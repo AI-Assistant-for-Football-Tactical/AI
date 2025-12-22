@@ -1,0 +1,343 @@
+{
+  "meta": {
+    "teamId": 2829,
+    "opponentId": 2819,
+    "matchDate": "2025-11-24T20:00:00Z",
+    "analysisTimestamp": "2025-11-20T14:30:00Z"
+  },
+  "opponentAnalysis": {
+    "tacticalStyle": {
+      "inferredFormation": "4-4-2",
+      "styleLabels": [
+        "POSSESSION_DOMINANT",
+        "HIGH_PRESS_INTENSITY",
+        "ATTACK_FOCUS_RIGHT_FLANK"
+      ],
+      "metrics": {
+        "avgPossession": 61.2,
+        "avgPassAccuracy": 88.5,
+        "avgPPDA": 8.4,
+        "longBallRatio": 0.12
+      }
+    },
+    "keyThreats": [
+      {
+        "playerId": 1009372,
+        "name": "Georges Mikautadze",
+        "position": [
+          "ST"
+        ],
+        "threatScore": 9.2,
+        "threatCodes": [
+          "CLINICAL_FINISHER",
+          "AERIAL_THREAT"
+        ],
+        "keyStat": {
+          "label": "goals_last_5_matches",
+          "value": 4
+        }
+      },
+      {
+        "playerId": 316148,
+        "name": "Thomas Partey",
+        "position": [
+          "DM",
+          "MC"
+        ],
+        "threatScore": 8.5,
+        "threatCodes": [
+          "BALL_RECOVERY_EXPERT",
+          "DISTRIBUTOR"
+        ],
+        "keyStat": {
+          "label": "interceptions_avg",
+          "value": 3.5
+        }
+      }
+    ],
+    "vulnerabilities": [
+      "SLOW_TRANSITION_DEFENSE",
+      "WEAK_AERIAL_DEFENSE_SET_PIECES"
+    ]
+  },
+  "teamSelection": {
+    "suggestedFormation": "4-3-3",
+    "strategyCode": "COUNTER_ATTACK_DIRECT",
+    "startingXI": [
+      {
+        "playerId": 868812,
+        "name": "Vinícius Júnior",
+        "position": "LW",
+        "role": "Inside Forward",
+        "suitabilityScore": 94.5,
+        "selectionFactors": {
+          "form": 9.8,
+          "fitness": 95,
+          "matchupAdvantage": 90
+        },
+        "reasonCodes": [
+          "PACE_MISMATCH_VS_RB",
+          "HIGH_RECENT_FORM"
+        ]
+      },
+      {
+        "playerId": 826643,
+        "name": "Kylian Mbappé",
+        "position": "ST",
+        "role": "Complete Forward",
+        "suitabilityScore": 96.0,
+        "selectionFactors": {
+          "form": 9.9,
+          "fitness": 88,
+          "matchupAdvantage": 92
+        }
+      },
+      {
+        "playerId": 835485,
+        "name": "Brahim Díaz",
+        "position": "RW",
+        "role": "Inverted Winger",
+        "suitabilityScore": 84.3,
+        "selectionFactors": {
+          "form": 8.1,
+          "fitness": 100,
+          "matchupAdvantage": 80
+        }
+      },
+      {
+        "playerId": 1091116,
+        "name": "Arda Güler",
+        "position": "AM",
+        "role": "Playmaker",
+        "suitabilityScore": 81.0,
+        "selectionFactors": {
+          "form": 8.0,
+          "fitness": 88,
+          "matchupAdvantage": 78
+        }
+      },
+      {
+        "playerId": 859025,
+        "name": "Aurélien Tchouaméni",
+        "position": "DC",
+        "role": "Defensive Anchor",
+        "suitabilityScore": 90.2,
+        "selectionFactors": {
+          "form": 8.5,
+          "fitness": 97,
+          "matchupAdvantage": 88
+        }
+      },
+      {
+        "playerId": 831808,
+        "name": "Federico Valverde",
+        "position": "MC",
+        "role": "Box-to-Box",
+        "suitabilityScore": 92.0,
+        "selectionFactors": {
+          "form": 9.0,
+          "fitness": 96,
+          "matchupAdvantage": 90
+        }
+      },
+      {
+        "playerId": 795064,
+        "name": "Trent Alexander-Arnold",
+        "position": "DR",
+        "role": "Attacking Fullback",
+        "suitabilityScore": 88.7,
+        "selectionFactors": {
+          "form": 8.4,
+          "fitness": 95,
+          "matchupAdvantage": 86
+        }
+      },
+      {
+        "playerId": 822519,
+        "name": "Éder Militão",
+        "position": "DC",
+        "suitabilityScore": 89.1,
+        "selectionFactors": {
+          "form": 7.2,
+          "fitness": 100,
+          "matchupAdvantage": 85
+        }
+      },
+      {
+        "playerId": 1176744,
+        "name": "Dean Huijsen",
+        "position": "DC",
+        "role": "Ball Playing Defender",
+        "suitabilityScore": 79.5,
+        "selectionFactors": {
+          "form": 7.6,
+          "fitness": 92,
+          "matchupAdvantage": 75
+        }
+      },
+      {
+        "playerId": 1085081,
+        "name": "Álvaro Carreras",
+        "position": "DL",
+        "role": "Defensive Wingback",
+        "suitabilityScore": 76.8,
+        "selectionFactors": {
+          "form": 7.4,
+          "fitness": 90,
+          "matchupAdvantage": 72
+        }
+      },
+      {
+        "playerId": 70988,
+        "name": "Thibaut Courtois",
+        "position": "GK",
+        "role": "Shot Stopper",
+        "suitabilityScore": 93.4,
+        "selectionFactors": {
+          "form": 9.2,
+          "fitness": 96,
+          "matchupAdvantage": 91
+        }
+      }
+    ],
+    "substitutes": [
+      {
+        "playerId": 1402716,
+        "name": "Gonzalo García",
+        "positions": [
+          "ST",
+          "LW"
+        ],
+        "suitabilityScore": 75.0
+      },
+      {
+        "playerId": 910536,
+        "name": "Rodrygo",
+        "positions": [
+          "ST",
+          "RW",
+          "LW"
+        ],
+        "suitabilityScore": 85.0
+      },
+      {
+        "playerId": 1174937,
+        "name": "Endrick",
+        "positions": [
+          "ST",
+          "RW"
+        ],
+        "suitabilityScore": 80.0
+      },
+      {
+        "playerId": 991011,
+        "name": "Jude Bellingham",
+        "positions": [
+          "AM",
+          "MC"
+        ],
+        "suitabilityScore": 90.0
+      },
+      {
+        "playerId": 1403559,
+        "name": "Franco Mastantuono",
+        "positions": [
+          "RW",
+          "AM"
+        ],
+        "suitabilityScore": 78.0
+      },
+      {
+        "playerId": 547838,
+        "name": "Dani Ceballos",
+        "positions": [
+          "MC",
+          "DM"
+        ]
+      },
+      {
+        "playerId": 138572,
+        "name": "Daniel Carvajal",
+        "positions": [
+          "DR"
+        ],
+        "suitabilityScore": 88.0
+      },
+      {
+        "playerId": 1156645,
+        "name": "Raúl Asencio",
+        "positions": [
+          "DC"
+        ],
+        "suitabilityScore": 79.0
+      },
+      {
+        "playerId": 142622,
+        "name": "Antonio Rüdiger",
+        "positions": [
+          "DC"
+        ],
+        "suitabilityScore": 89.0
+      },
+      {
+        "playerId": 66492,
+        "name": "David Alaba",
+        "positions": [
+          "DC"
+        ],
+        "suitabilityScore": 87.0
+      },
+      {
+        "playerId": 851271,
+        "name": "Fran García",
+        "positions": [
+          "DL",
+          "ML"
+        ],
+        "suitabilityScore": 81.0
+      },
+      {
+        "playerId": 857574,
+        "name": "Andriy Lunin",
+        "positions": [
+          "GK"
+        ],
+        "suitabilityScore": 83.0
+      }
+    ]
+  },
+  "trainingPlan": {
+    "teamDrills": [
+      {
+        "focusCode": "PRESS_RESISTANCE",
+        "priority": "HIGH",
+        "linkedOpponentFeature": "HIGH_PRESS_INTENSITY",
+        "targetedPositions": [
+          "D",
+          "M"
+        ]
+      },
+      {
+        "focusCode": "OFFENSIVE_TRANSITION_WING",
+        "priority": "MEDIUM",
+        "linkedOpponentFeature": "SLOW_TRANSITION_DEFENSE",
+        "targetedPositions": [
+          "F",
+          "M"
+        ]
+      }
+    ],
+    "individualDrills": [
+      {
+        "playerId": 138572,
+        "playerName": "Dani Carvajal",
+        "drillCode": "1V1_DEFENDING_WIDE"
+      },
+      {
+        "playerId": 868812,
+        "playerName": "Vinícius Júnior",
+        "drillCode": "FINISHING_INSIDE_BOX"
+      }
+    ]
+  }
+}
