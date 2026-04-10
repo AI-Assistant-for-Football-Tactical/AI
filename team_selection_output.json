@@ -1,7 +1,6 @@
 {
   "teamSelection": {
     "suggestedFormation": "3-5-2",
-    "strategyCode": "COUNTER_ATTACK_DIRECT",
     "startingXI": [
       {
         "playerId": 70988,
@@ -185,9 +184,9 @@
         "playerId": 1091116,
         "name": "Arda Güler",
         "positions": [
-          "CDM",
+          "CM",
           "LM",
-          "CM"
+          "CDM"
         ],
         "suitabilityScore": 42.6
       },
@@ -195,9 +194,9 @@
         "playerId": 991011,
         "name": "Jude Bellingham",
         "positions": [
-          "CM",
           "RM",
-          "CDM"
+          "CDM",
+          "CM"
         ],
         "suitabilityScore": 32.9
       },
@@ -205,8 +204,8 @@
         "playerId": 973887,
         "name": "Eduardo Camavinga",
         "positions": [
-          "LM",
-          "CDM"
+          "CDM",
+          "LM"
         ],
         "suitabilityScore": 30.8
       },
