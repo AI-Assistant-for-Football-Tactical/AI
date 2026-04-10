@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from pre_match import *
-from datetime import datetime
+from datetime import datetime , timezone
 
 
 app = Flask(__name__)
@@ -9,7 +9,7 @@ app = Flask(__name__)
 def index():
     return "server is working!"
 
-@app.route('/pre_match', methods=['POST'])
+@app.route('/pre_match', methods=['POST']) # endpoint for pre_match 
 def pre_match():
     data = request.get_json()
 
@@ -79,12 +79,28 @@ def pre_match():
 
     tacticle = get_tacticale(api_base , team_selection_output , opponent_id)
     tacticle = json.loads(tacticle)
+    
+     # getting the date for the next match
+    data = requests.get(api_base + f'teams/{team_id}/events/next/0').json()
 
+    event = data["events"][0]  # or any event you want
+    ts = event["startTimestamp"]
+
+    match_date = (
+        datetime
+        .fromtimestamp(ts, tz=timezone.utc)
+        .isoformat()
+        .replace("+00:00", "Z")
+    )
+
+ 
+
+    # constructing final json
     result = {
         "meta": {
         "teamId": team_id,
         "opponentId": opponent_id,
-        "matchDate": "2025-11-24T20:00:00Z",
+        "matchDate": match_date,
         "analysisTimestamp": datetime.utcnow().isoformat() + "Z"
     },
         "opponentAnalysis": opponent_analysis.get('opponentAnalysis'),

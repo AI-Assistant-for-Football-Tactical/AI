@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from pre_match import *
-from datetime import datetime
+from datetime import datetime , timezone
 from concurrent.futures import ThreadPoolExecutor
 import json
 
@@ -99,13 +99,25 @@ def pre_match():
         opponent_id
     )
     tacticle = json.loads(tacticle)
+    
+    data = requests.get(api_base + f'teams/{team_id}/events/next/0').json()
+
+    event = data["events"][0]  # or any event you want
+    ts = event["startTimestamp"]
+
+    match_date = (
+        datetime
+        .fromtimestamp(ts, tz=timezone.utc)
+        .isoformat()
+        .replace("+00:00", "Z")
+    )
 
     # ---------- Response ----------
     result = {
         "meta": {
             "teamId": team_id,
             "opponentId": opponent_id,
-            "matchDate": "2025-11-24T20:00:00Z",
+            "matchDate": match_date,
             "analysisTimestamp": datetime.utcnow().isoformat() + "Z"
         },
         "opponentAnalysis": opponent_analysis.get('opponentAnalysis'),
