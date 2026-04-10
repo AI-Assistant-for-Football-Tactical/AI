@@ -1,0 +1,51 @@
+{
+  "trainingPlan": {
+    "teamDrills": [
+      {
+        "focusCode": "FINAL_THIRD_CONVERSION",
+        "priority": "HIGH",
+        "linkedOpponentFeature": "LOW_SCORING_EFFICIENCY",
+        "targetedPositions": [
+          "M",
+          "F"
+        ]
+      },
+      {
+        "focusCode": "DEFENSIVE_TRANSITION_ORGANIZATION",
+        "priority": "MEDIUM",
+        "linkedOpponentFeature": "COUNTER_ATTACK_THREAT",
+        "targetedPositions": [
+          "D",
+          "M"
+        ]
+      }
+    ],
+    "individualDrills": [
+      {
+        "playerId": 2237795,
+        "playerName": "Thiago Pitarch",
+        "drillCode": "PROGRESSIVE_PASSING_DRILLS"
+      },
+      {
+        "playerId": 1403559,
+        "playerName": "Franco Mastantuono",
+        "drillCode": "SHOOTING_PRECISION_AND_TECHNIQUE"
+      },
+      {
+        "playerId": 1402716,
+        "playerName": "Gonzalo Garc\u00eda",
+        "drillCode": "POSITIONING_IN_BOX"
+      },
+      {
+        "playerId": 851271,
+        "playerName": "Fran Garc\u00eda",
+        "drillCode": "DEFENSIVE_1V1_CONSISTENCY"
+      },
+      {
+        "playerId": 991011,
+        "playerName": "Jude Bellingham",
+        "drillCode": "OFF_THE_BALL_MOVEMENT"
+      }
+    ]
+  }
+}
