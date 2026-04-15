@@ -4,16 +4,16 @@
       {
         "focusCode": "FINAL_THIRD_CONVERSION",
         "priority": "HIGH",
-        "linkedOpponentFeature": "LOW_SCORING_EFFICIENCY",
+        "linkedOpponentFeature": "LOW_BLOCK_DEFENSE",
         "targetedPositions": [
           "M",
           "F"
         ]
       },
       {
-        "focusCode": "DEFENSIVE_TRANSITION_ORGANIZATION",
+        "focusCode": "POSSESSION_RETENTION_UNDER_PRESSURE",
         "priority": "MEDIUM",
-        "linkedOpponentFeature": "COUNTER_ATTACK_THREAT",
+        "linkedOpponentFeature": "HIGH_PRESS_INTENSITY",
         "targetedPositions": [
           "D",
           "M"
@@ -22,29 +22,24 @@
     ],
     "individualDrills": [
       {
-        "playerId": 2237795,
-        "playerName": "Thiago Pitarch",
-        "drillCode": "PROGRESSIVE_PASSING_DRILLS"
-      },
-      {
-        "playerId": 1403559,
-        "playerName": "Franco Mastantuono",
-        "drillCode": "SHOOTING_PRECISION_AND_TECHNIQUE"
-      },
-      {
-        "playerId": 1402716,
-        "playerName": "Gonzalo Garc\u00eda",
-        "drillCode": "POSITIONING_IN_BOX"
-      },
-      {
-        "playerId": 851271,
-        "playerName": "Fran Garc\u00eda",
-        "drillCode": "DEFENSIVE_1V1_CONSISTENCY"
+        "playerId": 826643,
+        "playerName": "Kylian Mbapp\u00e9",
+        "drillCode": "FINISHING_CLINICAL_PRECISION"
       },
       {
         "playerId": 991011,
         "playerName": "Jude Bellingham",
-        "drillCode": "OFF_THE_BALL_MOVEMENT"
+        "drillCode": "BALL_CONTROL_UNDER_PRESSURE"
+      },
+      {
+        "playerId": 138572,
+        "playerName": "Dani Carvajal",
+        "drillCode": "1V1_DEFENDING_WIDE"
+      },
+      {
+        "playerId": 822519,
+        "playerName": "\u00c9der Milit\u00e3o",
+        "drillCode": "POSITIONING_RECOVERY"
       }
     ]
   }

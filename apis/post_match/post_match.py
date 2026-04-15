@@ -81,7 +81,6 @@ def get_fatigue(api_base: str, team_id: int) -> dict:
         axis=1
     )
     
-    players_df.drop(columns=['minutes_played'], inplace=True)
     
     req = pd.DataFrame({'player_id': last_match_players_ids, 'position': last_match_players_pos})
     filtered = players_df.merge(req, on=['player_id', 'position'], how='inner')
@@ -91,6 +90,7 @@ def get_fatigue(api_base: str, team_id: int) -> dict:
             "player_id": str(row["player_id"]),
             "name": row["name"],
             "position": row["position"],
+            "minutes_played": int(row["minutes_played"]),
             "fatigue_and_risk": {
                 "fatigue_index": float(row["fatigue_index"]),
                 "injury_risk_level": row["injury_risk_level"]
@@ -164,7 +164,7 @@ def get_training_recommendations(api_base: str, team_id: int) -> str:
         {json.dumps(stats_data)}
         """
 
-        client = genai.Client(api_key="AIzaSyAjd7dHUBIeyon7ODjg7MkeKMGEqdzhfoU")
+        client = genai.Client(api_key="AIzaSyDETBLONMaxx0qBo86bcxbT0Xl35C97mKk")
         
         response = client.models.generate_content(
             model="gemini-3.1-flash-lite-preview",
