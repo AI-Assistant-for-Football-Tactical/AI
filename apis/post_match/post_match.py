@@ -60,14 +60,13 @@ def get_fatigue(api_base :str , team_id: int) -> dict:
                             }
                         )
             except Exception as e:
-                print(f"Error fetching lineups for match {match_id}: {e}")
                 pass
     
-    players_df = pd.DataFrame(players_details)
+    players_df = pd.DataFrame(players_details).fillna(0)
     if players_df.empty:
         return {"players_analysis": []}
         
-    # getting fatigue index as percentage
+    players_df = players_df.groupby(by=['player_id', 'name', 'position']).agg({'minutes_played': 'sum'}).reset_index()
     min_s = players_df['minutes_played'].min()
     max_s = players_df['minutes_played'].max()
     players_df['fatigue_index'] = round(100 * (players_df['minutes_played'] - min_s) / (max_s - min_s) if max_s != min_s else 0)
