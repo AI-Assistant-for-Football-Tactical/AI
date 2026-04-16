@@ -4,6 +4,9 @@ import json
 import requests
 from datetime import datetime, timezone
 from flask import Flask, request, jsonify
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Add the API directories to sys.path so we can import their modules
 current_dir = os.path.dirname(os.path.abspath(__file__))

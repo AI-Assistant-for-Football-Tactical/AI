@@ -9,6 +9,7 @@ Original file is located at
 
 api_base = r'https://football-backend-app.victoriouswater-69fff737.swedencentral.azurecontainerapps.io/'
 
+import os
 import requests
 import pandas as pd
 import json
@@ -18,6 +19,7 @@ import statistics
 from google import genai
 from warnings import filterwarnings
 filterwarnings('ignore')
+from dotenv import load_dotenv
 
 
 def get_team_lnm(api_base :str , team_id:int , num_matchs: int) -> dict :
@@ -1466,11 +1468,14 @@ Your task:
 # """
 
         # llm call
-        client = genai.Client(api_key="AIzaSyAaP3-wHjenRqi_vc0-4ved2wox1NRPqCY")
+        api_key = os.environ.get("GEMINI_API_KEY_PRE_MATCH_1")
+        if not api_key:
+            return '{"error": "GEMINI_API_KEY_PRE_MATCH_1 environment variable not set"}'
+        client = genai.Client(api_key=api_key)
 
 
         response = client.models.generate_content(
-        model="gemini-3.1-flash-lite-preview",
+        model="gemini-2.5-flash",
         config={
             "system_instruction": "Only output the requierd output"
         },
@@ -1665,10 +1670,13 @@ def get_training_recommendations(api_base: str, average_stats_df: pd.DataFrame) 
         """
 
         # MAKE SURE TO REPLACE THIS KEY OR FETCH IT FROM ENV IF NEEDED
-        client = genai.Client(api_key="AIzaSyAjd7dHUBIeyon7ODjg7MkeKMGEqdzhfoU")
+        api_key = os.environ.get("GEMINI_API_KEY_PRE_MATCH_2")
+        if not api_key:
+            return '{"error": "GEMINI_API_KEY_PRE_MATCH_2 environment variable not set"}'
+        client = genai.Client(api_key=api_key)
 
         response = client.models.generate_content(
-            model="gemini-3.1-flash-lite-preview",
+            model="gemini-2.5-flash",
             config={
                 "system_instruction": "You are a professional football tactician. Output only strictly valid, unformatted JSON that perfectly matches the requested schema. No explanations."
             },

@@ -1,7 +1,9 @@
+import os
 import numpy as np, json, requests
 import pandas as pd
 from datetime import datetime
 from google import genai
+from dotenv import load_dotenv
 
 def get_team_lnm(api_base: str, team_id: int, num_matchs: int) -> dict:
     '''this function takes the base of the api without the endpoint, the team id and the number of last matchs wanted'''
@@ -27,32 +29,28 @@ def get_team_lnm(api_base: str, team_id: int, num_matchs: int) -> dict:
         
     return match_info
 
-def get_fatigue(api_base: str, team_id: int) -> dict:
-    players_details = [] 
-    last_match_players_ids = []
-    last_match_players_pos = []
-    matches_info = get_team_lnm(api_base, team_id, 5) 
+# 1. | Fatigue & Injury Risk Predictor
+def get_fatigue(api_base :str , team_id: int) -> dict: 
+    '''this function is used to get the fatigue index and injury risk level of the players of a team based on the minutes played in the last match '''
+    players_details = [] # list to add players details
+    matches_info = get_team_lnm(api_base , team_id , 1)  # getting the last match info of the team
  
-    for match_id in matches_info:
+    for match_id in matches_info: # getting the id for the last match and checking if it's an int (not the team id or name)
         if isinstance(match_id, int):
-            is_home = matches_info.get('target_team_name') == matches_info.get(match_id).get('homeTeam')
+            is_home = matches_info.get('target_team_name') == matches_info.get(match_id).get('homeTeam') # getting if the target team is home or away
             team_key = 'home' if is_home else 'away'
             
             try:
-                response = requests.get(api_base + f'events/{match_id}/lineups')
-                if response.status_code != 200: continue
+                data = requests.get(api_base + f'events/{match_id}/lineups').json() # getting the lineups data for the match
                 
-                data = response.json()
-                if team_key in data and isinstance(data[team_key], dict) and 'players' in data[team_key]:
+                
+                if team_key in data and isinstance(data[team_key], dict) and 'players' in data[team_key]: # accessing only our players
                     players = data[team_key]['players']
                     
                     for player in players:
                         if not isinstance(player, dict): continue
 
-                        if match_id == list(matches_info.keys())[0]:
-                            last_match_players_ids.append(player.get('player').get('id'))
-                            last_match_players_pos.append(player.get('position'))
-
+                       # getting only requiered data
                         players_details.append(
                             {
                                 'player_id': player.get('player').get('id'), 
@@ -62,29 +60,25 @@ def get_fatigue(api_base: str, team_id: int) -> dict:
                             }
                         )
             except Exception as e:
+                print(f"Error fetching lineups for match {match_id}: {e}")
                 pass
     
-    players_df = pd.DataFrame(players_details).fillna(0)
+    players_df = pd.DataFrame(players_details)
     if players_df.empty:
         return {"players_analysis": []}
         
-    players_df = players_df.groupby(by=['player_id', 'name', 'position']).agg({'minutes_played': 'sum'}).reset_index()
+    # getting fatigue index as percentage
     min_s = players_df['minutes_played'].min()
     max_s = players_df['minutes_played'].max()
     players_df['fatigue_index'] = round(100 * (players_df['minutes_played'] - min_s) / (max_s - min_s) if max_s != min_s else 0)
     
-    # ----------------------------------------------------
-    # Applied condition for >180 minutes -> High Risk
-    # ----------------------------------------------------
+    # constructing injury risk level column
     players_df['injury_risk_level'] = players_df.apply(
         lambda row: 'High' if row['minutes_played'] >= 180 else ('Low' if row['fatigue_index'] < 60 else ('Moderate' if row['fatigue_index'] < 80 else 'High')), 
         axis=1
     )
-    
-    
-    req = pd.DataFrame({'player_id': last_match_players_ids, 'position': last_match_players_pos})
-    filtered = players_df.merge(req, on=['player_id', 'position'], how='inner')
 
+    # constructing this json part
     players_analysis = [
         {
             "player_id": str(row["player_id"]),
@@ -96,7 +90,7 @@ def get_fatigue(api_base: str, team_id: int) -> dict:
                 "injury_risk_level": row["injury_risk_level"]
             }
         }
-        for _, row in filtered.iterrows()
+        for _, row in players_df.iterrows()
     ]
 
     return {"players_analysis": players_analysis}
@@ -164,10 +158,13 @@ def get_training_recommendations(api_base: str, team_id: int) -> str:
         {json.dumps(stats_data)}
         """
 
-        client = genai.Client(api_key="AIzaSyDETBLONMaxx0qBo86bcxbT0Xl35C97mKk")
+        api_key = os.environ.get("GEMINI_API_KEY_POST_MATCH")
+        if not api_key:
+            return '{"error": "GEMINI_API_KEY_POST_MATCH environment variable not set"}'
+        client = genai.Client(api_key=api_key)
         
         response = client.models.generate_content(
-            model="gemini-3.1-flash-lite-preview",
+            model="gemini-2.5-flash",
             config={
                 "system_instruction": "You are a professional football tactician. Output only strictly valid, unformatted JSON that perfectly matches the requested schema. No explanations."
             },
