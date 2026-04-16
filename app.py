@@ -1,5 +1,5 @@
 import sys
-import os
+import os , re
 import json
 import requests
 from datetime import datetime, timezone
@@ -93,13 +93,16 @@ def pre_match():
         # first parallel part 
         matches_stats = get_match_stats(api_base, matches_ids)
 
-        # second parallel part
-        players_stats = get_players_stats(api_base, matches_ids)
-        players_score = get_players_scores(api_base, players_stats, matches_ids.get('target_team_name'), matches_ids)
 
-        # third parallel part
+
+        # second parallel part
         players_real_positions = get_player_real_position_multimatch(api_base, matches_ids)
 
+        # third parallel part
+        players_stats = get_players_stats(api_base, matches_ids)
+        players_score = get_players_scores(api_base, players_stats, matches_ids.get('target_team_name'), players_real_positions)
+        
+        
         # fourth parallel part
         opponent_matches_ids = get_team_lnm(api_base, opponent_id, num_of_matches)
         opponent_analysis = analyze_opponent_comprehensive_multimatch(api_base, opponent_matches_ids)
@@ -122,7 +125,8 @@ def pre_match():
 
         tacticle = get_tacticale(api_base, team_selection_output, opponent_id)
         if isinstance(tacticle, str):
-            tacticle = json.loads(tacticle)
+            tacticle = re.search(r'\{[\s\S]*\}', tacticle)
+            tacticle = json.loads(tacticle.group())
         
         # getting the date for the next match
         response_data = requests.get(api_base + f'teams/{team_id}/events/next/0').json()

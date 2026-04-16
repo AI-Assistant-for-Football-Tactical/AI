@@ -1058,42 +1058,55 @@ def normalize_value(x, min_s, max_s):
 # player_stats_pos = get_players_scores(api_base , player_stats , teams_info)
 # player_stats_pos.style.background_gradient(cmap='Greens').set_properties(**{'font-family': 'Segoe UI'})
 
-def get_players_scores( api_base : str , players_stats : DataFrame , team_name : str , teams_info : DataFrame) -> DataFrame:
 
-    '''this function is used to take a dataframe of players stats and team name (each players should has stats for the last n matches)
+# some helper functions for nomalization 
+def normalize_score(x):
+    max_val = x.max()
+    min_val = x.min()
+
+    if max_val == min_val or max_val == 0:
+        return x * 0   # or return x if you want unchanged
+    else:
+        return 100 * x / max_val
+    
+    
+    
+def get_players_scores( api_base : str , players_stats : DataFrame , team_name : str , real_positions : DataFrame) -> DataFrame:
+
+    '''this function is used to take a dataframe of players stats and team name (each players should has stats for the last n matches) 
     and return the same dataframe of the players stats but also including a new column which is score column for each player
     noting : this function works for the players who has single or multiple positions'''
-
+    
     try :
-        all_real_positions = get_player_real_position_multimatch(api_base , teams_info) # getting real positions
+        all_real_positions = real_positions
         players_stats_filtered = players_stats[players_stats['player_name'].isin(all_real_positions['player_name'].unique())] # filtering our players from others
-
+        
         # getting the median of the statistics for the players
         players_stats_filtered = players_stats_filtered.drop(columns=['match_id','position' , 'statistics_type']).groupby(by=['player_id' , 'player_name']).median().reset_index()
-
+        
         # concatinating the two dataframes
         player_stats_with_scores = pd.concat([players_stats_filtered , all_real_positions.drop(columns='player_name')] , axis =1  )
-
+        
         player_stats_with_scores = player_stats_with_scores.loc[:, ~player_stats_with_scores.columns.duplicated()]
-
+        
         # getting scores
         player_stats_with_scores['score'] = player_stats_with_scores.apply(apply_score_formula_singlevalue , axis=1)
-
-
+        
+        
         # separating the multiple positions for the same player into different rows
         player_stats_with_scores = player_stats_with_scores.explode(['specific_role', 'score']).reset_index(drop=True).drop_duplicates()
-
+        
         # calculating the score inside each general position not accross all positions by setting the max value as 100 and the others is percentage from it
-        player_stats_with_scores['score'] = player_stats_with_scores.groupby('role')['score'].transform(
-            lambda x: np.where(
-                x.max() != x.min(),
-                (100 * x) / x.max(),
-                x   # identical scores → assign 0
-            )
+
+        player_stats_with_scores['score'] = (
+            player_stats_with_scores
+            .groupby('role')['score']
+            .transform(normalize_score)
         )
 
-
-
+        
+        
+        
         # getting the names of the columns
         columns = list(player_stats_with_scores.columns)
         columns.remove('specific_role')
@@ -1103,10 +1116,15 @@ def get_players_scores( api_base : str , players_stats : DataFrame , team_name :
           'specific_role': lambda x: list(x) if len(list(x)) > 1 else x.iloc[0],
           'score': lambda x: list(x) if len(list(x)) > 1 else x.iloc[0]
       })
-
+   
+        
+        
     except Exception as e :
         print(f'problem with getting real position of the players {e}')
         return np.NaN
+    
+
+
 
 def formation_suggestions(api_base: str , opponent_id: int) -> list:
     '''this function takes the base of the api without the endpoint , the opponent team id and returns the most suggested formation we should play with'''
