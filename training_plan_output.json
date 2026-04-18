@@ -1,3 +1,110 @@
 {
-  "error": "LLM API failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 38.51347752s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '38s'}]}}"
+  "trainingPlan": {
+    "teamDrills": [
+      {
+        "focusCode": "MIDFIELD_TRANSITION_ATTACK",
+        "priority": "HIGH",
+        "linkedOpponentFeature": "DEEP_BLOCK_DEFENSE",
+        "targetedPositions": [
+          "M",
+          "F"
+        ]
+      },
+      {
+        "focusCode": "FINAL_THIRD_EFFICIENCY",
+        "priority": "HIGH",
+        "linkedOpponentFeature": "TIGHT_DEFENSIVE_LINES",
+        "targetedPositions": [
+          "F",
+          "M"
+        ]
+      },
+      {
+        "focusCode": "PRESS_RESISTANCE",
+        "priority": "MEDIUM",
+        "linkedOpponentFeature": "HIGH_PRESS_INTENSITY",
+        "targetedPositions": [
+          "D",
+          "M"
+        ]
+      }
+    ],
+    "individualDrills": [
+      {
+        "playerId": 792073,
+        "playerName": "Ferland Mendy",
+        "drillCode": "1V1_DEFENDING_WIDE_RECOVERY"
+      },
+      {
+        "playerId": 142622,
+        "playerName": "Antonio Rudiger",
+        "drillCode": "DEFENSIVE_POSITIONING_READING_PLAY"
+      },
+      {
+        "playerId": 138572,
+        "playerName": "Dani Carvajal",
+        "drillCode": "WINGBACK_DEFENSIVE_TRANSITIONS"
+      },
+      {
+        "playerId": 66492,
+        "playerName": "David Alaba",
+        "drillCode": "DEFENDER_FITNESS_REINTEGRATION_PROGRAM"
+      },
+      {
+        "playerId": 835485,
+        "playerName": "Brahim D\u00edaz",
+        "drillCode": "ATTACKING_MIDFIELDER_FINISHING_DRILLS"
+      },
+      {
+        "playerId": 991011,
+        "playerName": "Jude Bellingham",
+        "drillCode": "BOX_TO_BOX_MIDFIELDER_GOAL_CONTRIBUTION"
+      },
+      {
+        "playerId": 973887,
+        "playerName": "Eduardo Camavinga",
+        "drillCode": "MIDFIELDER_CREATIVE_PASSING_DRILLS"
+      },
+      {
+        "playerId": 2237795,
+        "playerName": "Thiago Pitarch",
+        "drillCode": "FUNDAMENTAL_BALL_CONTROL_PASSING"
+      },
+      {
+        "playerId": 547838,
+        "playerName": "Dani Ceballos",
+        "drillCode": "MIDFIELDER_FITNESS_REINTEGRATION_PROGRAM"
+      },
+      {
+        "playerId": 826643,
+        "playerName": "Kylian Mbapp\u00e9",
+        "drillCode": "STRIKER_CLINICAL_FINISHING_UNDER_PRESSURE"
+      },
+      {
+        "playerId": 868812,
+        "playerName": "Vinicius J\u00fanior",
+        "drillCode": "WING_FORWARD_FINISHING_VARIETY"
+      },
+      {
+        "playerId": 1403559,
+        "playerName": "Franco Mastantuono",
+        "drillCode": "FORWARD_OFFENSIVE_MOVEMENT_FINISHING"
+      },
+      {
+        "playerId": 1402716,
+        "playerName": "Gonzalo Garc\u00eda",
+        "drillCode": "FORWARD_ATTACKING_FUNDAMENTALS"
+      },
+      {
+        "playerId": 857574,
+        "playerName": "Andriy Lunin",
+        "drillCode": "GOALKEEPER_DISTRIBUTION_LONG_SHORT"
+      },
+      {
+        "playerId": 1493226,
+        "playerName": "Fran Gonz\u00e1lez",
+        "drillCode": "GOALKEEPER_BASIC_SHOT_STOPPING"
+      }
+    ]
+  }
 }

@@ -126,15 +126,15 @@
         ]
       },
       {
-        "playerId": 1403559,
-        "name": "Franco Mastantuono",
+        "playerId": 2237795,
+        "name": "Thiago Pitarch",
         "position": "RW",
         "role": "Winger",
-        "suitabilityScore": 4.0,
+        "suitabilityScore": 1.5,
         "selectionFactors": {
-          "form": 0.4,
-          "fitness": 76,
-          "matchupAdvantage": 74
+          "form": 0.1,
+          "fitness": 75,
+          "matchupAdvantage": 73
         },
         "reasonCodes": [
           "TACTICAL_FIT"
@@ -156,29 +156,31 @@
         ]
       },
       {
-        "playerId": 835485,
-        "name": "Brahim Díaz",
+        "playerId": 857574,
+        "name": "Andriy Lunin",
         "position": "ST",
         "role": "Advanced Forward",
-        "suitabilityScore": 38.7,
+        "suitabilityScore": 38.5,
         "selectionFactors": {
           "form": 3.9,
           "fitness": 84,
           "matchupAdvantage": 82
         },
         "reasonCodes": [
-          "TACTICAL_FIT"
+          "TACTICAL_FIT",
+          "OUT_OF_POSITION_COVERAGE"
         ]
       }
     ],
     "substitutes": [
       {
-        "playerId": 857574,
-        "name": "Andriy Lunin",
+        "playerId": 835485,
+        "name": "Brahim Díaz",
         "positions": [
-          "G"
+          "CM",
+          "CAM"
         ],
-        "suitabilityScore": 48.2
+        "suitabilityScore": 38.7
       },
       {
         "playerId": 795064,
@@ -192,9 +194,9 @@
         "playerId": 1091116,
         "name": "Arda Güler",
         "positions": [
-          "LM",
+          "CDM",
           "CM",
-          "CDM"
+          "LM"
         ],
         "suitabilityScore": 16.3
       },
@@ -202,7 +204,8 @@
         "playerId": 792073,
         "name": "Ferland Mendy",
         "positions": [
-          "LB"
+          "LB",
+          "CB"
         ],
         "suitabilityScore": 9.8
       },
@@ -210,22 +213,19 @@
         "playerId": 973887,
         "name": "Eduardo Camavinga",
         "positions": [
-          "LM",
+          "CDM",
           "CM",
-          "CDM"
+          "LM"
         ],
         "suitabilityScore": 8.5
       },
       {
-        "playerId": 2237795,
-        "name": "Thiago Pitarch",
+        "playerId": 1403559,
+        "name": "Franco Mastantuono",
         "positions": [
-          "LM",
-          "RM",
-          "CM",
-          "CDM"
+          "LW"
         ],
-        "suitabilityScore": 1.5
+        "suitabilityScore": 4.0
       },
       {
         "playerId": 1156645,
