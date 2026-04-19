@@ -22,6 +22,7 @@ filterwarnings('ignore')
 from dotenv import load_dotenv
 
 
+
 def get_team_lnm(api_base :str , team_id:int , num_matchs: int) -> dict :
   '''this function takes the base of the api without the endpoint , the team id and the number of last matchs wanted
   and returns a dictionary of the last matchs ids of the team with the home team and away team names'''
@@ -1196,6 +1197,7 @@ def get_best_starting_lineup_from_recommendations(players_stats_scored: pd.DataF
         else:
             df['Real Position'] = [['Unknown']] * len(df)
 
+        df['score'] = pd.to_numeric(df['score'], errors='coerce')
         df = df.sort_values(by='score', ascending=False).reset_index(drop=True)
 
         def matches_bucket(role_list, tags):
@@ -1433,27 +1435,39 @@ def get_season_tournament_ids(api_base : str , players_ids : list) -> dict:
 #     return results
 # get_season_tournament_ids( api_base, list(player_stats_pos['player_id']))
 
-def get_tacticale(api_base : str , team_selection_output : json , opponent_id : int ) -> json :
 
+
+
+def get_tacticale(api_base : str , team_selection_output : json , opponent_id : int ) -> json :
+    
     ''' this functions is used to get the tacticale style for the team from the recommendations
     it works on --> the recommended players and  '''
-
+    
     try :
+        api_key = os.environ.get("GEMINI_API_KEY_PRE_MATCH_1")
+
+        client = genai.Client(api_key=api_key) 
         recommended_players = pd.json_normalize(team_selection_output['startingXI'])
+        
+        recommended_players['suitabilityScore'] = pd.to_numeric(
+            recommended_players['suitabilityScore'],
+            errors='coerce'
+        ).fillna(0.0)
+
         suggested_formations = team_selection_output['suggestedFormation']
         ids = get_season_tournament_ids( api_base, list(recommended_players['playerId']) )
-
+        
         general_statistics = [] # list to add the general statistics to it before merging
         for player_id in ids.keys() :
             response = requests.get(f"{api_base}players/{player_id}/unique-tournament/{ids[player_id]['tournament_id']}/season/{ids[player_id]['season_id']}/statistics/overall").json().get('statistics')
             response['id']= player_id
             general_statistics.append(response) # adding the general statistics to the list
-
+            
         general_statistics = pd.DataFrame(general_statistics).fillna(0).drop(columns=['type' ,'statisticsType'])
         # general_statistics = recommended_players.merge(general_statistics )
         general_statistics = pd.concat([recommended_players[['playerId' , 'name' , 'role' , 'position', 'suitabilityScore'] ] , general_statistics] , axis=1).drop(columns='playerId')
-
-        # getting opponent formation for the last match
+        
+        # getting opponent formation for the last match 
         opponent_lastm_info = get_team_lnm(api_base , opponent_id , 1)
         opponent_formation = requests.get(api_base + f'events/{list(opponent_lastm_info.keys())[0]}/lineups').json().get('home' if opponent_lastm_info.get('target_team_name') == opponent_lastm_info[list(opponent_lastm_info.keys())[0]]['homeTeam'] else 'away').get('formation')
 
@@ -1485,12 +1499,6 @@ Your task:
 #   "strategyCode": "COUNTER_ATTACK_DIRECT" }}
 # """
 
-        # llm call
-        api_key = os.environ.get("GEMINI_API_KEY_PRE_MATCH_1")
-        if not api_key:
-            return '{"error": "GEMINI_API_KEY_PRE_MATCH_1 environment variable not set"}'
-        client = genai.Client(api_key=api_key)
-
 
         response = client.models.generate_content(
         model="gemini-2.5-flash",
@@ -1502,9 +1510,10 @@ Your task:
         # getting the result from the output of the llm
         result = response.text
         return result
-
+    
     except Exception as e :
-        return f'something went wrong with : {e}'
+        return ''' { "suggestedFormation": null,
+        "strategyCode": null } '''
 
 def get_training_player_stats(api_base: str, matches_info: dict) -> pd.DataFrame:
     '''This function gets player stats using the exact same logic as analyze_opponent_comprehensive_multimatch from Section 4.'''
@@ -1704,4 +1713,5 @@ def get_training_recommendations(api_base: str, average_stats_df: pd.DataFrame) 
 
     except Exception as e:
         return f'{{"error": "LLM API failed: {e}"}}'
+
 

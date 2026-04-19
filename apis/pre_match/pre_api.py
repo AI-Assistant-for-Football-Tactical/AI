@@ -3,6 +3,14 @@ from pre_match import *
 from datetime import datetime , timezone
 import re
 
+
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+dotenv_path = os.path.join(current_dir, '.env')
+
+
+load_dotenv(dotenv_path=r"env", override=True)
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -78,9 +86,17 @@ def pre_match():
 
 
     tacticle = get_tacticale(api_base , team_selection_output , opponent_id)
+    
     if isinstance(tacticle, str):
-        tacticle = re.search(r'\{[\s\S]*\}', tacticle)
-        tacticle = json.loads(tacticle.group())
+        match = re.search(r'\{[\s\S]*\}', tacticle)
+
+        if match:
+            tacticle = json.loads(match.group())
+        else:
+            raise ValueError(
+                f"get_tacticale() did not return JSON.\nReturned value:\n{tacticle}"
+            )
+
     
     
      # getting the date for the next match
