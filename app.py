@@ -5,6 +5,10 @@ import requests
 from datetime import datetime, timezone
 from flask import Flask, request, jsonify
 from dotenv import load_dotenv
+from concurrent.futures import ThreadPoolExecutor
+
+
+
 
 load_dotenv()
 
@@ -72,7 +76,6 @@ def post_match():
 def pre_match():
     data = request.get_json()
 
-    # Validate input
     if not data:
         return jsonify({"error": "Missing JSON body"}), 400
 
@@ -82,69 +85,88 @@ def pre_match():
 
     if team_id is None or num_of_matches is None or opponent_id is None:
         return jsonify({
-            "error": "team_id, num_matches, and opponent_id are required"
+            "error": "team_id, num_of_matches, and opponent_id are required"
         }), 400
-
+    
     try:
-        # body of the function to process the pre-match data and generate result
-        # not parallel part
+
+        # Step 1: Not parallel
         matches_ids = get_team_lnm(api_base, team_id, num_of_matches)
 
-        # first parallel part 
-        matches_stats = get_match_stats(api_base, matches_ids)
+        # Step 2: Parallel execution
+        with ThreadPoolExecutor(max_workers=6) as executor:
+            
+            # submit tasks
+            future_match_stats = executor.submit(get_match_stats, api_base, matches_ids)
+            future_real_positions = executor.submit(get_player_real_position_multimatch, api_base, matches_ids)
+            future_players_stats = executor.submit(get_players_stats, api_base, matches_ids)
+            future_opponent_matches = executor.submit(get_team_lnm, api_base, opponent_id, num_of_matches)
+            future_formation = executor.submit(formation_suggestions, api_base, opponent_id)
+            future_training_stats = executor.submit(get_training_player_stats, api_base, matches_ids)
 
+            # get results
+            matches_stats = future_match_stats.result()
+            players_real_positions = future_real_positions.result()
+            players_stats = future_players_stats.result()
+            opponent_matches_ids = future_opponent_matches.result()
+            formation_suggestion = future_formation.result()
+            players_training_stats = future_training_stats.result()
 
+        # Step 3: Dependent computations (can partially parallelize)
+        with ThreadPoolExecutor(max_workers=3) as executor:
+            
+            future_players_score = executor.submit(
+                get_players_scores,
+                api_base,
+                players_stats,
+                matches_ids.get('target_team_name'),
+                players_real_positions
+            )
 
-        # second parallel part
-        players_real_positions = get_player_real_position_multimatch(api_base, matches_ids)
+            future_opponent_analysis = executor.submit(
+                analyze_opponent_comprehensive_multimatch,
+                api_base,
+                opponent_matches_ids
+            )
 
-        # third parallel part
-        players_stats = get_players_stats(api_base, matches_ids)
-        players_score = get_players_scores(api_base, players_stats, matches_ids.get('target_team_name'), players_real_positions)
-        
-        
-        # fourth parallel part
-        opponent_matches_ids = get_team_lnm(api_base, opponent_id, num_of_matches)
-        opponent_analysis = analyze_opponent_comprehensive_multimatch(api_base, opponent_matches_ids)
+            future_training_recommendations = executor.submit(
+                get_training_recommendations,
+                api_base,
+                players_training_stats
+            )
 
-        # fifth parallel part
-        formation_suggestion = formation_suggestions(api_base, opponent_id)
+            players_score = future_players_score.result()
+            opponent_analysis = future_opponent_analysis.result()
+            training_recommendations = future_training_recommendations.result()
 
-        # sixth parallel part
-        players_training_stats = get_training_player_stats(api_base, matches_ids)
-        training_recommendations = get_training_recommendations(api_base, players_training_stats)
-
-        # not parallel part
+        # Step 4: Not parallel (depends on previous outputs)
         team_selection_output = get_best_starting_lineup_from_recommendations(
-            players_stats_scored=players_score, 
+            players_stats_scored=players_score,
             recommended_formations=formation_suggestion,
-            real_pos_df=players_real_positions 
+            real_pos_df=players_real_positions
         )
 
         get_season_tournament_ids(api_base, list(players_score['player_id']))
 
+        # Step 5: Tactical
         tacticle = get_tacticale(api_base, team_selection_output, opponent_id)
+
         if isinstance(tacticle, str):
             tacticle = re.search(r'\{[\s\S]*\}', tacticle)
             tacticle = json.loads(tacticle.group())
-        
-        # getting the date for the next match
-        response_data = requests.get(api_base + f'teams/{team_id}/events/next/0').json()
-        event = response_data["events"][0]  # or any event you want
+
+        # Step 6: Get match date
+        data = requests.get(api_base + f'teams/{team_id}/events/next/0').json()
+        event = data["events"][0]
         ts = event["startTimestamp"]
 
         match_date = (
-            datetime
-            .fromtimestamp(ts, tz=timezone.utc)
+            datetime.fromtimestamp(ts, tz=timezone.utc)
             .isoformat()
             .replace("+00:00", "Z")
         )
 
-        training_plan_data = training_recommendations
-        if isinstance(training_plan_data, str):
-            training_plan_data = json.loads(training_plan_data)
-
-        # constructing final json
+        # Step 7: Final JSON
         result = {
             "meta": {
                 "teamId": team_id,
@@ -159,11 +181,12 @@ def pre_match():
                 "startingXI": team_selection_output.get('startingXI'),
                 "substitutes": team_selection_output.get('substitutes')
             },
-            "trainingPlan": training_plan_data.get('trainingPlan')
+            "trainingPlan": json.loads(training_recommendations).get('trainingPlan')
         }
 
         return jsonify(result), 200
-
+    
+    
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
