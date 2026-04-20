@@ -163,7 +163,7 @@ def get_training_recommendations(api_base: str, team_id: int) -> str:
         client = genai.Client(api_key=api_key)
         
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-2.5-flash-lite",
             config={
                 "system_instruction": "You are a professional football tactician. Output only strictly valid, unformatted JSON that perfectly matches the requested schema. No explanations."
             },
