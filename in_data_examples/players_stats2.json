@@ -1,0 +1,3905 @@
+[
+  {
+    "player": {
+      "name": "Alberto Paleari",
+      "firstName": "Alberto",
+      "lastName": "Paleari",
+      "slug": "alberto-paleari",
+      "shortName": "A. Paleari",
+      "position": "G",
+      "jerseyNumber": "1",
+      "height": 192,
+      "userCount": 428,
+      "gender": "M",
+      "id": 259281,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 715046400,
+      "proposedMarketValueRaw": {
+        "value": 1000000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "ألبرتو باليري",
+          "bn": "আলবার্তো পালিয়ারি",
+          "hi": "अल्बर्टो पलेरी"
+        },
+        "shortNameTranslation": {
+          "ar": "أ. باليري",
+          "bn": "এ. পালিয়ারি",
+          "hi": "ए. पलेरी"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 30,
+      "accuratePass": 18,
+      "totalLongBalls": 18,
+      "accurateLongBalls": 6,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 15,
+      "totalOwnHalfPasses": 17,
+      "accurateOppositionHalfPasses": 3,
+      "totalOppositionHalfPasses": 13,
+      "totalClearance": 1,
+      "ballRecovery": 14,
+      "goodHighClaim": 1,
+      "savedShotsFromInsideTheBox": 2,
+      "saves": 3,
+      "punches": 1,
+      "minutesPlayed": 90,
+      "touches": 39,
+      "rating": 7,
+      "possessionLostCtrl": 12,
+      "expectedAssists": 0.00129833,
+      "totalBallCarriesDistance": 24.909667025844,
+      "ballCarriesCount": 4,
+      "totalProgression": 16.22210679838,
+      "progressiveBallCarriesCount": 0,
+      "keeperSaveValue": 0.5407,
+      "ratingVersions": {
+        "original": 7,
+        "alternative": 6.9
+      },
+      "totalShots": 0,
+      "goalsPrevented": 0.5005,
+      "passValueNormalized": 0.05,
+      "dribbleValueNormalized": 0.01,
+      "defensiveValueNormalized": -0.16,
+      "goalkeeperValueNormalized": 0.38,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "G",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Saúl Coco",
+      "slug": "saul-coco",
+      "shortName": "S. Coco",
+      "position": "D",
+      "jerseyNumber": "23",
+      "height": 188,
+      "userCount": 1263,
+      "gender": "M",
+      "id": 1089453,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 918518400,
+      "proposedMarketValueRaw": {
+        "value": 9300000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "ساول كوكو",
+          "bn": "সাউল কোকো",
+          "hi": "साउल कोको"
+        },
+        "shortNameTranslation": {
+          "ar": "س. كوكو",
+          "bn": "এস. কোকো",
+          "hi": "एस. कोको"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 24,
+      "accuratePass": 16,
+      "totalLongBalls": 5,
+      "accurateLongBalls": 1,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 8,
+      "totalOwnHalfPasses": 11,
+      "accurateOppositionHalfPasses": 8,
+      "totalOppositionHalfPasses": 13,
+      "duelWon": 3,
+      "shotOffTarget": 1,
+      "totalClearance": 3,
+      "outfielderBlock": 1,
+      "interceptionWon": 3,
+      "ballRecovery": 2,
+      "totalTackle": 3,
+      "wonTackle": 1,
+      "minutesPlayed": 53,
+      "touches": 38,
+      "rating": 7.1,
+      "possessionLostCtrl": 8,
+      "expectedGoals": 0.0982,
+      "expectedAssists": 0.189491,
+      "totalBallCarriesDistance": 72.766525297018,
+      "ballCarriesCount": 8,
+      "totalProgression": 56.493404816522,
+      "bestBallCarryProgression": 19.662358516948,
+      "totalProgressiveBallCarriesDistance": 19.666481637548,
+      "progressiveBallCarriesCount": 1,
+      "keyPass": 1,
+      "ratingVersions": {
+        "original": 7.1,
+        "alternative": 7.3
+      },
+      "totalShots": 1,
+      "shotValueNormalized": -0.41,
+      "passValueNormalized": 0.33,
+      "dribbleValueNormalized": 0.2,
+      "defensiveValueNormalized": 0.2,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "D",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Ardian Ismajli",
+      "slug": "ardian-ismajli",
+      "shortName": "A. Ismajli",
+      "position": "D",
+      "jerseyNumber": "44",
+      "height": 188,
+      "userCount": 1185,
+      "gender": "M",
+      "id": 840414,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 844041600,
+      "proposedMarketValueRaw": {
+        "value": 5600000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "أرديان إسمايلي",
+          "bn": "আরদিয়ান ইসমাজলি",
+          "hi": "अर्दियन इस्माजली"
+        },
+        "shortNameTranslation": {
+          "ar": "أ. إسمايلي",
+          "bn": "এ. ইসমাজলি",
+          "hi": "ए. इस्माजली"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 46,
+      "accuratePass": 41,
+      "totalLongBalls": 4,
+      "accurateLongBalls": 2,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 23,
+      "totalOwnHalfPasses": 24,
+      "accurateOppositionHalfPasses": 18,
+      "totalOppositionHalfPasses": 22,
+      "duelLost": 1,
+      "duelWon": 3,
+      "totalClearance": 6,
+      "outfielderBlock": 2,
+      "interceptionWon": 1,
+      "ballRecovery": 3,
+      "lastManTackle": 1,
+      "totalTackle": 2,
+      "wonTackle": 2,
+      "wasFouled": 1,
+      "fouls": 1,
+      "minutesPlayed": 90,
+      "touches": 60,
+      "rating": 7.3,
+      "possessionLostCtrl": 5,
+      "expectedAssists": 0.0156115,
+      "totalBallCarriesDistance": 99.756562829882,
+      "ballCarriesCount": 11,
+      "totalProgression": 38.773422753818,
+      "bestBallCarryProgression": 17.842730632894,
+      "totalProgressiveBallCarriesDistance": 20.989134712989,
+      "progressiveBallCarriesCount": 1,
+      "ratingVersions": {
+        "original": 7.3,
+        "alternative": 7.3
+      },
+      "totalShots": 0,
+      "passValueNormalized": 0.21,
+      "dribbleValueNormalized": 0.04,
+      "defensiveValueNormalized": 0.73,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "D",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Enzo Ebosse",
+      "firstName": "",
+      "lastName": "",
+      "slug": "enzo-ebosse",
+      "shortName": "E. Ebosse",
+      "position": "D",
+      "jerseyNumber": "77",
+      "height": 185,
+      "userCount": 544,
+      "gender": "M",
+      "id": 848279,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 921110400,
+      "proposedMarketValueRaw": {
+        "value": 1500000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "إينزو إيبوسي",
+          "bn": "এনজো ইবোস",
+          "hi": "एन्ज़ो इबोसे"
+        },
+        "shortNameTranslation": {
+          "ar": "إ. إيبوسي",
+          "bn": "ই. ইবোস",
+          "hi": "ई. इबोसे"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 49,
+      "accuratePass": 46,
+      "totalLongBalls": 4,
+      "accurateLongBalls": 3,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 31,
+      "totalOwnHalfPasses": 32,
+      "accurateOppositionHalfPasses": 15,
+      "totalOppositionHalfPasses": 17,
+      "aerialWon": 1,
+      "duelLost": 5,
+      "duelWon": 2,
+      "totalClearance": 4,
+      "interceptionWon": 1,
+      "ballRecovery": 4,
+      "totalTackle": 1,
+      "unsuccessfulTouch": 1,
+      "fouls": 5,
+      "minutesPlayed": 90,
+      "touches": 56,
+      "rating": 6.1,
+      "possessionLostCtrl": 4,
+      "expectedAssists": 0.00676062,
+      "totalBallCarriesDistance": 73.883932768779,
+      "ballCarriesCount": 11,
+      "totalProgression": 18.774304510975,
+      "progressiveBallCarriesCount": 0,
+      "ratingVersions": {
+        "original": 6.1,
+        "alternative": 6.4
+      },
+      "totalShots": 0,
+      "passValueNormalized": 0.1,
+      "dribbleValueNormalized": 0.01,
+      "defensiveValueNormalized": -0.28,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "D",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Valentino Lazaro",
+      "firstName": "Valentino",
+      "lastName": "Lazaro",
+      "slug": "valentino-lazaro",
+      "shortName": "V. Lazaro",
+      "position": "M",
+      "jerseyNumber": "20",
+      "height": 180,
+      "userCount": 1028,
+      "gender": "M",
+      "id": 233826,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 827625600,
+      "proposedMarketValueRaw": {
+        "value": 3800000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "فالنتينو لازارو",
+          "bn": "ভ্যালেন্টিনো লাজারো",
+          "hi": "वैलेंटिनो लाज़ारो"
+        },
+        "shortNameTranslation": {
+          "ar": "ف. لازارو",
+          "bn": "ভি. লাজারো",
+          "hi": "वी. लाज़ारो"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 14,
+      "accuratePass": 10,
+      "totalLongBalls": 3,
+      "accurateLongBalls": 2,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 6,
+      "totalOwnHalfPasses": 7,
+      "accurateOppositionHalfPasses": 4,
+      "totalOppositionHalfPasses": 7,
+      "totalCross": 2,
+      "duelWon": 2,
+      "totalContest": 1,
+      "wonContest": 1,
+      "ballRecovery": 2,
+      "totalTackle": 1,
+      "unsuccessfulTouch": 2,
+      "minutesPlayed": 54,
+      "touches": 23,
+      "rating": 6.8,
+      "possessionLostCtrl": 8,
+      "expectedAssists": 0.00645967,
+      "totalBallCarriesDistance": 82.938289130209,
+      "ballCarriesCount": 8,
+      "totalProgression": 46.575959232447,
+      "bestBallCarryProgression": 28.490286601542,
+      "totalProgressiveBallCarriesDistance": 32.098841116152,
+      "progressiveBallCarriesCount": 1,
+      "ratingVersions": {
+        "original": 6.8,
+        "alternative": 6.6
+      },
+      "totalShots": 0,
+      "passValueNormalized": 0.07,
+      "dribbleValueNormalized": 0.04,
+      "defensiveValueNormalized": 0.17,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null
+  },
+  {},
+  {
+    "player": {
+      "name": "Gvidas Gineitis",
+      "firstName": "",
+      "lastName": "",
+      "slug": "gineitis-gvidas",
+      "shortName": "G. Gineitis",
+      "position": "M",
+      "jerseyNumber": "66",
+      "height": 191,
+      "userCount": 1606,
+      "gender": "M",
+      "id": 1030829,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 1081987200,
+      "proposedMarketValueRaw": {
+        "value": 5000000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "جينيتيس، جفيداس",
+          "bn": "জিনাইটিস, জিভিডাস",
+          "hi": "गिनाइटिस, ग्विदास"
+        },
+        "shortNameTranslation": {
+          "ar": "ج. جينيتيس",
+          "bn": "জি. জিনাইটিস",
+          "hi": "जी. गिनाइटिस"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 23,
+      "accuratePass": 19,
+      "totalLongBalls": 3,
+      "accurateLongBalls": 1,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 6,
+      "totalOwnHalfPasses": 6,
+      "accurateOppositionHalfPasses": 13,
+      "totalOppositionHalfPasses": 17,
+      "aerialWon": 1,
+      "duelLost": 1,
+      "duelWon": 2,
+      "dispossessed": 1,
+      "blockedScoringAttempt": 2,
+      "totalClearance": 1,
+      "outfielderBlock": 1,
+      "ballRecovery": 4,
+      "unsuccessfulTouch": 1,
+      "wasFouled": 1,
+      "minutesPlayed": 67,
+      "touches": 30,
+      "rating": 6.8,
+      "possessionLostCtrl": 6,
+      "expectedGoals": 0.0549,
+      "expectedAssists": 0.131605,
+      "totalBallCarriesDistance": 42.15135180969,
+      "ballCarriesCount": 5,
+      "totalProgression": 15.782980126938,
+      "progressiveBallCarriesCount": 0,
+      "ratingVersions": {
+        "original": 6.8,
+        "alternative": 6.7
+      },
+      "totalShots": 2,
+      "shotValueNormalized": -0.01,
+      "passValueNormalized": 0.31,
+      "dribbleValueNormalized": 0.03,
+      "defensiveValueNormalized": -0.04,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Rafael Obrador",
+      "firstName": "",
+      "lastName": "",
+      "slug": "rafael-obrador",
+      "shortName": "R. Obrador",
+      "position": "D",
+      "jerseyNumber": "33",
+      "height": 181,
+      "userCount": 1985,
+      "gender": "M",
+      "id": 1142692,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 1077580800,
+      "proposedMarketValueRaw": {
+        "value": 2100000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "رافائيل أوبرادور",
+          "bn": "রাফায়েল ওব্রাডর",
+          "hi": "राफेल ओब्राडोर"
+        },
+        "shortNameTranslation": {
+          "ar": "ر. أوبرادور",
+          "bn": "আর. ওব্রাডর",
+          "hi": "आर. ओब्राडोर"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 24,
+      "accuratePass": 19,
+      "totalLongBalls": 3,
+      "accurateLongBalls": 2,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 8,
+      "totalOwnHalfPasses": 11,
+      "accurateOppositionHalfPasses": 11,
+      "totalOppositionHalfPasses": 13,
+      "totalCross": 9,
+      "accurateCross": 1,
+      "aerialLost": 2,
+      "duelLost": 2,
+      "duelWon": 1,
+      "shotOffTarget": 1,
+      "totalClearance": 2,
+      "interceptionWon": 2,
+      "ballRecovery": 1,
+      "totalTackle": 1,
+      "wonTackle": 1,
+      "minutesPlayed": 90,
+      "touches": 43,
+      "rating": 6.6,
+      "possessionLostCtrl": 13,
+      "expectedGoals": 0.0258,
+      "expectedAssists": 0.065367,
+      "totalBallCarriesDistance": 52.776072554388,
+      "ballCarriesCount": 6,
+      "totalProgression": 35.224462870549,
+      "bestBallCarryProgression": 14.911340272723,
+      "totalProgressiveBallCarriesDistance": 14.948070945778,
+      "progressiveBallCarriesCount": 1,
+      "keyPass": 1,
+      "ratingVersions": {
+        "original": 6.6,
+        "alternative": 6.8
+      },
+      "totalShots": 1,
+      "shotValueNormalized": -0.05,
+      "passValueNormalized": 0.03,
+      "dribbleValueNormalized": 0.19,
+      "defensiveValueNormalized": -0.05,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Nikola Vlašić",
+      "firstName": "Nikola",
+      "lastName": "Vlašić",
+      "slug": "nikola-vlasic",
+      "shortName": "N. Vlasic",
+      "position": "M",
+      "jerseyNumber": "10",
+      "height": 178,
+      "userCount": 5692,
+      "gender": "M",
+      "sofascoreId": "niksivlasic_",
+      "id": 357596,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 875923200,
+      "proposedMarketValueRaw": {
+        "value": 9300000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "نيكولا فلاشيتش",
+          "bn": "নিকোলা ভ্লাসিচ",
+          "hi": "निकोला व्लासिक"
+        },
+        "shortNameTranslation": {
+          "ar": "ن. فلاشيتش",
+          "bn": "এন. ভ্লাসিচ",
+          "hi": "एन. व्लासिक"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 38,
+      "accuratePass": 33,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 12,
+      "totalOwnHalfPasses": 12,
+      "accurateOppositionHalfPasses": 21,
+      "totalOppositionHalfPasses": 26,
+      "aerialLost": 2,
+      "duelLost": 4,
+      "duelWon": 4,
+      "dispossessed": 1,
+      "totalContest": 2,
+      "wonContest": 1,
+      "onTargetScoringAttempt": 1,
+      "goals": 1,
+      "totalClearance": 1,
+      "ballRecovery": 3,
+      "totalTackle": 2,
+      "unsuccessfulTouch": 2,
+      "wasFouled": 1,
+      "minutesPlayed": 90,
+      "touches": 49,
+      "rating": 7.4,
+      "possessionLostCtrl": 10,
+      "expectedGoals": 0.7884,
+      "expectedGoalsOnTarget": 0.9876,
+      "expectedAssists": 0.105319,
+      "totalBallCarriesDistance": 118.7453004838,
+      "ballCarriesCount": 10,
+      "totalProgression": 45.833756536506,
+      "bestBallCarryProgression": 15.307058982743,
+      "totalProgressiveBallCarriesDistance": 32.569003322263,
+      "progressiveBallCarriesCount": 2,
+      "keyPass": 2,
+      "ratingVersions": {
+        "original": 7.4,
+        "alternative": 7.4
+      },
+      "totalShots": 1,
+      "shotValueNormalized": 0.32,
+      "passValueNormalized": 0.25,
+      "dribbleValueNormalized": 0.14,
+      "defensiveValueNormalized": 0.13,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "F",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Che Adams",
+      "slug": "che-adams",
+      "shortName": "C. Adams",
+      "position": "F",
+      "jerseyNumber": "19",
+      "height": 175,
+      "userCount": 3001,
+      "gender": "M",
+      "id": 773409,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 837216000,
+      "proposedMarketValueRaw": {
+        "value": 8199999,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تشي آدامز",
+          "bn": "চে অ্যাডামস",
+          "hi": "चे एडम्स"
+        },
+        "shortNameTranslation": {
+          "ar": "ت. آدامز",
+          "bn": "সি. অ্যাডামস",
+          "hi": "सी. एडम्स"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 20,
+      "accuratePass": 16,
+      "totalLongBalls": 2,
+      "accurateLongBalls": 2,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 6,
+      "totalOwnHalfPasses": 8,
+      "accurateOppositionHalfPasses": 10,
+      "totalOppositionHalfPasses": 12,
+      "aerialLost": 1,
+      "duelLost": 3,
+      "duelWon": 2,
+      "totalContest": 2,
+      "ballRecovery": 2,
+      "totalTackle": 2,
+      "wonTackle": 2,
+      "minutesPlayed": 67,
+      "touches": 28,
+      "rating": 6.6,
+      "possessionLostCtrl": 7,
+      "expectedAssists": 0.00814598,
+      "totalBallCarriesDistance": 55.593683198056,
+      "ballCarriesCount": 6,
+      "totalProgression": 28.433991852538,
+      "bestBallCarryProgression": 25.804652240276,
+      "totalProgressiveBallCarriesDistance": 27.181683557131,
+      "progressiveBallCarriesCount": 1,
+      "ratingVersions": {
+        "original": 6.6,
+        "alternative": 6.6
+      },
+      "totalShots": 0,
+      "passValueNormalized": -0.11,
+      "dribbleValueNormalized": 0.03,
+      "defensiveValueNormalized": 0.15,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "F",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Giovanni Simeone",
+      "firstName": "Giovanni",
+      "lastName": "Simeone",
+      "slug": "giovanni-simeone",
+      "shortName": "G. Simeone",
+      "position": "F",
+      "jerseyNumber": "18",
+      "height": 179,
+      "userCount": 10144,
+      "gender": "M",
+      "sofascoreId": "simeonegiovanni",
+      "id": 341143,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 804902400,
+      "proposedMarketValueRaw": {
+        "value": 5200000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "جيوفاني سيميوني",
+          "bn": "জন সিমিওন",
+          "hi": "जियोवानी शिमोन"
+        },
+        "shortNameTranslation": {
+          "ar": "ج. سيميوني",
+          "bn": "জি. সিমিওন",
+          "hi": "जी. शिमोन"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 19,
+      "accuratePass": 16,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 7,
+      "totalOwnHalfPasses": 8,
+      "accurateOppositionHalfPasses": 9,
+      "totalOppositionHalfPasses": 11,
+      "totalCross": 1,
+      "aerialLost": 1,
+      "aerialWon": 1,
+      "duelLost": 4,
+      "duelWon": 3,
+      "dispossessed": 1,
+      "totalContest": 3,
+      "wonContest": 1,
+      "bigChanceMissed": 1,
+      "shotOffTarget": 2,
+      "onTargetScoringAttempt": 1,
+      "blockedScoringAttempt": 1,
+      "goals": 1,
+      "ballRecovery": 5,
+      "unsuccessfulTouch": 1,
+      "wasFouled": 1,
+      "totalOffside": 1,
+      "minutesPlayed": 89,
+      "touches": 35,
+      "rating": 7.3,
+      "possessionLostCtrl": 8,
+      "expectedGoals": 1.1536,
+      "expectedGoalsOnTarget": 0.2794,
+      "expectedAssists": 0.0158207,
+      "totalBallCarriesDistance": 87.611034246065,
+      "ballCarriesCount": 10,
+      "totalProgression": 17.536842021718,
+      "bestBallCarryProgression": 15.292550837464,
+      "totalProgressiveBallCarriesDistance": 15.52103891497,
+      "progressiveBallCarriesCount": 1,
+      "keyPass": 1,
+      "ratingVersions": {
+        "original": 7.3,
+        "alternative": 7.1
+      },
+      "totalShots": 4,
+      "shotValueNormalized": 0.44,
+      "passValueNormalized": -0.06,
+      "dribbleValueNormalized": 0.12,
+      "defensiveValueNormalized": -0.02,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "F",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Luca Marianucci",
+      "firstName": "",
+      "lastName": "",
+      "slug": "marianucci-luca",
+      "shortName": "L. Marianucci",
+      "position": "D",
+      "jerseyNumber": "35",
+      "height": 186,
+      "userCount": 914,
+      "gender": "M",
+      "id": 1165371,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 1090540800,
+      "proposedMarketValueRaw": {
+        "value": 8000000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "ماريانوتشي، لوكا",
+          "bn": "মারিয়ানুচি, লুকা",
+          "hi": "मारियानुची, लुका"
+        },
+        "shortNameTranslation": {
+          "ar": "ل. ماريانوتشي",
+          "bn": "এল. মারিয়ানুচি",
+          "hi": "एल. मारियानुची"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 10,
+      "accuratePass": 8,
+      "totalLongBalls": 4,
+      "accurateLongBalls": 2,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 5,
+      "totalOwnHalfPasses": 5,
+      "accurateOppositionHalfPasses": 3,
+      "totalOppositionHalfPasses": 5,
+      "totalCross": 2,
+      "accurateCross": 1,
+      "duelWon": 1,
+      "totalContest": 1,
+      "wonContest": 1,
+      "bigChanceCreated": 1,
+      "ballRecovery": 1,
+      "unsuccessfulTouch": 1,
+      "minutesPlayed": 37,
+      "touches": 14,
+      "rating": 6.6,
+      "possessionLostCtrl": 4,
+      "expectedAssists": 0.0567763,
+      "totalBallCarriesDistance": 88.357080434545,
+      "ballCarriesCount": 4,
+      "totalProgression": 78.387642527036,
+      "bestBallCarryProgression": 35.960374032658,
+      "totalProgressiveBallCarriesDistance": 81.371717165537,
+      "progressiveBallCarriesCount": 3,
+      "keyPass": 1,
+      "ratingVersions": {
+        "original": 6.6,
+        "alternative": 6.7
+      },
+      "totalShots": 0,
+      "passValueNormalized": 0.24,
+      "dribbleValueNormalized": 0.14,
+      "defensiveValueNormalized": -0.18,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "D",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Alieu Njie",
+      "firstName": "",
+      "lastName": "",
+      "slug": "alieu-njie",
+      "shortName": "A. Njie",
+      "position": "F",
+      "jerseyNumber": "92",
+      "height": 185,
+      "userCount": 386,
+      "gender": "M",
+      "id": 1493157,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 1116028800,
+      "proposedMarketValueRaw": {
+        "value": 2400000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "عليو نيجي",
+          "bn": "আলিউ নজি",
+          "hi": "अलीयू न्जी"
+        },
+        "shortNameTranslation": {
+          "ar": "ع. نيجي",
+          "bn": "এ. এনজি",
+          "hi": "ए. न्जी"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 7,
+      "accuratePass": 4,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 1,
+      "totalOwnHalfPasses": 1,
+      "accurateOppositionHalfPasses": 3,
+      "totalOppositionHalfPasses": 6,
+      "aerialWon": 1,
+      "duelLost": 6,
+      "duelWon": 5,
+      "dispossessed": 1,
+      "totalContest": 4,
+      "wonContest": 1,
+      "totalTackle": 2,
+      "wasFouled": 1,
+      "fouls": 2,
+      "minutesPlayed": 36,
+      "touches": 16,
+      "rating": 6.6,
+      "possessionLostCtrl": 7,
+      "expectedAssists": 0.00091172,
+      "totalBallCarriesDistance": 38.314366612016,
+      "ballCarriesCount": 4,
+      "totalProgression": 28.200566269586,
+      "progressiveBallCarriesCount": 0,
+      "ratingVersions": {
+        "original": 6.6,
+        "alternative": 6.4
+      },
+      "totalShots": 0,
+      "passValueNormalized": -0.06,
+      "dribbleValueNormalized": 0.02,
+      "defensiveValueNormalized": -0.04,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "F",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Cesare Casadei",
+      "firstName": "",
+      "lastName": "",
+      "slug": "cesare-casadei",
+      "shortName": "C. Casadei",
+      "position": "M",
+      "jerseyNumber": "22",
+      "height": 192,
+      "userCount": 6571,
+      "gender": "M",
+      "sofascoreId": "cesarecasadei",
+      "id": 1016788,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 1042156800,
+      "proposedMarketValueRaw": {
+        "value": 14500000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "سيزار كاسادي",
+          "bn": "সিজার ক্যাসাডেই",
+          "hi": "सेसरे कासादेई"
+        },
+        "shortNameTranslation": {
+          "ar": "س. كاسادي",
+          "bn": "সি. ক্যাসাডেই",
+          "hi": "सी. कासादेई"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 3,
+      "accuratePass": 2,
+      "totalLongBalls": 1,
+      "accurateLongBalls": 1,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 1,
+      "totalOwnHalfPasses": 1,
+      "accurateOppositionHalfPasses": 1,
+      "totalOppositionHalfPasses": 2,
+      "aerialLost": 1,
+      "aerialWon": 1,
+      "duelLost": 1,
+      "duelWon": 1,
+      "blockedScoringAttempt": 1,
+      "totalClearance": 2,
+      "minutesPlayed": 23,
+      "touches": 7,
+      "rating": 6.9,
+      "possessionLostCtrl": 1,
+      "expectedGoals": 0.0915,
+      "expectedAssists": 0.0972795,
+      "totalBallCarriesDistance": 5.6293183423928,
+      "ballCarriesCount": 1,
+      "totalProgression": -5.3001962775864,
+      "progressiveBallCarriesCount": 0,
+      "keyPass": 1,
+      "ratingVersions": {
+        "original": 6.9,
+        "alternative": 6.8
+      },
+      "totalShots": 1,
+      "shotValueNormalized": 0.01,
+      "passValueNormalized": 0.17,
+      "dribbleValueNormalized": 0.08,
+      "defensiveValueNormalized": 0.19,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Duván Zapata",
+      "slug": "duvan-zapata",
+      "shortName": "D. Zapata",
+      "position": "F",
+      "jerseyNumber": "91",
+      "height": 189,
+      "userCount": 5962,
+      "gender": "M",
+      "sofascoreId": "duvanzapata91",
+      "id": 38162,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 670464000,
+      "proposedMarketValueRaw": {
+        "value": 3100000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "bn": "ডুভান জাপাতা",
+          "hi": "डुवान ज़ापाटा"
+        },
+        "shortNameTranslation": {
+          "bn": "ডি. জাপাতা",
+          "hi": "डी. ज़ापाटा"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 3,
+      "accuratePass": 2,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 1,
+      "totalOwnHalfPasses": 1,
+      "accurateOppositionHalfPasses": 1,
+      "totalOppositionHalfPasses": 2,
+      "totalCross": 1,
+      "aerialLost": 2,
+      "aerialWon": 1,
+      "duelLost": 4,
+      "duelWon": 2,
+      "totalContest": 1,
+      "blockedScoringAttempt": 3,
+      "ballRecovery": 1,
+      "unsuccessfulTouch": 1,
+      "wasFouled": 1,
+      "fouls": 2,
+      "minutesPlayed": 23,
+      "touches": 10,
+      "rating": 6.3,
+      "possessionLostCtrl": 4,
+      "expectedGoals": 0.2173,
+      "expectedAssists": 0.00074237,
+      "totalBallCarriesDistance": 52.504048450713,
+      "ballCarriesCount": 3,
+      "totalProgression": 31.722318366172,
+      "bestBallCarryProgression": 23.228593233055,
+      "totalProgressiveBallCarriesDistance": 48.613696153041,
+      "progressiveBallCarriesCount": 2,
+      "ratingVersions": {
+        "original": 6.3,
+        "alternative": 6.4
+      },
+      "totalShots": 3,
+      "shotValueNormalized": -0.37,
+      "passValueNormalized": -0.04,
+      "dribbleValueNormalized": 0.05,
+      "defensiveValueNormalized": -0.01,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "F",
+    "extra": null
+  },
+  {},
+  {
+    "player": {
+      "name": "Lapo Siviero",
+      "firstName": "Lapo Siviero",
+      "slug": "siviero-lapo",
+      "shortName": "L. Siviero",
+      "position": "G",
+      "jerseyNumber": "99",
+      "height": 195,
+      "userCount": 80,
+      "gender": "M",
+      "id": 1519010,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 1164240000,
+      "proposedMarketValueRaw": {
+        "value": 280000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "سيفييرو، لابو"
+        },
+        "shortNameTranslation": {
+          "ar": "ل. سيفييرو"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "G",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Franco Israel",
+      "slug": "franco-israel",
+      "shortName": "F. Israel",
+      "position": "G",
+      "jerseyNumber": "81",
+      "height": 189,
+      "userCount": 2267,
+      "gender": "M",
+      "id": 1084846,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 956361600,
+      "proposedMarketValueRaw": {
+        "value": 2900000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "فرانكو إسرائيل",
+          "bn": "ফ্রাঙ্কো ইজরায়েল",
+          "hi": "फ्रेंको इजराइल"
+        },
+        "shortNameTranslation": {
+          "ar": "ف. إسرائيل",
+          "bn": "এফ. ইজরায়েল",
+          "hi": "एफ. इजराइल"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "G",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Cristiano Biraghi",
+      "firstName": "Cristiano",
+      "lastName": "Biraghi",
+      "slug": "cristiano-biraghi",
+      "shortName": "C. Biraghi",
+      "position": "D",
+      "jerseyNumber": "34",
+      "height": 184,
+      "userCount": 1286,
+      "gender": "M",
+      "id": 122848,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 715305600,
+      "proposedMarketValueRaw": {
+        "value": 1300000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "كريستيانو بيراغي",
+          "bn": "ক্রিশ্চিয়ানো বিরাগি",
+          "hi": "क्रिस्टियानो बिराघी"
+        },
+        "shortNameTranslation": {
+          "ar": "ك. بيراغي",
+          "bn": "সি. বিরাগি",
+          "hi": "सी. बिराघी"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "D",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Guillermo Maripán",
+      "firstName": "Guillermo",
+      "lastName": "Maripan",
+      "slug": "guillermo-maripan",
+      "shortName": "G. Maripan",
+      "position": "D",
+      "jerseyNumber": "13",
+      "height": 193,
+      "userCount": 2150,
+      "gender": "M",
+      "id": 339909,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 768182400,
+      "proposedMarketValueRaw": {
+        "value": 2800000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "bn": "গুইলারমো মারিপান",
+          "hi": "गिलर्मो मारिपन"
+        },
+        "shortNameTranslation": {
+          "bn": "জি. মারিপান",
+          "hi": "जी. मारिपन"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "D",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Ivan Ilić",
+      "slug": "ivan-ilic",
+      "shortName": "I. Ilić",
+      "position": "M",
+      "jerseyNumber": "8",
+      "height": 185,
+      "userCount": 1804,
+      "gender": "M",
+      "id": 877371,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 984787200,
+      "proposedMarketValueRaw": {
+        "value": 9700000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "إيفان إيليتش",
+          "bn": "ইভান ইলিচ",
+          "hi": "इवान इलीक"
+        },
+        "shortNameTranslation": {
+          "ar": "إ. إيليتش",
+          "bn": "আই. ইলিচ",
+          "hi": "आई. इलीक"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Matteo Prati",
+      "slug": "matteo-prati",
+      "shortName": "M. Prati",
+      "position": "M",
+      "jerseyNumber": "4",
+      "height": 182,
+      "userCount": 719,
+      "gender": "M",
+      "id": 1111640,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 1072569600,
+      "proposedMarketValueRaw": {
+        "value": 5400000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "ماتييو براتي",
+          "bn": "মাত্তেও প্রতি",
+          "hi": "माटेओ प्राति"
+        },
+        "shortNameTranslation": {
+          "ar": "م. براتي",
+          "bn": "এম. প্রতি",
+          "hi": "एम. प्राति"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 140420,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null
+  },
+  {},
+  {
+    "player": {
+      "name": "Yann Sommer",
+      "slug": "yann-sommer",
+      "shortName": "Y. Sommer",
+      "position": "G",
+      "jerseyNumber": "1",
+      "height": 183,
+      "userCount": 12749,
+      "gender": "M",
+      "sofascoreId": "yannsommer",
+      "id": 16206,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 598320000,
+      "proposedMarketValueRaw": {
+        "value": 2300000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "يان زومر",
+          "bn": "জন সোমার",
+          "hi": "यान सोमर"
+        },
+        "shortNameTranslation": {
+          "ar": "ي. زومر",
+          "bn": "ওয়াই. সোমার",
+          "hi": "वाई. सोमर"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 40,
+      "accuratePass": 34,
+      "totalLongBalls": 9,
+      "accurateLongBalls": 3,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 31,
+      "totalOwnHalfPasses": 31,
+      "accurateOppositionHalfPasses": 3,
+      "totalOppositionHalfPasses": 9,
+      "totalClearance": 1,
+      "ballRecovery": 7,
+      "penaltyFaced": 1,
+      "punches": 1,
+      "minutesPlayed": 90,
+      "touches": 44,
+      "rating": 6,
+      "possessionLostCtrl": 6,
+      "expectedAssists": 0.00157086,
+      "totalBallCarriesDistance": 35.368962501475,
+      "ballCarriesCount": 8,
+      "totalProgression": 12.50418358839,
+      "progressiveBallCarriesCount": 0,
+      "ratingVersions": {
+        "original": 6,
+        "alternative": 6.4
+      },
+      "totalShots": 0,
+      "goalsPrevented": -0.733,
+      "passValueNormalized": 0.12,
+      "dribbleValueNormalized": -0.02,
+      "defensiveValueNormalized": -0.22,
+      "goalkeeperValueNormalized": -0.67,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "G",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Yann Bisseck",
+      "slug": "yann-bisseck",
+      "shortName": "Y. Bisseck",
+      "position": "D",
+      "jerseyNumber": "31",
+      "height": 194,
+      "userCount": 5769,
+      "gender": "M",
+      "id": 906275,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 975456000,
+      "proposedMarketValueRaw": {
+        "value": 33000000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "يان بيسيك",
+          "bn": "ইয়ান বিসেক",
+          "hi": "यान बिस्सेक"
+        },
+        "shortNameTranslation": {
+          "ar": "ي. بيسيك",
+          "bn": "ওয়াই. বিসেক",
+          "hi": "वाई. बिस्सेक"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 45,
+      "accuratePass": 44,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 28,
+      "totalOwnHalfPasses": 28,
+      "accurateOppositionHalfPasses": 16,
+      "totalOppositionHalfPasses": 17,
+      "aerialWon": 2,
+      "duelLost": 2,
+      "duelWon": 3,
+      "dispossessed": 1,
+      "onTargetScoringAttempt": 2,
+      "goals": 1,
+      "totalClearance": 2,
+      "ballRecovery": 4,
+      "totalTackle": 1,
+      "wonTackle": 1,
+      "unsuccessfulTouch": 1,
+      "fouls": 1,
+      "minutesPlayed": 87,
+      "touches": 57,
+      "rating": 7.4,
+      "possessionLostCtrl": 3,
+      "expectedGoals": 0.2011,
+      "expectedGoalsOnTarget": 0.8833,
+      "expectedAssists": 0.0511596,
+      "totalBallCarriesDistance": 113.59094256729,
+      "ballCarriesCount": 13,
+      "totalProgression": 18.173138851954,
+      "progressiveBallCarriesCount": 0,
+      "ratingVersions": {
+        "original": 7.4,
+        "alternative": 7.4
+      },
+      "totalShots": 2,
+      "shotValueNormalized": 0.49,
+      "passValueNormalized": 0.15,
+      "dribbleValueNormalized": 0.06,
+      "defensiveValueNormalized": -0.3,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "D",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Manuel Akanji",
+      "firstName": "Manuel",
+      "lastName": "Akanji",
+      "slug": "manuel-akanji",
+      "shortName": "M. Akanji",
+      "position": "D",
+      "jerseyNumber": "25",
+      "height": 187,
+      "userCount": 22659,
+      "gender": "M",
+      "sofascoreId": "manuel_akanji",
+      "id": 383560,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 806112000,
+      "proposedMarketValueRaw": {
+        "value": 20000000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "مانويل أكانجي",
+          "bn": "ম্যানুয়েল আকানজি",
+          "hi": "मैनुअल अकांजी"
+        },
+        "shortNameTranslation": {
+          "ar": "م. أكانجي",
+          "bn": "এম. আকানজি",
+          "hi": "एम. अकांजी"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 90,
+      "accuratePass": 80,
+      "totalLongBalls": 6,
+      "accurateLongBalls": 5,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 42,
+      "totalOwnHalfPasses": 46,
+      "accurateOppositionHalfPasses": 38,
+      "totalOppositionHalfPasses": 44,
+      "aerialLost": 2,
+      "aerialWon": 4,
+      "duelLost": 3,
+      "duelWon": 6,
+      "challengeLost": 1,
+      "shotOffTarget": 1,
+      "totalClearance": 5,
+      "outfielderBlock": 3,
+      "interceptionWon": 2,
+      "ballRecovery": 2,
+      "totalTackle": 2,
+      "wonTackle": 1,
+      "unsuccessfulTouch": 1,
+      "wasFouled": 1,
+      "minutesPlayed": 90,
+      "touches": 107,
+      "rating": 7.6,
+      "possessionLostCtrl": 11,
+      "expectedGoals": 0.1395,
+      "expectedAssists": 0.0271139,
+      "totalBallCarriesDistance": 200.491012795,
+      "ballCarriesCount": 21,
+      "totalProgression": 140.64325568952,
+      "bestBallCarryProgression": 20.523637003285,
+      "totalProgressiveBallCarriesDistance": 20.830107152869,
+      "progressiveBallCarriesCount": 1,
+      "keyPass": 1,
+      "ratingVersions": {
+        "original": 7.6,
+        "alternative": 7.6
+      },
+      "totalShots": 1,
+      "shotValueNormalized": -0.52,
+      "passValueNormalized": 0.28,
+      "dribbleValueNormalized": 0.22,
+      "defensiveValueNormalized": 0.38,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "D",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Carlos Augusto",
+      "firstName": "",
+      "lastName": "",
+      "slug": "carlos-augusto",
+      "shortName": "C. Augusto",
+      "position": "D",
+      "jerseyNumber": "30",
+      "height": 184,
+      "userCount": 7848,
+      "gender": "M",
+      "id": 929199,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 915667200,
+      "proposedMarketValueRaw": {
+        "value": 25000000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "كارلوس أوغستو",
+          "bn": "কার্লোস অগাস্টো",
+          "hi": "कार्लोस ऑगस्टो"
+        },
+        "shortNameTranslation": {
+          "ar": "ك. أوغستو",
+          "bn": "সি. অগাস্টো",
+          "hi": "सी. ऑगस्टो"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 81,
+      "accuratePass": 75,
+      "totalLongBalls": 5,
+      "accurateLongBalls": 2,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 42,
+      "totalOwnHalfPasses": 46,
+      "accurateOppositionHalfPasses": 33,
+      "totalOppositionHalfPasses": 35,
+      "totalCross": 1,
+      "accurateCross": 1,
+      "aerialWon": 1,
+      "duelWon": 4,
+      "blockedScoringAttempt": 1,
+      "totalClearance": 4,
+      "interceptionWon": 1,
+      "ballRecovery": 2,
+      "totalTackle": 2,
+      "wonTackle": 1,
+      "errorLeadToAShot": 2,
+      "unsuccessfulTouch": 1,
+      "penaltyConceded": 1,
+      "wasFouled": 1,
+      "fouls": 1,
+      "minutesPlayed": 90,
+      "touches": 100,
+      "rating": 6.4,
+      "possessionLostCtrl": 7,
+      "expectedGoals": 0.0386,
+      "expectedAssists": 0.0151289,
+      "totalBallCarriesDistance": 130.30928281413,
+      "ballCarriesCount": 22,
+      "totalProgression": 54.666551038503,
+      "progressiveBallCarriesCount": 0,
+      "ratingVersions": {
+        "original": 6.4,
+        "alternative": 6.1
+      },
+      "totalShots": 1,
+      "shotValueNormalized": -0.01,
+      "passValueNormalized": 0.12,
+      "dribbleValueNormalized": 0.07,
+      "defensiveValueNormalized": -0.5,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "D",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Matteo Darmian",
+      "slug": "matteo-darmian",
+      "shortName": "M. Darmian",
+      "position": "M",
+      "jerseyNumber": "36",
+      "height": 182,
+      "userCount": 3763,
+      "gender": "M",
+      "id": 19352,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 628560000,
+      "proposedMarketValueRaw": {
+        "value": 1400000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "ماتيو دارميان",
+          "bn": "ম্যাথিউ ডারমিয়ান",
+          "hi": "माटेओ डारमियान"
+        },
+        "shortNameTranslation": {
+          "ar": "م. دارميان",
+          "bn": "এম. ডারমিয়ান",
+          "hi": "एम. डारमियान"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 20,
+      "accuratePass": 18,
+      "totalLongBalls": 1,
+      "accurateLongBalls": 1,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 7,
+      "totalOwnHalfPasses": 7,
+      "accurateOppositionHalfPasses": 11,
+      "totalOppositionHalfPasses": 13,
+      "totalCross": 3,
+      "aerialLost": 1,
+      "aerialWon": 1,
+      "duelLost": 2,
+      "duelWon": 3,
+      "totalClearance": 2,
+      "outfielderBlock": 2,
+      "totalTackle": 2,
+      "wonTackle": 2,
+      "unsuccessfulTouch": 2,
+      "fouls": 1,
+      "minutesPlayed": 80,
+      "touches": 37,
+      "rating": 6.8,
+      "possessionLostCtrl": 7,
+      "expectedAssists": 0.0140321,
+      "totalBallCarriesDistance": 42.395857563933,
+      "ballCarriesCount": 7,
+      "totalProgression": 11.340311442953,
+      "progressiveBallCarriesCount": 0,
+      "ratingVersions": {
+        "original": 6.8,
+        "alternative": 6.9
+      },
+      "totalShots": 0,
+      "passValueNormalized": 0.04,
+      "dribbleValueNormalized": 0.06,
+      "defensiveValueNormalized": 0.17,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Nicolo Barella",
+      "firstName": "Nicolo",
+      "lastName": "Barella",
+      "slug": "nicolo-barella",
+      "shortName": "N. Barella",
+      "position": "M",
+      "jerseyNumber": "23",
+      "height": 175,
+      "userCount": 21872,
+      "gender": "M",
+      "sofascoreId": "nicolo_barella",
+      "id": 363856,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 855273600,
+      "proposedMarketValueRaw": {
+        "value": 54000000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "bn": "নিকোলো বারেলা",
+          "hi": "निकोलो बरेला"
+        },
+        "shortNameTranslation": {
+          "bn": "এন. বেরেলা",
+          "hi": "एन. बरेला"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 73,
+      "accuratePass": 64,
+      "totalLongBalls": 4,
+      "accurateLongBalls": 2,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 30,
+      "totalOwnHalfPasses": 30,
+      "accurateOppositionHalfPasses": 34,
+      "totalOppositionHalfPasses": 43,
+      "totalCross": 4,
+      "accurateCross": 1,
+      "aerialWon": 1,
+      "duelLost": 4,
+      "duelWon": 2,
+      "challengeLost": 1,
+      "dispossessed": 1,
+      "totalContest": 1,
+      "totalClearance": 1,
+      "interceptionWon": 1,
+      "ballRecovery": 7,
+      "totalTackle": 1,
+      "wonTackle": 1,
+      "unsuccessfulTouch": 1,
+      "fouls": 1,
+      "minutesPlayed": 90,
+      "touches": 85,
+      "rating": 6.6,
+      "possessionLostCtrl": 15,
+      "expectedAssists": 0.101388,
+      "totalBallCarriesDistance": 129.32880909724,
+      "ballCarriesCount": 18,
+      "totalProgression": 21.671527580414,
+      "progressiveBallCarriesCount": 0,
+      "keyPass": 1,
+      "ratingVersions": {
+        "original": 6.6,
+        "alternative": 7
+      },
+      "totalShots": 0,
+      "passValueNormalized": 0.25,
+      "dribbleValueNormalized": -0.25,
+      "defensiveValueNormalized": -0.11,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null
+  },
+  {},
+  {},
+  {
+    "player": {
+      "name": "Federico Dimarco",
+      "firstName": "Federico",
+      "lastName": "Dimarco",
+      "slug": "federico-dimarco",
+      "shortName": "F. Dimarco",
+      "position": "M",
+      "jerseyNumber": "32",
+      "height": 174,
+      "userCount": 17086,
+      "gender": "M",
+      "sofascoreId": "dimarco32",
+      "id": 284361,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 879120000,
+      "proposedMarketValueRaw": {
+        "value": 48000000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "فيديريكو ديماركو",
+          "bn": "ফেদেরিকো ডিমারকো",
+          "hi": "फेडेरिको डिमार्को"
+        },
+        "shortNameTranslation": {
+          "ar": "ف. ديماركو",
+          "bn": "এফ. ডিমারকো",
+          "hi": "एफ. डिमार्को"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 45,
+      "accuratePass": 41,
+      "totalLongBalls": 2,
+      "accurateLongBalls": 2,
+      "goalAssist": 2,
+      "accurateOwnHalfPasses": 18,
+      "totalOwnHalfPasses": 21,
+      "accurateOppositionHalfPasses": 23,
+      "totalOppositionHalfPasses": 24,
+      "totalCross": 3,
+      "accurateCross": 2,
+      "aerialLost": 1,
+      "duelLost": 2,
+      "duelWon": 1,
+      "challengeLost": 1,
+      "bigChanceCreated": 2,
+      "onTargetScoringAttempt": 1,
+      "blockedScoringAttempt": 1,
+      "totalClearance": 1,
+      "interceptionWon": 1,
+      "ballRecovery": 3,
+      "unsuccessfulTouch": 1,
+      "wasFouled": 1,
+      "minutesPlayed": 80,
+      "touches": 61,
+      "rating": 8.5,
+      "possessionLostCtrl": 6,
+      "expectedGoals": 0.1897,
+      "expectedGoalsOnTarget": 0.6126,
+      "expectedAssists": 0.659359,
+      "totalBallCarriesDistance": 117.9613019631,
+      "ballCarriesCount": 13,
+      "totalProgression": 81.25096631744,
+      "bestBallCarryProgression": 21.622611158493,
+      "totalProgressiveBallCarriesDistance": 22.851606529958,
+      "progressiveBallCarriesCount": 1,
+      "keyPass": 5,
+      "ratingVersions": {
+        "original": 8.5,
+        "alternative": 8.5
+      },
+      "totalShots": 2,
+      "shotValueNormalized": 0.28,
+      "passValueNormalized": 1,
+      "dribbleValueNormalized": 0.09,
+      "defensiveValueNormalized": -0.13,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Marcus Thuram",
+      "slug": "marcus-thuram",
+      "shortName": "M. Thuram",
+      "position": "F",
+      "jerseyNumber": "9",
+      "height": 192,
+      "userCount": 26886,
+      "gender": "M",
+      "sofascoreId": "m_thuram",
+      "id": 791702,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 870825600,
+      "proposedMarketValueRaw": {
+        "value": 52000000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "ماركوس تورام",
+          "bn": "থুরাম, মার্কাস",
+          "hi": "थुरम, मार्कस"
+        },
+        "shortNameTranslation": {
+          "ar": "م. تورام",
+          "bn": "এম. থুরাম",
+          "hi": "एम. मार्कस"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 26,
+      "accuratePass": 20,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 4,
+      "totalOwnHalfPasses": 4,
+      "accurateOppositionHalfPasses": 16,
+      "totalOppositionHalfPasses": 22,
+      "totalCross": 1,
+      "aerialLost": 2,
+      "duelLost": 2,
+      "duelWon": 3,
+      "onTargetScoringAttempt": 1,
+      "blockedScoringAttempt": 3,
+      "goals": 1,
+      "outfielderBlock": 1,
+      "ballRecovery": 2,
+      "totalTackle": 1,
+      "wonTackle": 1,
+      "wasFouled": 2,
+      "totalOffside": 1,
+      "minutesPlayed": 90,
+      "touches": 36,
+      "rating": 7.3,
+      "possessionLostCtrl": 7,
+      "expectedGoals": 0.592,
+      "expectedGoalsOnTarget": 0.9575,
+      "expectedAssists": 0.0510291,
+      "totalBallCarriesDistance": 124.29840240669,
+      "ballCarriesCount": 8,
+      "totalProgression": 83.426975311117,
+      "bestBallCarryProgression": 24.593148482007,
+      "totalProgressiveBallCarriesDistance": 98.401851899387,
+      "progressiveBallCarriesCount": 4,
+      "ratingVersions": {
+        "original": 7.3,
+        "alternative": 7.5
+      },
+      "totalShots": 4,
+      "shotValueNormalized": 0.29,
+      "passValueNormalized": -0.33,
+      "dribbleValueNormalized": 0.39,
+      "defensiveValueNormalized": 0.29,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "F",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Ange-Yoan Bonny",
+      "firstName": "",
+      "lastName": "",
+      "slug": "ange-yoan-bonny",
+      "shortName": "A. Bonny",
+      "position": "F",
+      "jerseyNumber": "14",
+      "height": 189,
+      "userCount": 11101,
+      "gender": "M",
+      "id": 1086223,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 1067040000,
+      "proposedMarketValueRaw": {
+        "value": 34000000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "أنجي-يوان بوني",
+          "bn": "অ্যাঞ্জ-ইয়োয়ান বনি",
+          "hi": "एंज-योन बोनी"
+        },
+        "shortNameTranslation": {
+          "ar": "أ. بوني",
+          "bn": "এ. বনি",
+          "hi": "ए. बोनी"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 11,
+      "accuratePass": 9,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 2,
+      "totalOwnHalfPasses": 2,
+      "accurateOppositionHalfPasses": 7,
+      "totalOppositionHalfPasses": 9,
+      "totalCross": 1,
+      "duelLost": 8,
+      "dispossessed": 4,
+      "totalContest": 4,
+      "shotOffTarget": 1,
+      "onTargetScoringAttempt": 1,
+      "ballRecovery": 2,
+      "minutesPlayed": 61,
+      "touches": 26,
+      "rating": 5.7,
+      "possessionLostCtrl": 11,
+      "expectedGoals": 0.2069,
+      "expectedGoalsOnTarget": 0.0471,
+      "expectedAssists": 0.0104928,
+      "totalBallCarriesDistance": 68.234243651399,
+      "ballCarriesCount": 6,
+      "totalProgression": -3.2764343238859,
+      "bestBallCarryProgression": 10.19921777936,
+      "totalProgressiveBallCarriesDistance": 16.485140248114,
+      "progressiveBallCarriesCount": 1,
+      "ratingVersions": {
+        "original": 5.7,
+        "alternative": 6.3
+      },
+      "totalShots": 2,
+      "shotValueNormalized": -0.51,
+      "passValueNormalized": -0.27,
+      "dribbleValueNormalized": -0.61,
+      "defensiveValueNormalized": -0.01,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "F",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Francesco Pio Esposito",
+      "slug": "francesco-pio-esposito",
+      "shortName": "F. P. Esposito",
+      "position": "F",
+      "jerseyNumber": "94",
+      "height": 189,
+      "userCount": 10922,
+      "gender": "M",
+      "id": 1156616,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 1119916800,
+      "proposedMarketValueRaw": {
+        "value": 47000000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "فرانشيسكو بيو إسبوزيتو",
+          "bn": "ফ্রান্সেসকো পিও এস্পোসিটো",
+          "hi": "फ्रांसेस्को पियो एस्पोसिटो"
+        },
+        "shortNameTranslation": {
+          "ar": "ف. ب. إسبوزيتو",
+          "bn": "এফ. পি. এসপোসিতো",
+          "hi": "एफ. पी. एस्पोसिटो"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 4,
+      "accuratePass": 3,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 3,
+      "totalOwnHalfPasses": 3,
+      "totalOppositionHalfPasses": 1,
+      "duelLost": 2,
+      "duelWon": 2,
+      "dispossessed": 1,
+      "unsuccessfulTouch": 2,
+      "wasFouled": 2,
+      "fouls": 1,
+      "minutesPlayed": 29,
+      "touches": 9,
+      "rating": 6.5,
+      "possessionLostCtrl": 4,
+      "expectedAssists": 8.182e-05,
+      "totalBallCarriesDistance": 12.066772631256,
+      "ballCarriesCount": 2,
+      "totalProgression": 9.9696254764047,
+      "progressiveBallCarriesCount": 0,
+      "ratingVersions": {
+        "original": 6.5,
+        "alternative": 6.4
+      },
+      "totalShots": 0,
+      "passValueNormalized": -0.04,
+      "dribbleValueNormalized": 0.04,
+      "defensiveValueNormalized": -0.01,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "F",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Denzel Dumfries",
+      "firstName": "",
+      "lastName": "",
+      "slug": "denzel-dumfries",
+      "shortName": "D. Dumfries",
+      "position": "M",
+      "jerseyNumber": "2",
+      "height": 189,
+      "userCount": 15637,
+      "gender": "M",
+      "sofascoreId": "ddumfries2",
+      "id": 759520,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 829785600,
+      "proposedMarketValueRaw": {
+        "value": 26000000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "دينزل دومفريز",
+          "bn": "ডেনজেল ​​ডামফ্রিজ",
+          "hi": "डेंज़ल डमफ्रिज़"
+        },
+        "shortNameTranslation": {
+          "ar": "د. دومفريز",
+          "bn": "ডি. ডামফ্রিজ",
+          "hi": "डी. डमफ्रिज़"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 8,
+      "accuratePass": 6,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 3,
+      "totalOwnHalfPasses": 3,
+      "accurateOppositionHalfPasses": 3,
+      "totalOppositionHalfPasses": 5,
+      "totalClearance": 1,
+      "ballRecovery": 2,
+      "minutesPlayed": 10,
+      "touches": 13,
+      "rating": 6.8,
+      "possessionLostCtrl": 4,
+      "expectedAssists": 0.0245041,
+      "totalBallCarriesDistance": 16.100511840323,
+      "ballCarriesCount": 3,
+      "totalProgression": 10.342139500407,
+      "progressiveBallCarriesCount": 0,
+      "ratingVersions": {
+        "original": 6.8,
+        "alternative": 6.7
+      },
+      "totalShots": 0,
+      "passValueNormalized": 0.07,
+      "dribbleValueNormalized": 0.02,
+      "defensiveValueNormalized": 0.22,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "D",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Andy Diouf",
+      "firstName": "",
+      "lastName": "",
+      "slug": "andy-diouf",
+      "shortName": "A. Diouf",
+      "position": "M",
+      "jerseyNumber": "17",
+      "height": 187,
+      "userCount": 4228,
+      "gender": "M",
+      "id": 1048889,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 1053129600,
+      "proposedMarketValueRaw": {
+        "value": 19400000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "أندي ديوف",
+          "bn": "অ্যান্ডি ডিউফ",
+          "hi": "एंडी डियॉफ़"
+        },
+        "shortNameTranslation": {
+          "ar": "أ. ديوف",
+          "bn": "এ. ডিউফ",
+          "hi": "ए. डियॉफ़"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 3,
+      "accuratePass": 3,
+      "goalAssist": 0,
+      "accurateOppositionHalfPasses": 3,
+      "totalOppositionHalfPasses": 3,
+      "totalCross": 1,
+      "duelLost": 1,
+      "duelWon": 3,
+      "totalClearance": 2,
+      "totalTackle": 2,
+      "wonTackle": 1,
+      "unsuccessfulTouch": 1,
+      "wasFouled": 1,
+      "fouls": 1,
+      "minutesPlayed": 10,
+      "touches": 10,
+      "rating": 6.7,
+      "possessionLostCtrl": 2,
+      "expectedAssists": 0.00151831,
+      "totalBallCarriesDistance": 13.190046409028,
+      "ballCarriesCount": 2,
+      "totalProgression": 8.6744801706723,
+      "progressiveBallCarriesCount": 0,
+      "ratingVersions": {
+        "original": 6.7,
+        "alternative": 6.8
+      },
+      "totalShots": 0,
+      "passValueNormalized": -0.05,
+      "dribbleValueNormalized": 0.02,
+      "defensiveValueNormalized": -0.01,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Henrikh Mkhitaryan",
+      "slug": "henrikh-mkhitaryan",
+      "shortName": "H. Mkhitaryan",
+      "position": "M",
+      "jerseyNumber": "22",
+      "height": 178,
+      "userCount": 9022,
+      "gender": "M",
+      "sofascoreId": "micki_taryan",
+      "id": 37151,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 601344000,
+      "proposedMarketValueRaw": {
+        "value": 3400000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "هنريك مخيتاريان",
+          "bn": "হেনরিখ মাখিতারিয়ান",
+          "hi": "हेनरिख मखितार्यन"
+        },
+        "shortNameTranslation": {
+          "ar": "ه. مخيتاريان",
+          "bn": "এইচ. মখিতারিয়ান",
+          "hi": "एच. मखितार्यन"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 8,
+      "accuratePass": 8,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 2,
+      "totalOwnHalfPasses": 2,
+      "accurateOppositionHalfPasses": 6,
+      "totalOppositionHalfPasses": 6,
+      "totalCross": 1,
+      "duelLost": 1,
+      "duelWon": 1,
+      "challengeLost": 1,
+      "wasFouled": 1,
+      "minutesPlayed": 10,
+      "touches": 12,
+      "rating": 6.6,
+      "possessionLostCtrl": 2,
+      "expectedAssists": 0.00899719,
+      "totalBallCarriesDistance": 29.784714694592,
+      "ballCarriesCount": 4,
+      "totalProgression": 24.727464342164,
+      "bestBallCarryProgression": 4.3964699680913,
+      "totalProgressiveBallCarriesDistance": 6.3003669734389,
+      "progressiveBallCarriesCount": 1,
+      "ratingVersions": {
+        "original": 6.6,
+        "alternative": 6.6
+      },
+      "totalShots": 0,
+      "passValueNormalized": -0.2,
+      "dribbleValueNormalized": 0.18,
+      "defensiveValueNormalized": -0.05,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Davide Frattesi",
+      "firstName": "",
+      "lastName": "",
+      "slug": "davide-frattesi",
+      "shortName": "D. Frattesi",
+      "position": "M",
+      "jerseyNumber": "16",
+      "height": 178,
+      "userCount": 5875,
+      "gender": "M",
+      "sofascoreId": "davidefrrattesi_22",
+      "id": 835600,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 937958400,
+      "proposedMarketValueRaw": {
+        "value": 26000000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "دافيد فراتيسي",
+          "bn": "ডেভিড ফ্রাটেসি",
+          "hi": "डेविड फ्रेटेसी"
+        },
+        "shortNameTranslation": {
+          "ar": "د. فراتيسي",
+          "bn": "ডি. ফ্রাটেসি",
+          "hi": "डी. फ्रेटेसी"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 1,
+      "accuratePass": 1,
+      "goalAssist": 0,
+      "accurateOppositionHalfPasses": 1,
+      "totalOppositionHalfPasses": 1,
+      "totalCross": 1,
+      "duelLost": 1,
+      "duelWon": 2,
+      "dispossessed": 1,
+      "totalTackle": 1,
+      "wasFouled": 1,
+      "minutesPlayed": 9,
+      "touches": 5,
+      "rating": 6.7,
+      "possessionLostCtrl": 2,
+      "expectedAssists": 0.00014872,
+      "totalBallCarriesDistance": 5.2323349472296,
+      "ballCarriesCount": 1,
+      "totalProgression": 3.1023676466494,
+      "progressiveBallCarriesCount": 0,
+      "keyPass": 1,
+      "ratingVersions": {
+        "original": 6.7,
+        "alternative": 6.6
+      },
+      "totalShots": 0,
+      "passValueNormalized": -0.02,
+      "dribbleValueNormalized": 0.02,
+      "defensiveValueNormalized": 0.14,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Josep Martínez",
+      "slug": "josep-martinez",
+      "shortName": "J. Martínez",
+      "position": "G",
+      "jerseyNumber": "13",
+      "height": 191,
+      "userCount": 2943,
+      "gender": "M",
+      "id": 845291,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 896227200,
+      "proposedMarketValueRaw": {
+        "value": 9400000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "جوزيف مارتينيز",
+          "bn": "জোসেপ মার্টিনেজ",
+          "hi": "जोसेफ मार्टिनेज"
+        },
+        "shortNameTranslation": {
+          "ar": "ج. مارتينيز",
+          "bn": "জে. মার্টিনেজ",
+          "hi": "जे. मार्टिनेज"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "G",
+    "extra": null
+  },
+  {},
+  {
+    "player": {
+      "name": "Matteo Cocchi",
+      "firstName": "Matteo Cocchi",
+      "slug": "matteo-cocchi",
+      "shortName": "M. Cocchi",
+      "position": "D",
+      "jerseyNumber": "43",
+      "height": 178,
+      "userCount": 1077,
+      "gender": "M",
+      "id": 1416579,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 1170288000,
+      "proposedMarketValueRaw": {
+        "value": 1500000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "ماتيو كوتشي"
+        },
+        "shortNameTranslation": {
+          "ar": "م. كوتشي"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "D",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Alessandro Bastoni",
+      "slug": "alessandro-bastoni",
+      "shortName": "A. Bastoni",
+      "position": "D",
+      "jerseyNumber": "95",
+      "height": 190,
+      "userCount": 18422,
+      "gender": "M",
+      "sofascoreId": "alessandrobastoni",
+      "id": 826188,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 923961600,
+      "proposedMarketValueRaw": {
+        "value": 65000000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "أليساندرو باستوني",
+          "bn": "আলেসান্দ্রো বাস্তনি",
+          "hi": "एलेसेंड्रो बस्टोनी"
+        },
+        "shortNameTranslation": {
+          "ar": "أ. باستوني",
+          "bn": "এ. বাস্তনি",
+          "hi": "ए. बस्टोनी"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "D",
+    "extra": null
+  },
+  {
+    "player": {
+      "name": "Stefan de Vrij",
+      "slug": "stefan-de-vrij",
+      "shortName": "S. de Vrij",
+      "position": "D",
+      "jerseyNumber": "6",
+      "height": 188,
+      "userCount": 5787,
+      "gender": "M",
+      "sofascoreId": "Stefandevrij",
+      "id": 91046,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 697248000,
+      "proposedMarketValueRaw": {
+        "value": 3200000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "ستيفان دي فري",
+          "bn": "স্টেফান ডি ভ্রিজ",
+          "hi": "स्टीफ़न डे व्रीज"
+        },
+        "shortNameTranslation": {
+          "ar": "س. دي فري",
+          "bn": "এস. ডি ভ্রিজ",
+          "hi": "एस. डे व्रीज"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "D",
+    "extra": null
+  },
+  {},
+  {
+    "player": {
+      "name": "Hakan Çalhanoğlu",
+      "firstName": "Hakan",
+      "lastName": "Calhanoglu",
+      "slug": "hakan-calhanoglu",
+      "shortName": "H. Calhanoglu",
+      "position": "M",
+      "jerseyNumber": "20",
+      "height": 178,
+      "userCount": 34457,
+      "gender": "M",
+      "sofascoreId": "HÇalhanoğlu",
+      "id": 135700,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 760665600,
+      "proposedMarketValueRaw": {
+        "value": 23000000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "هاكان تشالهانوجلو",
+          "bn": "হাকান চালহানোগলু",
+          "hi": "हकान चाल्हानोग्लू"
+        },
+        "shortNameTranslation": {
+          "ar": "ه. تشالهانوجلو",
+          "bn": "এইচ. চালহানোগলু",
+          "hi": "एच. चाल्हानोग्लू"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null
+  },
+  {},
+  {
+    "player": {
+      "name": "Mattia Mosconi",
+      "firstName": "Mattia",
+      "lastName": "Mosconi",
+      "slug": "mattia-mosconi",
+      "shortName": "M. Mosconi",
+      "position": "F",
+      "jerseyNumber": "48",
+      "height": 176,
+      "userCount": 558,
+      "gender": "M",
+      "id": 1530727,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 1174867200,
+      "proposedMarketValueRaw": {
+        "value": 630000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "موسكوني، ماتيا"
+        },
+        "shortNameTranslation": {
+          "ar": "م. موسكوني"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1926808,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "F",
+    "extra": null
+  }
+]
