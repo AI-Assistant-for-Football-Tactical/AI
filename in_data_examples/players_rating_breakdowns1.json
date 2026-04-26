@@ -1,0 +1,242 @@
+[
+  {
+    "message": "Cannot GET /events/13980104/player/259281/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/1089453/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/840414/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/848279/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/233826/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/1142612/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/1030829/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/1142692/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/357596/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/773409/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/341143/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/1165371/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/1493157/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/1016788/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/38162/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/1519010/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/1084846/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/122848/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/339909/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/139235/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/877371/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/1111640/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/826026/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/16206/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/906275/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/383560/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/929199/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/19352/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/363856/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/138605/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/1091303/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/284361/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/791702/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/1086223/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/1156616/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/845291/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/301162/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/1416579/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/826188/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/91046/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/126816/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/759520/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/1048889/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/37151/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/835600/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/135700/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/823984/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  },
+  {
+    "message": "Cannot GET /events/13980104/player/1530727/rating-breakdown",
+    "error": "Not Found",
+    "statusCode": 404
+  }
+]
