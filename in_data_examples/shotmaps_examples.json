@@ -1,0 +1,2423 @@
+[
+  [],
+  {
+    "shotmap": [
+      {
+        "player": {
+          "name": "Saúl Coco",
+          "firstName": "Saul",
+          "lastName": "Coco",
+          "slug": "saul-coco",
+          "shortName": "S. Coco",
+          "position": "D",
+          "jerseyNumber": "23",
+          "userCount": 1265,
+          "gender": "M",
+          "id": 1089453,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ساول كوكو",
+              "bn": "সাউল কোকো",
+              "hi": "साउल कोको"
+            },
+            "shortNameTranslation": {
+              "ar": "س. كوكو",
+              "bn": "এস. কোকো",
+              "hi": "एस. कोको"
+            }
+          }
+        },
+        "isHome": true,
+        "shotType": "miss",
+        "situation": "assisted",
+        "playerCoordinates": {
+          "x": 14.8,
+          "y": 52.1,
+          "z": 0
+        },
+        "bodyPart": "right-foot",
+        "goalMouthLocation": "high",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 47.1,
+          "z": 61.1
+        },
+        "xg": 0.099230587482452,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Yann Sommer",
+          "slug": "yann-sommer",
+          "shortName": "Y. Sommer",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 12811,
+          "gender": "M",
+          "sofascoreId": "yannsommer",
+          "id": 16206,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "يان زومر",
+              "bn": "জন সোমার",
+              "hi": "यान सोमर"
+            },
+            "shortNameTranslation": {
+              "ar": "ي. زومر",
+              "bn": "ওয়াই. সোমার",
+              "hi": "वाई. सोमर"
+            }
+          }
+        },
+        "id": 7147664,
+        "time": 8,
+        "timeSeconds": 458,
+        "draw": {
+          "start": {
+            "x": 52.1,
+            "y": 14.8
+          },
+          "end": {
+            "x": 52.9,
+            "y": 0
+          },
+          "goal": {
+            "x": 52.9,
+            "y": 38.9
+          }
+        },
+        "reversedPeriodTime": 38,
+        "reversedPeriodTimeSeconds": 2242,
+        "periodTimeSeconds": 458,
+        "incidentType": "shot"
+      }
+    ]
+  },
+  [],
+  [],
+  [],
+  [],
+  {
+    "shotmap": [
+      {
+        "player": {
+          "name": "Gvidas Gineitis",
+          "firstName": "",
+          "lastName": "",
+          "slug": "gineitis-gvidas",
+          "shortName": "G. Gineitis",
+          "position": "M",
+          "jerseyNumber": "66",
+          "userCount": 1639,
+          "gender": "M",
+          "id": 1030829,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "جينيتيس، جفيداس",
+              "bn": "জিনাইটিস, জিভিডাস",
+              "hi": "गिनाइटिस, ग्विदास"
+            },
+            "shortNameTranslation": {
+              "ar": "ج. جينيتيس",
+              "bn": "জি. জিনাইটিস",
+              "hi": "जी. गिनाइटिस"
+            }
+          }
+        },
+        "isHome": true,
+        "shotType": "block",
+        "situation": "free-kick",
+        "playerCoordinates": {
+          "x": 28.5,
+          "y": 56.7,
+          "z": 0
+        },
+        "bodyPart": "left-foot",
+        "goalMouthLocation": "low-centre",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 50.6,
+          "z": 19
+        },
+        "blockCoordinates": {
+          "x": 16.4,
+          "y": 53.6,
+          "z": 0
+        },
+        "xg": 0.034802205860615,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Yann Sommer",
+          "slug": "yann-sommer",
+          "shortName": "Y. Sommer",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 12811,
+          "gender": "M",
+          "sofascoreId": "yannsommer",
+          "id": 16206,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "يان زومر",
+              "bn": "জন সোমার",
+              "hi": "यान सोमर"
+            },
+            "shortNameTranslation": {
+              "ar": "ي. زومر",
+              "bn": "ওয়াই. সোমার",
+              "hi": "वाई. सोमर"
+            }
+          }
+        },
+        "id": 7148255,
+        "time": 56,
+        "timeSeconds": 3357,
+        "draw": {
+          "start": {
+            "x": 56.7,
+            "y": 28.5
+          },
+          "block": {
+            "x": 53.6,
+            "y": 16.4
+          },
+          "end": {
+            "x": 49.4,
+            "y": 0
+          },
+          "goal": {
+            "x": 49.4,
+            "y": 81
+          }
+        },
+        "reversedPeriodTime": 35,
+        "reversedPeriodTimeSeconds": 2043,
+        "periodTimeSeconds": 657,
+        "incidentType": "shot"
+      },
+      {
+        "player": {
+          "name": "Gvidas Gineitis",
+          "firstName": "",
+          "lastName": "",
+          "slug": "gineitis-gvidas",
+          "shortName": "G. Gineitis",
+          "position": "M",
+          "jerseyNumber": "66",
+          "userCount": 1639,
+          "gender": "M",
+          "id": 1030829,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "جينيتيس، جفيداس",
+              "bn": "জিনাইটিস, জিভিডাস",
+              "hi": "गिनाइटिस, ग्विदास"
+            },
+            "shortNameTranslation": {
+              "ar": "ج. جينيتيس",
+              "bn": "জি. জিনাইটিস",
+              "hi": "जी. गिनाइटिस"
+            }
+          }
+        },
+        "isHome": true,
+        "shotType": "block",
+        "situation": "regular",
+        "playerCoordinates": {
+          "x": 13.6,
+          "y": 49.3,
+          "z": 0
+        },
+        "bodyPart": "head",
+        "goalMouthLocation": "low-centre",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 50.9,
+          "z": 19
+        },
+        "blockCoordinates": {
+          "x": 11.9,
+          "y": 49.3,
+          "z": 0
+        },
+        "xg": 0.02026417478919,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Yann Sommer",
+          "slug": "yann-sommer",
+          "shortName": "Y. Sommer",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 12811,
+          "gender": "M",
+          "sofascoreId": "yannsommer",
+          "id": 16206,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "يان زومر",
+              "bn": "জন সোমার",
+              "hi": "यान सोमर"
+            },
+            "shortNameTranslation": {
+              "ar": "ي. زومر",
+              "bn": "ওয়াই. সোমার",
+              "hi": "वाई. सोमर"
+            }
+          }
+        },
+        "id": 7147936,
+        "time": 38,
+        "timeSeconds": 2256,
+        "draw": {
+          "start": {
+            "x": 49.3,
+            "y": 13.6
+          },
+          "block": {
+            "x": 49.3,
+            "y": 11.9
+          },
+          "end": {
+            "x": 49.1,
+            "y": 0
+          },
+          "goal": {
+            "x": 49.1,
+            "y": 81
+          }
+        },
+        "reversedPeriodTime": 8,
+        "reversedPeriodTimeSeconds": 444,
+        "periodTimeSeconds": 2256,
+        "incidentType": "shot"
+      }
+    ]
+  },
+  {
+    "shotmap": [
+      {
+        "player": {
+          "name": "Rafael Obrador",
+          "firstName": "",
+          "lastName": "",
+          "slug": "rafael-obrador",
+          "shortName": "R. Obrador",
+          "position": "D",
+          "jerseyNumber": "33",
+          "userCount": 1981,
+          "gender": "M",
+          "id": 1142692,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "رافائيل أوبرادور",
+              "bn": "রাফায়েল ওব্রাডর",
+              "hi": "राफेल ओब्राडोर"
+            },
+            "shortNameTranslation": {
+              "ar": "ر. أوبرادور",
+              "bn": "আর. ওব্রাডর",
+              "hi": "आर. ओब्राडोर"
+            }
+          }
+        },
+        "isHome": true,
+        "shotType": "miss",
+        "situation": "regular",
+        "playerCoordinates": {
+          "x": 12.8,
+          "y": 22.1,
+          "z": 0
+        },
+        "bodyPart": "left-foot",
+        "goalMouthLocation": "high-right",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 44,
+          "z": 69.4
+        },
+        "xg": 0.025779904797673,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Yann Sommer",
+          "slug": "yann-sommer",
+          "shortName": "Y. Sommer",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 12811,
+          "gender": "M",
+          "sofascoreId": "yannsommer",
+          "id": 16206,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "يان زومر",
+              "bn": "জন সোমার",
+              "hi": "यान सोमर"
+            },
+            "shortNameTranslation": {
+              "ar": "ي. زومر",
+              "bn": "ওয়াই. সোমার",
+              "hi": "वाई. सोमर"
+            }
+          }
+        },
+        "id": 7147938,
+        "time": 38,
+        "timeSeconds": 2259,
+        "draw": {
+          "start": {
+            "x": 22.1,
+            "y": 12.8
+          },
+          "end": {
+            "x": 56,
+            "y": 0
+          },
+          "goal": {
+            "x": 56,
+            "y": 30.6
+          }
+        },
+        "reversedPeriodTime": 8,
+        "reversedPeriodTimeSeconds": 441,
+        "periodTimeSeconds": 2259,
+        "incidentType": "shot"
+      }
+    ]
+  },
+  {
+    "shotmap": [
+      {
+        "player": {
+          "name": "Nikola Vlašić",
+          "slug": "nikola-vlasic",
+          "shortName": "N. Vlašić",
+          "position": "M",
+          "jerseyNumber": "10",
+          "userCount": 5737,
+          "gender": "M",
+          "sofascoreId": "niksivlasic_",
+          "id": 357596,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "نيكولا فلاشيتش",
+              "bn": "নিকোলা ভ্লাসিচ",
+              "hi": "निकोला व्लासिक"
+            },
+            "shortNameTranslation": {
+              "ar": "ن. فلاشيتش",
+              "bn": "এন. ভ্লাসিচ",
+              "hi": "एन. व्लासिक"
+            }
+          }
+        },
+        "isHome": true,
+        "shotType": "goal",
+        "goalType": "penalty",
+        "situation": "penalty",
+        "playerCoordinates": {
+          "x": 11.5,
+          "y": 50,
+          "z": 0
+        },
+        "bodyPart": "right-foot",
+        "goalMouthLocation": "high-left",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 53.9,
+          "z": 27.2
+        },
+        "xg": 0.7884,
+        "xgot": 0.98764622211456,
+        "goalkeeper": {
+          "name": "Yann Sommer",
+          "slug": "yann-sommer",
+          "shortName": "Y. Sommer",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 12811,
+          "gender": "M",
+          "sofascoreId": "yannsommer",
+          "id": 16206,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "يان زومر",
+              "bn": "জন সোমার",
+              "hi": "यान सोमर"
+            },
+            "shortNameTranslation": {
+              "ar": "ي. زومر",
+              "bn": "ওয়াই. সোমার",
+              "hi": "वाई. सोमर"
+            }
+          }
+        },
+        "id": 7148388,
+        "time": 79,
+        "timeSeconds": 4706,
+        "draw": {
+          "start": {
+            "x": 50,
+            "y": 11.5
+          },
+          "end": {
+            "x": 46.1,
+            "y": 0
+          },
+          "goal": {
+            "x": 46.1,
+            "y": 72.8
+          }
+        },
+        "reversedPeriodTime": 12,
+        "reversedPeriodTimeSeconds": 694,
+        "periodTimeSeconds": 2006,
+        "incidentType": "shot"
+      }
+    ]
+  },
+  [],
+  {
+    "shotmap": [
+      {
+        "player": {
+          "name": "Giovanni Simeone",
+          "firstName": "Giovanni",
+          "lastName": "Simeone",
+          "slug": "giovanni-simeone",
+          "shortName": "G. Simeone",
+          "position": "F",
+          "jerseyNumber": "18",
+          "userCount": 11254,
+          "gender": "M",
+          "sofascoreId": "simeonegiovanni",
+          "id": 341143,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "جيوفاني سيميوني",
+              "bn": "জন সিমিওন",
+              "hi": "जियोवानी शिमोन"
+            },
+            "shortNameTranslation": {
+              "ar": "ج. سيميوني",
+              "bn": "জি. সিমিওন",
+              "hi": "जी. शिमोन"
+            }
+          }
+        },
+        "isHome": true,
+        "shotType": "miss",
+        "situation": "corner",
+        "playerCoordinates": {
+          "x": 8.3,
+          "y": 51.1,
+          "z": 0
+        },
+        "bodyPart": "head",
+        "goalMouthLocation": "left",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 99.8,
+          "z": 4.2
+        },
+        "blockCoordinates": {
+          "x": 7.7,
+          "y": 45.3,
+          "z": 0
+        },
+        "xg": 0.14232358336449,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Yann Sommer",
+          "slug": "yann-sommer",
+          "shortName": "Y. Sommer",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 12811,
+          "gender": "M",
+          "sofascoreId": "yannsommer",
+          "id": 16206,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "يان زومر",
+              "bn": "জন সোমার",
+              "hi": "यान सोमर"
+            },
+            "shortNameTranslation": {
+              "ar": "ي. زومر",
+              "bn": "ওয়াই. সোমার",
+              "hi": "वाई. सोमर"
+            }
+          }
+        },
+        "id": 7148362,
+        "time": 74,
+        "timeSeconds": 4409,
+        "draw": {
+          "start": {
+            "x": 51.1,
+            "y": 8.3
+          },
+          "block": {
+            "x": 45.3,
+            "y": 7.7
+          },
+          "end": {
+            "x": 0.2,
+            "y": 0
+          },
+          "goal": {
+            "x": 0.2,
+            "y": 95.8
+          }
+        },
+        "reversedPeriodTime": 17,
+        "reversedPeriodTimeSeconds": 991,
+        "periodTimeSeconds": 1709,
+        "incidentType": "shot"
+      },
+      {
+        "player": {
+          "name": "Giovanni Simeone",
+          "firstName": "Giovanni",
+          "lastName": "Simeone",
+          "slug": "giovanni-simeone",
+          "shortName": "G. Simeone",
+          "position": "F",
+          "jerseyNumber": "18",
+          "userCount": 11254,
+          "gender": "M",
+          "sofascoreId": "simeonegiovanni",
+          "id": 341143,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "جيوفاني سيميوني",
+              "bn": "জন সিমিওন",
+              "hi": "जियोवानी शिमोन"
+            },
+            "shortNameTranslation": {
+              "ar": "ج. سيميوني",
+              "bn": "জি. সিমিওন",
+              "hi": "जी. शिमोन"
+            }
+          }
+        },
+        "isHome": true,
+        "shotType": "miss",
+        "situation": "fast-break",
+        "playerCoordinates": {
+          "x": 9.9,
+          "y": 52.8,
+          "z": 0
+        },
+        "bodyPart": "right-foot",
+        "goalMouthLocation": "left",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 61,
+          "z": 1.4
+        },
+        "xg": 0.32879319787025,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Yann Sommer",
+          "slug": "yann-sommer",
+          "shortName": "Y. Sommer",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 12811,
+          "gender": "M",
+          "sofascoreId": "yannsommer",
+          "id": 16206,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "يان زومر",
+              "bn": "জন সোমার",
+              "hi": "यान सोमर"
+            },
+            "shortNameTranslation": {
+              "ar": "ي. زومر",
+              "bn": "ওয়াই. সোমার",
+              "hi": "वाई. सोमर"
+            }
+          }
+        },
+        "id": 7148346,
+        "time": 72,
+        "timeSeconds": 4300,
+        "draw": {
+          "start": {
+            "x": 52.8,
+            "y": 9.9
+          },
+          "end": {
+            "x": 39,
+            "y": 0
+          },
+          "goal": {
+            "x": 39,
+            "y": 98.6
+          }
+        },
+        "reversedPeriodTime": 19,
+        "reversedPeriodTimeSeconds": 1100,
+        "periodTimeSeconds": 1600,
+        "incidentType": "shot"
+      },
+      {
+        "player": {
+          "name": "Giovanni Simeone",
+          "firstName": "Giovanni",
+          "lastName": "Simeone",
+          "slug": "giovanni-simeone",
+          "shortName": "G. Simeone",
+          "position": "F",
+          "jerseyNumber": "18",
+          "userCount": 11254,
+          "gender": "M",
+          "sofascoreId": "simeonegiovanni",
+          "id": 341143,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "جيوفاني سيميوني",
+              "bn": "জন সিমিওন",
+              "hi": "जियोवानी शिमोन"
+            },
+            "shortNameTranslation": {
+              "ar": "ج. سيميوني",
+              "bn": "জি. সিমিওন",
+              "hi": "जी. शिमोन"
+            }
+          }
+        },
+        "isHome": true,
+        "shotType": "goal",
+        "goalType": "regular",
+        "situation": "fast-break",
+        "playerCoordinates": {
+          "x": 12,
+          "y": 52.8,
+          "z": 0
+        },
+        "bodyPart": "right-foot",
+        "goalMouthLocation": "low-centre",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 50.3,
+          "z": 8.2
+        },
+        "xg": 0.69116866588593,
+        "xgot": 0.3601935505867,
+        "goalkeeper": {
+          "name": "Yann Sommer",
+          "slug": "yann-sommer",
+          "shortName": "Y. Sommer",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 12811,
+          "gender": "M",
+          "sofascoreId": "yannsommer",
+          "id": 16206,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "يان زومر",
+              "bn": "জন সোমার",
+              "hi": "यान सोमर"
+            },
+            "shortNameTranslation": {
+              "ar": "ي. زومر",
+              "bn": "ওয়াই. সোমার",
+              "hi": "वाई. सोमर"
+            }
+          }
+        },
+        "id": 7148335,
+        "time": 70,
+        "timeSeconds": 4173,
+        "draw": {
+          "start": {
+            "x": 52.8,
+            "y": 12
+          },
+          "end": {
+            "x": 49.7,
+            "y": 0
+          },
+          "goal": {
+            "x": 49.7,
+            "y": 91.8
+          }
+        },
+        "reversedPeriodTime": 21,
+        "reversedPeriodTimeSeconds": 1227,
+        "periodTimeSeconds": 1473,
+        "incidentType": "shot"
+      },
+      {
+        "player": {
+          "name": "Giovanni Simeone",
+          "firstName": "Giovanni",
+          "lastName": "Simeone",
+          "slug": "giovanni-simeone",
+          "shortName": "G. Simeone",
+          "position": "F",
+          "jerseyNumber": "18",
+          "userCount": 11254,
+          "gender": "M",
+          "sofascoreId": "simeonegiovanni",
+          "id": 341143,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "جيوفاني سيميوني",
+              "bn": "জন সিমিওন",
+              "hi": "जियोवानी शिमोन"
+            },
+            "shortNameTranslation": {
+              "ar": "ج. سيميوني",
+              "bn": "জি. সিমিওন",
+              "hi": "जी. शिमोन"
+            }
+          }
+        },
+        "isHome": true,
+        "shotType": "block",
+        "situation": "assisted",
+        "playerCoordinates": {
+          "x": 13.5,
+          "y": 59.5,
+          "z": 0
+        },
+        "bodyPart": "right-foot",
+        "goalMouthLocation": "low-right",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 45.7,
+          "z": 19
+        },
+        "blockCoordinates": {
+          "x": 12.3,
+          "y": 59,
+          "z": 0
+        },
+        "xg": 0.051886349916458,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Yann Sommer",
+          "slug": "yann-sommer",
+          "shortName": "Y. Sommer",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 12811,
+          "gender": "M",
+          "sofascoreId": "yannsommer",
+          "id": 16206,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "يان زومر",
+              "bn": "জন সোমার",
+              "hi": "यान सोमर"
+            },
+            "shortNameTranslation": {
+              "ar": "ي. زومر",
+              "bn": "ওয়াই. সোমার",
+              "hi": "वाई. सोमर"
+            }
+          }
+        },
+        "id": 7147572,
+        "time": 1,
+        "timeSeconds": 34,
+        "draw": {
+          "start": {
+            "x": 59.5,
+            "y": 13.5
+          },
+          "block": {
+            "x": 59,
+            "y": 12.3
+          },
+          "end": {
+            "x": 54.3,
+            "y": 0
+          },
+          "goal": {
+            "x": 54.3,
+            "y": 81
+          }
+        },
+        "reversedPeriodTime": 45,
+        "reversedPeriodTimeSeconds": 2666,
+        "periodTimeSeconds": 34,
+        "incidentType": "shot"
+      }
+    ]
+  },
+  [],
+  [],
+  {
+    "shotmap": [
+      {
+        "player": {
+          "name": "Cesare Casadei",
+          "firstName": "",
+          "lastName": "",
+          "slug": "cesare-casadei",
+          "shortName": "C. Casadei",
+          "position": "M",
+          "jerseyNumber": "22",
+          "userCount": 6580,
+          "gender": "M",
+          "sofascoreId": "cesarecasadei",
+          "id": 1016788,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "سيزار كاسادي",
+              "bn": "সিজার ক্যাসাডেই",
+              "hi": "सेसरे कासादेई"
+            },
+            "shortNameTranslation": {
+              "ar": "س. كاسادي",
+              "bn": "সি. ক্যাসাডেই",
+              "hi": "सी. कासादेई"
+            }
+          }
+        },
+        "isHome": true,
+        "shotType": "block",
+        "situation": "assisted",
+        "playerCoordinates": {
+          "x": 10.6,
+          "y": 57,
+          "z": 0
+        },
+        "bodyPart": "right-foot",
+        "goalMouthLocation": "low-centre",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 48.8,
+          "z": 19
+        },
+        "blockCoordinates": {
+          "x": 9,
+          "y": 56.1,
+          "z": 0
+        },
+        "xg": 0.091474317014217,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Yann Sommer",
+          "slug": "yann-sommer",
+          "shortName": "Y. Sommer",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 12811,
+          "gender": "M",
+          "sofascoreId": "yannsommer",
+          "id": 16206,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "يان زومر",
+              "bn": "জন সোমার",
+              "hi": "यान सोमर"
+            },
+            "shortNameTranslation": {
+              "ar": "ي. زومر",
+              "bn": "ওয়াই. সোমার",
+              "hi": "वाई. सोमर"
+            }
+          }
+        },
+        "id": 7148452,
+        "time": 83,
+        "timeSeconds": 4921,
+        "draw": {
+          "start": {
+            "x": 57,
+            "y": 10.6
+          },
+          "block": {
+            "x": 56.1,
+            "y": 9
+          },
+          "end": {
+            "x": 51.2,
+            "y": 0
+          },
+          "goal": {
+            "x": 51.2,
+            "y": 81
+          }
+        },
+        "reversedPeriodTime": 8,
+        "reversedPeriodTimeSeconds": 479,
+        "periodTimeSeconds": 2221,
+        "incidentType": "shot"
+      }
+    ]
+  },
+  {
+    "shotmap": [
+      {
+        "player": {
+          "name": "Duván Zapata",
+          "slug": "duvan-zapata",
+          "shortName": "D. Zapata",
+          "position": "F",
+          "jerseyNumber": "91",
+          "userCount": 5974,
+          "gender": "M",
+          "sofascoreId": "duvanzapata91",
+          "id": 38162,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "bn": "ডুভান জাপাতা",
+              "hi": "डुवान ज़ापाटा"
+            },
+            "shortNameTranslation": {
+              "bn": "ডি. জাপাতা",
+              "hi": "डी. ज़ापाटा"
+            }
+          }
+        },
+        "isHome": true,
+        "shotType": "block",
+        "situation": "set-piece",
+        "playerCoordinates": {
+          "x": 17.8,
+          "y": 48.5,
+          "z": 0
+        },
+        "bodyPart": "right-foot",
+        "goalMouthLocation": "low-centre",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 49.6,
+          "z": 19
+        },
+        "blockCoordinates": {
+          "x": 8.3,
+          "y": 49.1,
+          "z": 0
+        },
+        "xg": 0.054326709359884,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Yann Sommer",
+          "slug": "yann-sommer",
+          "shortName": "Y. Sommer",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 12811,
+          "gender": "M",
+          "sofascoreId": "yannsommer",
+          "id": 16206,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "يان زومر",
+              "bn": "জন সোমার",
+              "hi": "यान सोमर"
+            },
+            "shortNameTranslation": {
+              "ar": "ي. زومر",
+              "bn": "ওয়াই. সোমার",
+              "hi": "वाई. सोमर"
+            }
+          }
+        },
+        "id": 7148458,
+        "time": 85,
+        "timeSeconds": 5069,
+        "draw": {
+          "start": {
+            "x": 48.5,
+            "y": 17.8
+          },
+          "block": {
+            "x": 49.1,
+            "y": 8.3
+          },
+          "end": {
+            "x": 50.4,
+            "y": 0
+          },
+          "goal": {
+            "x": 50.4,
+            "y": 81
+          }
+        },
+        "reversedPeriodTime": 6,
+        "reversedPeriodTimeSeconds": 331,
+        "periodTimeSeconds": 2369,
+        "incidentType": "shot"
+      },
+      {
+        "player": {
+          "name": "Duván Zapata",
+          "slug": "duvan-zapata",
+          "shortName": "D. Zapata",
+          "position": "F",
+          "jerseyNumber": "91",
+          "userCount": 5974,
+          "gender": "M",
+          "sofascoreId": "duvanzapata91",
+          "id": 38162,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "bn": "ডুভান জাপাতা",
+              "hi": "डुवान ज़ापाटा"
+            },
+            "shortNameTranslation": {
+              "bn": "ডি. জাপাতা",
+              "hi": "डी. ज़ापाटा"
+            }
+          }
+        },
+        "isHome": true,
+        "shotType": "block",
+        "situation": "assisted",
+        "playerCoordinates": {
+          "x": 10.2,
+          "y": 56,
+          "z": 0
+        },
+        "bodyPart": "head",
+        "goalMouthLocation": "low-left",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 54,
+          "z": 19
+        },
+        "blockCoordinates": {
+          "x": 9.4,
+          "y": 55.2,
+          "z": 0
+        },
+        "xg": 0.038838125765324,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Yann Sommer",
+          "slug": "yann-sommer",
+          "shortName": "Y. Sommer",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 12811,
+          "gender": "M",
+          "sofascoreId": "yannsommer",
+          "id": 16206,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "يان زومر",
+              "bn": "জন সোমার",
+              "hi": "यान सोमर"
+            },
+            "shortNameTranslation": {
+              "ar": "ي. زومر",
+              "bn": "ওয়াই. সোমার",
+              "hi": "वाई. सोमर"
+            }
+          }
+        },
+        "id": 7148384,
+        "time": 75,
+        "timeSeconds": 4455,
+        "draw": {
+          "start": {
+            "x": 56,
+            "y": 10.2
+          },
+          "block": {
+            "x": 55.2,
+            "y": 9.4
+          },
+          "end": {
+            "x": 46,
+            "y": 0
+          },
+          "goal": {
+            "x": 46,
+            "y": 81
+          }
+        },
+        "reversedPeriodTime": 16,
+        "reversedPeriodTimeSeconds": 945,
+        "periodTimeSeconds": 1755,
+        "incidentType": "shot"
+      },
+      {
+        "player": {
+          "name": "Duván Zapata",
+          "slug": "duvan-zapata",
+          "shortName": "D. Zapata",
+          "position": "F",
+          "jerseyNumber": "91",
+          "userCount": 5974,
+          "gender": "M",
+          "sofascoreId": "duvanzapata91",
+          "id": 38162,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "bn": "ডুভান জাপাতা",
+              "hi": "डुवान ज़ापाटा"
+            },
+            "shortNameTranslation": {
+              "bn": "ডি. জাপাতা",
+              "hi": "डी. ज़ापाटा"
+            }
+          }
+        },
+        "isHome": true,
+        "shotType": "block",
+        "situation": "corner",
+        "playerCoordinates": {
+          "x": 8.6,
+          "y": 48.7,
+          "z": 0
+        },
+        "bodyPart": "right-foot",
+        "goalMouthLocation": "low-centre",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 50.2,
+          "z": 19
+        },
+        "blockCoordinates": {
+          "x": 7,
+          "y": 48.9,
+          "z": 0
+        },
+        "xg": 0.095032081007957,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Yann Sommer",
+          "slug": "yann-sommer",
+          "shortName": "Y. Sommer",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 12811,
+          "gender": "M",
+          "sofascoreId": "yannsommer",
+          "id": 16206,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "يان زومر",
+              "bn": "জন সোমার",
+              "hi": "यान सोमर"
+            },
+            "shortNameTranslation": {
+              "ar": "ي. زومر",
+              "bn": "ওয়াই. সোমার",
+              "hi": "वाई. सोमर"
+            }
+          }
+        },
+        "id": 7148369,
+        "time": 74,
+        "timeSeconds": 4413,
+        "draw": {
+          "start": {
+            "x": 48.7,
+            "y": 8.6
+          },
+          "block": {
+            "x": 48.9,
+            "y": 7
+          },
+          "end": {
+            "x": 49.8,
+            "y": 0
+          },
+          "goal": {
+            "x": 49.8,
+            "y": 81
+          }
+        },
+        "reversedPeriodTime": 17,
+        "reversedPeriodTimeSeconds": 987,
+        "periodTimeSeconds": 1713,
+        "incidentType": "shot"
+      }
+    ]
+  },
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  {
+    "shotmap": [
+      {
+        "player": {
+          "name": "Yann Bisseck",
+          "firstName": "Yann",
+          "lastName": "Bisseck",
+          "slug": "yann-bisseck",
+          "shortName": "Y. Bisseck",
+          "position": "D",
+          "jerseyNumber": "31",
+          "userCount": 5827,
+          "gender": "M",
+          "id": 906275,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "يان بيسيك",
+              "bn": "ইয়ান বিসেক",
+              "hi": "यान बिस्सेक"
+            },
+            "shortNameTranslation": {
+              "ar": "ي. بيسيك",
+              "bn": "ওয়াই. বিসেক",
+              "hi": "वाई. बिस्सेक"
+            }
+          }
+        },
+        "isHome": false,
+        "shotType": "goal",
+        "goalType": "regular",
+        "situation": "corner",
+        "playerCoordinates": {
+          "x": 7.3,
+          "y": 46.8,
+          "z": 0
+        },
+        "bodyPart": "head",
+        "goalMouthLocation": "low-right",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 47.2,
+          "z": 13.3
+        },
+        "xg": 0.11588998138905,
+        "xgot": 0.42942914366722,
+        "goalkeeper": {
+          "name": "Alberto Paleari",
+          "firstName": "Alberto",
+          "lastName": "Paleari",
+          "slug": "alberto-paleari",
+          "shortName": "A. Paleari",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 438,
+          "gender": "M",
+          "id": 259281,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ألبرتو باليري",
+              "bn": "আলবার্তো পালিয়ারি",
+              "hi": "अल्बर्टो पलेरी"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. باليري",
+              "bn": "এ. পালিয়ারি",
+              "hi": "ए. पलेरी"
+            }
+          }
+        },
+        "id": 7148294,
+        "time": 61,
+        "timeSeconds": 3625,
+        "draw": {
+          "start": {
+            "x": 46.8,
+            "y": 7.3
+          },
+          "end": {
+            "x": 52.8,
+            "y": 0
+          },
+          "goal": {
+            "x": 52.8,
+            "y": 86.7
+          }
+        },
+        "reversedPeriodTime": 30,
+        "reversedPeriodTimeSeconds": 1775,
+        "periodTimeSeconds": 925,
+        "incidentType": "shot"
+      },
+      {
+        "player": {
+          "name": "Yann Bisseck",
+          "firstName": "Yann",
+          "lastName": "Bisseck",
+          "slug": "yann-bisseck",
+          "shortName": "Y. Bisseck",
+          "position": "D",
+          "jerseyNumber": "31",
+          "userCount": 5827,
+          "gender": "M",
+          "id": 906275,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "يان بيسيك",
+              "bn": "ইয়ান বিসেক",
+              "hi": "यान बिस्सेक"
+            },
+            "shortNameTranslation": {
+              "ar": "ي. بيسيك",
+              "bn": "ওয়াই. বিসেক",
+              "hi": "वाई. बिस्सेक"
+            }
+          }
+        },
+        "isHome": false,
+        "shotType": "save",
+        "situation": "assisted",
+        "playerCoordinates": {
+          "x": 8.7,
+          "y": 53.8,
+          "z": 0
+        },
+        "bodyPart": "head",
+        "goalMouthLocation": "low-centre",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 49,
+          "z": 19
+        },
+        "blockCoordinates": {
+          "x": 1.6,
+          "y": 51.8,
+          "z": 0
+        },
+        "xg": 0.081569813191891,
+        "xgot": 0.046235043555498,
+        "goalkeeper": {
+          "name": "Alberto Paleari",
+          "firstName": "Alberto",
+          "lastName": "Paleari",
+          "slug": "alberto-paleari",
+          "shortName": "A. Paleari",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 438,
+          "gender": "M",
+          "id": 259281,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ألبرتو باليري",
+              "bn": "আলবার্তো পালিয়ারি",
+              "hi": "अल्बर्टो पलेरी"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. باليري",
+              "bn": "এ. পালিয়ারি",
+              "hi": "ए. पलेरी"
+            }
+          }
+        },
+        "id": 7147698,
+        "time": 14,
+        "timeSeconds": 783,
+        "draw": {
+          "start": {
+            "x": 53.8,
+            "y": 8.7
+          },
+          "block": {
+            "x": 51.8,
+            "y": 1.6
+          },
+          "end": {
+            "x": 51,
+            "y": 0
+          },
+          "goal": {
+            "x": 51,
+            "y": 81
+          }
+        },
+        "reversedPeriodTime": 32,
+        "reversedPeriodTimeSeconds": 1917,
+        "periodTimeSeconds": 783,
+        "incidentType": "shot"
+      }
+    ]
+  },
+  {
+    "shotmap": [
+      {
+        "player": {
+          "name": "Manuel Akanji",
+          "firstName": "Manuel",
+          "lastName": "Akanji",
+          "slug": "manuel-akanji",
+          "shortName": "M. Akanji",
+          "position": "D",
+          "jerseyNumber": "25",
+          "userCount": 22821,
+          "gender": "M",
+          "sofascoreId": "manuel_akanji",
+          "id": 383560,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "مانويل أكانجي",
+              "bn": "ম্যানুয়েল আকানজি",
+              "hi": "मैनुअल अकांजी"
+            },
+            "shortNameTranslation": {
+              "ar": "م. أكانجي",
+              "bn": "এম. আকানজি",
+              "hi": "एम. अकांजी"
+            }
+          }
+        },
+        "isHome": false,
+        "shotType": "miss",
+        "situation": "corner",
+        "playerCoordinates": {
+          "x": 6,
+          "y": 52.6,
+          "z": 0
+        },
+        "bodyPart": "head",
+        "goalMouthLocation": "close-right",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 43,
+          "z": 9.7
+        },
+        "xg": 0.1542559415102,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Alberto Paleari",
+          "firstName": "Alberto",
+          "lastName": "Paleari",
+          "slug": "alberto-paleari",
+          "shortName": "A. Paleari",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 438,
+          "gender": "M",
+          "id": 259281,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ألبرتو باليري",
+              "bn": "আলবার্তো পালিয়ারি",
+              "hi": "अल्बर्टो पलेरी"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. باليري",
+              "bn": "এ. পালিয়ারি",
+              "hi": "ए. पलेरी"
+            }
+          }
+        },
+        "id": 7147603,
+        "time": 7,
+        "timeSeconds": 370,
+        "draw": {
+          "start": {
+            "x": 52.6,
+            "y": 6
+          },
+          "end": {
+            "x": 57,
+            "y": 0
+          },
+          "goal": {
+            "x": 57,
+            "y": 90.3
+          }
+        },
+        "reversedPeriodTime": 39,
+        "reversedPeriodTimeSeconds": 2330,
+        "periodTimeSeconds": 370,
+        "incidentType": "shot"
+      }
+    ]
+  },
+  {
+    "shotmap": [
+      {
+        "player": {
+          "name": "Carlos Augusto",
+          "firstName": "",
+          "lastName": "",
+          "slug": "carlos-augusto",
+          "shortName": "C. Augusto",
+          "position": "D",
+          "jerseyNumber": "30",
+          "userCount": 7908,
+          "gender": "M",
+          "id": 929199,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "كارلوس أوغستو",
+              "bn": "কার্লোস অগাস্টো",
+              "hi": "कार्लोस ऑगस्टो"
+            },
+            "shortNameTranslation": {
+              "ar": "ك. أوغستو",
+              "bn": "সি. অগাস্টো",
+              "hi": "सी. ऑगस्टो"
+            }
+          }
+        },
+        "isHome": false,
+        "shotType": "block",
+        "situation": "corner",
+        "playerCoordinates": {
+          "x": 10.2,
+          "y": 42.1,
+          "z": 0
+        },
+        "bodyPart": "head",
+        "goalMouthLocation": "low-centre",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 51.7,
+          "z": 19
+        },
+        "blockCoordinates": {
+          "x": 5.8,
+          "y": 44.8,
+          "z": 0
+        },
+        "xg": 0.046038258820772,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Alberto Paleari",
+          "firstName": "Alberto",
+          "lastName": "Paleari",
+          "slug": "alberto-paleari",
+          "shortName": "A. Paleari",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 438,
+          "gender": "M",
+          "id": 259281,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ألبرتو باليري",
+              "bn": "আলবার্তো পালিয়ারি",
+              "hi": "अल्बर्टो पलेरी"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. باليري",
+              "bn": "এ. পালিয়ারি",
+              "hi": "ए. पलेरी"
+            }
+          }
+        },
+        "id": 7147682,
+        "time": 12,
+        "timeSeconds": 681,
+        "draw": {
+          "start": {
+            "x": 42.1,
+            "y": 10.2
+          },
+          "block": {
+            "x": 44.8,
+            "y": 5.8
+          },
+          "end": {
+            "x": 48.3,
+            "y": 0
+          },
+          "goal": {
+            "x": 48.3,
+            "y": 81
+          }
+        },
+        "reversedPeriodTime": 34,
+        "reversedPeriodTimeSeconds": 2019,
+        "periodTimeSeconds": 681,
+        "incidentType": "shot"
+      }
+    ]
+  },
+  [],
+  [],
+  [],
+  [],
+  {
+    "shotmap": [
+      {
+        "player": {
+          "name": "Federico Dimarco",
+          "firstName": "Federico",
+          "lastName": "Dimarco",
+          "slug": "federico-dimarco",
+          "shortName": "F. Dimarco",
+          "position": "M",
+          "jerseyNumber": "32",
+          "userCount": 17885,
+          "gender": "M",
+          "sofascoreId": "dimarco32",
+          "id": 284361,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "فيديريكو ديماركو",
+              "bn": "ফেদেরিকো ডিমারকো",
+              "hi": "फेडेरिको डिमार्को"
+            },
+            "shortNameTranslation": {
+              "ar": "ف. ديماركو",
+              "bn": "এফ. ডিমারকো",
+              "hi": "एफ. डिमार्को"
+            }
+          }
+        },
+        "isHome": false,
+        "shotType": "block",
+        "situation": "assisted",
+        "playerCoordinates": {
+          "x": 20,
+          "y": 36.8,
+          "z": 0
+        },
+        "bodyPart": "left-foot",
+        "goalMouthLocation": "low-centre",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 51.7,
+          "z": 19
+        },
+        "blockCoordinates": {
+          "x": 16.8,
+          "y": 38.6,
+          "z": 0
+        },
+        "xg": 0.037526622414589,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Alberto Paleari",
+          "firstName": "Alberto",
+          "lastName": "Paleari",
+          "slug": "alberto-paleari",
+          "shortName": "A. Paleari",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 438,
+          "gender": "M",
+          "id": 259281,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ألبرتو باليري",
+              "bn": "আলবার্তো পালিয়ারি",
+              "hi": "अल्बर्टो पलेरी"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. باليري",
+              "bn": "এ. পালিয়ারি",
+              "hi": "ए. पलेरी"
+            }
+          }
+        },
+        "id": 7148271,
+        "time": 59,
+        "timeSeconds": 3503,
+        "draw": {
+          "start": {
+            "x": 36.8,
+            "y": 20
+          },
+          "block": {
+            "x": 38.6,
+            "y": 16.8
+          },
+          "end": {
+            "x": 48.3,
+            "y": 0
+          },
+          "goal": {
+            "x": 48.3,
+            "y": 81
+          }
+        },
+        "reversedPeriodTime": 32,
+        "reversedPeriodTimeSeconds": 1897,
+        "periodTimeSeconds": 803,
+        "incidentType": "shot"
+      },
+      {
+        "player": {
+          "name": "Federico Dimarco",
+          "firstName": "Federico",
+          "lastName": "Dimarco",
+          "slug": "federico-dimarco",
+          "shortName": "F. Dimarco",
+          "position": "M",
+          "jerseyNumber": "32",
+          "userCount": 17885,
+          "gender": "M",
+          "sofascoreId": "dimarco32",
+          "id": 284361,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "فيديريكو ديماركو",
+              "bn": "ফেদেরিকো ডিমারকো",
+              "hi": "फेडेरिको डिमार्को"
+            },
+            "shortNameTranslation": {
+              "ar": "ف. ديماركو",
+              "bn": "এফ. ডিমারকো",
+              "hi": "एफ. डिमार्को"
+            }
+          }
+        },
+        "isHome": false,
+        "shotType": "save",
+        "situation": "regular",
+        "playerCoordinates": {
+          "x": 9.5,
+          "y": 34.2,
+          "z": 0
+        },
+        "bodyPart": "left-foot",
+        "goalMouthLocation": "low-centre",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 48.3,
+          "z": 1.9
+        },
+        "blockCoordinates": {
+          "x": 2.3,
+          "y": 44.2,
+          "z": 0
+        },
+        "xg": 0.1129070147872,
+        "xgot": 0.35219261050224,
+        "goalkeeper": {
+          "name": "Alberto Paleari",
+          "firstName": "Alberto",
+          "lastName": "Paleari",
+          "slug": "alberto-paleari",
+          "shortName": "A. Paleari",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 438,
+          "gender": "M",
+          "id": 259281,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ألبرتو باليري",
+              "bn": "আলবার্তো পালিয়ারি",
+              "hi": "अल्बर्टो पलेरी"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. باليري",
+              "bn": "এ. পালিয়ারি",
+              "hi": "ए. पलेरी"
+            }
+          }
+        },
+        "id": 7148183,
+        "time": 47,
+        "timeSeconds": 2778,
+        "draw": {
+          "start": {
+            "x": 34.2,
+            "y": 9.5
+          },
+          "block": {
+            "x": 44.2,
+            "y": 2.3
+          },
+          "end": {
+            "x": 51.7,
+            "y": 0
+          },
+          "goal": {
+            "x": 51.7,
+            "y": 98.1
+          }
+        },
+        "reversedPeriodTime": 44,
+        "reversedPeriodTimeSeconds": 2622,
+        "periodTimeSeconds": 78,
+        "incidentType": "shot"
+      }
+    ]
+  },
+  {
+    "shotmap": [
+      {
+        "player": {
+          "name": "Marcus Thuram",
+          "firstName": "Marcus",
+          "lastName": "Thuram",
+          "slug": "marcus-thuram",
+          "shortName": "M. Thuram",
+          "position": "F",
+          "jerseyNumber": "9",
+          "userCount": 27256,
+          "gender": "M",
+          "sofascoreId": "m_thuram",
+          "id": 791702,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ماركوس تورام",
+              "bn": "থুরাম, মার্কাস",
+              "hi": "थुरम, मार्कस"
+            },
+            "shortNameTranslation": {
+              "ar": "م. تورام",
+              "bn": "এম. থুরাম",
+              "hi": "एम. मार्कस"
+            }
+          }
+        },
+        "isHome": false,
+        "shotType": "block",
+        "situation": "assisted",
+        "playerCoordinates": {
+          "x": 26.3,
+          "y": 41.3,
+          "z": 0
+        },
+        "bodyPart": "right-foot",
+        "goalMouthLocation": "low-centre",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 49.1,
+          "z": 19
+        },
+        "blockCoordinates": {
+          "x": 16.3,
+          "y": 44.9,
+          "z": 0
+        },
+        "xg": 0.016160475090146,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Alberto Paleari",
+          "firstName": "Alberto",
+          "lastName": "Paleari",
+          "slug": "alberto-paleari",
+          "shortName": "A. Paleari",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 438,
+          "gender": "M",
+          "id": 259281,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ألبرتو باليري",
+              "bn": "আলবার্তো পালিয়ারি",
+              "hi": "अल्बर्टो पलेरी"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. باليري",
+              "bn": "এ. পালিয়ারি",
+              "hi": "ए. पलेरी"
+            }
+          }
+        },
+        "id": 7148501,
+        "time": 90,
+        "addedTime": 2,
+        "timeSeconds": 5502,
+        "draw": {
+          "start": {
+            "x": 41.3,
+            "y": 26.3
+          },
+          "block": {
+            "x": 44.9,
+            "y": 16.3
+          },
+          "end": {
+            "x": 50.9,
+            "y": 0
+          },
+          "goal": {
+            "x": 50.9,
+            "y": 81
+          }
+        },
+        "reversedPeriodTime": 1,
+        "reversedPeriodTimeSeconds": 798,
+        "periodTimeSeconds": 102,
+        "incidentType": "shot"
+      },
+      {
+        "player": {
+          "name": "Marcus Thuram",
+          "firstName": "Marcus",
+          "lastName": "Thuram",
+          "slug": "marcus-thuram",
+          "shortName": "M. Thuram",
+          "position": "F",
+          "jerseyNumber": "9",
+          "userCount": 27256,
+          "gender": "M",
+          "sofascoreId": "m_thuram",
+          "id": 791702,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ماركوس تورام",
+              "bn": "থুরাম, মার্কাস",
+              "hi": "थुरम, मार्कस"
+            },
+            "shortNameTranslation": {
+              "ar": "م. تورام",
+              "bn": "এম. থুরাম",
+              "hi": "एम. मार्कस"
+            }
+          }
+        },
+        "isHome": false,
+        "shotType": "block",
+        "situation": "fast-break",
+        "playerCoordinates": {
+          "x": 13.8,
+          "y": 37.8,
+          "z": 0
+        },
+        "bodyPart": "right-foot",
+        "goalMouthLocation": "low-centre",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 48.5,
+          "z": 19
+        },
+        "blockCoordinates": {
+          "x": 11.2,
+          "y": 39.5,
+          "z": 0
+        },
+        "xg": 0.10943968594074,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Alberto Paleari",
+          "firstName": "Alberto",
+          "lastName": "Paleari",
+          "slug": "alberto-paleari",
+          "shortName": "A. Paleari",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 438,
+          "gender": "M",
+          "id": 259281,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ألبرتو باليري",
+              "bn": "আলবার্তো পালিয়ারি",
+              "hi": "अल्बर्टो पलेरी"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. باليري",
+              "bn": "এ. পালিয়ারি",
+              "hi": "ए. पलेरी"
+            }
+          }
+        },
+        "id": 7148287,
+        "time": 60,
+        "timeSeconds": 3568,
+        "draw": {
+          "start": {
+            "x": 37.8,
+            "y": 13.8
+          },
+          "block": {
+            "x": 39.5,
+            "y": 11.2
+          },
+          "end": {
+            "x": 51.5,
+            "y": 0
+          },
+          "goal": {
+            "x": 51.5,
+            "y": 81
+          }
+        },
+        "reversedPeriodTime": 31,
+        "reversedPeriodTimeSeconds": 1832,
+        "periodTimeSeconds": 868,
+        "incidentType": "shot"
+      },
+      {
+        "player": {
+          "name": "Marcus Thuram",
+          "firstName": "Marcus",
+          "lastName": "Thuram",
+          "slug": "marcus-thuram",
+          "shortName": "M. Thuram",
+          "position": "F",
+          "jerseyNumber": "9",
+          "userCount": 27256,
+          "gender": "M",
+          "sofascoreId": "m_thuram",
+          "id": 791702,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ماركوس تورام",
+              "bn": "থুরাম, মার্কাস",
+              "hi": "थुरम, मार्कस"
+            },
+            "shortNameTranslation": {
+              "ar": "م. تورام",
+              "bn": "এম. থুরাম",
+              "hi": "एम. मार्कस"
+            }
+          }
+        },
+        "isHome": false,
+        "shotType": "block",
+        "situation": "assisted",
+        "playerCoordinates": {
+          "x": 17.5,
+          "y": 38.9,
+          "z": 0
+        },
+        "bodyPart": "right-foot",
+        "goalMouthLocation": "low-right",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 47.6,
+          "z": 19
+        },
+        "blockCoordinates": {
+          "x": 14.4,
+          "y": 41.3,
+          "z": 0
+        },
+        "xg": 0.030658209696412,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Alberto Paleari",
+          "firstName": "Alberto",
+          "lastName": "Paleari",
+          "slug": "alberto-paleari",
+          "shortName": "A. Paleari",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 438,
+          "gender": "M",
+          "id": 259281,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ألبرتو باليري",
+              "bn": "আলবার্তো পালিয়ারি",
+              "hi": "अल्बर्टो पलेरी"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. باليري",
+              "bn": "এ. পালিয়ারি",
+              "hi": "ए. पलेरी"
+            }
+          }
+        },
+        "id": 7148178,
+        "time": 47,
+        "timeSeconds": 2776,
+        "draw": {
+          "start": {
+            "x": 38.9,
+            "y": 17.5
+          },
+          "block": {
+            "x": 41.3,
+            "y": 14.4
+          },
+          "end": {
+            "x": 52.4,
+            "y": 0
+          },
+          "goal": {
+            "x": 52.4,
+            "y": 81
+          }
+        },
+        "reversedPeriodTime": 44,
+        "reversedPeriodTimeSeconds": 2624,
+        "periodTimeSeconds": 76,
+        "incidentType": "shot"
+      },
+      {
+        "player": {
+          "name": "Marcus Thuram",
+          "firstName": "Marcus",
+          "lastName": "Thuram",
+          "slug": "marcus-thuram",
+          "shortName": "M. Thuram",
+          "position": "F",
+          "jerseyNumber": "9",
+          "userCount": 27256,
+          "gender": "M",
+          "sofascoreId": "m_thuram",
+          "id": 791702,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ماركوس تورام",
+              "bn": "থুরাম, মার্কাস",
+              "hi": "थुरम, मार्कस"
+            },
+            "shortNameTranslation": {
+              "ar": "م. تورام",
+              "bn": "এম. থুরাম",
+              "hi": "एम. मार्कस"
+            }
+          }
+        },
+        "isHome": false,
+        "shotType": "goal",
+        "goalType": "regular",
+        "situation": "assisted",
+        "playerCoordinates": {
+          "x": 2.9,
+          "y": 54.8,
+          "z": 0
+        },
+        "bodyPart": "head",
+        "goalMouthLocation": "high-right",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 46.6,
+          "z": 24.7
+        },
+        "xg": 0.44976899027824,
+        "xgot": 0.92658221721649,
+        "goalkeeper": {
+          "name": "Alberto Paleari",
+          "firstName": "Alberto",
+          "lastName": "Paleari",
+          "slug": "alberto-paleari",
+          "shortName": "A. Paleari",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 438,
+          "gender": "M",
+          "id": 259281,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ألبرتو باليري",
+              "bn": "আলবার্তো পালিয়ারি",
+              "hi": "अल्बर्टो पलेरी"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. باليري",
+              "bn": "এ. পালিয়ারি",
+              "hi": "ए. पलेरी"
+            }
+          }
+        },
+        "id": 7147818,
+        "time": 23,
+        "timeSeconds": 1376,
+        "draw": {
+          "start": {
+            "x": 54.8,
+            "y": 2.9
+          },
+          "end": {
+            "x": 53.4,
+            "y": 0
+          },
+          "goal": {
+            "x": 53.4,
+            "y": 75.3
+          }
+        },
+        "reversedPeriodTime": 23,
+        "reversedPeriodTimeSeconds": 1324,
+        "periodTimeSeconds": 1376,
+        "incidentType": "shot"
+      }
+    ]
+  },
+  {
+    "shotmap": [
+      {
+        "player": {
+          "name": "Ange-Yoan Bonny",
+          "firstName": "Ange",
+          "lastName": "Bonny",
+          "slug": "ange-bonny",
+          "shortName": "A. Bonny",
+          "position": "F",
+          "jerseyNumber": "14",
+          "userCount": 11243,
+          "gender": "M",
+          "id": 1086223,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "bn": "অ্যাঞ্জ-ইয়োয়ান বনি",
+              "hi": "एंज-योन बोनी"
+            },
+            "shortNameTranslation": {
+              "bn": "এ. বনি",
+              "hi": "ए. बोनी"
+            }
+          }
+        },
+        "isHome": false,
+        "shotType": "miss",
+        "situation": "assisted",
+        "playerCoordinates": {
+          "x": 7.3,
+          "y": 54.2,
+          "z": 0
+        },
+        "bodyPart": "head",
+        "goalMouthLocation": "high",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 50.9,
+          "z": 62.5
+        },
+        "xg": 0.24342261254787,
+        "xgot": 0,
+        "goalkeeper": {
+          "name": "Alberto Paleari",
+          "firstName": "Alberto",
+          "lastName": "Paleari",
+          "slug": "alberto-paleari",
+          "shortName": "A. Paleari",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 438,
+          "gender": "M",
+          "id": 259281,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ألبرتو باليري",
+              "bn": "আলবার্তো পালিয়ারি",
+              "hi": "अल्बर्टो पलेरी"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. باليري",
+              "bn": "এ. পালিয়ারি",
+              "hi": "ए. पलेरी"
+            }
+          }
+        },
+        "id": 7147898,
+        "time": 33,
+        "timeSeconds": 1932,
+        "draw": {
+          "start": {
+            "x": 54.2,
+            "y": 7.3
+          },
+          "end": {
+            "x": 49.1,
+            "y": 0
+          },
+          "goal": {
+            "x": 49.1,
+            "y": 37.5
+          }
+        },
+        "reversedPeriodTime": 13,
+        "reversedPeriodTimeSeconds": 768,
+        "periodTimeSeconds": 1932,
+        "incidentType": "shot"
+      },
+      {
+        "player": {
+          "name": "Ange-Yoan Bonny",
+          "firstName": "Ange",
+          "lastName": "Bonny",
+          "slug": "ange-bonny",
+          "shortName": "A. Bonny",
+          "position": "F",
+          "jerseyNumber": "14",
+          "userCount": 11243,
+          "gender": "M",
+          "id": 1086223,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "bn": "অ্যাঞ্জ-ইয়োয়ান বনি",
+              "hi": "एंज-योन बोनी"
+            },
+            "shortNameTranslation": {
+              "bn": "এ. বনি",
+              "hi": "ए. बोनी"
+            }
+          }
+        },
+        "isHome": false,
+        "shotType": "save",
+        "situation": "regular",
+        "playerCoordinates": {
+          "x": 19.1,
+          "y": 51.5,
+          "z": 0
+        },
+        "bodyPart": "right-foot",
+        "goalMouthLocation": "low-centre",
+        "goalMouthCoordinates": {
+          "x": 0,
+          "y": 51.3,
+          "z": 4.4
+        },
+        "blockCoordinates": {
+          "x": 3.2,
+          "y": 50.2,
+          "z": 0
+        },
+        "xg": 0.042772985994816,
+        "xgot": 0.044405769556761,
+        "goalkeeper": {
+          "name": "Alberto Paleari",
+          "firstName": "Alberto",
+          "lastName": "Paleari",
+          "slug": "alberto-paleari",
+          "shortName": "A. Paleari",
+          "position": "G",
+          "jerseyNumber": "1",
+          "userCount": 438,
+          "gender": "M",
+          "id": 259281,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ألبرتو باليري",
+              "bn": "আলবার্তো পালিয়ারি",
+              "hi": "अल्बर्टो पलेरी"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. باليري",
+              "bn": "এ. পালিয়ারি",
+              "hi": "ए. पलेरी"
+            }
+          }
+        },
+        "id": 7147781,
+        "time": 20,
+        "timeSeconds": 1183,
+        "draw": {
+          "start": {
+            "x": 51.5,
+            "y": 19.1
+          },
+          "block": {
+            "x": 50.2,
+            "y": 3.2
+          },
+          "end": {
+            "x": 48.7,
+            "y": 0
+          },
+          "goal": {
+            "x": 48.7,
+            "y": 95.6
+          }
+        },
+        "reversedPeriodTime": 26,
+        "reversedPeriodTimeSeconds": 1517,
+        "periodTimeSeconds": 1183,
+        "incidentType": "shot"
+      }
+    ]
+  },
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  []
+]
