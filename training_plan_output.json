@@ -2,40 +2,78 @@
   "trainingPlan": {
     "teamDrills": [
       {
-        "focusCode": "TRANSITION_DEFENSE_TO_OFFENSE",
+        "focusCode": "POSSESSION_UNDER_PRESSURE",
         "priority": "HIGH",
-        "linkedOpponentFeature": "SLOW_COUNTER_ATTACKS",
-        "targetedPositions": [
-          "D",
-          "M",
-          "F"
-        ]
-      },
-      {
-        "focusCode": "BUILD_UP_PLAY_UNDER_PRESSURE",
-        "priority": "MEDIUM",
         "linkedOpponentFeature": "HIGH_PRESS_INTENSITY",
         "targetedPositions": [
-          "D",
-          "M"
+          "M",
+          "D"
         ]
       },
       {
-        "focusCode": "ATTACKING_WIDTH_CREATION",
+        "focusCode": "TRANSITION_ATTACK_DEFENCE",
         "priority": "MEDIUM",
-        "linkedOpponentFeature": "COMPACT_DEFENSE",
+        "linkedOpponentFeature": "COUNTER_ATTACK_THREAT",
+        "targetedPositions": [
+          "M",
+          "D"
+        ]
+      },
+      {
+        "focusCode": "BUILD_UP_FROM_DEFENCE",
+        "priority": "MEDIUM",
+        "linkedOpponentFeature": "MIDFIELD_BLOCK",
         "targetedPositions": [
           "D",
-          "M",
-          "F"
+          "G"
         ]
       }
     ],
     "individualDrills": [
       {
-        "playerId": 795064,
-        "playerName": "Trent Alexander-Arnold",
-        "drillCode": "CROSSING_ACCURACY_UNDER_PRESSURE"
+        "playerId": 792073,
+        "playerName": "Ferland Mendy",
+        "drillCode": "1V1_DEFENDING_WIDE"
+      },
+      {
+        "playerId": 792073,
+        "playerName": "Ferland Mendy",
+        "drillCode": "PASSING_ACCURACY_SHORT"
+      },
+      {
+        "playerId": 66492,
+        "playerName": "David Alaba",
+        "drillCode": "POSITIONAL_AWARENESS_CENTRE_BACK"
+      },
+      {
+        "playerId": 66492,
+        "playerName": "David Alaba",
+        "drillCode": "SHORT_PASSING_UNDER_PRESSURE"
+      },
+      {
+        "playerId": 138572,
+        "playerName": "Dani Carvajal",
+        "drillCode": "DEFENSIVE_TRANSITIONS_WIDE"
+      },
+      {
+        "playerId": 142622,
+        "playerName": "Antonio R\u00fcdiger",
+        "drillCode": "BALL_RECOVERY_HIGH_LINE"
+      },
+      {
+        "playerId": 851271,
+        "playerName": "Fran Garc\u00eda",
+        "drillCode": "CROSSING_ACCURACY"
+      },
+      {
+        "playerId": 1085081,
+        "playerName": "\u00c1lvaro Carreras",
+        "drillCode": "CROSSING_ACCURACY"
+      },
+      {
+        "playerId": 1156645,
+        "playerName": "Ra\u00fal Asencio",
+        "drillCode": "INTERCEPTIONS_CENTRE_BACK"
       },
       {
         "playerId": 822519,
@@ -43,99 +81,64 @@
         "drillCode": "LONG_PASSING_ACCURACY"
       },
       {
-        "playerId": 142622,
-        "playerName": "Antonio Rudiger",
-        "drillCode": "PASSING_RANGE_AND_ACCURACY"
-      },
-      {
-        "playerId": 792073,
-        "playerName": "Ferland Mendy",
-        "drillCode": "BALL_CONTROL_IN_TIGHT_SPACES"
-      },
-      {
-        "playerId": 835485,
-        "playerName": "Brahim D\u00edaz",
-        "drillCode": "FINISHING_FROM_DIFFERENT_ANGLES"
-      },
-      {
-        "playerId": 991011,
-        "playerName": "Jude Bellingham",
-        "drillCode": "LONG_RANGE_SHOT_ACCURACY"
-      },
-      {
-        "playerId": 831808,
-        "playerName": "Federico Valverde",
-        "drillCode": "SHOT_SELECTION_AND_EXECUTION"
-      },
-      {
-        "playerId": 1091116,
-        "playerName": "Arda G\u00fcler",
-        "drillCode": "FINISHING_FROM_OUTSIDE_THE_BOX"
-      },
-      {
-        "playerId": 826643,
-        "playerName": "Kylian Mbapp\u00e9",
-        "drillCode": "OFF_BALL_MOVEMENT_TO_CREATE_SPACE"
-      },
-      {
-        "playerId": 868812,
-        "playerName": "Vinicius J\u00fanior",
-        "drillCode": "FINAL_THIRD_DECISION_MAKING"
+        "playerId": 2237795,
+        "playerName": "Thiago Pitarch",
+        "drillCode": "BALL_RETENTION_CENTRE_MIDFIELD"
       },
       {
         "playerId": 973887,
         "playerName": "Eduardo Camavinga",
-        "drillCode": "INTERCEPTION_AND_TACKLING_TECHNIQUE"
-      },
-      {
-        "playerId": 2237795,
-        "playerName": "Thiago Pitarch",
-        "drillCode": "BALL_RETAINING_IN_MIDFIELD"
-      },
-      {
-        "playerId": 1403559,
-        "playerName": "Franco Mastantuono",
-        "drillCode": "DRIBBBLING_IN_WIDE_AREAS"
-      },
-      {
-        "playerId": 1176744,
-        "playerName": "Dean Huijsen",
-        "drillCode": "ONE_ON_ONE_DEFENDING_VS_FORWARD"
-      },
-      {
-        "playerId": 1085081,
-        "playerName": "\u00c1lvaro Carreras",
-        "drillCode": "POSITIONING_IN_WIDE_DEFENSE"
-      },
-      {
-        "playerId": 138572,
-        "playerName": "Dani Carvajal",
-        "drillCode": "DEFENSIVE_TRANSITION_POSITIONING"
-      },
-      {
-        "playerId": 851271,
-        "playerName": "Fran Garc\u00eda",
-        "drillCode": "CROSS_INTERCEPTION_TECHNIQUE"
-      },
-      {
-        "playerId": 1156645,
-        "playerName": "Ra\u00fal Asencio",
-        "drillCode": "COMMUNICATION_WITH_GOALKEEPER"
+        "drillCode": "SHORT_PASSING_UNDER_PRESSURE"
       },
       {
         "playerId": 859025,
         "playerName": "Aur\u00e9lien Tchouam\u00e9ni",
-        "drillCode": "PASS_BREAKING_AND_INTERCEPTING"
+        "drillCode": "LONG_PASSING_ACCURACY"
+      },
+      {
+        "playerId": 1402688,
+        "playerName": "C\u00e9sar Palacios",
+        "drillCode": "BALL_RETENTION_DEFENSIVE_MIDFIELD"
       },
       {
         "playerId": 1142683,
         "playerName": "Manuel \u00c1ngel Mor\u00e1n",
-        "drillCode": "SPACE_EXPLOITATION_IN_ATTACK"
+        "drillCode": "PASSING_OPTIONS_CENTRE_MIDFIELD"
       },
       {
-        "playerId": 1402688,
+        "playerId": 835485,
+        "playerName": "Brahim D\u00edaz",
+        "drillCode": "FINISHING_FROM_MEDIUM_RANGE"
+      },
+      {
+        "playerId": 1402716,
         "playerName": "Gonzalo Garc\u00eda",
-        "drillCode": "FINISHING_UNDER_DUAL_PRESSURE"
+        "drillCode": "CROSSING_ACCURACY"
+      },
+      {
+        "playerId": 1403559,
+        "playerName": "Franco Mastantuono",
+        "drillCode": "SHOT_CREATION_WIDE"
+      },
+      {
+        "playerId": 1546404,
+        "playerName": "Daniel Y\u00e1\u00f1ez",
+        "drillCode": "FINAL_THIRD_PENETRATION"
+      },
+      {
+        "playerId": 857574,
+        "playerName": "Andriy Lunin",
+        "drillCode": "DISTRIBUTION_LONG_PASS"
+      },
+      {
+        "playerId": 1493226,
+        "playerName": "Fran Gonz\u00e1lez",
+        "drillCode": "REACTION_SAVING"
+      },
+      {
+        "playerId": 1403015,
+        "playerName": "Sergio Mestre",
+        "drillCode": "REACTION_SAVING"
       }
     ]
   }
