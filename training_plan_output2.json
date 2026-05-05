@@ -1,0 +1,95 @@
+{
+  "trainingPlan": {
+    "teamDrills": [
+      {
+        "focusCode": "TRANSITION_ATTACK_TO_DEFENSE",
+        "priority": "HIGH",
+        "linkedOpponentFeature": "FAST_BREAKS",
+        "targetedPositions": [
+          "D",
+          "M",
+          "F"
+        ]
+      },
+      {
+        "focusCode": "COUNTER_PRESSING_EFFECTIVENESS",
+        "priority": "HIGH",
+        "linkedOpponentFeature": "BUILD_UP_UNDER_PRESSURE",
+        "targetedPositions": [
+          "M",
+          "F"
+        ]
+      },
+      {
+        "focusCode": "DEFENSIVE_SHAPE_MAINTENANCE",
+        "priority": "MEDIUM",
+        "linkedOpponentFeature": "WIDE_ATTACKS",
+        "targetedPositions": [
+          "D",
+          "M"
+        ]
+      },
+      {
+        "focusCode": "POSSESSION_RETENTION_UNDER_PRESSURE",
+        "priority": "MEDIUM",
+        "linkedOpponentFeature": "HIGH_PRESS_INTENSITY",
+        "targetedPositions": [
+          "D",
+          "M"
+        ]
+      }
+    ],
+    "individualDrills": [
+      {
+        "playerId": 795064,
+        "playerName": "Trent Alexander-Arnold",
+        "drillCode": "1V1_DEFENDING_WIDE"
+      },
+      {
+        "playerId": 795064,
+        "playerName": "Trent Alexander-Arnold",
+        "drillCode": "POSITIONAL_DISCIPLINE_IN_TRANSITION"
+      },
+      {
+        "playerId": 142622,
+        "playerName": "Antonio R\u00fcdiger",
+        "drillCode": "LONG_BALL_ACCURACY_UNDER_PRESSURE"
+      },
+      {
+        "playerId": 792073,
+        "playerName": "Ferland Mendy",
+        "drillCode": "ONE_ON_ONE_DEFENDING_IN_CHALLENGING_SITUATIONS"
+      },
+      {
+        "playerId": 792073,
+        "playerName": "Ferland Mendy",
+        "drillCode": "ERROR_AVOIDANCE_IN_DEFENSIVE_THIRD"
+      },
+      {
+        "playerId": 835485,
+        "playerName": "Brahim D\u00edaz",
+        "drillCode": "IMPROVING_DECISION_MAKING_IN_FINAL_THIRD"
+      },
+      {
+        "playerId": 991011,
+        "playerName": "Jude Bellingham",
+        "drillCode": "BALL_RETENTION_AGAINST_AGGRESSIVE_MARKING"
+      },
+      {
+        "playerId": 826643,
+        "playerName": "Kylian Mbapp\u00e9",
+        "drillCode": "SHOT_SELECTION_AND_EXECUTION"
+      },
+      {
+        "playerId": 826643,
+        "playerName": "Kylian Mbapp\u00e9",
+        "drillCode": "PASSING_CHOICE_UNDER_DEFENSIVE_PRESSURE"
+      },
+      {
+        "playerId": 868812,
+        "playerName": "Vinicius J\u00fanior",
+        "drillCode": "DECISIVENESS_IN_FRONT_OF_GOAL"
+      }
+    ]
+  }
+}
