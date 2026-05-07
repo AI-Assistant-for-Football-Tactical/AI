@@ -593,7 +593,7 @@ def get_tacticale(api_base: str, team_selection_output: json, opponent_id: int) 
             response = stats_resp.json().get('statistics')
             response['id'] = player_id
             general_statistics.append(response)
-        general_statistics = pd.DataFrame(general_statistics).fillna(0).drop(columns=['type', 'statisticsType'])
+        general_statistics = pd.DataFrame(general_statistics).fillna(0)
         general_statistics = pd.concat([recommended_players[['playerId', 'name', 'role', 'position', 'suitabilityScore']], general_statistics], axis=1).drop(columns='playerId')
         opponent_lastm_info = get_team_lnm(api_base, opponent_id, 1)
         opp_lineups_resp = cached_get(api_base + f'events/{list(opponent_lastm_info.keys())[0]}/lineups')

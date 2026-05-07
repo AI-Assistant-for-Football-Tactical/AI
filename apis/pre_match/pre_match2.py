@@ -712,16 +712,39 @@ def get_training_recommendations(api_base: str, df: pd.DataFrame) -> str:
         return resp.text.strip()
     except: return '{"trainingPlan": {"teamDrills": [], "individualDrills": []}}'
 
-def get_tacticale(api_base: str, selection: dict, opponent_id: int) -> dict:
+def get_tacticale(api_base: str, team_selection_output: json, opponent_id: int) -> json:
     try:
         api_key = os.environ.get('GEMINI_API_KEY_PRE_MATCH_1')
         client = genai.Client(api_key=api_key)
-        prompt = f"Selection: {json.dumps(selection)}\nOpponent ID: {opponent_id}"
-        resp = client.models.generate_content(model='gemini-2.5-flash-lite', config={'system_instruction': 'Return JSON with suggestedFormation and strategyCode.'}, contents=prompt)
-        txt = resp.text.strip()
-        m = re.search(r'\{.*\}', txt, re.DOTALL)
-        return json.loads(m.group()) if m else {"suggestedFormation": selection.get('suggestedFormation'), "strategyCode": "BALANCED"}
-    except: return {"suggestedFormation": selection.get('suggestedFormation'), "strategyCode": "BALANCED"}
+        recommended_players = pd.json_normalize(team_selection_output['startingXI'])
+        recommended_players['suitabilityScore'] = pd.to_numeric(recommended_players['suitabilityScore'], errors='coerce').fillna(0.0)
+        suggested_formations = team_selection_output['suggestedFormation']
+        ids = get_season_tournament_ids(api_base, list(recommended_players['playerId']))
+        general_statistics = []
+        for player_id in ids.keys():
+            stats_resp = cached_get(f"{api_base}players/{player_id}/unique-tournament/{ids[player_id]['tournament_id']}/season/{ids[player_id]['season_id']}/statistics/overall")
+            if stats_resp is None or stats_resp.status_code != 200:
+                print(f'Skipping player {player_id}: statistics endpoint failed')
+                continue
+            response = stats_resp.json().get('statistics')
+            response['id'] = player_id
+            general_statistics.append(response)
+        general_statistics = pd.DataFrame(general_statistics).fillna(0)
+        general_statistics = pd.concat([recommended_players[['playerId', 'name', 'role', 'position', 'suitabilityScore']], general_statistics], axis=1).drop(columns='playerId')
+        opponent_lastm_info = get_team_lnm(api_base, opponent_id, 1)
+        opp_lineups_resp = cached_get(api_base + f'events/{list(opponent_lastm_info.keys())[0]}/lineups')
+        if opp_lineups_resp is not None and opp_lineups_resp.status_code == 200:
+            opponent_formation = opp_lineups_resp.json().get('home' if opponent_lastm_info.get('target_team_name') == opponent_lastm_info[list(opponent_lastm_info.keys())[0]]['homeTeam'] else 'away', {}).get('formation')
+        else:
+            opponent_formation = 'Unknown'
+        prompt = f"""\nYou are a professional football manager and tactical analyst. You are given a dataset containing the statistics and positions of the players selected for the next match. \nPlayer data: {general_statistics.to_json()} \nThe suggested formation for our team to play with: {suggested_formations} \nThe opponent played their last match using this formation: {opponent_formation} \nYour task:\n# 1. Analyze the player statistics and positions.\n# 2. Suggest a tactical strategy that best fits the squad and counters the opponent's formation. \n# Return ONLY a valid JSON object in the following format:\n\n# {{ "suggestedFormation": "formation",\n#   "strategyCode": "strategy_name" }}\n\n# Example:\n# {{ "suggestedFormation": "4-3-3",\n#   "strategyCode": "COUNTER_ATTACK_DIRECT" }}\n# """
+        response = client.models.generate_content(model='gemini-2.5-flash-lite', config={'system_instruction': 'Only output the requierd output'}, contents=prompt)
+        result = response.text
+        return result
+    except Exception as e:
+        print(e)
+        return ' { "suggestedFormation": null,\n        "strategyCode": null } '
+
 
 def get_season_tournament_ids(api_base: str, pids: list) -> dict:
     return {} # Implementation not critical for core flow if using stats directly
