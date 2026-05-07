@@ -30,7 +30,9 @@ from pre_match import (
     get_training_recommendations,
     get_best_starting_lineup_from_recommendations,
     get_season_tournament_ids,
-    get_tacticale
+    get_tacticale,
+    cached_get,
+    clear_api_cache
 )
 
 from post_match import generate_post_match_report
@@ -89,6 +91,9 @@ def pre_match():
         }), 400
     
     try:
+
+        # Clear API cache for fresh analysis run
+        clear_api_cache()
 
         # Step 1: Not parallel
         matches_ids = get_team_lnm(api_base, team_id, num_of_matches)
@@ -156,7 +161,10 @@ def pre_match():
             tacticle = json.loads(tacticle.group())
 
         # Step 6: Get match date
-        data = requests.get(api_base + f'teams/{team_id}/events/next/0').json()
+        next_resp = cached_get(api_base + f'teams/{team_id}/events/next/0')
+        if next_resp is None or next_resp.status_code != 200:
+            return jsonify({"error": "Failed to fetch next match data"}), 500
+        data = next_resp.json()
         event = data["events"][0]
         ts = event["startTimestamp"]
 

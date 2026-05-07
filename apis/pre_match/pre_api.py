@@ -9,7 +9,7 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 dotenv_path = os.path.join(current_dir, '.env')
 
 
-load_dotenv(dotenv_path=r"env", override=True)
+load_dotenv(dotenv_path=dotenv_path, override=True)
 
 app = Flask(__name__)
 
@@ -61,56 +61,41 @@ def pre_match():
     # fifth parallel part
     formation_suggestion = formation_suggestions(api_base , opponent_id)
 
-
-
-
     # sixth parallel part
     players_training_stats = get_training_player_stats(api_base, matches_ids)
     training_recommendations = get_training_recommendations(api_base, players_training_stats)
 
-
-
-
-    # not parallel part
-
+    # team selection logic
     team_selection_output = get_best_starting_lineup_from_recommendations(
                 players_stats_scored=players_score, 
                 recommended_formations=formation_suggestion,
                 real_pos_df=players_real_positions 
             )
 
-
-
-    get_season_tournament_ids( api_base, list(players_score['player_id']))
-
-
-
     tacticle = get_tacticale(api_base , team_selection_output , opponent_id)
     
     if isinstance(tacticle, str):
         match = re.search(r'\{[\s\S]*\}', tacticle)
-
         if match:
             tacticle = json.loads(match.group())
         else:
-            raise ValueError(
-                f"get_tacticale() did not return JSON.\nReturned value:\n{tacticle}"
-            )
+            tacticle = {"suggestedFormation": team_selection_output.get('suggestedFormation'), "strategyCode": "BALANCED"}
 
-    
-    
-     # getting the date for the next match
-    data = requests.get(api_base + f'teams/{team_id}/events/next/0').json()
-
-    event = data["events"][0]  # or any event you want
-    ts = event["startTimestamp"]
-
-    match_date = (
-        datetime
-        .fromtimestamp(ts, tz=timezone.utc)
-        .isoformat()
-        .replace("+00:00", "Z")
-    )
+    # getting the date for the next match
+    try:
+        next_match_resp = requests.get(api_base + f'teams/{team_id}/events/next/0')
+        if next_match_resp.status_code == 200:
+            next_data = next_match_resp.json()
+            if next_data.get("events"):
+                event = next_data["events"][0]
+                ts = event["startTimestamp"]
+                match_date = datetime.fromtimestamp(ts, tz=timezone.utc).isoformat().replace("+00:00", "Z")
+            else:
+                match_date = datetime.utcnow().isoformat() + "Z"
+        else:
+            match_date = datetime.utcnow().isoformat() + "Z"
+    except:
+        match_date = datetime.utcnow().isoformat() + "Z"
 
  
 
