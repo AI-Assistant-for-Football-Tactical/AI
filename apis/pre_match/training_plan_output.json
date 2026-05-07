@@ -1,0 +1,155 @@
+{
+  "trainingPlan": {
+    "teamDrills": [
+      {
+        "focusCode": "BUILD_UP_PLAY_FROM_DEFENSE",
+        "priority": "MEDIUM",
+        "linkedOpponentFeature": "HIGH_PRESS_INTENSITY",
+        "targetedPositions": [
+          "D",
+          "M"
+        ]
+      },
+      {
+        "focusCode": "TRANSITIONS_ATTACK_TO_DEFENSE",
+        "priority": "HIGH",
+        "linkedOpponentFeature": "QUICK_COUNTER_ATTACKS",
+        "targetedPositions": [
+          "M",
+          "F"
+        ]
+      },
+      {
+        "focusCode": "DEFENSIVE_SHAPE_AND_COVER",
+        "priority": "HIGH",
+        "linkedOpponentFeature": "WIDE_ATTACKING_THREAT",
+        "targetedPositions": [
+          "D",
+          "M"
+        ]
+      }
+    ],
+    "individualDrills": [
+      {
+        "playerId": 2237795,
+        "playerName": "Thiago Pitarch",
+        "drillCode": "PASSING_ACCURACY_UNDER_PRESSURE"
+      },
+      {
+        "playerId": 792073,
+        "playerName": "Ferland Mendy",
+        "drillCode": "CROSSING_ACCURACY_FROM_DEEP"
+      },
+      {
+        "playerId": 826643,
+        "playerName": "Kylian Mbapp\u00e9",
+        "drillCode": "FINISHING_FROM_DIFFERENT_ANGLES"
+      },
+      {
+        "playerId": 859025,
+        "playerName": "Aur\u00e9lien Tchouam\u00e9ni",
+        "drillCode": "INTERCEPTIONS_AND_TACKLING"
+      },
+      {
+        "playerId": 142622,
+        "playerName": "Antonio R\u00fcdiger",
+        "drillCode": "LONG_PASSING_ACCURACY"
+      },
+      {
+        "playerId": 795064,
+        "playerName": "Trent Alexander-Arnold",
+        "drillCode": "LONG_PASSING_ACCURACY"
+      },
+      {
+        "playerId": 822519,
+        "playerName": "\u00c9der Milit\u00e3o",
+        "drillCode": "POSSESS_AND_BUILD_UP_PLAY"
+      },
+      {
+        "playerId": 991011,
+        "playerName": "Jude Bellingham",
+        "drillCode": "LONG_SHOT_ACCURACY"
+      },
+      {
+        "playerId": 831808,
+        "playerName": "Federico Valverde",
+        "drillCode": "LONG_SHOT_ACCURACY"
+      },
+      {
+        "playerId": 835485,
+        "playerName": "Brahim D\u00edaz",
+        "drillCode": "DRIBBING_IN_TIGHT_SPACES"
+      },
+      {
+        "playerId": 66492,
+        "playerName": "David Alaba",
+        "drillCode": "POSITIONAL_AWARENESS_IN_DEFENSE"
+      },
+      {
+        "playerId": 1402716,
+        "playerName": "Gonzalo Garc\u00eda",
+        "drillCode": "FINISHING_WITH_BOTH_FEET"
+      },
+      {
+        "playerId": 1085081,
+        "playerName": "\u00c1lvaro Carreras",
+        "drillCode": "CROSSING_ACCURACY"
+      },
+      {
+        "playerId": 851271,
+        "playerName": "Fran Garc\u00eda",
+        "drillCode": "ONE_V_ONE_DEFENDING"
+      },
+      {
+        "playerId": 1403559,
+        "playerName": "Franco Mastantuono",
+        "drillCode": "FINISHING_FROM_MEDIUM_RANGE"
+      },
+      {
+        "playerId": 973887,
+        "playerName": "Eduardo Camavinga",
+        "drillCode": "PASSING_RANGE_AND_VISION"
+      },
+      {
+        "playerId": 1091116,
+        "playerName": "Arda G\u00fcler",
+        "drillCode": "SHOT_CREATION_AND_EXECUTION"
+      },
+      {
+        "playerId": 1402688,
+        "playerName": "C\u00e9sar Palacios",
+        "drillCode": "POSSESSION_MAINTENANCE"
+      },
+      {
+        "playerId": 138572,
+        "playerName": "Dani Carvajal",
+        "drillCode": "TACKLING_AND_BALL_WINNING"
+      },
+      {
+        "playerId": 1156645,
+        "playerName": "Ra\u00fal Asencio",
+        "drillCode": "AERIAL_DUELS_DEFENDING"
+      },
+      {
+        "playerId": 1142683,
+        "playerName": "Manuel \u00c1ngel Mor\u00e1n",
+        "drillCode": "SHORT_PASSING_ACCURACY"
+      },
+      {
+        "playerId": 547838,
+        "playerName": "Dani Ceballos",
+        "drillCode": "PASSING_UNDER_PRESSURE"
+      },
+      {
+        "playerId": 1470066,
+        "playerName": "Jes\u00fas Fortea",
+        "drillCode": "DEFENSIVE_POSITIONING"
+      },
+      {
+        "playerId": 1546404,
+        "playerName": "Daniel Y\u00e1\u00f1ez",
+        "drillCode": "FINISHING_DRILLS"
+      }
+    ]
+  }
+}

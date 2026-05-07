@@ -42,10 +42,13 @@ def pre_match():
     # first parallel part 
     matches_stats = get_match_stats(api_base ,matches_ids )
 
+
+
     # second parallel part
     players_real_positions = get_player_real_position_multimatch(api_base, matches_ids)
     
-    
+
+
     # third parallel part
     players_stats = get_players_stats(api_base, matches_ids)
     players_score = get_players_scores(api_base , players_stats , matches_ids.get('target_team_name') , players_real_positions)
@@ -58,12 +61,15 @@ def pre_match():
 
 
 
+
     # fifth parallel part
     formation_suggestion = formation_suggestions(api_base , opponent_id)
+
 
     # sixth parallel part
     players_training_stats = get_training_player_stats(api_base, matches_ids)
     training_recommendations = get_training_recommendations(api_base, players_training_stats)
+  
 
     # team selection logic
     team_selection_output = get_best_starting_lineup_from_recommendations(
@@ -97,7 +103,14 @@ def pre_match():
     except:
         match_date = datetime.utcnow().isoformat() + "Z"
 
- 
+
+    if isinstance(training_recommendations, str):
+        match = re.search(r'\{[\s\S]*\}', training_recommendations)
+    if match:
+        training_recommendations = json.loads(match.group())
+    else:
+        training_recommendations = {"trainingPlan": None }
+
 
     # constructing final json
     result = {
@@ -114,7 +127,7 @@ def pre_match():
         "startingXI": team_selection_output.get('startingXI'),
         "substitutes": team_selection_output.get('substitutes')
         },
-        "trainingPlan": json.loads(training_recommendations).get('trainingPlan')
+        "trainingPlan": training_recommendations.get('trainingPlan')
         
     }
 

@@ -289,11 +289,49 @@ def analyze_opponent_comprehensive_multimatch(api_base: str, matches_info: dict)
             'stats': {'totalGoals': data['goals'], 'totalAssists': data['assists'], 'avgRating': round(avg_rating, 1)}
         })
     
+    top_threats = sorted(scored_players, key=lambda x: x['threatScore'], reverse=True)
+    primary_formation = primary_fmt
+
+    vulns = []
+
+    if avg_poss > 60:
+        vulns.append('HIGH_DEFENSIVE_LINE')
+
+    elif avg_poss < 45:
+        vulns.append('PASSIVE_MIDFIELD')
+
+    if avg_pass < 75:
+        vulns.append('INACCURATE_IN_BUILDUP')
+
+    elif avg_pass > 90:
+        vulns.append('SHORT_PASS_DEPENDENT')
+
+    total_threat = sum(
+        p['threatScore']
+        for p in scored_players
+    ) or 1
+
+    top2_threat = sum(
+        p['threatScore']
+        for p in top_threats[:2]
+    )
+
+    if top2_threat / total_threat > 0.5:
+        vulns.append('OVER_RELIANT_ON_KEY_PLAYERS')
+
+    if primary_formation in ('4-4-2', '4-2-4'):
+        vulns.append('VULNERABLE_THROUGH_MIDDLE')
+
+    elif primary_formation in ('3-5-2', '3-4-3'):
+        vulns.append('EXPOSED_WIDE_CHANNELS')
+
+    if avg_poss > 55:
+        vulns.append('EXPOSED_TO_COUNTER_ATTACKS')
     return {
         'opponentAnalysis': {
             'tacticalStyle': {'inferredFormation': primary_fmt, 'styleLabels': style, 'metrics': {'avgPossession': round(avg_poss, 1), 'avgPassAccuracy': round(avg_pass, 1)}},
             'keyThreats': sorted(scored_players, key=lambda x: x['threatScore'], reverse=True)[:5],
-            'vulnerabilities': (['HIGH_DEFENSIVE_LINE'] if avg_poss > 60 else ['PASSIVE_MIDFIELD'] if avg_poss < 40 else [])
+            'vulnerabilities': vulns
         }
     }
 
@@ -354,72 +392,286 @@ def get_players_scores(api_base: str, players_stats: pd.DataFrame, team_name: st
         print(f"Scoring error: {e}")
         return pd.DataFrame()
 
-def get_best_starting_lineup_from_recommendations(players_stats_scored: pd.DataFrame, recommended_formations: list, real_pos_df: pd.DataFrame=None) -> dict:
-    try:
-        if players_stats_scored.empty: return {}
-        df = players_stats_scored.copy()
-        df['score'] = df['score'].apply(lambda x: max(x) if isinstance(x, list) else x)
-        df['clean_id'] = df['player_id'].astype(str).str.replace(r'\.0$', '', regex=True).str.strip()
+# def get_best_starting_lineup_from_recommendations(players_stats_scored: pd.DataFrame, recommended_formations: list, real_pos_df: pd.DataFrame=None) -> dict:
+#     try:
+#         if players_stats_scored.empty: return {}
+#         df = players_stats_scored.copy()
+#         df['score'] = df['score'].apply(lambda x: max(x) if isinstance(x, list) else x)
+#         df['clean_id'] = df['player_id'].astype(str).str.replace(r'\.0$', '', regex=True).str.strip()
         
-        if real_pos_df is not None:
-            id_map = dict(zip(real_pos_df['player_id'].astype(str).str.replace(r'\.0$', '', regex=True), real_pos_df['specific_role']))
-            df['Real Position'] = df['clean_id'].map(id_map).apply(lambda x: x if isinstance(x, list) else [x])
+#         if real_pos_df is not None:
+#             id_map = dict(zip(real_pos_df['player_id'].astype(str).str.replace(r'\.0$', '', regex=True), real_pos_df['specific_role']))
+#             df['Real Position'] = df['clean_id'].map(id_map).apply(lambda x: x if isinstance(x, list) else [x])
+#         else:
+#             df['Real Position'] = [['Unknown']] * len(df)
+            
+#         df = df.sort_values('score', ascending=False).reset_index(drop=True)
+        
+#         bucket_features = {'Goalkeeper': {'pos': 'GK', 'role': 'Shot Stopper'}, 'Left Back': {'pos': 'DL', 'role': 'Attacking Wingback'}, 'Left Wing Back': {'pos': 'WBL', 'role': 'Complete Wingback'}, 'Right Back': {'pos': 'DR', 'role': 'Attacking Fullback'}, 'Right Wing Back': {'pos': 'WBR', 'role': 'Complete Wingback'}, 'Center Backs': {'pos': 'DC', 'role': 'Ball Playing Defender'}, 'Defenders': {'pos': 'DC', 'role': 'No-Nonsense Defender'}, 'Defensive Midfielders': {'pos': 'DM', 'role': 'Defensive Anchor'}, 'Central Midfielders': {'pos': 'MC', 'role': 'Box-to-Box'}, 'Midfielders': {'pos': 'MC', 'role': 'Deep Lying Playmaker'}, 'Attacking Midfielder': {'pos': 'AM', 'role': 'Playmaker'}, 'Left Mid': {'pos': 'ML', 'role': 'Wide Midfielder'}, 'Right Mid': {'pos': 'MR', 'role': 'Wide Midfielder'}, 'Left Mid/Wing': {'pos': 'LW', 'role': 'Inverted Winger'}, 'Right Mid/Wing': {'pos': 'RW', 'role': 'Winger'}, 'Left Winger': {'pos': 'LW', 'role': 'Inside Forward'}, 'Right Winger': {'pos': 'RW', 'role': 'Inverted Winger'}, 'Left Forward': {'pos': 'AML', 'role': 'Shadow Striker'}, 'Right Forward': {'pos': 'AMR', 'role': 'Shadow Striker'}, 'Striker': {'pos': 'ST', 'role': 'Complete Forward'}, 'Strikers': {'pos': 'ST', 'role': 'Advanced Forward'}, 'Forwards': {'pos': 'ST', 'role': 'Poacher'}}
+
+#         def get_blueprint(f):
+#             bp = {'Goalkeeper': {'max': 1, 'tags': ['GK'], 'players': [], 'filled': 0}}
+#             f = str(f).strip()
+#             if f.startswith('4-'):
+#                 bp.update({'Left Back': {'max': 1, 'tags': ['LB', 'LWB'], 'players': [], 'filled': 0}, 'Right Back': {'max': 1, 'tags': ['RB', 'RWB'], 'players': [], 'filled': 0}, 'Center Backs': {'max': 2, 'tags': ['CB'], 'players': [], 'filled': 0}})
+#             elif f.startswith('3-'):
+#                 bp.update({'Center Backs': {'max': 3, 'tags': ['CB', 'LB', 'RB'], 'players': [], 'filled': 0}})
+#             elif f.startswith('5-'):
+#                 bp.update({'Left Wing Back': {'max': 1, 'tags': ['LWB', 'LB', 'LM'], 'players': [], 'filled': 0}, 'Right Wing Back': {'max': 1, 'tags': ['RWB', 'RB', 'RM'], 'players': [], 'filled': 0}, 'Center Backs': {'max': 3, 'tags': ['CB'], 'players': [], 'filled': 0}})
+            
+#             if f in ['4-3-3', '4-1-2-3', '4-3-2-1']:
+#                 bp.update({'Central Midfielders': {'max': 3, 'tags': ['CM', 'CDM', 'CAM'], 'players': [], 'filled': 0}, 'Left Winger': {'max': 1, 'tags': ['LW', 'LM'], 'players': [], 'filled': 0}, 'Right Winger': {'max': 1, 'tags': ['RW', 'RM'], 'players': [], 'filled': 0}, 'Striker': {'max': 1, 'tags': ['ST', 'CF', 'FW'], 'players': [], 'filled': 0}})
+#             elif f in ['4-2-3-1', '4-4-1-1']:
+#                 bp.update({'Defensive Midfielders': {'max': 2, 'tags': ['CDM', 'CM'], 'players': [], 'filled': 0}, 'Attacking Midfielder': {'max': 1, 'tags': ['CAM', 'CM'], 'players': [], 'filled': 0}, 'Left Winger': {'max': 1, 'tags': ['LW', 'LM'], 'players': [], 'filled': 0}, 'Right Winger': {'max': 1, 'tags': ['RW', 'RM'], 'players': [], 'filled': 0}, 'Striker': {'max': 1, 'tags': ['ST', 'CF', 'FW'], 'players': [], 'filled': 0}})
+#             elif f in ['4-4-2', '4-5-1']:
+#                 bp.update({'Central Midfielders': {'max': 2, 'tags': ['CM', 'CDM'], 'players': [], 'filled': 0}, 'Left Mid': {'max': 1, 'tags': ['LM', 'LW'], 'players': [], 'filled': 0}, 'Right Mid': {'max': 1, 'tags': ['RM', 'RW'], 'players': [], 'filled': 0}, 'Strikers': {'max': 2 if f == '4-4-2' else 1, 'tags': ['ST', 'CF'], 'players': [], 'filled': 0}})
+#             return bp
+
+#         best_score = -1
+#         final_selection = {}
+
+#         for form in recommended_formations:
+#             bp = get_blueprint(form)
+#             xi = []
+#             bench = []
+#             curr_score = 0
+            
+#             for _, row in df.iterrows():
+#                 placed = False
+#                 for b_name, b_info in bp.items():
+#                     if b_info['filled'] < b_info['max']:
+#                         if any(t in str(row['Real Position']).upper() for t in b_info['tags']):
+#                             p_dict = {'playerId': row['clean_id'], 'name': row['player_name'], 'position': bucket_features.get(b_name, {}).get('pos', 'UNK'), 'role': bucket_features.get(b_name, {}).get('role', 'Player'), 'suitabilityScore': round(row['score'], 1), 'selectionFactors': {'form': round(row['score']/10, 1), 'fitness': 90}, 'reasonCodes': ['TACTICAL_FIT']}
+#                             xi.append(p_dict)
+#                             b_info['filled'] += 1
+#                             curr_score += row['score']
+#                             placed = True
+#                             break
+#                 if not placed:
+#                     bench.append({'playerId': row['clean_id'], 'name': row['player_name'], 'positions': row['Real Position'], 'suitabilityScore': round(row['score'], 1)})
+            
+#             if curr_score > best_score and len(xi) >= 11:
+#                 best_score = curr_score
+#                 final_selection = {'suggestedFormation': form, 'startingXI': xi[:11], 'substitutes': bench[:7]}
+        
+#         return final_selection
+#     except Exception as e:
+#         print(f"Selection error: {e}")
+#         return {}
+
+def get_best_starting_lineup_from_recommendations(players_stats_scored: pd.DataFrame, recommended_formations: list, real_pos_df: pd.DataFrame = None) -> tuple:
+    try:
+        if 'score' not in players_stats_scored.columns:
+            return "Scores missing. Run Section 5 first.", None, None
+            
+        df = players_stats_scored.copy()
+        
+        # 1. PREPARE THE DATA & FIX SCRAMBLED POSITIONS
+        df['score'] = df['score'].apply(lambda x: max(x) if isinstance(x, list) else x)
+        
+        # Safe ID mapping
+        if 'player_id' in df.columns:
+            df['clean_id'] = df['player_id'].astype(str).str.replace(r'\.0$', '', regex=True).str.strip()
+        elif 'id' in df.columns:
+            df['clean_id'] = df['id'].astype(str).str.replace(r'\.0$', '', regex=True).str.strip()
+        else:
+            df['clean_id'] = 'N/A'
+            
+        name_col = next((c for c in ['player_name', 'name', 'playerName'] if c in df.columns), None)
+        df['Player Name'] = df[name_col] if name_col else 'Unknown'
+
+        # STRICT ID TO POSITION MAPPING
+        if real_pos_df is not None and not real_pos_df.empty:
+            temp_real = real_pos_df.copy()
+            temp_real['clean_id'] = temp_real['player_id'].astype(str).str.replace(r'\.0$', '', regex=True).str.strip()
+            id_to_true_role = dict(zip(temp_real['clean_id'], temp_real['specific_role']))
+            df['raw_true_position'] = df['clean_id'].map(id_to_true_role)
+            df['Real Position'] = df['raw_true_position'].apply(
+                lambda x: [str(i).strip() for i in x] if isinstance(x, list) 
+                else [p.strip() for p in str(x).split('or')] if 'or' in str(x).lower()
+                else [str(x).strip()] if pd.notna(x) else ['Unknown']
+            )
         else:
             df['Real Position'] = [['Unknown']] * len(df)
             
-        df = df.sort_values('score', ascending=False).reset_index(drop=True)
+        df['score'] = pd.to_numeric(df['score'], errors='coerce')
+        df = df.sort_values(by='score', ascending=False).reset_index(drop=True)
         
-        bucket_features = {'Goalkeeper': {'pos': 'GK', 'role': 'Shot Stopper'}, 'Left Back': {'pos': 'DL', 'role': 'Attacking Wingback'}, 'Left Wing Back': {'pos': 'WBL', 'role': 'Complete Wingback'}, 'Right Back': {'pos': 'DR', 'role': 'Attacking Fullback'}, 'Right Wing Back': {'pos': 'WBR', 'role': 'Complete Wingback'}, 'Center Backs': {'pos': 'DC', 'role': 'Ball Playing Defender'}, 'Defenders': {'pos': 'DC', 'role': 'No-Nonsense Defender'}, 'Defensive Midfielders': {'pos': 'DM', 'role': 'Defensive Anchor'}, 'Central Midfielders': {'pos': 'MC', 'role': 'Box-to-Box'}, 'Midfielders': {'pos': 'MC', 'role': 'Deep Lying Playmaker'}, 'Attacking Midfielder': {'pos': 'AM', 'role': 'Playmaker'}, 'Left Mid': {'pos': 'ML', 'role': 'Wide Midfielder'}, 'Right Mid': {'pos': 'MR', 'role': 'Wide Midfielder'}, 'Left Mid/Wing': {'pos': 'LW', 'role': 'Inverted Winger'}, 'Right Mid/Wing': {'pos': 'RW', 'role': 'Winger'}, 'Left Winger': {'pos': 'LW', 'role': 'Inside Forward'}, 'Right Winger': {'pos': 'RW', 'role': 'Inverted Winger'}, 'Left Forward': {'pos': 'AML', 'role': 'Shadow Striker'}, 'Right Forward': {'pos': 'AMR', 'role': 'Shadow Striker'}, 'Striker': {'pos': 'ST', 'role': 'Complete Forward'}, 'Strikers': {'pos': 'ST', 'role': 'Advanced Forward'}, 'Forwards': {'pos': 'ST', 'role': 'Poacher'}}
+        def matches_bucket(role_list, tags):
+            for r in role_list:
+                clean_r = r.upper()
+                for tag in tags:
+                    if tag in clean_r: return True
+            return False
 
-        def get_blueprint(f):
-            bp = {'Goalkeeper': {'max': 1, 'tags': ['GK'], 'players': [], 'filled': 0}}
-            f = str(f).strip()
-            if f.startswith('4-'):
-                bp.update({'Left Back': {'max': 1, 'tags': ['LB', 'LWB'], 'players': [], 'filled': 0}, 'Right Back': {'max': 1, 'tags': ['RB', 'RWB'], 'players': [], 'filled': 0}, 'Center Backs': {'max': 2, 'tags': ['CB'], 'players': [], 'filled': 0}})
-            elif f.startswith('3-'):
-                bp.update({'Center Backs': {'max': 3, 'tags': ['CB', 'LB', 'RB'], 'players': [], 'filled': 0}})
-            elif f.startswith('5-'):
-                bp.update({'Left Wing Back': {'max': 1, 'tags': ['LWB', 'LB', 'LM'], 'players': [], 'filled': 0}, 'Right Wing Back': {'max': 1, 'tags': ['RWB', 'RB', 'RM'], 'players': [], 'filled': 0}, 'Center Backs': {'max': 3, 'tags': ['CB'], 'players': [], 'filled': 0}})
+        # Dictionary to map 'Bucket Names' to 'JSON Style Position' and 'Tactical Role'
+        bucket_features = {
+            'Goalkeeper': {'pos': 'GK', 'role': 'Shot Stopper'},
+            'Left Back': {'pos': 'DL', 'role': 'Attacking Wingback'},
+            'Left Wing Back': {'pos': 'WBL', 'role': 'Complete Wingback'},
+            'Right Back': {'pos': 'DR', 'role': 'Attacking Fullback'},
+            'Right Wing Back': {'pos': 'WBR', 'role': 'Complete Wingback'},
+            'Center Backs': {'pos': 'DC', 'role': 'Ball Playing Defender'},
+            'Defenders': {'pos': 'DC', 'role': 'No-Nonsense Defender'},
+            'Defensive Midfielders': {'pos': 'DM', 'role': 'Defensive Anchor'},
+            'Central Midfielders': {'pos': 'MC', 'role': 'Box-to-Box'},
+            'Midfielders': {'pos': 'MC', 'role': 'Deep Lying Playmaker'},
+            'Attacking Midfielder': {'pos': 'AM', 'role': 'Playmaker'},
+            'Left Mid': {'pos': 'ML', 'role': 'Wide Midfielder'},
+            'Right Mid': {'pos': 'MR', 'role': 'Wide Midfielder'},
+            'Left Mid/Wing': {'pos': 'LW', 'role': 'Inverted Winger'},
+            'Right Mid/Wing': {'pos': 'RW', 'role': 'Winger'},
+            'Left Winger': {'pos': 'LW', 'role': 'Inside Forward'},
+            'Right Winger': {'pos': 'RW', 'role': 'Inverted Winger'},
+            'Left Forward': {'pos': 'AML', 'role': 'Shadow Striker'},
+            'Right Forward': {'pos': 'AMR', 'role': 'Shadow Striker'},
+            'Striker': {'pos': 'ST', 'role': 'Complete Forward'},
+            'Strikers': {'pos': 'ST', 'role': 'Advanced Forward'},
+            'Forwards': {'pos': 'ST', 'role': 'Poacher'},
+        }
+
+        def get_formation_blueprint(formation_str):
+            bp = {'Goalkeeper': {'max': 1, 'filled': 0, 'tags': ['GK'], 'players': []}}
+            f = str(formation_str).strip()
             
-            if f in ['4-3-3', '4-1-2-3', '4-3-2-1']:
-                bp.update({'Central Midfielders': {'max': 3, 'tags': ['CM', 'CDM', 'CAM'], 'players': [], 'filled': 0}, 'Left Winger': {'max': 1, 'tags': ['LW', 'LM'], 'players': [], 'filled': 0}, 'Right Winger': {'max': 1, 'tags': ['RW', 'RM'], 'players': [], 'filled': 0}, 'Striker': {'max': 1, 'tags': ['ST', 'CF', 'FW'], 'players': [], 'filled': 0}})
-            elif f in ['4-2-3-1', '4-4-1-1']:
-                bp.update({'Defensive Midfielders': {'max': 2, 'tags': ['CDM', 'CM'], 'players': [], 'filled': 0}, 'Attacking Midfielder': {'max': 1, 'tags': ['CAM', 'CM'], 'players': [], 'filled': 0}, 'Left Winger': {'max': 1, 'tags': ['LW', 'LM'], 'players': [], 'filled': 0}, 'Right Winger': {'max': 1, 'tags': ['RW', 'RM'], 'players': [], 'filled': 0}, 'Striker': {'max': 1, 'tags': ['ST', 'CF', 'FW'], 'players': [], 'filled': 0}})
-            elif f in ['4-4-2', '4-5-1']:
-                bp.update({'Central Midfielders': {'max': 2, 'tags': ['CM', 'CDM'], 'players': [], 'filled': 0}, 'Left Mid': {'max': 1, 'tags': ['LM', 'LW'], 'players': [], 'filled': 0}, 'Right Mid': {'max': 1, 'tags': ['RM', 'RW'], 'players': [], 'filled': 0}, 'Strikers': {'max': 2 if f == '4-4-2' else 1, 'tags': ['ST', 'CF'], 'players': [], 'filled': 0}})
+            if f.startswith('4-'):
+                bp.update({'Left Back': {'max': 1, 'filled': 0, 'tags': ['LB', 'LWB'], 'players': []}, 'Right Back': {'max': 1, 'filled': 0, 'tags': ['RB', 'RWB'], 'players': []}, 'Center Backs': {'max': 2, 'filled': 0, 'tags': ['CB'], 'players': []}})
+            elif f.startswith('3-'):
+                bp.update({'Center Backs': {'max': 3, 'filled': 0, 'tags': ['CB', 'LB', 'RB'], 'players': []}})
+            elif f.startswith('5-'):
+                bp.update({'Left Wing Back': {'max': 1, 'filled': 0, 'tags': ['LWB', 'LB', 'LM'], 'players': []}, 'Right Wing Back': {'max': 1, 'filled': 0, 'tags': ['RWB', 'RB', 'RM'], 'players': []}, 'Center Backs': {'max': 3, 'filled': 0, 'tags': ['CB'], 'players': []}})
+            else:
+                bp['Defenders'] = {'max': 4, 'filled': 0, 'tags': ['CB', 'LB', 'RB'], 'players': []}
+
+            if f in ["4-3-3", "4-1-2-3", "4-3-2-1"]:
+                bp.update({'Central Midfielders': {'max': 3, 'filled': 0, 'tags': ['CM', 'CDM', 'CAM'], 'players': []}, 'Left Winger': {'max': 1, 'filled': 0, 'tags': ['LW', 'LM'], 'players': []}, 'Right Winger': {'max': 1, 'filled': 0, 'tags': ['RW', 'RM'], 'players': []}, 'Striker': {'max': 1, 'filled': 0, 'tags': ['ST', 'CF', 'FW'], 'players': []}})
+            elif f in ["4-2-3-1", "4-4-1-1"]:
+                bp.update({'Defensive Midfielders': {'max': 2, 'filled': 0, 'tags': ['CDM', 'CM'], 'players': []}, 'Attacking Midfielder': {'max': 1, 'filled': 0, 'tags': ['CAM', 'CM'], 'players': []}, 'Left Winger': {'max': 1, 'filled': 0, 'tags': ['LW', 'LM'], 'players': []}, 'Right Winger': {'max': 1, 'filled': 0, 'tags': ['RW', 'RM'], 'players': []}, 'Striker': {'max': 1, 'filled': 0, 'tags': ['ST', 'CF', 'FW'], 'players': []}})
+            elif f in ["4-4-2", "4-1-4-1", "4-1-3-2", "4-5-1"]:
+                bp.update({'Central Midfielders': {'max': 2, 'filled': 0, 'tags': ['CM', 'CDM', 'CAM'], 'players': []}, 'Left Mid': {'max': 1, 'filled': 0, 'tags': ['LM', 'LW'], 'players': []}, 'Right Mid': {'max': 1, 'filled': 0, 'tags': ['RM', 'RW'], 'players': []}, 'Strikers': {'max': 2 if f in ["4-4-2", "4-1-3-2"] else 1, 'filled': 0, 'tags': ['ST', 'CF', 'FW'], 'players': []}})
+            elif f in ["3-5-2", "3-1-4-2"]:
+                bp.update({'Central Midfielders': {'max': 3, 'filled': 0, 'tags': ['CM', 'CDM', 'CAM'], 'players': []}, 'Left Mid/Wing': {'max': 1, 'filled': 0, 'tags': ['LM', 'LWB', 'LW'], 'players': []}, 'Right Mid/Wing': {'max': 1, 'filled': 0, 'tags': ['RM', 'RWB', 'RW'], 'players': []}, 'Strikers': {'max': 2, 'filled': 0, 'tags': ['ST', 'CF', 'FW'], 'players': []}})
+            else:
+                bp['Midfielders'] = {'max': 3, 'filled': 0, 'tags': ['CM', 'CDM', 'CAM'], 'players': []}
+                bp['Forwards'] = {'max': 3, 'filled': 0, 'tags': ['ST', 'LW', 'RW'], 'players': []}
+
             return bp
 
-        best_score = -1
-        final_selection = {}
+        best_total_score = -1
+        best_formation_name = ""
+        best_starting_xi = None
+        best_bench = None
 
-        for form in recommended_formations:
-            bp = get_blueprint(form)
-            xi = []
+        # 2. SIMULATE EVERY RECOMMENDED FORMATION
+        for target_formation in recommended_formations:
+            formation_blueprint = get_formation_blueprint(str(target_formation))
             bench = []
-            curr_score = 0
+            current_formation_score = 0
             
+            # Formatter for building the advanced JSON-ready dictionary
+            def build_player_dict(row, bucket_name, score_multiplier=1.0):
+                final_score = row['score'] * score_multiplier
+                form_val = round((final_score / 10), 1) if final_score <= 100 else 9.9
+                fitness_val = min(100, int(75 + (final_score / 4)))
+                
+                # Fetch mapped JSON roles
+                pos_str = bucket_features.get(bucket_name, {}).get('pos', 'UNK')
+                role_str = bucket_features.get(bucket_name, {}).get('role', 'Player')
+                
+                # Generate dynamic reason codes
+                reasons = []
+                if final_score > 90: reasons.append("HIGH_RECENT_FORM")
+                if "Winger" in bucket_name or "Back" in bucket_name: reasons.append("PACE_MISMATCH_VS_OPPONENT")
+                if "Center Back" in bucket_name and final_score > 85: reasons.append("AERIAL_DOMINANCE")
+                if not reasons: reasons.append("TACTICAL_FIT")
+
+                return {
+                    'playerId': int(row['clean_id']) if str(row['clean_id']).isdigit() else row['clean_id'],
+                    'name': row['Player Name'],
+                    'position': pos_str,
+                    'role': role_str,
+                    'suitabilityScore': round(final_score, 1),
+                    'selectionFactors': {
+                        'form': min(9.9, form_val),
+                        'fitness': fitness_val,
+                        'matchupAdvantage': min(98, fitness_val - 2)
+                    },
+                    'reasonCodes': reasons
+                }
+            
+            # Fill the XI for this specific formation
             for _, row in df.iterrows():
+                if row['Real Position'] == ['Unknown']: continue
+                
                 placed = False
-                for b_name, b_info in bp.items():
-                    if b_info['filled'] < b_info['max']:
-                        if any(t in str(row['Real Position']).upper() for t in b_info['tags']):
-                            p_dict = {'playerId': row['clean_id'], 'name': row['player_name'], 'position': bucket_features.get(b_name, {}).get('pos', 'UNK'), 'role': bucket_features.get(b_name, {}).get('role', 'Player'), 'suitabilityScore': round(row['score'], 1), 'selectionFactors': {'form': round(row['score']/10, 1), 'fitness': 90}, 'reasonCodes': ['TACTICAL_FIT']}
-                            xi.append(p_dict)
-                            b_info['filled'] += 1
-                            curr_score += row['score']
-                            placed = True
-                            break
+                role_list = row['Real Position']
+                
+                for bucket_name, bucket_info in formation_blueprint.items():
+                    if bucket_info['filled'] < bucket_info['max'] and matches_bucket(role_list, bucket_info['tags']):
+                        bucket_info['players'].append(build_player_dict(row, bucket_name))
+                        bucket_info['filled'] += 1
+                        current_formation_score += row['score'] 
+                        placed = True
+                        break
+                
                 if not placed:
-                    bench.append({'playerId': row['clean_id'], 'name': row['player_name'], 'positions': row['Real Position'], 'suitabilityScore': round(row['score'], 1)})
-            
-            if curr_score > best_score and len(xi) >= 11:
-                best_score = curr_score
-                final_selection = {'suggestedFormation': form, 'startingXI': xi[:11], 'substitutes': bench[:7]}
+                    # Stash actual list of short roles for substitute parsing
+                    stashed_positions = [str(r).upper().strip() for r in role_list]
+                    short_positions = [r if len(r) <= 3 else 'UNK' for r in stashed_positions]
+                    bench.append({
+                        'playerId': int(row['clean_id']) if str(row['clean_id']).isdigit() else row['clean_id'],
+                        'name': row['Player Name'],
+                        'positions': short_positions,  # Bench expects a list "positions": ["ST", "LW"]
+                        'suitabilityScore': round(row['score'], 1),
+                        # Store raw row for OOP fallback
+                        '_raw_row': row
+                    })
+                        
+            # Force Fill missing slots from bench
+            total_filled = sum(b['filled'] for b in formation_blueprint.values())
+            while total_filled < 11 and bench:
+                best_sub = bench.pop(0)
+                for bucket_name, bucket_info in formation_blueprint.items():
+                    if bucket_info['filled'] < bucket_info['max']:
+                        raw_row = best_sub.pop('_raw_row')
+                        oop_player = build_player_dict(raw_row, bucket_name, score_multiplier=0.8) # 20% penalty
+                        oop_player['reasonCodes'].append("OUT_OF_POSITION_COVERAGE")
+                        bucket_info['players'].append(oop_player)
+                        
+                        bucket_info['filled'] += 1
+                        total_filled += 1
+                        current_formation_score += (raw_row['score'] * 0.8)
+                        break
+                        
+            if current_formation_score > best_total_score and total_filled >= 11:
+                best_total_score = current_formation_score
+                best_formation_name = target_formation
+                
+                lineup_list = []
+                for b in formation_blueprint.values(): lineup_list.extend(b['players'])
+                best_starting_xi = lineup_list # Now it's a list of dictionaries matching JSON!
+                
+                # Clean up bench format
+                final_bench = []
+                for i in range(min(7, len(bench))):
+                    sub = bench[i].copy()
+                    if '_raw_row' in sub: del sub['_raw_row']
+                    final_bench.append(sub)
+                
+                best_bench = final_bench
+
+        # Generate the final TeamSelection dictionary structure
+        team_selection_json = {
+            "suggestedFormation": best_formation_name,
+            "startingXI": best_starting_xi,
+            "substitutes": best_bench
+        }
+
+        return team_selection_json
         
-        return final_selection
     except Exception as e:
-        print(f"Selection error: {e}")
-        return {}
+        print(f"Algorithm Error: {e}")
+        return None
 
 def formation_suggestions(api_base: str, opponent_id: int) -> list:
     info = get_team_lnm(api_base, opponent_id, 5)
@@ -455,7 +707,7 @@ def get_training_recommendations(api_base: str, df: pd.DataFrame) -> str:
     try:
         api_key = os.environ.get('GEMINI_API_KEY_PRE_MATCH_1')
         client = genai.Client(api_key=api_key)
-        prompt = f"Analyze these stats and generate a JSON trainingPlan:\n{df.to_json()}"
+        prompt = f'\n        Analyze the following player statistics and identify weaknesses.\n        Generate a strictly valid JSON training plan. DO NOT use markdown code blocks (e.g., no ```json).\n        The JSON MUST strictly follow this exact structure and key names:\n        {{\n          "trainingPlan": {{\n            "teamDrills": [\n              {{\n                "focusCode": "str (e.g., PRESS_RESISTANCE)",\n                "priority": "str (HIGH/MEDIUM/LOW)",\n                "linkedOpponentFeature": "str (e.g., HIGH_PRESS_INTENSITY)",\n                "targetedPositions": ["D", "M"] \n              }}\n            ],\n            "individualDrills": [\n              {{\n                "playerId": int,\n                "playerName": "str",\n                "drillCode": "str (e.g., 1V1_DEFENDING_WIDE)"\n              }}\n            ]\n          }}\n        }}\n\n        Player Statistics:\n        {df.to_json()}\n        '
         resp = client.models.generate_content(model='gemini-2.5-flash', config={'system_instruction': 'Output strictly valid JSON with keys: trainingPlan (teamDrills, individualDrills).'}, contents=prompt)
         return resp.text.strip()
     except: return '{"trainingPlan": {"teamDrills": [], "individualDrills": []}}'

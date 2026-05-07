@@ -291,11 +291,42 @@ def analyze_opponent_comprehensive_multimatch(api_base: str, matches_info: dict)
             codes.append('HIGH_VOLUME_SHOOTER')
         scored_players.append({'playerId': pid, 'name': data['name'], 'position': detailed_roles, 'threatScore': round(threat_score, 1), 'threatCodes': codes, 'stats': {'totalGoals': data['goals'], 'totalAssists': data['assists'], 'avgRating': round(avg_rating, 1)}})
     top_threats = sorted(scored_players, key=lambda x: x['threatScore'], reverse=True)[:5]
+   
     vulns = []
+
     if avg_poss > 60:
         vulns.append('HIGH_DEFENSIVE_LINE')
-    if avg_poss < 40:
+
+    elif avg_poss < 45:
         vulns.append('PASSIVE_MIDFIELD')
+
+    if avg_pass < 75:
+        vulns.append('INACCURATE_IN_BUILDUP')
+
+    elif avg_pass > 90:
+        vulns.append('SHORT_PASS_DEPENDENT')
+
+    total_threat = sum(
+        p['threatScore']
+        for p in scored_players
+    ) or 1
+
+    top2_threat = sum(
+        p['threatScore']
+        for p in top_threats[:2]
+    )
+
+    if top2_threat / total_threat > 0.5:
+        vulns.append('OVER_RELIANT_ON_KEY_PLAYERS')
+
+    if primary_formation in ('4-4-2', '4-2-4'):
+        vulns.append('VULNERABLE_THROUGH_MIDDLE')
+
+    elif primary_formation in ('3-5-2', '3-4-3'):
+        vulns.append('EXPOSED_WIDE_CHANNELS')
+
+    if avg_poss > 55:
+        vulns.append('EXPOSED_TO_COUNTER_ATTACKS')
     report = {'opponentAnalysis': {'tacticalStyle': {'inferredFormation': primary_formation, 'styleLabels': style_labels, 'metrics': {'avgPossession': round(avg_poss, 1), 'avgPassAccuracy': round(avg_pass, 1)}}, 'keyThreats': top_threats, 'vulnerabilities': vulns}}
     return report
 
@@ -555,7 +586,7 @@ def get_tacticale(api_base: str, team_selection_output: json, opponent_id: int) 
         ids = get_season_tournament_ids(api_base, list(recommended_players['playerId']))
         general_statistics = []
         for player_id in ids.keys():
-            stats_resp = cached_get(f'{api_base}players/{player_id}/unique-tournament/{ids[player_id]['tournament_id']}/season/{ids[player_id]['season_id']}/statistics/overall')
+            stats_resp = cached_get(f"{api_base}players/{player_id}/unique-tournament/{ids[player_id]['tournament_id']}/season/{ids[player_id]['season_id']}/statistics/overall")
             if stats_resp is None or stats_resp.status_code != 200:
                 print(f'Skipping player {player_id}: statistics endpoint failed')
                 continue
