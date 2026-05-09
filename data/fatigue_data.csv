@@ -1,0 +1,23 @@
+player_id,name,position,minutes_played,fatigue_index,injury_risk_level
+857574,Andriy Lunin,G,90,100.0,High
+795064,Trent Alexander-Arnold,D,90,100.0,High
+142622,Antonio Rüdiger,D,90,100.0,High
+1176744,Dean Huijsen,D,90,100.0,High
+792073,Ferland Mendy,D,14,16.0,Low
+831808,Federico Valverde,M,90,100.0,High
+2237795,Thiago Pitarch,M,53,59.0,Low
+859025,Aurélien Tchouaméni,M,84,93.0,High
+868812,Vinicius Júnior,M,84,93.0,High
+991011,Jude Bellingham,F,90,100.0,High
+835485,Brahim Díaz,F,53,59.0,Low
+851271,Fran García,D,76,84.0,High
+1402716,Gonzalo García,F,37,41.0,Low
+1403559,Franco Mastantuono,F,37,41.0,Low
+973887,Eduardo Camavinga,M,12,13.0,Low
+1402688,César Palacios,M,12,13.0,Low
+1493226,Fran González,G,0,0.0,Low
+1403015,Sergio Mestre,G,0,0.0,Low
+1085081,Álvaro Carreras,D,0,0.0,Low
+1156645,Raúl Asencio,D,0,0.0,Low
+66492,David Alaba,D,0,0.0,Low
+1142689,David Jiménez,D,0,0.0,Low

@@ -1,0 +1,316 @@
+{
+  "team_id": 2829,
+  "team_name": "Real Madrid",
+  "raw_data": {
+    "team": {
+      "name": "Real Madrid",
+      "slug": "real-madrid",
+      "shortName": "Real Madrid",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "category": {
+        "name": "Spain",
+        "slug": "spain",
+        "sport": {
+          "name": "Football",
+          "slug": "football",
+          "id": 1
+        },
+        "priority": 9,
+        "country": {
+          "alpha2": "ES",
+          "alpha3": "ESP",
+          "name": "Spain",
+          "slug": "spain"
+        },
+        "id": 32,
+        "flag": "spain",
+        "alpha2": "ES",
+        "fieldTranslations": {
+          "nameTranslation": {
+            "hi": "स्पेन",
+            "ar": "إسبانيا",
+            "bn": "স্পেন",
+            "ru": "Испания"
+          },
+          "shortNameTranslation": {}
+        },
+        "transferPeriod": [
+          {
+            "activeFrom": "06-01 00:00",
+            "activeTo": "09-18 00:00"
+          },
+          {
+            "activeFrom": "12-30 00:00",
+            "activeTo": "02-16 00:00"
+          }
+        ]
+      },
+      "tournament": {
+        "name": "LaLiga",
+        "slug": "laliga",
+        "category": {
+          "name": "Spain",
+          "slug": "spain",
+          "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+          },
+          "priority": 9,
+          "country": {
+            "alpha2": "ES",
+            "alpha3": "ESP",
+            "name": "Spain",
+            "slug": "spain"
+          },
+          "id": 32,
+          "flag": "spain",
+          "alpha2": "ES",
+          "fieldTranslations": {
+            "nameTranslation": {
+              "hi": "स्पेन",
+              "ar": "إسبانيا",
+              "bn": "স্পেন",
+              "ru": "Испания"
+            },
+            "shortNameTranslation": {}
+          },
+          "transferPeriod": [
+            {
+              "activeFrom": "06-01 00:00",
+              "activeTo": "09-18 00:00"
+            },
+            {
+              "activeFrom": "12-30 00:00",
+              "activeTo": "02-16 00:00"
+            }
+          ]
+        },
+        "uniqueTournament": {
+          "name": "LaLiga",
+          "slug": "laliga",
+          "primaryColorHex": "#2f4a89",
+          "secondaryColorHex": "#f4a32e",
+          "category": {
+            "name": "Spain",
+            "slug": "spain",
+            "sport": {
+              "name": "Football",
+              "slug": "football",
+              "id": 1
+            },
+            "priority": 9,
+            "country": {
+              "alpha2": "ES",
+              "alpha3": "ESP",
+              "name": "Spain",
+              "slug": "spain"
+            },
+            "id": 32,
+            "flag": "spain",
+            "alpha2": "ES",
+            "fieldTranslations": {
+              "nameTranslation": {
+                "hi": "स्पेन",
+                "ar": "إسبانيا",
+                "bn": "স্পেন",
+                "ru": "Испания"
+              },
+              "shortNameTranslation": {}
+            },
+            "transferPeriod": [
+              {
+                "activeFrom": "06-01 00:00",
+                "activeTo": "09-18 00:00"
+              },
+              {
+                "activeFrom": "12-30 00:00",
+                "activeTo": "02-16 00:00"
+              }
+            ]
+          },
+          "userCount": 850896,
+          "hasPerformanceGraphFeature": true,
+          "country": {},
+          "id": 8,
+          "displayInverseHomeAwayTeams": false,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "الدوري الإسباني",
+              "hi": "ला लिगा",
+              "bn": "লা লীগা"
+            },
+            "shortNameTranslation": {}
+          }
+        },
+        "priority": 701,
+        "isLive": false,
+        "id": 36,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "hi": "ला लीगा",
+            "ar": "الدوري الإسباني",
+            "bn": "লা লীগা"
+          },
+          "shortNameTranslation": {}
+        }
+      },
+      "primaryUniqueTournament": {
+        "name": "LaLiga",
+        "slug": "laliga",
+        "primaryColorHex": "#2f4a89",
+        "secondaryColorHex": "#f4a32e",
+        "category": {
+          "name": "Spain",
+          "slug": "spain",
+          "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+          },
+          "priority": 9,
+          "country": {
+            "alpha2": "ES",
+            "alpha3": "ESP",
+            "name": "Spain",
+            "slug": "spain"
+          },
+          "id": 32,
+          "flag": "spain",
+          "alpha2": "ES",
+          "fieldTranslations": {
+            "nameTranslation": {
+              "hi": "स्पेन",
+              "ar": "إسبانيا",
+              "bn": "স্পেন",
+              "ru": "Испания"
+            },
+            "shortNameTranslation": {}
+          },
+          "transferPeriod": [
+            {
+              "activeFrom": "06-01 00:00",
+              "activeTo": "09-18 00:00"
+            },
+            {
+              "activeFrom": "12-30 00:00",
+              "activeTo": "02-16 00:00"
+            }
+          ]
+        },
+        "userCount": 850896,
+        "hasPerformanceGraphFeature": true,
+        "country": {},
+        "id": 8,
+        "displayInverseHomeAwayTeams": false,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "الدوري الإسباني",
+            "hi": "ला लिगा",
+            "bn": "লা লীগা"
+          },
+          "shortNameTranslation": {}
+        }
+      },
+      "userCount": 7528146,
+      "manager": {
+        "name": "Álvaro Arbeloa",
+        "slug": "alvaro-arbeloa",
+        "shortName": "Á. Arbeloa",
+        "country": {
+          "alpha2": "ES",
+          "alpha3": "ESP",
+          "name": "Spain",
+          "slug": "spain"
+        },
+        "id": 798940,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "ألفارو أربيلوا"
+          },
+          "shortNameTranslation": {
+            "ar": "أ. أربيلوا"
+          }
+        }
+      },
+      "venue": {
+        "venueCoordinates": {
+          "latitude": 40.453,
+          "longitude": -3.6883
+        },
+        "hidden": false,
+        "slug": "santiago-bernab-u",
+        "name": "Bernabéu",
+        "capacity": 84744,
+        "country": {
+          "alpha2": "ES",
+          "alpha3": "ESP",
+          "name": "Spain",
+          "slug": "spain"
+        },
+        "id": 754,
+        "city": {
+          "name": "Madrid"
+        },
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "سانتياغو برنابيو",
+            "hi": "सैंटियागो बर्नबेउ",
+            "bn": "সান্তিয়াগো বার্নাব্যু"
+          },
+          "shortNameTranslation": {}
+        },
+        "stadium": {
+          "name": "Bernabéu",
+          "capacity": 84744
+        }
+      },
+      "nameCode": "RMA",
+      "class": 4,
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "country": {
+        "alpha2": "ES",
+        "alpha3": "ESP",
+        "name": "Spain",
+        "slug": "spain"
+      },
+      "id": 2829,
+      "fullName": "Real Madrid",
+      "teamColors": {
+        "primary": "#ffffff",
+        "secondary": "#004996",
+        "text": "#004996"
+      },
+      "foundationDateTimestamp": -2140387200,
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "ريال مدريد",
+          "bn": "রিয়াল মাদ্রিদ",
+          "hi": "रियल मैड्रिड",
+          "ru": "Реал Мадрид"
+        },
+        "shortNameTranslation": {}
+      },
+      "timeActive": []
+    },
+    "pregameForm": {
+      "avgRating": "7.05",
+      "position": 2,
+      "value": "77",
+      "form": [
+        "L",
+        "D",
+        "W",
+        "D",
+        "W"
+      ]
+    }
+  }
+}
