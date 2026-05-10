@@ -9,7 +9,7 @@
       "position": "G",
       "jerseyNumber": "1",
       "height": 192,
-      "userCount": 428,
+      "userCount": 449,
       "gender": "M",
       "id": 259281,
       "marketValueCurrency": "EUR",
@@ -41,7 +41,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -74,47 +74,263 @@
       "totalOppositionHalfPasses": 13,
       "totalClearance": 1,
       "ballRecovery": 14,
-      "goodHighClaim": 1,
+      "goodHighClaim": 2,
       "savedShotsFromInsideTheBox": 2,
       "saves": 3,
       "punches": 1,
       "minutesPlayed": 90,
-      "touches": 39,
-      "rating": 7,
+      "touches": 40,
+      "rating": 6.6,
       "possessionLostCtrl": 12,
-      "expectedAssists": 0.00129833,
-      "totalBallCarriesDistance": 24.909667025844,
-      "ballCarriesCount": 4,
-      "totalProgression": 16.22210679838,
+      "expectedAssists": 0.00129848,
+      "totalBallCarriesDistance": 27.939341760861,
+      "ballCarriesCount": 5,
+      "totalProgression": 17.921379309627,
       "progressiveBallCarriesCount": 0,
-      "keeperSaveValue": 0.5407,
+      "keeperSaveValue": 0.2988,
       "ratingVersions": {
-        "original": 7,
-        "alternative": 6.9
+        "original": 6.6,
+        "alternative": 7
       },
       "totalShots": 0,
-      "goalsPrevented": 0.5005,
+      "goalsPrevented": -0.2012,
       "passValueNormalized": 0.05,
       "dribbleValueNormalized": 0.01,
       "defensiveValueNormalized": -0.16,
-      "goalkeeperValueNormalized": 0.38,
+      "goalkeeperValueNormalized": 0.19,
       "statisticsType": {
         "sportSlug": "football",
         "statisticsType": "player"
       }
     },
     "position": "G",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 8,
+        "y": 63
+      },
+      {
+        "x": 5,
+        "y": 51
+      },
+      {
+        "x": 7,
+        "y": 49
+      },
+      {
+        "x": 5,
+        "y": 49
+      },
+      {
+        "x": 22,
+        "y": 44
+      },
+      {
+        "x": 22,
+        "y": 44
+      },
+      {
+        "x": 7,
+        "y": 47
+      },
+      {
+        "x": 3,
+        "y": 51
+      },
+      {
+        "x": 3,
+        "y": 51
+      },
+      {
+        "x": 13,
+        "y": 50
+      },
+      {
+        "x": 4,
+        "y": 48
+      },
+      {
+        "x": 13,
+        "y": 38
+      },
+      {
+        "x": 14,
+        "y": 38
+      },
+      {
+        "x": 14,
+        "y": 45
+      },
+      {
+        "x": 35,
+        "y": 51
+      },
+      {
+        "x": 3,
+        "y": 49
+      },
+      {
+        "x": 3,
+        "y": 49
+      },
+      {
+        "x": 7,
+        "y": 47
+      },
+      {
+        "x": 6,
+        "y": 43
+      },
+      {
+        "x": 5,
+        "y": 50
+      },
+      {
+        "x": 12,
+        "y": 49
+      },
+      {
+        "x": 3,
+        "y": 58
+      },
+      {
+        "x": 12,
+        "y": 58
+      },
+      {
+        "x": 18,
+        "y": 50
+      },
+      {
+        "x": 5,
+        "y": 50
+      },
+      {
+        "x": 13,
+        "y": 61
+      },
+      {
+        "x": 4,
+        "y": 42
+      },
+      {
+        "x": 4,
+        "y": 42
+      },
+      {
+        "x": 24,
+        "y": 45
+      },
+      {
+        "x": 3,
+        "y": 43
+      },
+      {
+        "x": 4,
+        "y": 42
+      },
+      {
+        "x": 10,
+        "y": 45
+      },
+      {
+        "x": 10,
+        "y": 50
+      },
+      {
+        "x": 12,
+        "y": 35
+      },
+      {
+        "x": 15,
+        "y": 48
+      },
+      {
+        "x": 4,
+        "y": 53
+      },
+      {
+        "x": 13,
+        "y": 47
+      },
+      {
+        "x": 7,
+        "y": 52
+      },
+      {
+        "x": 8,
+        "y": 49
+      },
+      {
+        "x": 4,
+        "y": 83
+      },
+      {
+        "x": 7,
+        "y": 74
+      },
+      {
+        "x": 8,
+        "y": 54
+      },
+      {
+        "x": 21,
+        "y": 55
+      },
+      {
+        "x": 6,
+        "y": 51
+      },
+      {
+        "x": 27,
+        "y": 72
+      },
+      {
+        "x": 14,
+        "y": 50
+      },
+      {
+        "x": 4,
+        "y": 50
+      },
+      {
+        "x": 5,
+        "y": 56
+      },
+      {
+        "x": 5,
+        "y": 52
+      },
+      {
+        "x": 12,
+        "y": 53
+      },
+      {
+        "x": 13,
+        "y": 69
+      },
+      {
+        "x": 14,
+        "y": 46
+      },
+      {
+        "x": 14,
+        "y": 53
+      }
+    ]
   },
   {
     "player": {
       "name": "Saúl Coco",
+      "firstName": "Saul",
+      "lastName": "Coco",
       "slug": "saul-coco",
       "shortName": "S. Coco",
       "position": "D",
       "jerseyNumber": "23",
       "height": 188,
-      "userCount": 1263,
+      "userCount": 1268,
       "gender": "M",
       "id": 1089453,
       "marketValueCurrency": "EUR",
@@ -146,7 +362,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -189,11 +405,11 @@
       "touches": 38,
       "rating": 7.1,
       "possessionLostCtrl": 8,
-      "expectedGoals": 0.0982,
+      "expectedGoals": 0.0992,
       "expectedAssists": 0.189491,
-      "totalBallCarriesDistance": 72.766525297018,
-      "ballCarriesCount": 8,
-      "totalProgression": 56.493404816522,
+      "totalBallCarriesDistance": 68.298288955909,
+      "ballCarriesCount": 7,
+      "totalProgression": 53.670577630401,
       "bestBallCarryProgression": 19.662358516948,
       "totalProgressiveBallCarriesDistance": 19.666481637548,
       "progressiveBallCarriesCount": 1,
@@ -203,33 +419,205 @@
         "alternative": 7.3
       },
       "totalShots": 1,
-      "shotValueNormalized": -0.41,
+      "shotValueNormalized": -0.45,
       "passValueNormalized": 0.33,
-      "dribbleValueNormalized": 0.2,
-      "defensiveValueNormalized": 0.2,
+      "dribbleValueNormalized": 0.12,
+      "defensiveValueNormalized": 0.19,
       "statisticsType": {
         "sportSlug": "football",
         "statisticsType": "player"
       }
     },
     "position": "D",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 31,
+        "y": 17
+      },
+      {
+        "x": 76,
+        "y": 27
+      },
+      {
+        "x": 84,
+        "y": 25
+      },
+      {
+        "x": 10,
+        "y": 5
+      },
+      {
+        "x": 5,
+        "y": 21
+      },
+      {
+        "x": 12,
+        "y": 8
+      },
+      {
+        "x": 53,
+        "y": 17
+      },
+      {
+        "x": 85,
+        "y": 47
+      },
+      {
+        "x": 33,
+        "y": 9
+      },
+      {
+        "x": 63,
+        "y": 23
+      },
+      {
+        "x": 26,
+        "y": 24
+      },
+      {
+        "x": 4,
+        "y": 46
+      },
+      {
+        "x": 36,
+        "y": 30
+      },
+      {
+        "x": 4,
+        "y": 11
+      },
+      {
+        "x": 29,
+        "y": 37
+      },
+      {
+        "x": 59,
+        "y": 21
+      },
+      {
+        "x": 40,
+        "y": 10
+      },
+      {
+        "x": 24,
+        "y": 16
+      },
+      {
+        "x": 27,
+        "y": 16
+      },
+      {
+        "x": 31,
+        "y": 19
+      },
+      {
+        "x": 18,
+        "y": 16
+      },
+      {
+        "x": 10,
+        "y": 10
+      },
+      {
+        "x": 15,
+        "y": 37
+      },
+      {
+        "x": 9,
+        "y": 18
+      },
+      {
+        "x": 22,
+        "y": 9
+      },
+      {
+        "x": 54,
+        "y": 16
+      },
+      {
+        "x": 47,
+        "y": 18
+      },
+      {
+        "x": 38,
+        "y": 12
+      },
+      {
+        "x": 68,
+        "y": 42
+      },
+      {
+        "x": 27,
+        "y": 39
+      },
+      {
+        "x": 2,
+        "y": 31
+      },
+      {
+        "x": 1,
+        "y": 32
+      },
+      {
+        "x": 61,
+        "y": 15
+      },
+      {
+        "x": 54,
+        "y": 26
+      },
+      {
+        "x": 28,
+        "y": 8
+      },
+      {
+        "x": 45,
+        "y": 22
+      },
+      {
+        "x": 61,
+        "y": 14
+      },
+      {
+        "x": 8,
+        "y": 48
+      },
+      {
+        "x": 72,
+        "y": 28
+      },
+      {
+        "x": 3,
+        "y": 20
+      },
+      {
+        "x": 2,
+        "y": 23
+      },
+      {
+        "x": 2,
+        "y": 23
+      }
+    ]
   },
   {
     "player": {
       "name": "Ardian Ismajli",
+      "firstName": "Ardian",
+      "lastName": "Ismajli",
       "slug": "ardian-ismajli",
       "shortName": "A. Ismajli",
       "position": "D",
       "jerseyNumber": "44",
       "height": 188,
-      "userCount": 1185,
+      "userCount": 1197,
       "gender": "M",
       "id": 840414,
       "marketValueCurrency": "EUR",
       "dateOfBirthTimestamp": 844041600,
       "proposedMarketValueRaw": {
-        "value": 5600000,
+        "value": 4700000,
         "currency": "EUR"
       },
       "fieldTranslations": {
@@ -255,7 +643,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -299,7 +687,7 @@
       "fouls": 1,
       "minutesPlayed": 90,
       "touches": 60,
-      "rating": 7.3,
+      "rating": 7.5,
       "possessionLostCtrl": 5,
       "expectedAssists": 0.0156115,
       "totalBallCarriesDistance": 99.756562829882,
@@ -309,32 +697,306 @@
       "totalProgressiveBallCarriesDistance": 20.989134712989,
       "progressiveBallCarriesCount": 1,
       "ratingVersions": {
-        "original": 7.3,
+        "original": 7.5,
         "alternative": 7.3
       },
       "totalShots": 0,
       "passValueNormalized": 0.21,
       "dribbleValueNormalized": 0.04,
-      "defensiveValueNormalized": 0.73,
+      "defensiveValueNormalized": 0.88,
       "statisticsType": {
         "sportSlug": "football",
         "statisticsType": "player"
       }
     },
     "position": "D",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 31,
+        "y": 46
+      },
+      {
+        "x": 68,
+        "y": 20
+      },
+      {
+        "x": 8,
+        "y": 27
+      },
+      {
+        "x": 5,
+        "y": 24
+      },
+      {
+        "x": 8,
+        "y": 22
+      },
+      {
+        "x": 4,
+        "y": 23
+      },
+      {
+        "x": 31,
+        "y": 30
+      },
+      {
+        "x": 27,
+        "y": 32
+      },
+      {
+        "x": 46,
+        "y": 67
+      },
+      {
+        "x": 45,
+        "y": 31
+      },
+      {
+        "x": 46,
+        "y": 49
+      },
+      {
+        "x": 23,
+        "y": 75
+      },
+      {
+        "x": 28,
+        "y": 56
+      },
+      {
+        "x": 7,
+        "y": 49
+      },
+      {
+        "x": 33,
+        "y": 25
+      },
+      {
+        "x": 32,
+        "y": 36
+      },
+      {
+        "x": 57,
+        "y": 49
+      },
+      {
+        "x": 55,
+        "y": 44
+      },
+      {
+        "x": 53,
+        "y": 34
+      },
+      {
+        "x": 55,
+        "y": 46
+      },
+      {
+        "x": 74,
+        "y": 27
+      },
+      {
+        "x": 39,
+        "y": 34
+      },
+      {
+        "x": 33,
+        "y": 51
+      },
+      {
+        "x": 29,
+        "y": 54
+      },
+      {
+        "x": 27,
+        "y": 19
+      },
+      {
+        "x": 47,
+        "y": 56
+      },
+      {
+        "x": 21,
+        "y": 30
+      },
+      {
+        "x": 8,
+        "y": 51
+      },
+      {
+        "x": 62,
+        "y": 45
+      },
+      {
+        "x": 63,
+        "y": 13
+      },
+      {
+        "x": 88,
+        "y": 11
+      },
+      {
+        "x": 8,
+        "y": 51
+      },
+      {
+        "x": 31,
+        "y": 13
+      },
+      {
+        "x": 20,
+        "y": 37
+      },
+      {
+        "x": 36,
+        "y": 42
+      },
+      {
+        "x": 39,
+        "y": 42
+      },
+      {
+        "x": 54,
+        "y": 36
+      },
+      {
+        "x": 55,
+        "y": 53
+      },
+      {
+        "x": 44,
+        "y": 68
+      },
+      {
+        "x": 43,
+        "y": 29
+      },
+      {
+        "x": 10,
+        "y": 17
+      },
+      {
+        "x": 14,
+        "y": 41
+      },
+      {
+        "x": 51,
+        "y": 70
+      },
+      {
+        "x": 52,
+        "y": 53
+      },
+      {
+        "x": 34,
+        "y": 52
+      },
+      {
+        "x": 24,
+        "y": 41
+      },
+      {
+        "x": 14,
+        "y": 42
+      },
+      {
+        "x": 11,
+        "y": 85
+      },
+      {
+        "x": 10,
+        "y": 40
+      },
+      {
+        "x": 9,
+        "y": 40
+      },
+      {
+        "x": 30,
+        "y": 48
+      },
+      {
+        "x": 35,
+        "y": 81
+      },
+      {
+        "x": 36,
+        "y": 10
+      },
+      {
+        "x": 32,
+        "y": 12
+      },
+      {
+        "x": 37,
+        "y": 15
+      },
+      {
+        "x": 61,
+        "y": 26
+      },
+      {
+        "x": 13,
+        "y": 54
+      },
+      {
+        "x": 24,
+        "y": 57
+      },
+      {
+        "x": 25,
+        "y": 45
+      },
+      {
+        "x": 32,
+        "y": 55
+      },
+      {
+        "x": 32,
+        "y": 29
+      },
+      {
+        "x": 48,
+        "y": 48
+      },
+      {
+        "x": 47,
+        "y": 21
+      },
+      {
+        "x": 27,
+        "y": 40
+      },
+      {
+        "x": 19,
+        "y": 49
+      },
+      {
+        "x": 7,
+        "y": 54
+      },
+      {
+        "x": 35,
+        "y": 49
+      },
+      {
+        "x": 12,
+        "y": 48
+      }
+    ]
   },
   {
     "player": {
       "name": "Enzo Ebosse",
-      "firstName": "",
-      "lastName": "",
+      "firstName": "Enzo",
+      "lastName": "Ebosse",
       "slug": "enzo-ebosse",
       "shortName": "E. Ebosse",
       "position": "D",
       "jerseyNumber": "77",
       "height": 185,
-      "userCount": 544,
+      "userCount": 558,
       "gender": "M",
       "id": 848279,
       "marketValueCurrency": "EUR",
@@ -366,7 +1028,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -408,7 +1070,7 @@
       "fouls": 5,
       "minutesPlayed": 90,
       "touches": 56,
-      "rating": 6.1,
+      "rating": 6.2,
       "possessionLostCtrl": 4,
       "expectedAssists": 0.00676062,
       "totalBallCarriesDistance": 73.883932768779,
@@ -416,12 +1078,12 @@
       "totalProgression": 18.774304510975,
       "progressiveBallCarriesCount": 0,
       "ratingVersions": {
-        "original": 6.1,
+        "original": 6.2,
         "alternative": 6.4
       },
       "totalShots": 0,
-      "passValueNormalized": 0.1,
-      "dribbleValueNormalized": 0.01,
+      "passValueNormalized": 0.11,
+      "dribbleValueNormalized": 0.02,
       "defensiveValueNormalized": -0.28,
       "statisticsType": {
         "sportSlug": "football",
@@ -429,7 +1091,285 @@
       }
     },
     "position": "D",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 28,
+        "y": 90
+      },
+      {
+        "x": 63,
+        "y": 94
+      },
+      {
+        "x": 46,
+        "y": 80
+      },
+      {
+        "x": 53,
+        "y": 65
+      },
+      {
+        "x": 45,
+        "y": 73
+      },
+      {
+        "x": 66,
+        "y": 50
+      },
+      {
+        "x": 22,
+        "y": 94
+      },
+      {
+        "x": 5,
+        "y": 61
+      },
+      {
+        "x": 4,
+        "y": 61
+      },
+      {
+        "x": 25,
+        "y": 67
+      },
+      {
+        "x": 30,
+        "y": 81
+      },
+      {
+        "x": 41,
+        "y": 76
+      },
+      {
+        "x": 4,
+        "y": 60
+      },
+      {
+        "x": 21,
+        "y": 71
+      },
+      {
+        "x": 63,
+        "y": 71
+      },
+      {
+        "x": 59,
+        "y": 67
+      },
+      {
+        "x": 61,
+        "y": 71
+      },
+      {
+        "x": 38,
+        "y": 49
+      },
+      {
+        "x": 38,
+        "y": 49
+      },
+      {
+        "x": 4,
+        "y": 59
+      },
+      {
+        "x": 41,
+        "y": 76
+      },
+      {
+        "x": 63,
+        "y": 80
+      },
+      {
+        "x": 18,
+        "y": 49
+      },
+      {
+        "x": 14,
+        "y": 76
+      },
+      {
+        "x": 31,
+        "y": 60
+      },
+      {
+        "x": 55,
+        "y": 65
+      },
+      {
+        "x": 35,
+        "y": 35
+      },
+      {
+        "x": 61,
+        "y": 67
+      },
+      {
+        "x": 17,
+        "y": 51
+      },
+      {
+        "x": 5,
+        "y": 15
+      },
+      {
+        "x": 22,
+        "y": 80
+      },
+      {
+        "x": 24,
+        "y": 69
+      },
+      {
+        "x": 43,
+        "y": 86
+      },
+      {
+        "x": 63,
+        "y": 70
+      },
+      {
+        "x": 57,
+        "y": 73
+      },
+      {
+        "x": 6,
+        "y": 58
+      },
+      {
+        "x": 62,
+        "y": 85
+      },
+      {
+        "x": 64,
+        "y": 89
+      },
+      {
+        "x": 57,
+        "y": 88
+      },
+      {
+        "x": 63,
+        "y": 85
+      },
+      {
+        "x": 57,
+        "y": 94
+      },
+      {
+        "x": 40,
+        "y": 76
+      },
+      {
+        "x": 21,
+        "y": 74
+      },
+      {
+        "x": 45,
+        "y": 58
+      },
+      {
+        "x": 4,
+        "y": 57
+      },
+      {
+        "x": 8,
+        "y": 70
+      },
+      {
+        "x": 27,
+        "y": 92
+      },
+      {
+        "x": 62,
+        "y": 37
+      },
+      {
+        "x": 11,
+        "y": 88
+      },
+      {
+        "x": 65,
+        "y": 75
+      },
+      {
+        "x": 26,
+        "y": 82
+      },
+      {
+        "x": 37,
+        "y": 83
+      },
+      {
+        "x": 36,
+        "y": 80
+      },
+      {
+        "x": 40,
+        "y": 79
+      },
+      {
+        "x": 23,
+        "y": 76
+      },
+      {
+        "x": 23,
+        "y": 76
+      },
+      {
+        "x": 24,
+        "y": 87
+      },
+      {
+        "x": 31,
+        "y": 91
+      },
+      {
+        "x": 31,
+        "y": 90
+      },
+      {
+        "x": 69,
+        "y": 83
+      },
+      {
+        "x": 24,
+        "y": 92
+      },
+      {
+        "x": 23,
+        "y": 68
+      },
+      {
+        "x": 26,
+        "y": 83
+      },
+      {
+        "x": 51,
+        "y": 74
+      },
+      {
+        "x": 37,
+        "y": 92
+      },
+      {
+        "x": 28,
+        "y": 55
+      },
+      {
+        "x": 28,
+        "y": 55
+      },
+      {
+        "x": 26,
+        "y": 72
+      },
+      {
+        "x": 73,
+        "y": 89
+      }
+    ]
   },
   {
     "player": {
@@ -441,7 +1381,7 @@
       "position": "M",
       "jerseyNumber": "20",
       "height": 180,
-      "userCount": 1028,
+      "userCount": 1038,
       "gender": "M",
       "id": 233826,
       "marketValueCurrency": "EUR",
@@ -473,7 +1413,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -513,21 +1453,21 @@
       "unsuccessfulTouch": 2,
       "minutesPlayed": 54,
       "touches": 23,
-      "rating": 6.8,
+      "rating": 6.9,
       "possessionLostCtrl": 8,
       "expectedAssists": 0.00645967,
-      "totalBallCarriesDistance": 82.938289130209,
+      "totalBallCarriesDistance": 91.144186225423,
       "ballCarriesCount": 8,
-      "totalProgression": 46.575959232447,
+      "totalProgression": 40.090132864744,
       "bestBallCarryProgression": 28.490286601542,
       "totalProgressiveBallCarriesDistance": 32.098841116152,
       "progressiveBallCarriesCount": 1,
       "ratingVersions": {
-        "original": 6.8,
+        "original": 6.9,
         "alternative": 6.6
       },
       "totalShots": 0,
-      "passValueNormalized": 0.07,
+      "passValueNormalized": 0.1,
       "dribbleValueNormalized": 0.04,
       "defensiveValueNormalized": 0.17,
       "statisticsType": {
@@ -536,9 +1476,407 @@
       }
     },
     "position": "M",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 64,
+        "y": 10
+      },
+      {
+        "x": 54,
+        "y": 6
+      },
+      {
+        "x": 66,
+        "y": 8
+      },
+      {
+        "x": 78,
+        "y": 7
+      },
+      {
+        "x": 78,
+        "y": 0
+      },
+      {
+        "x": 62,
+        "y": 7
+      },
+      {
+        "x": 75,
+        "y": 3
+      },
+      {
+        "x": 70,
+        "y": 20
+      },
+      {
+        "x": 83,
+        "y": 0
+      },
+      {
+        "x": 76,
+        "y": 5
+      },
+      {
+        "x": 14,
+        "y": 40
+      },
+      {
+        "x": 41,
+        "y": 3
+      },
+      {
+        "x": 93,
+        "y": 7
+      },
+      {
+        "x": 39,
+        "y": 9
+      },
+      {
+        "x": 24,
+        "y": 8
+      },
+      {
+        "x": 24,
+        "y": 8
+      },
+      {
+        "x": 35,
+        "y": 10
+      },
+      {
+        "x": 68,
+        "y": 7
+      },
+      {
+        "x": 43,
+        "y": 6
+      },
+      {
+        "x": 43,
+        "y": 6
+      },
+      {
+        "x": 85,
+        "y": 6
+      },
+      {
+        "x": 93,
+        "y": 9
+      },
+      {
+        "x": 94,
+        "y": 8
+      },
+      {
+        "x": 56,
+        "y": 64
+      },
+      {
+        "x": 31,
+        "y": 90
+      },
+      {
+        "x": 30,
+        "y": 14
+      }
+    ]
   },
-  {},
+  {
+    "player": {
+      "name": "Emirhan İlkhan",
+      "firstName": "",
+      "lastName": "",
+      "slug": "emirhan-ilkhan",
+      "shortName": "E. İlkhan",
+      "position": "M",
+      "jerseyNumber": "6",
+      "height": 175,
+      "userCount": 1182,
+      "gender": "M",
+      "id": 1142612,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 1086048000,
+      "proposedMarketValueRaw": {
+        "value": 5200000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "إميرهان إلخان",
+          "bn": "আমিরখান ইলখান",
+          "hi": "एमिरहान इल्खान"
+        },
+        "shortNameTranslation": {
+          "ar": "إ. إلخان",
+          "bn": "ই. ইলখান",
+          "hi": "ई. इल्खान"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 144850,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 33,
+      "accuratePass": 26,
+      "totalLongBalls": 8,
+      "accurateLongBalls": 6,
+      "goalAssist": 1,
+      "accurateOwnHalfPasses": 8,
+      "totalOwnHalfPasses": 9,
+      "accurateOppositionHalfPasses": 18,
+      "totalOppositionHalfPasses": 24,
+      "totalCross": 1,
+      "accurateCross": 1,
+      "aerialWon": 1,
+      "duelWon": 2,
+      "bigChanceCreated": 1,
+      "blockedScoringAttempt": 1,
+      "totalClearance": 1,
+      "interceptionWon": 1,
+      "ballRecovery": 2,
+      "wasFouled": 1,
+      "minutesPlayed": 90,
+      "touches": 42,
+      "rating": 7.4,
+      "possessionLostCtrl": 7,
+      "expectedGoals": 0.0348,
+      "expectedAssists": 0.178786,
+      "totalBallCarriesDistance": 18.321014735935,
+      "ballCarriesCount": 5,
+      "totalProgression": 12.701471225627,
+      "progressiveBallCarriesCount": 0,
+      "keyPass": 3,
+      "ratingVersions": {
+        "original": 7.4,
+        "alternative": 7.4
+      },
+      "totalShots": 1,
+      "shotValueNormalized": 0,
+      "passValueNormalized": 0.54,
+      "dribbleValueNormalized": 0.11,
+      "defensiveValueNormalized": -0.04,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 73,
+        "y": 30
+      },
+      {
+        "x": 53,
+        "y": 32
+      },
+      {
+        "x": 62,
+        "y": 38
+      },
+      {
+        "x": 68,
+        "y": 48
+      },
+      {
+        "x": 67,
+        "y": 33
+      },
+      {
+        "x": 66,
+        "y": 23
+      },
+      {
+        "x": 67,
+        "y": 58
+      },
+      {
+        "x": 33,
+        "y": 36
+      },
+      {
+        "x": 60,
+        "y": 29
+      },
+      {
+        "x": 57,
+        "y": 19
+      },
+      {
+        "x": 64,
+        "y": 55
+      },
+      {
+        "x": 65,
+        "y": 42
+      },
+      {
+        "x": 67,
+        "y": 56
+      },
+      {
+        "x": 28,
+        "y": 69
+      },
+      {
+        "x": 28,
+        "y": 69
+      },
+      {
+        "x": 63,
+        "y": 30
+      },
+      {
+        "x": 59,
+        "y": 30
+      },
+      {
+        "x": 72,
+        "y": 25
+      },
+      {
+        "x": 71,
+        "y": 20
+      },
+      {
+        "x": 69,
+        "y": 47
+      },
+      {
+        "x": 60,
+        "y": 64
+      },
+      {
+        "x": 53,
+        "y": 25
+      },
+      {
+        "x": 8,
+        "y": 24
+      },
+      {
+        "x": 28,
+        "y": 47
+      },
+      {
+        "x": 63,
+        "y": 39
+      },
+      {
+        "x": 37,
+        "y": 59
+      },
+      {
+        "x": 38,
+        "y": 38
+      },
+      {
+        "x": 37,
+        "y": 38
+      },
+      {
+        "x": 30,
+        "y": 73
+      },
+      {
+        "x": 36,
+        "y": 66
+      },
+      {
+        "x": 46,
+        "y": 52
+      },
+      {
+        "x": 65,
+        "y": 24
+      },
+      {
+        "x": 78,
+        "y": 60
+      },
+      {
+        "x": 34,
+        "y": 74
+      },
+      {
+        "x": 90,
+        "y": 22
+      },
+      {
+        "x": 40,
+        "y": 72
+      },
+      {
+        "x": 40,
+        "y": 72
+      },
+      {
+        "x": 62,
+        "y": 20
+      },
+      {
+        "x": 80,
+        "y": 32
+      },
+      {
+        "x": 36,
+        "y": 82
+      },
+      {
+        "x": 29,
+        "y": 68
+      },
+      {
+        "x": 68,
+        "y": 38
+      },
+      {
+        "x": 14,
+        "y": 86
+      },
+      {
+        "x": 9,
+        "y": 66
+      },
+      {
+        "x": 36,
+        "y": 28
+      }
+    ]
+  },
   {
     "player": {
       "name": "Gvidas Gineitis",
@@ -549,7 +1887,7 @@
       "position": "M",
       "jerseyNumber": "66",
       "height": 191,
-      "userCount": 1606,
+      "userCount": 1665,
       "gender": "M",
       "id": 1030829,
       "marketValueCurrency": "EUR",
@@ -581,7 +1919,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -603,51 +1941,207 @@
       }
     },
     "statistics": {
-      "totalPass": 23,
-      "accuratePass": 19,
+      "totalPass": 22,
+      "accuratePass": 18,
       "totalLongBalls": 3,
       "accurateLongBalls": 1,
       "goalAssist": 0,
-      "accurateOwnHalfPasses": 6,
-      "totalOwnHalfPasses": 6,
+      "accurateOwnHalfPasses": 5,
+      "totalOwnHalfPasses": 5,
       "accurateOppositionHalfPasses": 13,
       "totalOppositionHalfPasses": 17,
       "aerialWon": 1,
       "duelLost": 1,
-      "duelWon": 2,
+      "duelWon": 3,
       "dispossessed": 1,
       "blockedScoringAttempt": 2,
       "totalClearance": 1,
       "outfielderBlock": 1,
       "ballRecovery": 4,
+      "totalTackle": 1,
+      "wonTackle": 1,
       "unsuccessfulTouch": 1,
       "wasFouled": 1,
       "minutesPlayed": 67,
       "touches": 30,
-      "rating": 6.8,
+      "rating": 6.9,
       "possessionLostCtrl": 6,
-      "expectedGoals": 0.0549,
-      "expectedAssists": 0.131605,
-      "totalBallCarriesDistance": 42.15135180969,
-      "ballCarriesCount": 5,
-      "totalProgression": 15.782980126938,
+      "expectedGoals": 0.0551,
+      "expectedAssists": 0.131646,
+      "totalBallCarriesDistance": 45.224710884058,
+      "ballCarriesCount": 6,
+      "totalProgression": 13.814426427167,
       "progressiveBallCarriesCount": 0,
       "ratingVersions": {
-        "original": 6.8,
-        "alternative": 6.7
+        "original": 6.9,
+        "alternative": 6.8
       },
       "totalShots": 2,
-      "shotValueNormalized": -0.01,
-      "passValueNormalized": 0.31,
-      "dribbleValueNormalized": 0.03,
-      "defensiveValueNormalized": -0.04,
+      "shotValueNormalized": -0.04,
+      "passValueNormalized": 0.3,
+      "dribbleValueNormalized": 0.12,
+      "defensiveValueNormalized": -0.03,
       "statisticsType": {
         "sportSlug": "football",
         "statisticsType": "player"
       }
     },
     "position": "M",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 8,
+        "y": 92
+      },
+      {
+        "x": 8,
+        "y": 96
+      },
+      {
+        "x": 89,
+        "y": 71
+      },
+      {
+        "x": 89,
+        "y": 71
+      },
+      {
+        "x": 58,
+        "y": 70
+      },
+      {
+        "x": 34,
+        "y": 84
+      },
+      {
+        "x": 35,
+        "y": 84
+      },
+      {
+        "x": 65,
+        "y": 89
+      },
+      {
+        "x": 81,
+        "y": 45
+      },
+      {
+        "x": 24,
+        "y": 48
+      },
+      {
+        "x": 72,
+        "y": 75
+      },
+      {
+        "x": 71,
+        "y": 53
+      },
+      {
+        "x": 69,
+        "y": 50
+      },
+      {
+        "x": 68,
+        "y": 48
+      },
+      {
+        "x": 67,
+        "y": 60
+      },
+      {
+        "x": 66,
+        "y": 66
+      },
+      {
+        "x": 86,
+        "y": 50
+      },
+      {
+        "x": 86,
+        "y": 50
+      },
+      {
+        "x": 29,
+        "y": 82
+      },
+      {
+        "x": 30,
+        "y": 78
+      },
+      {
+        "x": 55,
+        "y": 84
+      },
+      {
+        "x": 60,
+        "y": 74
+      },
+      {
+        "x": 68,
+        "y": 85
+      },
+      {
+        "x": 67,
+        "y": 72
+      },
+      {
+        "x": 12,
+        "y": 54
+      },
+      {
+        "x": 69,
+        "y": 82
+      },
+      {
+        "x": 66,
+        "y": 55
+      },
+      {
+        "x": 57,
+        "y": 84
+      },
+      {
+        "x": 38,
+        "y": 66
+      },
+      {
+        "x": 34,
+        "y": 69
+      },
+      {
+        "x": 74,
+        "y": 36
+      },
+      {
+        "x": 71,
+        "y": 43
+      },
+      {
+        "x": 73,
+        "y": 43
+      },
+      {
+        "x": 67,
+        "y": 77
+      },
+      {
+        "x": 17,
+        "y": 38
+      },
+      {
+        "x": 60,
+        "y": 71
+      },
+      {
+        "x": 60,
+        "y": 71
+      },
+      {
+        "x": 44,
+        "y": 54
+      }
+    ]
   },
   {
     "player": {
@@ -659,13 +2153,13 @@
       "position": "D",
       "jerseyNumber": "33",
       "height": 181,
-      "userCount": 1985,
+      "userCount": 1979,
       "gender": "M",
       "id": 1142692,
       "marketValueCurrency": "EUR",
       "dateOfBirthTimestamp": 1077580800,
       "proposedMarketValueRaw": {
-        "value": 2100000,
+        "value": 4099999,
         "currency": "EUR"
       },
       "fieldTranslations": {
@@ -691,7 +2185,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -738,10 +2232,10 @@
       "rating": 6.6,
       "possessionLostCtrl": 13,
       "expectedGoals": 0.0258,
-      "expectedAssists": 0.065367,
-      "totalBallCarriesDistance": 52.776072554388,
-      "ballCarriesCount": 6,
-      "totalProgression": 35.224462870549,
+      "expectedAssists": 0.0631042,
+      "totalBallCarriesDistance": 61.084718713661,
+      "ballCarriesCount": 7,
+      "totalProgression": 37.829660972345,
       "bestBallCarryProgression": 14.911340272723,
       "totalProgressiveBallCarriesDistance": 14.948070945778,
       "progressiveBallCarriesCount": 1,
@@ -752,8 +2246,8 @@
       },
       "totalShots": 1,
       "shotValueNormalized": -0.05,
-      "passValueNormalized": 0.03,
-      "dribbleValueNormalized": 0.19,
+      "passValueNormalized": -0.02,
+      "dribbleValueNormalized": 0.2,
       "defensiveValueNormalized": -0.05,
       "statisticsType": {
         "sportSlug": "football",
@@ -761,19 +2255,203 @@
       }
     },
     "position": "M",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 99,
+        "y": 0
+      },
+      {
+        "x": 92,
+        "y": 5
+      },
+      {
+        "x": 22,
+        "y": 94
+      },
+      {
+        "x": 41,
+        "y": 96
+      },
+      {
+        "x": 62,
+        "y": 95
+      },
+      {
+        "x": 13,
+        "y": 85
+      },
+      {
+        "x": 8,
+        "y": 53
+      },
+      {
+        "x": 32,
+        "y": 49
+      },
+      {
+        "x": 71,
+        "y": 81
+      },
+      {
+        "x": 71,
+        "y": 89
+      },
+      {
+        "x": 10,
+        "y": 85
+      },
+      {
+        "x": 32,
+        "y": 77
+      },
+      {
+        "x": 80,
+        "y": 74
+      },
+      {
+        "x": 63,
+        "y": 73
+      },
+      {
+        "x": 87,
+        "y": 77
+      },
+      {
+        "x": 11,
+        "y": 81
+      },
+      {
+        "x": 11,
+        "y": 81
+      },
+      {
+        "x": 99,
+        "y": 99
+      },
+      {
+        "x": 28,
+        "y": 100
+      },
+      {
+        "x": 59,
+        "y": 93
+      },
+      {
+        "x": 11,
+        "y": 62
+      },
+      {
+        "x": 86,
+        "y": 100
+      },
+      {
+        "x": 72,
+        "y": 93
+      },
+      {
+        "x": 95,
+        "y": 79
+      },
+      {
+        "x": 71,
+        "y": 95
+      },
+      {
+        "x": 70,
+        "y": 93
+      },
+      {
+        "x": 21,
+        "y": 86
+      },
+      {
+        "x": 99,
+        "y": 0
+      },
+      {
+        "x": 9,
+        "y": 84
+      },
+      {
+        "x": 3,
+        "y": 75
+      },
+      {
+        "x": 31,
+        "y": 92
+      },
+      {
+        "x": 44,
+        "y": 100
+      },
+      {
+        "x": 39,
+        "y": 71
+      },
+      {
+        "x": 99,
+        "y": 99
+      },
+      {
+        "x": 92,
+        "y": 90
+      },
+      {
+        "x": 43,
+        "y": 84
+      },
+      {
+        "x": 90,
+        "y": 90
+      },
+      {
+        "x": 91,
+        "y": 92
+      },
+      {
+        "x": 72,
+        "y": 100
+      },
+      {
+        "x": 79,
+        "y": 95
+      },
+      {
+        "x": 26,
+        "y": 88
+      },
+      {
+        "x": 68,
+        "y": 62
+      },
+      {
+        "x": 10,
+        "y": 85
+      },
+      {
+        "x": 18,
+        "y": 89
+      },
+      {
+        "x": 44,
+        "y": 88
+      },
+      {
+        "x": 99,
+        "y": 0
+      }
+    ]
   },
   {
     "player": {
       "name": "Nikola Vlašić",
-      "firstName": "Nikola",
-      "lastName": "Vlašić",
       "slug": "nikola-vlasic",
-      "shortName": "N. Vlasic",
+      "shortName": "N. Vlašić",
       "position": "M",
       "jerseyNumber": "10",
       "height": 178,
-      "userCount": 5692,
+      "userCount": 5769,
       "gender": "M",
       "sofascoreId": "niksivlasic_",
       "id": 357596,
@@ -806,7 +2484,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -831,10 +2509,10 @@
       "totalPass": 38,
       "accuratePass": 33,
       "goalAssist": 0,
-      "accurateOwnHalfPasses": 12,
-      "totalOwnHalfPasses": 12,
-      "accurateOppositionHalfPasses": 21,
-      "totalOppositionHalfPasses": 26,
+      "accurateOwnHalfPasses": 11,
+      "totalOwnHalfPasses": 11,
+      "accurateOppositionHalfPasses": 22,
+      "totalOppositionHalfPasses": 27,
       "aerialLost": 2,
       "duelLost": 4,
       "duelWon": 4,
@@ -854,10 +2532,10 @@
       "possessionLostCtrl": 10,
       "expectedGoals": 0.7884,
       "expectedGoalsOnTarget": 0.9876,
-      "expectedAssists": 0.105319,
-      "totalBallCarriesDistance": 118.7453004838,
-      "ballCarriesCount": 10,
-      "totalProgression": 45.833756536506,
+      "expectedAssists": 0.140997,
+      "totalBallCarriesDistance": 138.72157421145,
+      "ballCarriesCount": 13,
+      "totalProgression": 43.006475959108,
       "bestBallCarryProgression": 15.307058982743,
       "totalProgressiveBallCarriesDistance": 32.569003322263,
       "progressiveBallCarriesCount": 2,
@@ -868,8 +2546,8 @@
       },
       "totalShots": 1,
       "shotValueNormalized": 0.32,
-      "passValueNormalized": 0.25,
-      "dribbleValueNormalized": 0.14,
+      "passValueNormalized": 0.26,
+      "dribbleValueNormalized": 0.15,
       "defensiveValueNormalized": 0.13,
       "statisticsType": {
         "sportSlug": "football",
@@ -877,17 +2555,253 @@
       }
     },
     "position": "F",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 87,
+        "y": 11
+      },
+      {
+        "x": 87,
+        "y": 49
+      },
+      {
+        "x": 88,
+        "y": 50
+      },
+      {
+        "x": 38,
+        "y": 55
+      },
+      {
+        "x": 59,
+        "y": 19
+      },
+      {
+        "x": 83,
+        "y": 11
+      },
+      {
+        "x": 87,
+        "y": 24
+      },
+      {
+        "x": 33,
+        "y": 19
+      },
+      {
+        "x": 63,
+        "y": 24
+      },
+      {
+        "x": 68,
+        "y": 28
+      },
+      {
+        "x": 92,
+        "y": 14
+      },
+      {
+        "x": 35,
+        "y": 25
+      },
+      {
+        "x": 35,
+        "y": 25
+      },
+      {
+        "x": 65,
+        "y": 9
+      },
+      {
+        "x": 86,
+        "y": 25
+      },
+      {
+        "x": 65,
+        "y": 30
+      },
+      {
+        "x": 45,
+        "y": 46
+      },
+      {
+        "x": 47,
+        "y": 43
+      },
+      {
+        "x": 35,
+        "y": 12
+      },
+      {
+        "x": 34,
+        "y": 13
+      },
+      {
+        "x": 34,
+        "y": 18
+      },
+      {
+        "x": 65,
+        "y": 66
+      },
+      {
+        "x": 25,
+        "y": 15
+      },
+      {
+        "x": 65,
+        "y": 50
+      },
+      {
+        "x": 57,
+        "y": 36
+      },
+      {
+        "x": 65,
+        "y": 26
+      },
+      {
+        "x": 68,
+        "y": 10
+      },
+      {
+        "x": 58,
+        "y": 8
+      },
+      {
+        "x": 71,
+        "y": 47
+      },
+      {
+        "x": 37,
+        "y": 22
+      },
+      {
+        "x": 48,
+        "y": 26
+      },
+      {
+        "x": 59,
+        "y": 26
+      },
+      {
+        "x": 64,
+        "y": 40
+      },
+      {
+        "x": 75,
+        "y": 17
+      },
+      {
+        "x": 75,
+        "y": 17
+      },
+      {
+        "x": 72,
+        "y": 57
+      },
+      {
+        "x": 3,
+        "y": 39
+      },
+      {
+        "x": 32,
+        "y": 19
+      },
+      {
+        "x": 79,
+        "y": 12
+      },
+      {
+        "x": 75,
+        "y": 7
+      },
+      {
+        "x": 28,
+        "y": 34
+      },
+      {
+        "x": 66,
+        "y": 63
+      },
+      {
+        "x": 73,
+        "y": 80
+      },
+      {
+        "x": 65,
+        "y": 82
+      },
+      {
+        "x": 34,
+        "y": 77
+      },
+      {
+        "x": 58,
+        "y": 70
+      },
+      {
+        "x": 44,
+        "y": 76
+      },
+      {
+        "x": 58,
+        "y": 28
+      },
+      {
+        "x": 14,
+        "y": 56
+      },
+      {
+        "x": 61,
+        "y": 14
+      },
+      {
+        "x": 45,
+        "y": 15
+      },
+      {
+        "x": 53,
+        "y": 88
+      },
+      {
+        "x": 88,
+        "y": 50
+      },
+      {
+        "x": 55,
+        "y": 68
+      },
+      {
+        "x": 75,
+        "y": 30
+      },
+      {
+        "x": 33,
+        "y": 75
+      },
+      {
+        "x": 15,
+        "y": 71
+      },
+      {
+        "x": 86,
+        "y": 94
+      }
+    ]
   },
   {
     "player": {
       "name": "Che Adams",
+      "firstName": "Che",
+      "lastName": "Adams",
       "slug": "che-adams",
       "shortName": "C. Adams",
       "position": "F",
       "jerseyNumber": "19",
       "height": 175,
-      "userCount": 3001,
+      "userCount": 3014,
       "gender": "M",
       "id": 773409,
       "marketValueCurrency": "EUR",
@@ -919,7 +2833,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -956,33 +2870,159 @@
       "totalContest": 2,
       "ballRecovery": 2,
       "totalTackle": 2,
-      "wonTackle": 2,
+      "wonTackle": 1,
       "minutesPlayed": 67,
       "touches": 28,
-      "rating": 6.6,
+      "rating": 6.5,
       "possessionLostCtrl": 7,
-      "expectedAssists": 0.00814598,
-      "totalBallCarriesDistance": 55.593683198056,
-      "ballCarriesCount": 6,
-      "totalProgression": 28.433991852538,
+      "expectedAssists": 0.00812404,
+      "totalBallCarriesDistance": 62.004888700924,
+      "ballCarriesCount": 7,
+      "totalProgression": 25.734821470486,
       "bestBallCarryProgression": 25.804652240276,
       "totalProgressiveBallCarriesDistance": 27.181683557131,
       "progressiveBallCarriesCount": 1,
       "ratingVersions": {
-        "original": 6.6,
-        "alternative": 6.6
+        "original": 6.5,
+        "alternative": 6.5
       },
       "totalShots": 0,
-      "passValueNormalized": -0.11,
-      "dribbleValueNormalized": 0.03,
-      "defensiveValueNormalized": 0.15,
+      "passValueNormalized": -0.08,
+      "dribbleValueNormalized": 0.02,
+      "defensiveValueNormalized": 0.14,
       "statisticsType": {
         "sportSlug": "football",
         "statisticsType": "player"
       }
     },
     "position": "F",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 34,
+        "y": 75
+      },
+      {
+        "x": 27,
+        "y": 89
+      },
+      {
+        "x": 26,
+        "y": 82
+      },
+      {
+        "x": 25,
+        "y": 93
+      },
+      {
+        "x": 24,
+        "y": 92
+      },
+      {
+        "x": 64,
+        "y": 75
+      },
+      {
+        "x": 45,
+        "y": 67
+      },
+      {
+        "x": 66,
+        "y": 52
+      },
+      {
+        "x": 48,
+        "y": 52
+      },
+      {
+        "x": 64,
+        "y": 45
+      },
+      {
+        "x": 36,
+        "y": 94
+      },
+      {
+        "x": 62,
+        "y": 73
+      },
+      {
+        "x": 49,
+        "y": 75
+      },
+      {
+        "x": 74,
+        "y": 70
+      },
+      {
+        "x": 62,
+        "y": 47
+      },
+      {
+        "x": 72,
+        "y": 57
+      },
+      {
+        "x": 45,
+        "y": 79
+      },
+      {
+        "x": 68,
+        "y": 57
+      },
+      {
+        "x": 32,
+        "y": 88
+      },
+      {
+        "x": 35,
+        "y": 86
+      },
+      {
+        "x": 35,
+        "y": 94
+      },
+      {
+        "x": 61,
+        "y": 94
+      },
+      {
+        "x": 42,
+        "y": 75
+      },
+      {
+        "x": 74,
+        "y": 45
+      },
+      {
+        "x": 71,
+        "y": 77
+      },
+      {
+        "x": 43,
+        "y": 83
+      },
+      {
+        "x": 33,
+        "y": 75
+      },
+      {
+        "x": 31,
+        "y": 63
+      },
+      {
+        "x": 28,
+        "y": 57
+      },
+      {
+        "x": 63,
+        "y": 88
+      },
+      {
+        "x": 65,
+        "y": 83
+      }
+    ]
   },
   {
     "player": {
@@ -994,7 +3034,7 @@
       "position": "F",
       "jerseyNumber": "18",
       "height": 179,
-      "userCount": 10144,
+      "userCount": 11318,
       "gender": "M",
       "sofascoreId": "simeonegiovanni",
       "id": 341143,
@@ -1027,7 +3067,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -1074,15 +3114,15 @@
       "wasFouled": 1,
       "totalOffside": 1,
       "minutesPlayed": 89,
-      "touches": 35,
+      "touches": 36,
       "rating": 7.3,
       "possessionLostCtrl": 8,
-      "expectedGoals": 1.1536,
+      "expectedGoals": 1.1286,
       "expectedGoalsOnTarget": 0.2794,
       "expectedAssists": 0.0158207,
-      "totalBallCarriesDistance": 87.611034246065,
-      "ballCarriesCount": 10,
-      "totalProgression": 17.536842021718,
+      "totalBallCarriesDistance": 63.198398215822,
+      "ballCarriesCount": 8,
+      "totalProgression": 19.944072406596,
       "bestBallCarryProgression": 15.292550837464,
       "totalProgressiveBallCarriesDistance": 15.52103891497,
       "progressiveBallCarriesCount": 1,
@@ -1093,16 +3133,198 @@
       },
       "totalShots": 4,
       "shotValueNormalized": 0.44,
-      "passValueNormalized": -0.06,
-      "dribbleValueNormalized": 0.12,
-      "defensiveValueNormalized": -0.02,
+      "passValueNormalized": -0.04,
+      "dribbleValueNormalized": -0.32,
+      "defensiveValueNormalized": -0.01,
       "statisticsType": {
         "sportSlug": "football",
         "statisticsType": "player"
       }
     },
     "position": "F",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 50,
+        "y": 50
+      },
+      {
+        "x": 86,
+        "y": 40
+      },
+      {
+        "x": 90,
+        "y": 45
+      },
+      {
+        "x": 62,
+        "y": 7
+      },
+      {
+        "x": 38,
+        "y": 32
+      },
+      {
+        "x": 47,
+        "y": 53
+      },
+      {
+        "x": 70,
+        "y": 35
+      },
+      {
+        "x": 75,
+        "y": 21
+      },
+      {
+        "x": 83,
+        "y": 10
+      },
+      {
+        "x": 90,
+        "y": 28
+      },
+      {
+        "x": 87,
+        "y": 26
+      },
+      {
+        "x": 49,
+        "y": 50
+      },
+      {
+        "x": 65,
+        "y": 31
+      },
+      {
+        "x": 65,
+        "y": 31
+      },
+      {
+        "x": 62,
+        "y": 26
+      },
+      {
+        "x": 67,
+        "y": 23
+      },
+      {
+        "x": 69,
+        "y": 35
+      },
+      {
+        "x": 69,
+        "y": 41
+      },
+      {
+        "x": 80,
+        "y": 35
+      },
+      {
+        "x": 28,
+        "y": 29
+      },
+      {
+        "x": 30,
+        "y": 38
+      },
+      {
+        "x": 42,
+        "y": 73
+      },
+      {
+        "x": 42,
+        "y": 73
+      },
+      {
+        "x": 37,
+        "y": 36
+      },
+      {
+        "x": 38,
+        "y": 58
+      },
+      {
+        "x": 65,
+        "y": 71
+      },
+      {
+        "x": 65,
+        "y": 71
+      },
+      {
+        "x": 67,
+        "y": 72
+      },
+      {
+        "x": 49,
+        "y": 49
+      },
+      {
+        "x": 63,
+        "y": 17
+      },
+      {
+        "x": 36,
+        "y": 82
+      },
+      {
+        "x": 65,
+        "y": 59
+      },
+      {
+        "x": 88,
+        "y": 47
+      },
+      {
+        "x": 90,
+        "y": 47
+      },
+      {
+        "x": 43,
+        "y": 70
+      },
+      {
+        "x": 91,
+        "y": 48
+      },
+      {
+        "x": 75,
+        "y": 89
+      },
+      {
+        "x": 86,
+        "y": 5
+      },
+      {
+        "x": 91,
+        "y": 5
+      },
+      {
+        "x": 42,
+        "y": 55
+      },
+      {
+        "x": 47,
+        "y": 58
+      },
+      {
+        "x": 46,
+        "y": 55
+      },
+      {
+        "x": 44,
+        "y": 55
+      },
+      {
+        "x": 57,
+        "y": 64
+      },
+      {
+        "x": 72,
+        "y": 62
+      }
+    ]
   },
   {
     "player": {
@@ -1114,7 +3336,7 @@
       "position": "D",
       "jerseyNumber": "35",
       "height": 186,
-      "userCount": 914,
+      "userCount": 920,
       "gender": "M",
       "id": 1165371,
       "marketValueCurrency": "EUR",
@@ -1146,7 +3368,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -1189,12 +3411,12 @@
       "touches": 14,
       "rating": 6.6,
       "possessionLostCtrl": 4,
-      "expectedAssists": 0.0567763,
-      "totalBallCarriesDistance": 88.357080434545,
+      "expectedAssists": 0.0566472,
+      "totalBallCarriesDistance": 90.999042807014,
       "ballCarriesCount": 4,
-      "totalProgression": 78.387642527036,
+      "totalProgression": 78.825472670466,
       "bestBallCarryProgression": 35.960374032658,
-      "totalProgressiveBallCarriesDistance": 81.371717165537,
+      "totalProgressiveBallCarriesDistance": 84.013679538007,
       "progressiveBallCarriesCount": 3,
       "keyPass": 1,
       "ratingVersions": {
@@ -1203,7 +3425,7 @@
       },
       "totalShots": 0,
       "passValueNormalized": 0.24,
-      "dribbleValueNormalized": 0.14,
+      "dribbleValueNormalized": 0.15,
       "defensiveValueNormalized": -0.18,
       "statisticsType": {
         "sportSlug": "football",
@@ -1211,7 +3433,69 @@
       }
     },
     "position": "D",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 38,
+        "y": 16
+      },
+      {
+        "x": 34,
+        "y": 10
+      },
+      {
+        "x": 74,
+        "y": 28
+      },
+      {
+        "x": 34,
+        "y": 25
+      },
+      {
+        "x": 14,
+        "y": 25
+      },
+      {
+        "x": 46,
+        "y": 5
+      },
+      {
+        "x": 44,
+        "y": 3
+      },
+      {
+        "x": 47,
+        "y": 7
+      },
+      {
+        "x": 74,
+        "y": 2
+      },
+      {
+        "x": 24,
+        "y": 9
+      },
+      {
+        "x": 74,
+        "y": 20
+      },
+      {
+        "x": 85,
+        "y": 14
+      },
+      {
+        "x": 54,
+        "y": 18
+      },
+      {
+        "x": 22,
+        "y": 18
+      },
+      {
+        "x": 35,
+        "y": 8
+      }
+    ]
   },
   {
     "player": {
@@ -1223,7 +3507,7 @@
       "position": "F",
       "jerseyNumber": "92",
       "height": 185,
-      "userCount": 386,
+      "userCount": 400,
       "gender": "M",
       "id": 1493157,
       "marketValueCurrency": "EUR",
@@ -1255,7 +3539,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -1297,26 +3581,112 @@
       "touches": 16,
       "rating": 6.6,
       "possessionLostCtrl": 7,
-      "expectedAssists": 0.00091172,
-      "totalBallCarriesDistance": 38.314366612016,
+      "expectedAssists": 0.00091209,
+      "totalBallCarriesDistance": 38.306104080309,
       "ballCarriesCount": 4,
-      "totalProgression": 28.200566269586,
+      "totalProgression": 28.141413812711,
       "progressiveBallCarriesCount": 0,
       "ratingVersions": {
         "original": 6.6,
         "alternative": 6.4
       },
       "totalShots": 0,
-      "passValueNormalized": -0.06,
+      "passValueNormalized": -0.05,
       "dribbleValueNormalized": 0.02,
-      "defensiveValueNormalized": -0.04,
+      "defensiveValueNormalized": -0.03,
       "statisticsType": {
         "sportSlug": "football",
         "statisticsType": "player"
       }
     },
     "position": "F",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 54,
+        "y": 5
+      },
+      {
+        "x": 58,
+        "y": 15
+      },
+      {
+        "x": 66,
+        "y": 52
+      },
+      {
+        "x": 10,
+        "y": 55
+      },
+      {
+        "x": 43,
+        "y": 21
+      },
+      {
+        "x": 49,
+        "y": 4
+      },
+      {
+        "x": 70,
+        "y": 6
+      },
+      {
+        "x": 78,
+        "y": 17
+      },
+      {
+        "x": 76,
+        "y": 18
+      },
+      {
+        "x": 76,
+        "y": 18
+      },
+      {
+        "x": 49,
+        "y": 47
+      },
+      {
+        "x": 78,
+        "y": 28
+      },
+      {
+        "x": 30,
+        "y": 35
+      },
+      {
+        "x": 32,
+        "y": 32
+      },
+      {
+        "x": 96,
+        "y": 12
+      },
+      {
+        "x": 98,
+        "y": 44
+      },
+      {
+        "x": 82,
+        "y": 86
+      },
+      {
+        "x": 84,
+        "y": 87
+      },
+      {
+        "x": 91,
+        "y": 92
+      },
+      {
+        "x": 92,
+        "y": 91
+      },
+      {
+        "x": 92,
+        "y": 91
+      }
+    ]
   },
   {
     "player": {
@@ -1328,7 +3698,7 @@
       "position": "M",
       "jerseyNumber": "22",
       "height": 192,
-      "userCount": 6571,
+      "userCount": 6595,
       "gender": "M",
       "sofascoreId": "cesarecasadei",
       "id": 1016788,
@@ -1361,7 +3731,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -1400,23 +3770,23 @@
       "totalClearance": 2,
       "minutesPlayed": 23,
       "touches": 7,
-      "rating": 6.9,
+      "rating": 6.8,
       "possessionLostCtrl": 1,
       "expectedGoals": 0.0915,
       "expectedAssists": 0.0972795,
-      "totalBallCarriesDistance": 5.6293183423928,
+      "totalBallCarriesDistance": 4.5617366210688,
       "ballCarriesCount": 1,
-      "totalProgression": -5.3001962775864,
+      "totalProgression": -4.5609274452683,
       "progressiveBallCarriesCount": 0,
       "keyPass": 1,
       "ratingVersions": {
-        "original": 6.9,
+        "original": 6.8,
         "alternative": 6.8
       },
       "totalShots": 1,
       "shotValueNormalized": 0.01,
-      "passValueNormalized": 0.17,
-      "dribbleValueNormalized": 0.08,
+      "passValueNormalized": -0.02,
+      "dribbleValueNormalized": 0.26,
       "defensiveValueNormalized": 0.19,
       "statisticsType": {
         "sportSlug": "football",
@@ -1424,7 +3794,49 @@
       }
     },
     "position": "M",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 91,
+        "y": 45
+      },
+      {
+        "x": 89,
+        "y": 59
+      },
+      {
+        "x": 26,
+        "y": 66
+      },
+      {
+        "x": 89,
+        "y": 46
+      },
+      {
+        "x": 89,
+        "y": 43
+      },
+      {
+        "x": 96,
+        "y": 27
+      },
+      {
+        "x": 6,
+        "y": 42
+      },
+      {
+        "x": 3,
+        "y": 40
+      },
+      {
+        "x": 9,
+        "y": 56
+      },
+      {
+        "x": 9,
+        "y": 56
+      }
+    ]
   },
   {
     "player": {
@@ -1434,7 +3846,7 @@
       "position": "F",
       "jerseyNumber": "91",
       "height": 189,
-      "userCount": 5962,
+      "userCount": 5983,
       "gender": "M",
       "sofascoreId": "duvanzapata91",
       "id": 38162,
@@ -1465,7 +3877,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -1509,20 +3921,20 @@
       "touches": 10,
       "rating": 6.3,
       "possessionLostCtrl": 4,
-      "expectedGoals": 0.2173,
+      "expectedGoals": 0.2389,
       "expectedAssists": 0.00074237,
-      "totalBallCarriesDistance": 52.504048450713,
+      "totalBallCarriesDistance": 52.606735629274,
       "ballCarriesCount": 3,
-      "totalProgression": 31.722318366172,
-      "bestBallCarryProgression": 23.228593233055,
-      "totalProgressiveBallCarriesDistance": 48.613696153041,
+      "totalProgression": 31.734533626054,
+      "bestBallCarryProgression": 23.240808492936,
+      "totalProgressiveBallCarriesDistance": 48.716383331602,
       "progressiveBallCarriesCount": 2,
       "ratingVersions": {
         "original": 6.3,
         "alternative": 6.4
       },
       "totalShots": 3,
-      "shotValueNormalized": -0.37,
+      "shotValueNormalized": -0.31,
       "passValueNormalized": -0.04,
       "dribbleValueNormalized": 0.05,
       "defensiveValueNormalized": -0.01,
@@ -1532,9 +3944,165 @@
       }
     },
     "position": "F",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 76,
+        "y": 82
+      },
+      {
+        "x": 92,
+        "y": 82
+      },
+      {
+        "x": 92,
+        "y": 82
+      },
+      {
+        "x": 91,
+        "y": 51
+      },
+      {
+        "x": 89,
+        "y": 44
+      },
+      {
+        "x": 89,
+        "y": 44
+      },
+      {
+        "x": 95,
+        "y": 88
+      },
+      {
+        "x": 41,
+        "y": 84
+      },
+      {
+        "x": 37,
+        "y": 84
+      },
+      {
+        "x": 35,
+        "y": 86
+      },
+      {
+        "x": 59,
+        "y": 74
+      },
+      {
+        "x": 82,
+        "y": 51
+      },
+      {
+        "x": 68,
+        "y": 76
+      },
+      {
+        "x": 39,
+        "y": 29
+      },
+      {
+        "x": 66,
+        "y": 65
+      },
+      {
+        "x": 61,
+        "y": 79
+      }
+    ]
   },
-  {},
+  {
+    "player": {
+      "name": "Adrien Tameze",
+      "firstName": "Adrien",
+      "lastName": "Tameze",
+      "slug": "adrien-tameze",
+      "shortName": "A. Tameze",
+      "position": "D",
+      "jerseyNumber": "61",
+      "height": 182,
+      "userCount": 354,
+      "gender": "M",
+      "id": 139235,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 760320000,
+      "proposedMarketValueRaw": {
+        "value": 1400000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "أدريان تاميز",
+          "bn": "অ্যাড্রিয়েন টেমেজ",
+          "hi": "एड्रियन तामेज़े"
+        },
+        "shortNameTranslation": {
+          "ar": "أ. تاميز",
+          "bn": "এ. টামেজ",
+          "hi": "ए. तामेज़े"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 144850,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 1,
+      "accuratePass": 1,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 1,
+      "totalOwnHalfPasses": 1,
+      "minutesPlayed": 1,
+      "touches": 1,
+      "expectedAssists": 1.25e-05,
+      "totalBallCarriesDistance": 9.792,
+      "ballCarriesCount": 1,
+      "totalProgression": -5.2961905151831,
+      "progressiveBallCarriesCount": 0,
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 59,
+        "y": 7
+      }
+    ]
+  },
   {
     "player": {
       "name": "Lapo Siviero",
@@ -1544,7 +4112,7 @@
       "position": "G",
       "jerseyNumber": "99",
       "height": 195,
-      "userCount": 80,
+      "userCount": 87,
       "gender": "M",
       "id": 1519010,
       "marketValueCurrency": "EUR",
@@ -1572,7 +4140,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -1601,17 +4169,20 @@
       }
     },
     "position": "G",
-    "extra": null
+    "extra": null,
+    "heatmap": null
   },
   {
     "player": {
       "name": "Franco Israel",
+      "firstName": "Franco",
+      "lastName": "Israel",
       "slug": "franco-israel",
       "shortName": "F. Israel",
       "position": "G",
       "jerseyNumber": "81",
       "height": 189,
-      "userCount": 2267,
+      "userCount": 2270,
       "gender": "M",
       "id": 1084846,
       "marketValueCurrency": "EUR",
@@ -1643,7 +4214,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -1672,7 +4243,8 @@
       }
     },
     "position": "G",
-    "extra": null
+    "extra": null,
+    "heatmap": null
   },
   {
     "player": {
@@ -1716,7 +4288,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -1745,19 +4317,18 @@
       }
     },
     "position": "D",
-    "extra": null
+    "extra": null,
+    "heatmap": null
   },
   {
     "player": {
       "name": "Guillermo Maripán",
-      "firstName": "Guillermo",
-      "lastName": "Maripan",
       "slug": "guillermo-maripan",
-      "shortName": "G. Maripan",
+      "shortName": "G. Maripán",
       "position": "D",
       "jerseyNumber": "13",
       "height": 193,
-      "userCount": 2150,
+      "userCount": 2158,
       "gender": "M",
       "id": 339909,
       "marketValueCurrency": "EUR",
@@ -1787,7 +4358,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -1816,17 +4387,20 @@
       }
     },
     "position": "D",
-    "extra": null
+    "extra": null,
+    "heatmap": null
   },
   {
     "player": {
       "name": "Ivan Ilić",
+      "firstName": "Ivan",
+      "lastName": "Ilic",
       "slug": "ivan-ilic",
       "shortName": "I. Ilić",
       "position": "M",
       "jerseyNumber": "8",
       "height": 185,
-      "userCount": 1804,
+      "userCount": 1803,
       "gender": "M",
       "id": 877371,
       "marketValueCurrency": "EUR",
@@ -1858,7 +4432,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -1887,17 +4461,20 @@
       }
     },
     "position": "M",
-    "extra": null
+    "extra": null,
+    "heatmap": null
   },
   {
     "player": {
       "name": "Matteo Prati",
+      "firstName": "Matteo",
+      "lastName": "Prati",
       "slug": "matteo-prati",
       "shortName": "M. Prati",
       "position": "M",
       "jerseyNumber": "4",
       "height": 182,
-      "userCount": 719,
+      "userCount": 727,
       "gender": "M",
       "id": 1111640,
       "marketValueCurrency": "EUR",
@@ -1929,7 +4506,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 140420,
+      "userCount": 144850,
       "nameCode": "TOR",
       "disabled": false,
       "national": false,
@@ -1958,9 +4535,83 @@
       }
     },
     "position": "M",
-    "extra": null
+    "extra": null,
+    "heatmap": null
   },
-  {},
+  {
+    "player": {
+      "name": "Sandro Kulenović",
+      "firstName": "Sandro",
+      "lastName": "Kulenovic",
+      "slug": "sandro-kulenovic",
+      "shortName": "S. Kulenović",
+      "position": "F",
+      "jerseyNumber": "17",
+      "height": 191,
+      "userCount": 3304,
+      "gender": "M",
+      "id": 826026,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 944265600,
+      "proposedMarketValueRaw": {
+        "value": 3900000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "ساندرو كولينوفيتش",
+          "bn": "সান্দ্রো কুলেনোভিচ",
+          "hi": "सैंड्रो कुलेनोविक"
+        },
+        "shortNameTranslation": {
+          "ar": "س. كولينوفيتش",
+          "bn": "এস. কুলেনোভিচ",
+          "hi": "एस. कुलेनोविक"
+        }
+      }
+    },
+    "team": {
+      "name": "Torino",
+      "slug": "torino",
+      "shortName": "Torino",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 144850,
+      "nameCode": "TOR",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2696,
+      "teamColors": {
+        "primary": "#6d1b1d",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تورينو",
+          "bn": "টরিনো",
+          "hi": "टोरीनो",
+          "ru": "Торино"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "F",
+    "extra": null,
+    "heatmap": null
+  },
   {
     "player": {
       "name": "Yann Sommer",
@@ -1969,7 +4620,7 @@
       "position": "G",
       "jerseyNumber": "1",
       "height": 183,
-      "userCount": 12749,
+      "userCount": 12851,
       "gender": "M",
       "sofascoreId": "yannsommer",
       "id": 16206,
@@ -2002,7 +4653,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -2062,23 +4713,231 @@
       }
     },
     "position": "G",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 9,
+        "y": 47
+      },
+      {
+        "x": 5,
+        "y": 52
+      },
+      {
+        "x": 3,
+        "y": 40
+      },
+      {
+        "x": 13,
+        "y": 62
+      },
+      {
+        "x": 13,
+        "y": 49
+      },
+      {
+        "x": 10,
+        "y": 53
+      },
+      {
+        "x": 8,
+        "y": 52
+      },
+      {
+        "x": 4,
+        "y": 47
+      },
+      {
+        "x": 6,
+        "y": 45
+      },
+      {
+        "x": 11,
+        "y": 48
+      },
+      {
+        "x": 13,
+        "y": 55
+      },
+      {
+        "x": 17,
+        "y": 51
+      },
+      {
+        "x": 15,
+        "y": 46
+      },
+      {
+        "x": 13,
+        "y": 48
+      },
+      {
+        "x": 11,
+        "y": 53
+      },
+      {
+        "x": 14,
+        "y": 48
+      },
+      {
+        "x": 3,
+        "y": 52
+      },
+      {
+        "x": 10,
+        "y": 49
+      },
+      {
+        "x": 32,
+        "y": 85
+      },
+      {
+        "x": 3,
+        "y": 53
+      },
+      {
+        "x": 19,
+        "y": 56
+      },
+      {
+        "x": 19,
+        "y": 56
+      },
+      {
+        "x": 21,
+        "y": 51
+      },
+      {
+        "x": 8,
+        "y": 30
+      },
+      {
+        "x": 2,
+        "y": 50
+      },
+      {
+        "x": 14,
+        "y": 86
+      },
+      {
+        "x": 11,
+        "y": 47
+      },
+      {
+        "x": 4,
+        "y": 53
+      },
+      {
+        "x": 25,
+        "y": 53
+      },
+      {
+        "x": 29,
+        "y": 33
+      },
+      {
+        "x": 28,
+        "y": 58
+      },
+      {
+        "x": 6,
+        "y": 53
+      },
+      {
+        "x": 6,
+        "y": 53
+      },
+      {
+        "x": 18,
+        "y": 37
+      },
+      {
+        "x": 18,
+        "y": 37
+      },
+      {
+        "x": 13,
+        "y": 55
+      },
+      {
+        "x": 19,
+        "y": 52
+      },
+      {
+        "x": 7,
+        "y": 40
+      },
+      {
+        "x": 5,
+        "y": 37
+      },
+      {
+        "x": 13,
+        "y": 52
+      },
+      {
+        "x": 4,
+        "y": 48
+      },
+      {
+        "x": 11,
+        "y": 39
+      },
+      {
+        "x": 11,
+        "y": 40
+      },
+      {
+        "x": 5,
+        "y": 45
+      },
+      {
+        "x": 3,
+        "y": 50
+      },
+      {
+        "x": 9,
+        "y": 71
+      },
+      {
+        "x": 9,
+        "y": 71
+      },
+      {
+        "x": 2,
+        "y": 58
+      },
+      {
+        "x": 8,
+        "y": 50
+      },
+      {
+        "x": 25,
+        "y": 52
+      },
+      {
+        "x": 11,
+        "y": 15
+      }
+    ]
   },
   {
     "player": {
       "name": "Yann Bisseck",
+      "firstName": "Yann",
+      "lastName": "Bisseck",
       "slug": "yann-bisseck",
       "shortName": "Y. Bisseck",
       "position": "D",
       "jerseyNumber": "31",
       "height": 194,
-      "userCount": 5769,
+      "userCount": 5858,
       "gender": "M",
       "id": 906275,
       "marketValueCurrency": "EUR",
       "dateOfBirthTimestamp": 975456000,
       "proposedMarketValueRaw": {
-        "value": 33000000,
+        "value": 38000000,
         "currency": "EUR"
       },
       "fieldTranslations": {
@@ -2104,7 +4963,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -2146,12 +5005,12 @@
       "unsuccessfulTouch": 1,
       "fouls": 1,
       "minutesPlayed": 87,
-      "touches": 57,
+      "touches": 58,
       "rating": 7.4,
       "possessionLostCtrl": 3,
-      "expectedGoals": 0.2011,
-      "expectedGoalsOnTarget": 0.8833,
-      "expectedAssists": 0.0511596,
+      "expectedGoals": 0.1975,
+      "expectedGoalsOnTarget": 0.4757,
+      "expectedAssists": 0.0511394,
       "totalBallCarriesDistance": 113.59094256729,
       "ballCarriesCount": 13,
       "totalProgression": 18.173138851954,
@@ -2161,7 +5020,7 @@
         "alternative": 7.4
       },
       "totalShots": 2,
-      "shotValueNormalized": 0.49,
+      "shotValueNormalized": 0.48,
       "passValueNormalized": 0.15,
       "dribbleValueNormalized": 0.06,
       "defensiveValueNormalized": -0.3,
@@ -2171,7 +5030,273 @@
       }
     },
     "position": "D",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 16,
+        "y": 3
+      },
+      {
+        "x": 23,
+        "y": 64
+      },
+      {
+        "x": 17,
+        "y": 25
+      },
+      {
+        "x": 66,
+        "y": 11
+      },
+      {
+        "x": 34,
+        "y": 42
+      },
+      {
+        "x": 33,
+        "y": 27
+      },
+      {
+        "x": 70,
+        "y": 8
+      },
+      {
+        "x": 70,
+        "y": 13
+      },
+      {
+        "x": 91,
+        "y": 46
+      },
+      {
+        "x": 91,
+        "y": 46
+      },
+      {
+        "x": 45,
+        "y": 35
+      },
+      {
+        "x": 58,
+        "y": 34
+      },
+      {
+        "x": 29,
+        "y": 35
+      },
+      {
+        "x": 34,
+        "y": 29
+      },
+      {
+        "x": 69,
+        "y": 15
+      },
+      {
+        "x": 53,
+        "y": 16
+      },
+      {
+        "x": 48,
+        "y": 9
+      },
+      {
+        "x": 76,
+        "y": 24
+      },
+      {
+        "x": 82,
+        "y": 27
+      },
+      {
+        "x": 62,
+        "y": 5
+      },
+      {
+        "x": 61,
+        "y": 0
+      },
+      {
+        "x": 44,
+        "y": 54
+      },
+      {
+        "x": 44,
+        "y": 55
+      },
+      {
+        "x": 48,
+        "y": 43
+      },
+      {
+        "x": 65,
+        "y": 32
+      },
+      {
+        "x": 53,
+        "y": 0
+      },
+      {
+        "x": 22,
+        "y": 50
+      },
+      {
+        "x": 22,
+        "y": 50
+      },
+      {
+        "x": 55,
+        "y": 44
+      },
+      {
+        "x": 62,
+        "y": 42
+      },
+      {
+        "x": 56,
+        "y": 30
+      },
+      {
+        "x": 4,
+        "y": 42
+      },
+      {
+        "x": 4,
+        "y": 39
+      },
+      {
+        "x": 6,
+        "y": 49
+      },
+      {
+        "x": 23,
+        "y": 22
+      },
+      {
+        "x": 23,
+        "y": 22
+      },
+      {
+        "x": 28,
+        "y": 8
+      },
+      {
+        "x": 33,
+        "y": 27
+      },
+      {
+        "x": 15,
+        "y": 32
+      },
+      {
+        "x": 74,
+        "y": 21
+      },
+      {
+        "x": 63,
+        "y": 16
+      },
+      {
+        "x": 33,
+        "y": 37
+      },
+      {
+        "x": 50,
+        "y": 16
+      },
+      {
+        "x": 63,
+        "y": 0
+      },
+      {
+        "x": 60,
+        "y": 6
+      },
+      {
+        "x": 40,
+        "y": 22
+      },
+      {
+        "x": 56,
+        "y": 12
+      },
+      {
+        "x": 35,
+        "y": 28
+      },
+      {
+        "x": 68,
+        "y": 36
+      },
+      {
+        "x": 69,
+        "y": 26
+      },
+      {
+        "x": 92,
+        "y": 53
+      },
+      {
+        "x": 38,
+        "y": 16
+      },
+      {
+        "x": 24,
+        "y": 18
+      },
+      {
+        "x": 12,
+        "y": 63
+      },
+      {
+        "x": 12,
+        "y": 64
+      },
+      {
+        "x": 34,
+        "y": 47
+      },
+      {
+        "x": 24,
+        "y": 12
+      },
+      {
+        "x": 23,
+        "y": 12
+      },
+      {
+        "x": 15,
+        "y": 15
+      },
+      {
+        "x": 31,
+        "y": 24
+      },
+      {
+        "x": 37,
+        "y": 33
+      },
+      {
+        "x": 39,
+        "y": 18
+      },
+      {
+        "x": 31,
+        "y": 24
+      },
+      {
+        "x": 62,
+        "y": 16
+      },
+      {
+        "x": 40,
+        "y": 25
+      },
+      {
+        "x": 40,
+        "y": 25
+      }
+    ]
   },
   {
     "player": {
@@ -2183,14 +5308,14 @@
       "position": "D",
       "jerseyNumber": "25",
       "height": 187,
-      "userCount": 22659,
+      "userCount": 27476,
       "gender": "M",
       "sofascoreId": "manuel_akanji",
       "id": 383560,
       "marketValueCurrency": "EUR",
       "dateOfBirthTimestamp": 806112000,
       "proposedMarketValueRaw": {
-        "value": 20000000,
+        "value": 16399999,
         "currency": "EUR"
       },
       "fieldTranslations": {
@@ -2216,7 +5341,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -2238,58 +5363,528 @@
       }
     },
     "statistics": {
-      "totalPass": 90,
-      "accuratePass": 80,
+      "totalPass": 89,
+      "accuratePass": 79,
       "totalLongBalls": 6,
       "accurateLongBalls": 5,
       "goalAssist": 0,
-      "accurateOwnHalfPasses": 42,
-      "totalOwnHalfPasses": 46,
-      "accurateOppositionHalfPasses": 38,
-      "totalOppositionHalfPasses": 44,
+      "accurateOwnHalfPasses": 40,
+      "totalOwnHalfPasses": 44,
+      "accurateOppositionHalfPasses": 39,
+      "totalOppositionHalfPasses": 45,
       "aerialLost": 2,
       "aerialWon": 4,
       "duelLost": 3,
       "duelWon": 6,
       "challengeLost": 1,
       "shotOffTarget": 1,
-      "totalClearance": 5,
+      "totalClearance": 6,
       "outfielderBlock": 3,
-      "interceptionWon": 2,
+      "interceptionWon": 3,
       "ballRecovery": 2,
       "totalTackle": 2,
       "wonTackle": 1,
       "unsuccessfulTouch": 1,
       "wasFouled": 1,
       "minutesPlayed": 90,
-      "touches": 107,
-      "rating": 7.6,
+      "touches": 108,
+      "rating": 7.4,
       "possessionLostCtrl": 11,
-      "expectedGoals": 0.1395,
-      "expectedAssists": 0.0271139,
-      "totalBallCarriesDistance": 200.491012795,
-      "ballCarriesCount": 21,
-      "totalProgression": 140.64325568952,
+      "expectedGoals": 0.1543,
+      "expectedAssists": 0.0270397,
+      "totalBallCarriesDistance": 210.41722100797,
+      "ballCarriesCount": 23,
+      "totalProgression": 127.94291326029,
       "bestBallCarryProgression": 20.523637003285,
       "totalProgressiveBallCarriesDistance": 20.830107152869,
       "progressiveBallCarriesCount": 1,
       "keyPass": 1,
       "ratingVersions": {
-        "original": 7.6,
-        "alternative": 7.6
+        "original": 7.4,
+        "alternative": 7.7
       },
       "totalShots": 1,
-      "shotValueNormalized": -0.52,
-      "passValueNormalized": 0.28,
-      "dribbleValueNormalized": 0.22,
-      "defensiveValueNormalized": 0.38,
+      "shotValueNormalized": -0.55,
+      "passValueNormalized": 0.27,
+      "dribbleValueNormalized": 0.21,
+      "defensiveValueNormalized": 0.28,
       "statisticsType": {
         "sportSlug": "football",
         "statisticsType": "player"
       }
     },
     "position": "D",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 10,
+        "y": 59
+      },
+      {
+        "x": 10,
+        "y": 54
+      },
+      {
+        "x": 28,
+        "y": 19
+      },
+      {
+        "x": 31,
+        "y": 18
+      },
+      {
+        "x": 46,
+        "y": 27
+      },
+      {
+        "x": 63,
+        "y": 47
+      },
+      {
+        "x": 62,
+        "y": 43
+      },
+      {
+        "x": 63,
+        "y": 37
+      },
+      {
+        "x": 55,
+        "y": 48
+      },
+      {
+        "x": 42,
+        "y": 32
+      },
+      {
+        "x": 55,
+        "y": 65
+      },
+      {
+        "x": 52,
+        "y": 56
+      },
+      {
+        "x": 94,
+        "y": 47
+      },
+      {
+        "x": 38,
+        "y": 81
+      },
+      {
+        "x": 38,
+        "y": 71
+      },
+      {
+        "x": 35,
+        "y": 62
+      },
+      {
+        "x": 22,
+        "y": 70
+      },
+      {
+        "x": 20,
+        "y": 73
+      },
+      {
+        "x": 12,
+        "y": 55
+      },
+      {
+        "x": 28,
+        "y": 47
+      },
+      {
+        "x": 29,
+        "y": 49
+      },
+      {
+        "x": 47,
+        "y": 49
+      },
+      {
+        "x": 58,
+        "y": 29
+      },
+      {
+        "x": 59,
+        "y": 41
+      },
+      {
+        "x": 65,
+        "y": 41
+      },
+      {
+        "x": 35,
+        "y": 35
+      },
+      {
+        "x": 52,
+        "y": 46
+      },
+      {
+        "x": 53,
+        "y": 45
+      },
+      {
+        "x": 32,
+        "y": 13
+      },
+      {
+        "x": 17,
+        "y": 52
+      },
+      {
+        "x": 18,
+        "y": 63
+      },
+      {
+        "x": 27,
+        "y": 48
+      },
+      {
+        "x": 28,
+        "y": 41
+      },
+      {
+        "x": 50,
+        "y": 51
+      },
+      {
+        "x": 63,
+        "y": 47
+      },
+      {
+        "x": 64,
+        "y": 43
+      },
+      {
+        "x": 61,
+        "y": 40
+      },
+      {
+        "x": 66,
+        "y": 35
+      },
+      {
+        "x": 38,
+        "y": 80
+      },
+      {
+        "x": 53,
+        "y": 67
+      },
+      {
+        "x": 52,
+        "y": 71
+      },
+      {
+        "x": 45,
+        "y": 69
+      },
+      {
+        "x": 64,
+        "y": 52
+      },
+      {
+        "x": 54,
+        "y": 61
+      },
+      {
+        "x": 49,
+        "y": 62
+      },
+      {
+        "x": 30,
+        "y": 67
+      },
+      {
+        "x": 48,
+        "y": 59
+      },
+      {
+        "x": 37,
+        "y": 74
+      },
+      {
+        "x": 43,
+        "y": 79
+      },
+      {
+        "x": 54,
+        "y": 67
+      },
+      {
+        "x": 47,
+        "y": 84
+      },
+      {
+        "x": 54,
+        "y": 70
+      },
+      {
+        "x": 45,
+        "y": 82
+      },
+      {
+        "x": 64,
+        "y": 68
+      },
+      {
+        "x": 56,
+        "y": 68
+      },
+      {
+        "x": 54,
+        "y": 64
+      },
+      {
+        "x": 34,
+        "y": 68
+      },
+      {
+        "x": 34,
+        "y": 68
+      },
+      {
+        "x": 13,
+        "y": 67
+      },
+      {
+        "x": 32,
+        "y": 77
+      },
+      {
+        "x": 55,
+        "y": 53
+      },
+      {
+        "x": 79,
+        "y": 0
+      },
+      {
+        "x": 60,
+        "y": 30
+      },
+      {
+        "x": 42,
+        "y": 5
+      },
+      {
+        "x": 63,
+        "y": 59
+      },
+      {
+        "x": 66,
+        "y": 60
+      },
+      {
+        "x": 24,
+        "y": 49
+      },
+      {
+        "x": 43,
+        "y": 46
+      },
+      {
+        "x": 52,
+        "y": 41
+      },
+      {
+        "x": 42,
+        "y": 64
+      },
+      {
+        "x": 43,
+        "y": 34
+      },
+      {
+        "x": 47,
+        "y": 27
+      },
+      {
+        "x": 49,
+        "y": 26
+      },
+      {
+        "x": 24,
+        "y": 58
+      },
+      {
+        "x": 29,
+        "y": 49
+      },
+      {
+        "x": 26,
+        "y": 48
+      },
+      {
+        "x": 43,
+        "y": 41
+      },
+      {
+        "x": 61,
+        "y": 45
+      },
+      {
+        "x": 55,
+        "y": 69
+      },
+      {
+        "x": 66,
+        "y": 59
+      },
+      {
+        "x": 47,
+        "y": 62
+      },
+      {
+        "x": 31,
+        "y": 42
+      },
+      {
+        "x": 31,
+        "y": 42
+      },
+      {
+        "x": 26,
+        "y": 41
+      },
+      {
+        "x": 26,
+        "y": 40
+      },
+      {
+        "x": 56,
+        "y": 11
+      },
+      {
+        "x": 45,
+        "y": 11
+      },
+      {
+        "x": 40,
+        "y": 16
+      },
+      {
+        "x": 35,
+        "y": 28
+      },
+      {
+        "x": 29,
+        "y": 30
+      },
+      {
+        "x": 38,
+        "y": 43
+      },
+      {
+        "x": 38,
+        "y": 43
+      },
+      {
+        "x": 21,
+        "y": 12
+      },
+      {
+        "x": 43,
+        "y": 65
+      },
+      {
+        "x": 15,
+        "y": 81
+      },
+      {
+        "x": 29,
+        "y": 29
+      },
+      {
+        "x": 24,
+        "y": 16
+      },
+      {
+        "x": 8,
+        "y": 54
+      },
+      {
+        "x": 8,
+        "y": 54
+      },
+      {
+        "x": 7,
+        "y": 48
+      },
+      {
+        "x": 37,
+        "y": 22
+      },
+      {
+        "x": 8,
+        "y": 41
+      },
+      {
+        "x": 19,
+        "y": 66
+      },
+      {
+        "x": 23,
+        "y": 81
+      },
+      {
+        "x": 25,
+        "y": 71
+      },
+      {
+        "x": 8,
+        "y": 55
+      },
+      {
+        "x": 53,
+        "y": 44
+      },
+      {
+        "x": 53,
+        "y": 44
+      },
+      {
+        "x": 38,
+        "y": 40
+      },
+      {
+        "x": 38,
+        "y": 30
+      },
+      {
+        "x": 22,
+        "y": 38
+      },
+      {
+        "x": 61,
+        "y": 53
+      },
+      {
+        "x": 71,
+        "y": 34
+      },
+      {
+        "x": 64,
+        "y": 18
+      },
+      {
+        "x": 67,
+        "y": 18
+      },
+      {
+        "x": 33,
+        "y": 34
+      },
+      {
+        "x": 24,
+        "y": 22
+      }
+    ]
   },
   {
     "player": {
@@ -2301,7 +5896,7 @@
       "position": "D",
       "jerseyNumber": "30",
       "height": 184,
-      "userCount": 7848,
+      "userCount": 7936,
       "gender": "M",
       "id": 929199,
       "marketValueCurrency": "EUR",
@@ -2333,7 +5928,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -2355,13 +5950,13 @@
       }
     },
     "statistics": {
-      "totalPass": 81,
-      "accuratePass": 75,
+      "totalPass": 80,
+      "accuratePass": 74,
       "totalLongBalls": 5,
       "accurateLongBalls": 2,
       "goalAssist": 0,
-      "accurateOwnHalfPasses": 42,
-      "totalOwnHalfPasses": 46,
+      "accurateOwnHalfPasses": 41,
+      "totalOwnHalfPasses": 45,
       "accurateOppositionHalfPasses": 33,
       "totalOppositionHalfPasses": 35,
       "totalCross": 1,
@@ -2369,7 +5964,7 @@
       "aerialWon": 1,
       "duelWon": 4,
       "blockedScoringAttempt": 1,
-      "totalClearance": 4,
+      "totalClearance": 5,
       "interceptionWon": 1,
       "ballRecovery": 2,
       "totalTackle": 2,
@@ -2383,28 +5978,462 @@
       "touches": 100,
       "rating": 6.4,
       "possessionLostCtrl": 7,
-      "expectedGoals": 0.0386,
-      "expectedAssists": 0.0151289,
-      "totalBallCarriesDistance": 130.30928281413,
-      "ballCarriesCount": 22,
-      "totalProgression": 54.666551038503,
+      "expectedGoals": 0.046,
+      "expectedAssists": 0.0153028,
+      "totalBallCarriesDistance": 146.06473618215,
+      "ballCarriesCount": 24,
+      "totalProgression": 63.916790101509,
       "progressiveBallCarriesCount": 0,
       "ratingVersions": {
         "original": 6.4,
         "alternative": 6.1
       },
       "totalShots": 1,
-      "shotValueNormalized": -0.01,
-      "passValueNormalized": 0.12,
+      "shotValueNormalized": -0.02,
+      "passValueNormalized": 0.11,
       "dribbleValueNormalized": 0.07,
-      "defensiveValueNormalized": -0.5,
+      "defensiveValueNormalized": -0.51,
       "statisticsType": {
         "sportSlug": "football",
         "statisticsType": "player"
       }
     },
     "position": "D",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 4,
+        "y": 53
+      },
+      {
+        "x": 24,
+        "y": 68
+      },
+      {
+        "x": 16,
+        "y": 63
+      },
+      {
+        "x": 10,
+        "y": 86
+      },
+      {
+        "x": 19,
+        "y": 84
+      },
+      {
+        "x": 31,
+        "y": 79
+      },
+      {
+        "x": 26,
+        "y": 87
+      },
+      {
+        "x": 46,
+        "y": 65
+      },
+      {
+        "x": 56,
+        "y": 79
+      },
+      {
+        "x": 70,
+        "y": 85
+      },
+      {
+        "x": 66,
+        "y": 73
+      },
+      {
+        "x": 73,
+        "y": 83
+      },
+      {
+        "x": 50,
+        "y": 85
+      },
+      {
+        "x": 33,
+        "y": 84
+      },
+      {
+        "x": 18,
+        "y": 55
+      },
+      {
+        "x": 19,
+        "y": 40
+      },
+      {
+        "x": 30,
+        "y": 65
+      },
+      {
+        "x": 89,
+        "y": 57
+      },
+      {
+        "x": 37,
+        "y": 62
+      },
+      {
+        "x": 57,
+        "y": 66
+      },
+      {
+        "x": 56,
+        "y": 82
+      },
+      {
+        "x": 64,
+        "y": 87
+      },
+      {
+        "x": 5,
+        "y": 58
+      },
+      {
+        "x": 24,
+        "y": 77
+      },
+      {
+        "x": 20,
+        "y": 71
+      },
+      {
+        "x": 53,
+        "y": 58
+      },
+      {
+        "x": 36,
+        "y": 79
+      },
+      {
+        "x": 27,
+        "y": 72
+      },
+      {
+        "x": 27,
+        "y": 71
+      },
+      {
+        "x": 41,
+        "y": 77
+      },
+      {
+        "x": 52,
+        "y": 56
+      },
+      {
+        "x": 52,
+        "y": 55
+      },
+      {
+        "x": 58,
+        "y": 60
+      },
+      {
+        "x": 55,
+        "y": 65
+      },
+      {
+        "x": 66,
+        "y": 61
+      },
+      {
+        "x": 44,
+        "y": 86
+      },
+      {
+        "x": 47,
+        "y": 100
+      },
+      {
+        "x": 66,
+        "y": 80
+      },
+      {
+        "x": 59,
+        "y": 68
+      },
+      {
+        "x": 61,
+        "y": 65
+      },
+      {
+        "x": 64,
+        "y": 80
+      },
+      {
+        "x": 36,
+        "y": 92
+      },
+      {
+        "x": 34,
+        "y": 91
+      },
+      {
+        "x": 53,
+        "y": 76
+      },
+      {
+        "x": 56,
+        "y": 87
+      },
+      {
+        "x": 45,
+        "y": 88
+      },
+      {
+        "x": 59,
+        "y": 94
+      },
+      {
+        "x": 69,
+        "y": 100
+      },
+      {
+        "x": 64,
+        "y": 84
+      },
+      {
+        "x": 58,
+        "y": 74
+      },
+      {
+        "x": 15,
+        "y": 68
+      },
+      {
+        "x": 33,
+        "y": 82
+      },
+      {
+        "x": 30,
+        "y": 64
+      },
+      {
+        "x": 58,
+        "y": 68
+      },
+      {
+        "x": 54,
+        "y": 50
+      },
+      {
+        "x": 44,
+        "y": 62
+      },
+      {
+        "x": 61,
+        "y": 84
+      },
+      {
+        "x": 61,
+        "y": 82
+      },
+      {
+        "x": 69,
+        "y": 63
+      },
+      {
+        "x": 57,
+        "y": 83
+      },
+      {
+        "x": 37,
+        "y": 73
+      },
+      {
+        "x": 32,
+        "y": 68
+      },
+      {
+        "x": 34,
+        "y": 64
+      },
+      {
+        "x": 12,
+        "y": 54
+      },
+      {
+        "x": 31,
+        "y": 69
+      },
+      {
+        "x": 30,
+        "y": 71
+      },
+      {
+        "x": 32,
+        "y": 67
+      },
+      {
+        "x": 44,
+        "y": 70
+      },
+      {
+        "x": 83,
+        "y": 100
+      },
+      {
+        "x": 58,
+        "y": 80
+      },
+      {
+        "x": 48,
+        "y": 73
+      },
+      {
+        "x": 65,
+        "y": 66
+      },
+      {
+        "x": 30,
+        "y": 67
+      },
+      {
+        "x": 62,
+        "y": 77
+      },
+      {
+        "x": 6,
+        "y": 52
+      },
+      {
+        "x": 32,
+        "y": 53
+      },
+      {
+        "x": 32,
+        "y": 73
+      },
+      {
+        "x": 43,
+        "y": 80
+      },
+      {
+        "x": 43,
+        "y": 79
+      },
+      {
+        "x": 33,
+        "y": 53
+      },
+      {
+        "x": 28,
+        "y": 45
+      },
+      {
+        "x": 39,
+        "y": 42
+      },
+      {
+        "x": 43,
+        "y": 65
+      },
+      {
+        "x": 46,
+        "y": 67
+      },
+      {
+        "x": 30,
+        "y": 67
+      },
+      {
+        "x": 36,
+        "y": 81
+      },
+      {
+        "x": 53,
+        "y": 80
+      },
+      {
+        "x": 56,
+        "y": 78
+      },
+      {
+        "x": 18,
+        "y": 65
+      },
+      {
+        "x": 22,
+        "y": 83
+      },
+      {
+        "x": 29,
+        "y": 93
+      },
+      {
+        "x": 21,
+        "y": 72
+      },
+      {
+        "x": 24,
+        "y": 77
+      },
+      {
+        "x": 21,
+        "y": 81
+      },
+      {
+        "x": 19,
+        "y": 46
+      },
+      {
+        "x": 4,
+        "y": 56
+      },
+      {
+        "x": 9,
+        "y": 57
+      },
+      {
+        "x": 8,
+        "y": 52
+      },
+      {
+        "x": 31,
+        "y": 89
+      },
+      {
+        "x": 16,
+        "y": 88
+      },
+      {
+        "x": 13,
+        "y": 92
+      },
+      {
+        "x": 23,
+        "y": 34
+      },
+      {
+        "x": 23,
+        "y": 34
+      },
+      {
+        "x": 23,
+        "y": 34
+      },
+      {
+        "x": 62,
+        "y": 66
+      },
+      {
+        "x": 61,
+        "y": 76
+      },
+      {
+        "x": 73,
+        "y": 82
+      },
+      {
+        "x": 35,
+        "y": 70
+      }
+    ]
   },
   {
     "player": {
@@ -2414,7 +6443,7 @@
       "position": "M",
       "jerseyNumber": "36",
       "height": 182,
-      "userCount": 3763,
+      "userCount": 3786,
       "gender": "M",
       "id": 19352,
       "marketValueCurrency": "EUR",
@@ -2446,7 +6475,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -2492,38 +6521,210 @@
       "touches": 37,
       "rating": 6.8,
       "possessionLostCtrl": 7,
-      "expectedAssists": 0.0140321,
-      "totalBallCarriesDistance": 42.395857563933,
+      "expectedAssists": 0.0140322,
+      "totalBallCarriesDistance": 44.229975608545,
       "ballCarriesCount": 7,
-      "totalProgression": 11.340311442953,
+      "totalProgression": 8.1570173354828,
       "progressiveBallCarriesCount": 0,
       "ratingVersions": {
         "original": 6.8,
         "alternative": 6.9
       },
       "totalShots": 0,
-      "passValueNormalized": 0.04,
-      "dribbleValueNormalized": 0.06,
-      "defensiveValueNormalized": 0.17,
+      "passValueNormalized": 0.06,
+      "dribbleValueNormalized": 0.02,
+      "defensiveValueNormalized": 0.2,
       "statisticsType": {
         "sportSlug": "football",
         "statisticsType": "player"
       }
     },
     "position": "M",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 29,
+        "y": 6
+      },
+      {
+        "x": 27,
+        "y": 6
+      },
+      {
+        "x": 74,
+        "y": 18
+      },
+      {
+        "x": 85,
+        "y": 0
+      },
+      {
+        "x": 56,
+        "y": 17
+      },
+      {
+        "x": 39,
+        "y": 14
+      },
+      {
+        "x": 65,
+        "y": 15
+      },
+      {
+        "x": 73,
+        "y": 0
+      },
+      {
+        "x": 67,
+        "y": 50
+      },
+      {
+        "x": 66,
+        "y": 47
+      },
+      {
+        "x": 77,
+        "y": 7
+      },
+      {
+        "x": 82,
+        "y": 6
+      },
+      {
+        "x": 27,
+        "y": 29
+      },
+      {
+        "x": 44,
+        "y": 47
+      },
+      {
+        "x": 76,
+        "y": 4
+      },
+      {
+        "x": 84,
+        "y": 9
+      },
+      {
+        "x": 90,
+        "y": 13
+      },
+      {
+        "x": 69,
+        "y": 38
+      },
+      {
+        "x": 13,
+        "y": 49
+      },
+      {
+        "x": 13,
+        "y": 49
+      },
+      {
+        "x": 63,
+        "y": 25
+      },
+      {
+        "x": 70,
+        "y": 15
+      },
+      {
+        "x": 13,
+        "y": 67
+      },
+      {
+        "x": 54,
+        "y": 9
+      },
+      {
+        "x": 53,
+        "y": 0
+      },
+      {
+        "x": 90,
+        "y": 43
+      },
+      {
+        "x": 85,
+        "y": 11
+      },
+      {
+        "x": 53,
+        "y": 11
+      },
+      {
+        "x": 92,
+        "y": 21
+      },
+      {
+        "x": 10,
+        "y": 30
+      },
+      {
+        "x": 56,
+        "y": 24
+      },
+      {
+        "x": 18,
+        "y": 52
+      },
+      {
+        "x": 18,
+        "y": 51
+      },
+      {
+        "x": 28,
+        "y": 21
+      },
+      {
+        "x": 48,
+        "y": 5
+      },
+      {
+        "x": 70,
+        "y": 0
+      },
+      {
+        "x": 37,
+        "y": 7
+      },
+      {
+        "x": 75,
+        "y": 10
+      },
+      {
+        "x": 44,
+        "y": 23
+      },
+      {
+        "x": 71,
+        "y": 0
+      },
+      {
+        "x": 23,
+        "y": 8
+      },
+      {
+        "x": 7,
+        "y": 17
+      },
+      {
+        "x": 7,
+        "y": 17
+      }
+    ]
   },
   {
     "player": {
-      "name": "Nicolo Barella",
-      "firstName": "Nicolo",
-      "lastName": "Barella",
+      "name": "Nicolò Barella",
       "slug": "nicolo-barella",
       "shortName": "N. Barella",
       "position": "M",
       "jerseyNumber": "23",
       "height": 175,
-      "userCount": 21872,
+      "userCount": 22052,
       "gender": "M",
       "sofascoreId": "nicolo_barella",
       "id": 363856,
@@ -2535,10 +6736,12 @@
       },
       "fieldTranslations": {
         "nameTranslation": {
+          "ar": "نيكولو باريلا",
           "bn": "নিকোলো বারেলা",
           "hi": "निकोलो बरेला"
         },
         "shortNameTranslation": {
+          "ar": "ن. باريلا",
           "bn": "এন. বেরেলা",
           "hi": "एन. बरेला"
         }
@@ -2554,7 +6757,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -2578,7 +6781,7 @@
     "statistics": {
       "totalPass": 73,
       "accuratePass": 64,
-      "totalLongBalls": 4,
+      "totalLongBalls": 5,
       "accurateLongBalls": 2,
       "goalAssist": 0,
       "accurateOwnHalfPasses": 30,
@@ -2588,46 +6791,1346 @@
       "totalCross": 4,
       "accurateCross": 1,
       "aerialWon": 1,
-      "duelLost": 4,
+      "duelLost": 5,
       "duelWon": 2,
       "challengeLost": 1,
-      "dispossessed": 1,
+      "dispossessed": 2,
       "totalContest": 1,
       "totalClearance": 1,
-      "interceptionWon": 1,
+      "interceptionWon": 2,
       "ballRecovery": 7,
       "totalTackle": 1,
       "wonTackle": 1,
-      "unsuccessfulTouch": 1,
       "fouls": 1,
       "minutesPlayed": 90,
-      "touches": 85,
-      "rating": 6.6,
+      "touches": 86,
+      "rating": 6.5,
       "possessionLostCtrl": 15,
-      "expectedAssists": 0.101388,
-      "totalBallCarriesDistance": 129.32880909724,
-      "ballCarriesCount": 18,
-      "totalProgression": 21.671527580414,
+      "expectedAssists": 0.0928876,
+      "totalBallCarriesDistance": 187.89047142915,
+      "ballCarriesCount": 19,
+      "totalProgression": -16.083357884188,
       "progressiveBallCarriesCount": 0,
       "keyPass": 1,
       "ratingVersions": {
-        "original": 6.6,
-        "alternative": 7
+        "original": 6.5,
+        "alternative": 6.9
       },
       "totalShots": 0,
       "passValueNormalized": 0.25,
-      "dribbleValueNormalized": -0.25,
-      "defensiveValueNormalized": -0.11,
+      "dribbleValueNormalized": -0.36,
+      "defensiveValueNormalized": -0.1,
       "statisticsType": {
         "sportSlug": "football",
         "statisticsType": "player"
       }
     },
     "position": "M",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 67,
+        "y": 40
+      },
+      {
+        "x": 67,
+        "y": 55
+      },
+      {
+        "x": 67,
+        "y": 83
+      },
+      {
+        "x": 63,
+        "y": 74
+      },
+      {
+        "x": 48,
+        "y": 28
+      },
+      {
+        "x": 99,
+        "y": 99
+      },
+      {
+        "x": 12,
+        "y": 37
+      },
+      {
+        "x": 74,
+        "y": 22
+      },
+      {
+        "x": 75,
+        "y": 21
+      },
+      {
+        "x": 82,
+        "y": 23
+      },
+      {
+        "x": 99,
+        "y": 0
+      },
+      {
+        "x": 67,
+        "y": 10
+      },
+      {
+        "x": 73,
+        "y": 6
+      },
+      {
+        "x": 73,
+        "y": 6
+      },
+      {
+        "x": 41,
+        "y": 44
+      },
+      {
+        "x": 48,
+        "y": 39
+      },
+      {
+        "x": 43,
+        "y": 33
+      },
+      {
+        "x": 18,
+        "y": 38
+      },
+      {
+        "x": 17,
+        "y": 79
+      },
+      {
+        "x": 26,
+        "y": 77
+      },
+      {
+        "x": 26,
+        "y": 27
+      },
+      {
+        "x": 24,
+        "y": 54
+      },
+      {
+        "x": 41,
+        "y": 17
+      },
+      {
+        "x": 56,
+        "y": 51
+      },
+      {
+        "x": 66,
+        "y": 68
+      },
+      {
+        "x": 65,
+        "y": 56
+      },
+      {
+        "x": 64,
+        "y": 9
+      },
+      {
+        "x": 39,
+        "y": 22
+      },
+      {
+        "x": 33,
+        "y": 40
+      },
+      {
+        "x": 76,
+        "y": 32
+      },
+      {
+        "x": 34,
+        "y": 66
+      },
+      {
+        "x": 58,
+        "y": 70
+      },
+      {
+        "x": 41,
+        "y": 86
+      },
+      {
+        "x": 44,
+        "y": 84
+      },
+      {
+        "x": 54,
+        "y": 63
+      },
+      {
+        "x": 57,
+        "y": 33
+      },
+      {
+        "x": 57,
+        "y": 12
+      },
+      {
+        "x": 51,
+        "y": 72
+      },
+      {
+        "x": 55,
+        "y": 43
+      },
+      {
+        "x": 57,
+        "y": 34
+      },
+      {
+        "x": 54,
+        "y": 39
+      },
+      {
+        "x": 56,
+        "y": 83
+      },
+      {
+        "x": 61,
+        "y": 81
+      },
+      {
+        "x": 70,
+        "y": 40
+      },
+      {
+        "x": 68,
+        "y": 29
+      },
+      {
+        "x": 33,
+        "y": 70
+      },
+      {
+        "x": 54,
+        "y": 67
+      },
+      {
+        "x": 53,
+        "y": 70
+      },
+      {
+        "x": 51,
+        "y": 70
+      },
+      {
+        "x": 66,
+        "y": 45
+      },
+      {
+        "x": 62,
+        "y": 61
+      },
+      {
+        "x": 6,
+        "y": 28
+      },
+      {
+        "x": 14,
+        "y": 29
+      },
+      {
+        "x": 15,
+        "y": 29
+      },
+      {
+        "x": 68,
+        "y": 39
+      },
+      {
+        "x": 66,
+        "y": 17
+      },
+      {
+        "x": 68,
+        "y": 17
+      },
+      {
+        "x": 70,
+        "y": 17
+      },
+      {
+        "x": 89,
+        "y": 37
+      },
+      {
+        "x": 68,
+        "y": 38
+      },
+      {
+        "x": 64,
+        "y": 32
+      },
+      {
+        "x": 75,
+        "y": 64
+      },
+      {
+        "x": 46,
+        "y": 54
+      },
+      {
+        "x": 67,
+        "y": 13
+      },
+      {
+        "x": 64,
+        "y": 6
+      },
+      {
+        "x": 56,
+        "y": 41
+      },
+      {
+        "x": 81,
+        "y": 23
+      },
+      {
+        "x": 61,
+        "y": 9
+      },
+      {
+        "x": 58,
+        "y": 12
+      },
+      {
+        "x": 80,
+        "y": 45
+      },
+      {
+        "x": 66,
+        "y": 24
+      },
+      {
+        "x": 57,
+        "y": 57
+      },
+      {
+        "x": 44,
+        "y": 32
+      },
+      {
+        "x": 20,
+        "y": 30
+      },
+      {
+        "x": 52,
+        "y": 45
+      },
+      {
+        "x": 25,
+        "y": 66
+      },
+      {
+        "x": 31,
+        "y": 75
+      },
+      {
+        "x": 43,
+        "y": 9
+      },
+      {
+        "x": 27,
+        "y": 82
+      },
+      {
+        "x": 45,
+        "y": 9
+      },
+      {
+        "x": 31,
+        "y": 13
+      },
+      {
+        "x": 42,
+        "y": 32
+      },
+      {
+        "x": 28,
+        "y": 38
+      },
+      {
+        "x": 8,
+        "y": 34
+      },
+      {
+        "x": 37,
+        "y": 15
+      },
+      {
+        "x": 99,
+        "y": 99
+      },
+      {
+        "x": 55,
+        "y": 66
+      },
+      {
+        "x": 82,
+        "y": 10
+      },
+      {
+        "x": 78,
+        "y": 10
+      },
+      {
+        "x": 84,
+        "y": 8
+      },
+      {
+        "x": 84,
+        "y": 28
+      },
+      {
+        "x": 84,
+        "y": 28
+      },
+      {
+        "x": 32,
+        "y": 27
+      },
+      {
+        "x": 41,
+        "y": 15
+      },
+      {
+        "x": 59,
+        "y": 12
+      },
+      {
+        "x": 22,
+        "y": 19
+      },
+      {
+        "x": 7,
+        "y": 16
+      },
+      {
+        "x": 6,
+        "y": 15
+      }
+    ]
   },
-  {},
-  {},
+  {
+    "player": {
+      "name": "Piotr Zieliński",
+      "slug": "piotr-zielinski",
+      "shortName": "P. Zieliński",
+      "position": "M",
+      "jerseyNumber": "7",
+      "height": 180,
+      "userCount": 20207,
+      "gender": "M",
+      "sofascoreId": "zielu_94",
+      "id": 138605,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 769392000,
+      "proposedMarketValueRaw": {
+        "value": 10300000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "بيوتر زيلينسكي",
+          "bn": "পিওতর জিলিনিস্কি",
+          "hi": "पिओट्र ज़िलिंस्की"
+        },
+        "shortNameTranslation": {
+          "ar": "ب. زيلينسكي",
+          "bn": "পি. জিলিনিস্কি",
+          "hi": "पी. ज़िलिंस्की"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1958007,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 81,
+      "accuratePass": 77,
+      "totalLongBalls": 5,
+      "accurateLongBalls": 3,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 25,
+      "totalOwnHalfPasses": 25,
+      "accurateOppositionHalfPasses": 52,
+      "totalOppositionHalfPasses": 56,
+      "duelWon": 1,
+      "shotOffTarget": 2,
+      "ballRecovery": 3,
+      "totalTackle": 1,
+      "wonTackle": 1,
+      "unsuccessfulTouch": 1,
+      "minutesPlayed": 90,
+      "touches": 87,
+      "rating": 6.9,
+      "possessionLostCtrl": 5,
+      "expectedGoals": 0.1572,
+      "expectedAssists": 0.0793398,
+      "totalBallCarriesDistance": 213.28051423706,
+      "ballCarriesCount": 30,
+      "totalProgression": 134.4531280052,
+      "bestBallCarryProgression": 19.889520143257,
+      "totalProgressiveBallCarriesDistance": 40.587873181726,
+      "progressiveBallCarriesCount": 2,
+      "keyPass": 1,
+      "ratingVersions": {
+        "original": 6.9,
+        "alternative": 7.1
+      },
+      "totalShots": 2,
+      "shotValueNormalized": -0.43,
+      "passValueNormalized": 0.09,
+      "dribbleValueNormalized": 0.39,
+      "defensiveValueNormalized": -0.09,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 34,
+        "y": 79
+      },
+      {
+        "x": 50,
+        "y": 74
+      },
+      {
+        "x": 50,
+        "y": 74
+      },
+      {
+        "x": 37,
+        "y": 32
+      },
+      {
+        "x": 39,
+        "y": 35
+      },
+      {
+        "x": 75,
+        "y": 45
+      },
+      {
+        "x": 47,
+        "y": 43
+      },
+      {
+        "x": 64,
+        "y": 62
+      },
+      {
+        "x": 13,
+        "y": 73
+      },
+      {
+        "x": 42,
+        "y": 14
+      },
+      {
+        "x": 52,
+        "y": 40
+      },
+      {
+        "x": 58,
+        "y": 60
+      },
+      {
+        "x": 67,
+        "y": 56
+      },
+      {
+        "x": 45,
+        "y": 69
+      },
+      {
+        "x": 37,
+        "y": 49
+      },
+      {
+        "x": 42,
+        "y": 30
+      },
+      {
+        "x": 54,
+        "y": 35
+      },
+      {
+        "x": 61,
+        "y": 34
+      },
+      {
+        "x": 57,
+        "y": 34
+      },
+      {
+        "x": 49,
+        "y": 40
+      },
+      {
+        "x": 82,
+        "y": 50
+      },
+      {
+        "x": 45,
+        "y": 44
+      },
+      {
+        "x": 48,
+        "y": 37
+      },
+      {
+        "x": 48,
+        "y": 34
+      },
+      {
+        "x": 45,
+        "y": 70
+      },
+      {
+        "x": 28,
+        "y": 64
+      },
+      {
+        "x": 56,
+        "y": 67
+      },
+      {
+        "x": 54,
+        "y": 52
+      },
+      {
+        "x": 55,
+        "y": 26
+      },
+      {
+        "x": 65,
+        "y": 61
+      },
+      {
+        "x": 66,
+        "y": 44
+      },
+      {
+        "x": 71,
+        "y": 35
+      },
+      {
+        "x": 46,
+        "y": 80
+      },
+      {
+        "x": 47,
+        "y": 77
+      },
+      {
+        "x": 59,
+        "y": 67
+      },
+      {
+        "x": 63,
+        "y": 74
+      },
+      {
+        "x": 60,
+        "y": 79
+      },
+      {
+        "x": 62,
+        "y": 80
+      },
+      {
+        "x": 58,
+        "y": 26
+      },
+      {
+        "x": 53,
+        "y": 44
+      },
+      {
+        "x": 61,
+        "y": 66
+      },
+      {
+        "x": 48,
+        "y": 69
+      },
+      {
+        "x": 73,
+        "y": 33
+      },
+      {
+        "x": 68,
+        "y": 59
+      },
+      {
+        "x": 81,
+        "y": 49
+      },
+      {
+        "x": 40,
+        "y": 59
+      },
+      {
+        "x": 43,
+        "y": 59
+      },
+      {
+        "x": 54,
+        "y": 67
+      },
+      {
+        "x": 61,
+        "y": 60
+      },
+      {
+        "x": 65,
+        "y": 66
+      },
+      {
+        "x": 75,
+        "y": 49
+      },
+      {
+        "x": 35,
+        "y": 53
+      },
+      {
+        "x": 24,
+        "y": 43
+      },
+      {
+        "x": 52,
+        "y": 58
+      },
+      {
+        "x": 61,
+        "y": 59
+      },
+      {
+        "x": 66,
+        "y": 26
+      },
+      {
+        "x": 45,
+        "y": 29
+      },
+      {
+        "x": 48,
+        "y": 58
+      },
+      {
+        "x": 53,
+        "y": 55
+      },
+      {
+        "x": 40,
+        "y": 66
+      },
+      {
+        "x": 42,
+        "y": 62
+      },
+      {
+        "x": 33,
+        "y": 65
+      },
+      {
+        "x": 49,
+        "y": 67
+      },
+      {
+        "x": 45,
+        "y": 48
+      },
+      {
+        "x": 43,
+        "y": 39
+      },
+      {
+        "x": 29,
+        "y": 24
+      },
+      {
+        "x": 29,
+        "y": 22
+      },
+      {
+        "x": 38,
+        "y": 38
+      },
+      {
+        "x": 38,
+        "y": 38
+      },
+      {
+        "x": 59,
+        "y": 20
+      },
+      {
+        "x": 80,
+        "y": 64
+      },
+      {
+        "x": 40,
+        "y": 66
+      },
+      {
+        "x": 31,
+        "y": 51
+      },
+      {
+        "x": 29,
+        "y": 29
+      },
+      {
+        "x": 29,
+        "y": 29
+      },
+      {
+        "x": 30,
+        "y": 61
+      },
+      {
+        "x": 44,
+        "y": 70
+      },
+      {
+        "x": 52,
+        "y": 48
+      },
+      {
+        "x": 36,
+        "y": 54
+      },
+      {
+        "x": 11,
+        "y": 59
+      },
+      {
+        "x": 32,
+        "y": 54
+      },
+      {
+        "x": 38,
+        "y": 36
+      },
+      {
+        "x": 45,
+        "y": 56
+      },
+      {
+        "x": 59,
+        "y": 25
+      },
+      {
+        "x": 86,
+        "y": 16
+      },
+      {
+        "x": 80,
+        "y": 16
+      },
+      {
+        "x": 61,
+        "y": 69
+      },
+      {
+        "x": 84,
+        "y": 43
+      },
+      {
+        "x": 30,
+        "y": 53
+      },
+      {
+        "x": 56,
+        "y": 25
+      }
+    ]
+  },
+  {
+    "player": {
+      "name": "Petar Sučić",
+      "slug": "petar-sucic",
+      "shortName": "P. Sučić",
+      "position": "M",
+      "jerseyNumber": "8",
+      "height": 184,
+      "userCount": 8692,
+      "gender": "M",
+      "id": 1091303,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 1067040000,
+      "proposedMarketValueRaw": {
+        "value": 33000000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "بيتار سوتشيتش",
+          "bn": "পেটার সুসিক",
+          "hi": "पेटर सुचिच"
+        },
+        "shortNameTranslation": {
+          "ar": "ب. سوتشيتش",
+          "bn": "পি. সুসিক",
+          "hi": "पी. सुचिच"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1958007,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalPass": 62,
+      "accuratePass": 57,
+      "totalLongBalls": 3,
+      "goalAssist": 0,
+      "accurateOwnHalfPasses": 26,
+      "totalOwnHalfPasses": 26,
+      "accurateOppositionHalfPasses": 31,
+      "totalOppositionHalfPasses": 36,
+      "totalCross": 3,
+      "accurateCross": 1,
+      "aerialLost": 1,
+      "duelLost": 5,
+      "challengeLost": 1,
+      "dispossessed": 1,
+      "totalClearance": 3,
+      "interceptionWon": 1,
+      "ballRecovery": 4,
+      "unsuccessfulTouch": 1,
+      "fouls": 2,
+      "minutesPlayed": 80,
+      "touches": 72,
+      "rating": 6.5,
+      "possessionLostCtrl": 9,
+      "expectedAssists": 0.612768,
+      "totalBallCarriesDistance": 204.92524339705,
+      "ballCarriesCount": 22,
+      "totalProgression": 124.10535877363,
+      "bestBallCarryProgression": 21.618181507435,
+      "totalProgressiveBallCarriesDistance": 80.747237077197,
+      "progressiveBallCarriesCount": 4,
+      "keyPass": 2,
+      "ratingVersions": {
+        "original": 6.5,
+        "alternative": 6.7
+      },
+      "totalShots": 0,
+      "passValueNormalized": 0.27,
+      "dribbleValueNormalized": 0.19,
+      "defensiveValueNormalized": -0.1,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "M",
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 26,
+        "y": 62
+      },
+      {
+        "x": 33,
+        "y": 87
+      },
+      {
+        "x": 30,
+        "y": 90
+      },
+      {
+        "x": 30,
+        "y": 75
+      },
+      {
+        "x": 46,
+        "y": 59
+      },
+      {
+        "x": 65,
+        "y": 64
+      },
+      {
+        "x": 64,
+        "y": 74
+      },
+      {
+        "x": 65,
+        "y": 67
+      },
+      {
+        "x": 65,
+        "y": 63
+      },
+      {
+        "x": 66,
+        "y": 61
+      },
+      {
+        "x": 63,
+        "y": 52
+      },
+      {
+        "x": 70,
+        "y": 82
+      },
+      {
+        "x": 61,
+        "y": 73
+      },
+      {
+        "x": 64,
+        "y": 65
+      },
+      {
+        "x": 78,
+        "y": 69
+      },
+      {
+        "x": 45,
+        "y": 82
+      },
+      {
+        "x": 46,
+        "y": 82
+      },
+      {
+        "x": 22,
+        "y": 91
+      },
+      {
+        "x": 42,
+        "y": 64
+      },
+      {
+        "x": 77,
+        "y": 71
+      },
+      {
+        "x": 26,
+        "y": 50
+      },
+      {
+        "x": 25,
+        "y": 46
+      },
+      {
+        "x": 36,
+        "y": 60
+      },
+      {
+        "x": 57,
+        "y": 66
+      },
+      {
+        "x": 62,
+        "y": 70
+      },
+      {
+        "x": 65,
+        "y": 84
+      },
+      {
+        "x": 33,
+        "y": 83
+      },
+      {
+        "x": 28,
+        "y": 60
+      },
+      {
+        "x": 30,
+        "y": 40
+      },
+      {
+        "x": 19,
+        "y": 51
+      },
+      {
+        "x": 60,
+        "y": 68
+      },
+      {
+        "x": 60,
+        "y": 68
+      },
+      {
+        "x": 30,
+        "y": 50
+      },
+      {
+        "x": 74,
+        "y": 86
+      },
+      {
+        "x": 59,
+        "y": 86
+      },
+      {
+        "x": 72,
+        "y": 48
+      },
+      {
+        "x": 68,
+        "y": 67
+      },
+      {
+        "x": 45,
+        "y": 32
+      },
+      {
+        "x": 88,
+        "y": 31
+      },
+      {
+        "x": 78,
+        "y": 18
+      },
+      {
+        "x": 48,
+        "y": 75
+      },
+      {
+        "x": 70,
+        "y": 22
+      },
+      {
+        "x": 99,
+        "y": 17
+      },
+      {
+        "x": 56,
+        "y": 90
+      },
+      {
+        "x": 70,
+        "y": 90
+      },
+      {
+        "x": 62,
+        "y": 63
+      },
+      {
+        "x": 55,
+        "y": 82
+      },
+      {
+        "x": 68,
+        "y": 65
+      },
+      {
+        "x": 71,
+        "y": 60
+      },
+      {
+        "x": 98,
+        "y": 70
+      },
+      {
+        "x": 98,
+        "y": 67
+      },
+      {
+        "x": 36,
+        "y": 69
+      },
+      {
+        "x": 61,
+        "y": 87
+      },
+      {
+        "x": 37,
+        "y": 66
+      },
+      {
+        "x": 58,
+        "y": 73
+      },
+      {
+        "x": 71,
+        "y": 76
+      },
+      {
+        "x": 56,
+        "y": 80
+      },
+      {
+        "x": 56,
+        "y": 77
+      },
+      {
+        "x": 75,
+        "y": 85
+      },
+      {
+        "x": 7,
+        "y": 44
+      },
+      {
+        "x": 50,
+        "y": 69
+      },
+      {
+        "x": 97,
+        "y": 83
+      },
+      {
+        "x": 91,
+        "y": 75
+      },
+      {
+        "x": 40,
+        "y": 71
+      },
+      {
+        "x": 25,
+        "y": 63
+      },
+      {
+        "x": 5,
+        "y": 60
+      },
+      {
+        "x": 43,
+        "y": 52
+      },
+      {
+        "x": 54,
+        "y": 68
+      },
+      {
+        "x": 71,
+        "y": 13
+      },
+      {
+        "x": 38,
+        "y": 63
+      },
+      {
+        "x": 53,
+        "y": 76
+      },
+      {
+        "x": 50,
+        "y": 82
+      },
+      {
+        "x": 31,
+        "y": 50
+      },
+      {
+        "x": 23,
+        "y": 55
+      },
+      {
+        "x": 30,
+        "y": 85
+      },
+      {
+        "x": 29,
+        "y": 87
+      },
+      {
+        "x": 52,
+        "y": 87
+      },
+      {
+        "x": 59,
+        "y": 58
+      },
+      {
+        "x": 27,
+        "y": 68
+      },
+      {
+        "x": 12,
+        "y": 32
+      },
+      {
+        "x": 3,
+        "y": 7
+      },
+      {
+        "x": 6,
+        "y": 7
+      }
+    ]
+  },
   {
     "player": {
       "name": "Federico Dimarco",
@@ -2638,7 +8141,7 @@
       "position": "M",
       "jerseyNumber": "32",
       "height": 174,
-      "userCount": 17086,
+      "userCount": 17965,
       "gender": "M",
       "sofascoreId": "dimarco32",
       "id": 284361,
@@ -2671,7 +8174,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -2698,10 +8201,10 @@
       "totalLongBalls": 2,
       "accurateLongBalls": 2,
       "goalAssist": 2,
-      "accurateOwnHalfPasses": 18,
-      "totalOwnHalfPasses": 21,
-      "accurateOppositionHalfPasses": 23,
-      "totalOppositionHalfPasses": 24,
+      "accurateOwnHalfPasses": 16,
+      "totalOwnHalfPasses": 19,
+      "accurateOppositionHalfPasses": 25,
+      "totalOppositionHalfPasses": 26,
       "totalCross": 3,
       "accurateCross": 2,
       "aerialLost": 1,
@@ -2718,26 +8221,26 @@
       "wasFouled": 1,
       "minutesPlayed": 80,
       "touches": 61,
-      "rating": 8.5,
+      "rating": 7.9,
       "possessionLostCtrl": 6,
-      "expectedGoals": 0.1897,
-      "expectedGoalsOnTarget": 0.6126,
-      "expectedAssists": 0.659359,
-      "totalBallCarriesDistance": 117.9613019631,
-      "ballCarriesCount": 13,
-      "totalProgression": 81.25096631744,
+      "expectedGoals": 0.1504,
+      "expectedGoalsOnTarget": 0.3522,
+      "expectedAssists": 0.828276,
+      "totalBallCarriesDistance": 113.06705191748,
+      "ballCarriesCount": 12,
+      "totalProgression": 73.901625189124,
       "bestBallCarryProgression": 21.622611158493,
       "totalProgressiveBallCarriesDistance": 22.851606529958,
       "progressiveBallCarriesCount": 1,
       "keyPass": 5,
       "ratingVersions": {
-        "original": 8.5,
+        "original": 7.9,
         "alternative": 8.5
       },
       "totalShots": 2,
-      "shotValueNormalized": 0.28,
-      "passValueNormalized": 1,
-      "dribbleValueNormalized": 0.09,
+      "shotValueNormalized": 0.1,
+      "passValueNormalized": 0.9,
+      "dribbleValueNormalized": 0.08,
       "defensiveValueNormalized": -0.13,
       "statisticsType": {
         "sportSlug": "football",
@@ -2745,17 +8248,289 @@
       }
     },
     "position": "M",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 7,
+        "y": 90
+      },
+      {
+        "x": 34,
+        "y": 94
+      },
+      {
+        "x": 38,
+        "y": 100
+      },
+      {
+        "x": 52,
+        "y": 78
+      },
+      {
+        "x": 60,
+        "y": 89
+      },
+      {
+        "x": 70,
+        "y": 84
+      },
+      {
+        "x": 74,
+        "y": 88
+      },
+      {
+        "x": 72,
+        "y": 93
+      },
+      {
+        "x": 80,
+        "y": 84
+      },
+      {
+        "x": 67,
+        "y": 96
+      },
+      {
+        "x": 42,
+        "y": 100
+      },
+      {
+        "x": 60,
+        "y": 90
+      },
+      {
+        "x": 63,
+        "y": 94
+      },
+      {
+        "x": 90,
+        "y": 88
+      },
+      {
+        "x": 39,
+        "y": 82
+      },
+      {
+        "x": 63,
+        "y": 66
+      },
+      {
+        "x": 15,
+        "y": 87
+      },
+      {
+        "x": 30,
+        "y": 92
+      },
+      {
+        "x": 61,
+        "y": 58
+      },
+      {
+        "x": 38,
+        "y": 92
+      },
+      {
+        "x": 14,
+        "y": 83
+      },
+      {
+        "x": 16,
+        "y": 92
+      },
+      {
+        "x": 15,
+        "y": 91
+      },
+      {
+        "x": 33,
+        "y": 86
+      },
+      {
+        "x": 87,
+        "y": 70
+      },
+      {
+        "x": 59,
+        "y": 86
+      },
+      {
+        "x": 60,
+        "y": 87
+      },
+      {
+        "x": 73,
+        "y": 100
+      },
+      {
+        "x": 61,
+        "y": 91
+      },
+      {
+        "x": 53,
+        "y": 78
+      },
+      {
+        "x": 71,
+        "y": 91
+      },
+      {
+        "x": 63,
+        "y": 88
+      },
+      {
+        "x": 37,
+        "y": 88
+      },
+      {
+        "x": 65,
+        "y": 89
+      },
+      {
+        "x": 56,
+        "y": 86
+      },
+      {
+        "x": 48,
+        "y": 44
+      },
+      {
+        "x": 33,
+        "y": 47
+      },
+      {
+        "x": 12,
+        "y": 85
+      },
+      {
+        "x": 14,
+        "y": 83
+      },
+      {
+        "x": 12,
+        "y": 86
+      },
+      {
+        "x": 11,
+        "y": 88
+      },
+      {
+        "x": 69,
+        "y": 92
+      },
+      {
+        "x": 99,
+        "y": 99
+      },
+      {
+        "x": 18,
+        "y": 70
+      },
+      {
+        "x": 78,
+        "y": 90
+      },
+      {
+        "x": 90,
+        "y": 65
+      },
+      {
+        "x": 68,
+        "y": 90
+      },
+      {
+        "x": 73,
+        "y": 49
+      },
+      {
+        "x": 61,
+        "y": 90
+      },
+      {
+        "x": 65,
+        "y": 96
+      },
+      {
+        "x": 70,
+        "y": 88
+      },
+      {
+        "x": 62,
+        "y": 88
+      },
+      {
+        "x": 48,
+        "y": 75
+      },
+      {
+        "x": 37,
+        "y": 85
+      },
+      {
+        "x": 80,
+        "y": 63
+      },
+      {
+        "x": 26,
+        "y": 78
+      },
+      {
+        "x": 26,
+        "y": 85
+      },
+      {
+        "x": 99,
+        "y": 99
+      },
+      {
+        "x": 34,
+        "y": 85
+      },
+      {
+        "x": 54,
+        "y": 88
+      },
+      {
+        "x": 60,
+        "y": 86
+      },
+      {
+        "x": 29,
+        "y": 62
+      },
+      {
+        "x": 60,
+        "y": 43
+      },
+      {
+        "x": 32,
+        "y": 91
+      },
+      {
+        "x": 35,
+        "y": 90
+      },
+      {
+        "x": 28,
+        "y": 92
+      },
+      {
+        "x": 10,
+        "y": 56
+      }
+    ]
   },
   {
     "player": {
       "name": "Marcus Thuram",
+      "firstName": "Marcus",
+      "lastName": "Thuram",
       "slug": "marcus-thuram",
       "shortName": "M. Thuram",
       "position": "F",
       "jerseyNumber": "9",
       "height": 192,
-      "userCount": 26886,
+      "userCount": 27424,
       "gender": "M",
       "sofascoreId": "m_thuram",
       "id": 791702,
@@ -2788,7 +8563,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -2832,25 +8607,25 @@
       "totalOffside": 1,
       "minutesPlayed": 90,
       "touches": 36,
-      "rating": 7.3,
+      "rating": 7.6,
       "possessionLostCtrl": 7,
-      "expectedGoals": 0.592,
-      "expectedGoalsOnTarget": 0.9575,
-      "expectedAssists": 0.0510291,
-      "totalBallCarriesDistance": 124.29840240669,
-      "ballCarriesCount": 8,
-      "totalProgression": 83.426975311117,
-      "bestBallCarryProgression": 24.593148482007,
-      "totalProgressiveBallCarriesDistance": 98.401851899387,
+      "expectedGoals": 0.606,
+      "expectedGoalsOnTarget": 0.9266,
+      "expectedAssists": 0.0430718,
+      "totalBallCarriesDistance": 135.02163149203,
+      "ballCarriesCount": 10,
+      "totalProgression": 86.89658780745,
+      "bestBallCarryProgression": 27.247662703887,
+      "totalProgressiveBallCarriesDistance": 99.296466982011,
       "progressiveBallCarriesCount": 4,
       "ratingVersions": {
-        "original": 7.3,
+        "original": 7.6,
         "alternative": 7.5
       },
       "totalShots": 4,
-      "shotValueNormalized": 0.29,
-      "passValueNormalized": -0.33,
-      "dribbleValueNormalized": 0.39,
+      "shotValueNormalized": 0.37,
+      "passValueNormalized": -0.36,
+      "dribbleValueNormalized": 0.49,
       "defensiveValueNormalized": 0.29,
       "statisticsType": {
         "sportSlug": "football",
@@ -2858,19 +8633,193 @@
       }
     },
     "position": "F",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 92,
+        "y": 14
+      },
+      {
+        "x": 34,
+        "y": 49
+      },
+      {
+        "x": 84,
+        "y": 13
+      },
+      {
+        "x": 91,
+        "y": 18
+      },
+      {
+        "x": 94,
+        "y": 22
+      },
+      {
+        "x": 86,
+        "y": 35
+      },
+      {
+        "x": 75,
+        "y": 87
+      },
+      {
+        "x": 36,
+        "y": 57
+      },
+      {
+        "x": 61,
+        "y": 50
+      },
+      {
+        "x": 53,
+        "y": 12
+      },
+      {
+        "x": 97,
+        "y": 45
+      },
+      {
+        "x": 69,
+        "y": 61
+      },
+      {
+        "x": 66,
+        "y": 69
+      },
+      {
+        "x": 69,
+        "y": 88
+      },
+      {
+        "x": 28,
+        "y": 53
+      },
+      {
+        "x": 28,
+        "y": 57
+      },
+      {
+        "x": 49,
+        "y": 71
+      },
+      {
+        "x": 65,
+        "y": 72
+      },
+      {
+        "x": 65,
+        "y": 90
+      },
+      {
+        "x": 56,
+        "y": 70
+      },
+      {
+        "x": 66,
+        "y": 51
+      },
+      {
+        "x": 76,
+        "y": 15
+      },
+      {
+        "x": 75,
+        "y": 9
+      },
+      {
+        "x": 74,
+        "y": 48
+      },
+      {
+        "x": 76,
+        "y": 59
+      },
+      {
+        "x": 61,
+        "y": 71
+      },
+      {
+        "x": 62,
+        "y": 72
+      },
+      {
+        "x": 49,
+        "y": 50
+      },
+      {
+        "x": 64,
+        "y": 84
+      },
+      {
+        "x": 82,
+        "y": 61
+      },
+      {
+        "x": 69,
+        "y": 67
+      },
+      {
+        "x": 89,
+        "y": 12
+      },
+      {
+        "x": 50,
+        "y": 45
+      },
+      {
+        "x": 65,
+        "y": 67
+      },
+      {
+        "x": 86,
+        "y": 62
+      },
+      {
+        "x": 86,
+        "y": 64
+      },
+      {
+        "x": 96,
+        "y": 20
+      },
+      {
+        "x": 37,
+        "y": 63
+      },
+      {
+        "x": 49,
+        "y": 49
+      },
+      {
+        "x": 8,
+        "y": 49
+      },
+      {
+        "x": 90,
+        "y": 43
+      },
+      {
+        "x": 73,
+        "y": 58
+      },
+      {
+        "x": 66,
+        "y": 45
+      }
+    ]
   },
   {
     "player": {
       "name": "Ange-Yoan Bonny",
-      "firstName": "",
-      "lastName": "",
-      "slug": "ange-yoan-bonny",
+      "firstName": "Ange",
+      "lastName": "Bonny",
+      "slug": "ange-bonny",
       "shortName": "A. Bonny",
       "position": "F",
       "jerseyNumber": "14",
       "height": 189,
-      "userCount": 11101,
+      "userCount": 11319,
       "gender": "M",
       "id": 1086223,
       "marketValueCurrency": "EUR",
@@ -2881,12 +8830,10 @@
       },
       "fieldTranslations": {
         "nameTranslation": {
-          "ar": "أنجي-يوان بوني",
           "bn": "অ্যাঞ্জ-ইয়োয়ান বনি",
           "hi": "एंज-योन बोनी"
         },
         "shortNameTranslation": {
-          "ar": "أ. بوني",
           "bn": "এ. বনি",
           "hi": "ए. बोनी"
         }
@@ -2902,7 +8849,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -2940,25 +8887,23 @@
       "ballRecovery": 2,
       "minutesPlayed": 61,
       "touches": 26,
-      "rating": 5.7,
+      "rating": 5.6,
       "possessionLostCtrl": 11,
-      "expectedGoals": 0.2069,
-      "expectedGoalsOnTarget": 0.0471,
+      "expectedGoals": 0.2862,
+      "expectedGoalsOnTarget": 0.0444,
       "expectedAssists": 0.0104928,
-      "totalBallCarriesDistance": 68.234243651399,
+      "totalBallCarriesDistance": 57.263623157475,
       "ballCarriesCount": 6,
-      "totalProgression": -3.2764343238859,
-      "bestBallCarryProgression": 10.19921777936,
-      "totalProgressiveBallCarriesDistance": 16.485140248114,
-      "progressiveBallCarriesCount": 1,
+      "totalProgression": -8.7324803680822,
+      "progressiveBallCarriesCount": 0,
       "ratingVersions": {
-        "original": 5.7,
+        "original": 5.6,
         "alternative": 6.3
       },
       "totalShots": 2,
-      "shotValueNormalized": -0.51,
+      "shotValueNormalized": -0.27,
       "passValueNormalized": -0.27,
-      "dribbleValueNormalized": -0.61,
+      "dribbleValueNormalized": -0.62,
       "defensiveValueNormalized": -0.01,
       "statisticsType": {
         "sportSlug": "football",
@@ -2966,7 +8911,125 @@
       }
     },
     "position": "F",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 34,
+        "y": 85
+      },
+      {
+        "x": 93,
+        "y": 79
+      },
+      {
+        "x": 94,
+        "y": 77
+      },
+      {
+        "x": 91,
+        "y": 82
+      },
+      {
+        "x": 93,
+        "y": 83
+      },
+      {
+        "x": 66,
+        "y": 81
+      },
+      {
+        "x": 67,
+        "y": 83
+      },
+      {
+        "x": 68,
+        "y": 74
+      },
+      {
+        "x": 80,
+        "y": 48
+      },
+      {
+        "x": 88,
+        "y": 87
+      },
+      {
+        "x": 85,
+        "y": 59
+      },
+      {
+        "x": 84,
+        "y": 58
+      },
+      {
+        "x": 63,
+        "y": 65
+      },
+      {
+        "x": 64,
+        "y": 53
+      },
+      {
+        "x": 82,
+        "y": 36
+      },
+      {
+        "x": 92,
+        "y": 45
+      },
+      {
+        "x": 66,
+        "y": 67
+      },
+      {
+        "x": 50,
+        "y": 78
+      },
+      {
+        "x": 31,
+        "y": 58
+      },
+      {
+        "x": 29,
+        "y": 52
+      },
+      {
+        "x": 73,
+        "y": 60
+      },
+      {
+        "x": 45,
+        "y": 73
+      },
+      {
+        "x": 55,
+        "y": 31
+      },
+      {
+        "x": 66,
+        "y": 65
+      },
+      {
+        "x": 85,
+        "y": 75
+      },
+      {
+        "x": 28,
+        "y": 21
+      },
+      {
+        "x": 85,
+        "y": 44
+      },
+      {
+        "x": 89,
+        "y": 44
+      },
+      {
+        "x": 55,
+        "y": 41
+      }
+    ]
   },
   {
     "player": {
@@ -2976,7 +9039,7 @@
       "position": "F",
       "jerseyNumber": "94",
       "height": 189,
-      "userCount": 10922,
+      "userCount": 11000,
       "gender": "M",
       "id": 1156616,
       "marketValueCurrency": "EUR",
@@ -3008,7 +9071,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -3047,17 +9110,17 @@
       "rating": 6.5,
       "possessionLostCtrl": 4,
       "expectedAssists": 8.182e-05,
-      "totalBallCarriesDistance": 12.066772631256,
-      "ballCarriesCount": 2,
-      "totalProgression": 9.9696254764047,
+      "totalBallCarriesDistance": 21.033676277443,
+      "ballCarriesCount": 3,
+      "totalProgression": 7.5296925104917,
       "progressiveBallCarriesCount": 0,
       "ratingVersions": {
         "original": 6.5,
         "alternative": 6.4
       },
       "totalShots": 0,
-      "passValueNormalized": -0.04,
-      "dribbleValueNormalized": 0.04,
+      "passValueNormalized": -0.01,
+      "dribbleValueNormalized": 0.02,
       "defensiveValueNormalized": -0.01,
       "statisticsType": {
         "sportSlug": "football",
@@ -3065,19 +9128,65 @@
       }
     },
     "position": "F",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 53,
+        "y": 69
+      },
+      {
+        "x": 33,
+        "y": 64
+      },
+      {
+        "x": 86,
+        "y": 45
+      },
+      {
+        "x": 81,
+        "y": 16
+      },
+      {
+        "x": 34,
+        "y": 24
+      },
+      {
+        "x": 51,
+        "y": 30
+      },
+      {
+        "x": 49,
+        "y": 50
+      },
+      {
+        "x": 30,
+        "y": 16
+      },
+      {
+        "x": 66,
+        "y": 27
+      },
+      {
+        "x": 87,
+        "y": 52
+      },
+      {
+        "x": 50,
+        "y": 14
+      }
+    ]
   },
   {
     "player": {
       "name": "Denzel Dumfries",
-      "firstName": "",
-      "lastName": "",
+      "firstName": "Denzel",
+      "lastName": "Dumfries",
       "slug": "denzel-dumfries",
       "shortName": "D. Dumfries",
       "position": "M",
       "jerseyNumber": "2",
       "height": 189,
-      "userCount": 15637,
+      "userCount": 15790,
       "gender": "M",
       "sofascoreId": "ddumfries2",
       "id": 759520,
@@ -3110,7 +9219,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -3145,7 +9254,7 @@
       "touches": 13,
       "rating": 6.8,
       "possessionLostCtrl": 4,
-      "expectedAssists": 0.0245041,
+      "expectedAssists": 0.0245042,
       "totalBallCarriesDistance": 16.100511840323,
       "ballCarriesCount": 3,
       "totalProgression": 10.342139500407,
@@ -3164,7 +9273,73 @@
       }
     },
     "position": "D",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 55,
+        "y": 9
+      },
+      {
+        "x": 7,
+        "y": 17
+      },
+      {
+        "x": 40,
+        "y": 12
+      },
+      {
+        "x": 73,
+        "y": 0
+      },
+      {
+        "x": 89,
+        "y": 12
+      },
+      {
+        "x": 41,
+        "y": 15
+      },
+      {
+        "x": 45,
+        "y": 10
+      },
+      {
+        "x": 57,
+        "y": 0
+      },
+      {
+        "x": 20,
+        "y": 8
+      },
+      {
+        "x": 22,
+        "y": 8
+      },
+      {
+        "x": 27,
+        "y": 13
+      },
+      {
+        "x": 98,
+        "y": 2
+      },
+      {
+        "x": 88,
+        "y": 0
+      },
+      {
+        "x": 29,
+        "y": 31
+      },
+      {
+        "x": 4,
+        "y": 52
+      },
+      {
+        "x": 1,
+        "y": 55
+      }
+    ]
   },
   {
     "player": {
@@ -3176,7 +9351,7 @@
       "position": "M",
       "jerseyNumber": "17",
       "height": 187,
-      "userCount": 4228,
+      "userCount": 4277,
       "gender": "M",
       "id": 1048889,
       "marketValueCurrency": "EUR",
@@ -3208,7 +9383,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -3248,17 +9423,17 @@
       "touches": 10,
       "rating": 6.7,
       "possessionLostCtrl": 2,
-      "expectedAssists": 0.00151831,
-      "totalBallCarriesDistance": 13.190046409028,
-      "ballCarriesCount": 2,
-      "totalProgression": 8.6744801706723,
+      "expectedAssists": 0.00150891,
+      "totalBallCarriesDistance": 26.069463925183,
+      "ballCarriesCount": 3,
+      "totalProgression": 8.382691962075,
       "progressiveBallCarriesCount": 0,
       "ratingVersions": {
         "original": 6.7,
         "alternative": 6.8
       },
       "totalShots": 0,
-      "passValueNormalized": -0.05,
+      "passValueNormalized": -0.04,
       "dribbleValueNormalized": 0.02,
       "defensiveValueNormalized": -0.01,
       "statisticsType": {
@@ -3267,7 +9442,53 @@
       }
     },
     "position": "M",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 21,
+        "y": 71
+      },
+      {
+        "x": 6,
+        "y": 48
+      },
+      {
+        "x": 69,
+        "y": 63
+      },
+      {
+        "x": 69,
+        "y": 64
+      },
+      {
+        "x": 67,
+        "y": 67
+      },
+      {
+        "x": 60,
+        "y": 71
+      },
+      {
+        "x": 69,
+        "y": 86
+      },
+      {
+        "x": 84,
+        "y": 81
+      },
+      {
+        "x": 35,
+        "y": 89
+      },
+      {
+        "x": 76,
+        "y": 93
+      },
+      {
+        "x": 6,
+        "y": 49
+      }
+    ]
   },
   {
     "player": {
@@ -3277,7 +9498,7 @@
       "position": "M",
       "jerseyNumber": "22",
       "height": 178,
-      "userCount": 9022,
+      "userCount": 9143,
       "gender": "M",
       "sofascoreId": "micki_taryan",
       "id": 37151,
@@ -3310,7 +9531,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -3349,9 +9570,9 @@
       "rating": 6.6,
       "possessionLostCtrl": 2,
       "expectedAssists": 0.00899719,
-      "totalBallCarriesDistance": 29.784714694592,
+      "totalBallCarriesDistance": 34.103757314509,
       "ballCarriesCount": 4,
-      "totalProgression": 24.727464342164,
+      "totalProgression": 26.764610957449,
       "bestBallCarryProgression": 4.3964699680913,
       "totalProgressiveBallCarriesDistance": 6.3003669734389,
       "progressiveBallCarriesCount": 1,
@@ -3369,26 +9590,80 @@
       }
     },
     "position": "M",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 22,
+        "y": 91
+      },
+      {
+        "x": 93,
+        "y": 35
+      },
+      {
+        "x": 51,
+        "y": 52
+      },
+      {
+        "x": 48,
+        "y": 26
+      },
+      {
+        "x": 39,
+        "y": 30
+      },
+      {
+        "x": 88,
+        "y": 11
+      },
+      {
+        "x": 74,
+        "y": 26
+      },
+      {
+        "x": 74,
+        "y": 23
+      },
+      {
+        "x": 65,
+        "y": 66
+      },
+      {
+        "x": 80,
+        "y": 26
+      },
+      {
+        "x": 53,
+        "y": 87
+      },
+      {
+        "x": 84,
+        "y": 54
+      },
+      {
+        "x": 55,
+        "y": 51
+      }
+    ]
   },
   {
     "player": {
       "name": "Davide Frattesi",
-      "firstName": "",
-      "lastName": "",
+      "firstName": "Davide",
+      "lastName": "Frattesi",
       "slug": "davide-frattesi",
       "shortName": "D. Frattesi",
       "position": "M",
       "jerseyNumber": "16",
       "height": 178,
-      "userCount": 5875,
+      "userCount": 5935,
       "gender": "M",
       "sofascoreId": "davidefrrattesi_22",
       "id": 835600,
       "marketValueCurrency": "EUR",
       "dateOfBirthTimestamp": 937958400,
       "proposedMarketValueRaw": {
-        "value": 26000000,
+        "value": 20000000,
         "currency": "EUR"
       },
       "fieldTranslations": {
@@ -3414,7 +9689,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -3471,23 +9746,51 @@
       }
     },
     "position": "M",
-    "extra": null
+    "extra": null,
+    "heatmap": [
+      {
+        "x": 90,
+        "y": 13
+      },
+      {
+        "x": 95,
+        "y": 15
+      },
+      {
+        "x": 46,
+        "y": 37
+      },
+      {
+        "x": 18,
+        "y": 13
+      },
+      {
+        "x": 7,
+        "y": 8
+      },
+      {
+        "x": 7,
+        "y": 8
+      }
+    ]
   },
   {
     "player": {
       "name": "Josep Martínez",
+      "firstName": "Josep",
+      "lastName": "Martinez",
       "slug": "josep-martinez",
       "shortName": "J. Martínez",
       "position": "G",
       "jerseyNumber": "13",
       "height": 191,
-      "userCount": 2943,
+      "userCount": 2985,
       "gender": "M",
       "id": 845291,
       "marketValueCurrency": "EUR",
       "dateOfBirthTimestamp": 896227200,
       "proposedMarketValueRaw": {
-        "value": 9400000,
+        "value": 7800000,
         "currency": "EUR"
       },
       "fieldTranslations": {
@@ -3513,7 +9816,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -3542,9 +9845,81 @@
       }
     },
     "position": "G",
-    "extra": null
+    "extra": null,
+    "heatmap": null
   },
-  {},
+  {
+    "player": {
+      "name": "Raffaele Di Gennaro",
+      "firstName": "Raffaele",
+      "lastName": "Di Gennaro",
+      "slug": "raffaele-di-gennaro",
+      "shortName": "R. Di Gennaro",
+      "position": "G",
+      "jerseyNumber": "12",
+      "height": 188,
+      "userCount": 1463,
+      "gender": "M",
+      "id": 301162,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 749606400,
+      "proposedMarketValueRaw": {
+        "value": 325000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "bn": "রাফায়েল ডি জেনারো",
+          "hi": "राफेल डि जेननारो"
+        },
+        "shortNameTranslation": {
+          "bn": "আর. ডি. জেনারো",
+          "hi": "आर.डी. जेननारो"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1958007,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "G",
+    "extra": null,
+    "heatmap": null
+  },
   {
     "player": {
       "name": "Matteo Cocchi",
@@ -3554,7 +9929,7 @@
       "position": "D",
       "jerseyNumber": "43",
       "height": 178,
-      "userCount": 1077,
+      "userCount": 1105,
       "gender": "M",
       "id": 1416579,
       "marketValueCurrency": "EUR",
@@ -3582,7 +9957,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -3611,17 +9986,20 @@
       }
     },
     "position": "D",
-    "extra": null
+    "extra": null,
+    "heatmap": null
   },
   {
     "player": {
       "name": "Alessandro Bastoni",
+      "firstName": "Alessandro",
+      "lastName": "Bastoni",
       "slug": "alessandro-bastoni",
       "shortName": "A. Bastoni",
       "position": "D",
       "jerseyNumber": "95",
       "height": 190,
-      "userCount": 18422,
+      "userCount": 18716,
       "gender": "M",
       "sofascoreId": "alessandrobastoni",
       "id": 826188,
@@ -3654,7 +10032,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -3683,7 +10061,8 @@
       }
     },
     "position": "D",
-    "extra": null
+    "extra": null,
+    "heatmap": null
   },
   {
     "player": {
@@ -3693,7 +10072,7 @@
       "position": "D",
       "jerseyNumber": "6",
       "height": 188,
-      "userCount": 5787,
+      "userCount": 5821,
       "gender": "M",
       "sofascoreId": "Stefandevrij",
       "id": 91046,
@@ -3726,7 +10105,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -3755,27 +10134,99 @@
       }
     },
     "position": "D",
-    "extra": null
+    "extra": null,
+    "heatmap": null
   },
-  {},
+  {
+    "player": {
+      "name": "Francesco Acerbi",
+      "firstName": "Francesco",
+      "lastName": "Acerbi",
+      "slug": "francesco-acerbi",
+      "shortName": "F. Acerbi",
+      "position": "D",
+      "jerseyNumber": "15",
+      "height": 192,
+      "userCount": 5727,
+      "gender": "M",
+      "id": 126816,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 571449600,
+      "proposedMarketValueRaw": {
+        "value": 2400000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "فرانشيسكو أتشيربي",
+          "bn": "ফ্রান্সেসকো অ্যাসারবি",
+          "hi": "फ्रांसेस्को एसेरबी"
+        },
+        "shortNameTranslation": {
+          "ar": "ف. أتشيربي",
+          "bn": "এফ. অ্যাসারবি",
+          "hi": "एफ. एसेरबी"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1958007,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "D",
+    "extra": null,
+    "heatmap": null
+  },
   {
     "player": {
       "name": "Hakan Çalhanoğlu",
-      "firstName": "Hakan",
-      "lastName": "Calhanoglu",
       "slug": "hakan-calhanoglu",
-      "shortName": "H. Calhanoglu",
+      "shortName": "H. Çalhanoğlu",
       "position": "M",
       "jerseyNumber": "20",
       "height": 178,
-      "userCount": 34457,
+      "userCount": 34962,
       "gender": "M",
       "sofascoreId": "HÇalhanoğlu",
       "id": 135700,
       "marketValueCurrency": "EUR",
       "dateOfBirthTimestamp": 760665600,
       "proposedMarketValueRaw": {
-        "value": 23000000,
+        "value": 18700000,
         "currency": "EUR"
       },
       "fieldTranslations": {
@@ -3801,7 +10252,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -3830,34 +10281,39 @@
       }
     },
     "position": "M",
-    "extra": null
+    "extra": null,
+    "heatmap": null
   },
-  {},
   {
     "player": {
-      "name": "Mattia Mosconi",
-      "firstName": "Mattia",
-      "lastName": "Mosconi",
-      "slug": "mattia-mosconi",
-      "shortName": "M. Mosconi",
+      "name": "Lautaro Martínez",
+      "firstName": "Lautaro",
+      "lastName": "Martinez",
+      "slug": "lautaro-martinez",
+      "shortName": "L. Martínez",
       "position": "F",
-      "jerseyNumber": "48",
-      "height": 176,
-      "userCount": 558,
+      "jerseyNumber": "10",
+      "height": 175,
+      "userCount": 125776,
       "gender": "M",
-      "id": 1530727,
+      "sofascoreId": "LautaroM",
+      "id": 823984,
       "marketValueCurrency": "EUR",
-      "dateOfBirthTimestamp": 1174867200,
+      "dateOfBirthTimestamp": 872208000,
       "proposedMarketValueRaw": {
-        "value": 630000,
+        "value": 80000000,
         "currency": "EUR"
       },
       "fieldTranslations": {
         "nameTranslation": {
-          "ar": "موسكوني، ماتيا"
+          "ar": "لاوتارو مارتينيز",
+          "bn": "লাউতারো মার্টিনেজ",
+          "hi": "लौटारो मार्टिनेज़"
         },
         "shortNameTranslation": {
-          "ar": "م. موسكوني"
+          "ar": "ل. مارتينيز",
+          "bn": "এল. মার্টিনেজ",
+          "hi": "एल. मार्टिनेज़"
         }
       }
     },
@@ -3871,7 +10327,7 @@
         "slug": "football",
         "id": 1
       },
-      "userCount": 1926808,
+      "userCount": 1958007,
       "nameCode": "INT",
       "disabled": false,
       "national": false,
@@ -3900,6 +10356,77 @@
       }
     },
     "position": "F",
-    "extra": null
+    "extra": null,
+    "heatmap": null
+  },
+  {
+    "player": {
+      "name": "Mattia Mosconi",
+      "firstName": "Mattia",
+      "lastName": "Mosconi",
+      "slug": "mattia-mosconi",
+      "shortName": "M. Mosconi",
+      "position": "F",
+      "jerseyNumber": "48",
+      "height": 176,
+      "userCount": 611,
+      "gender": "M",
+      "id": 1530727,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 1174867200,
+      "proposedMarketValueRaw": {
+        "value": 630000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "موسكوني، ماتيا"
+        },
+        "shortNameTranslation": {
+          "ar": "م. موسكوني"
+        }
+      }
+    },
+    "team": {
+      "name": "Inter",
+      "slug": "inter",
+      "shortName": "Inter",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 1958007,
+      "nameCode": "INT",
+      "disabled": false,
+      "national": false,
+      "type": 0,
+      "id": 2697,
+      "teamColors": {
+        "primary": "#1a57cc",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "انتر",
+          "bn": "ইন্টার",
+          "hi": "इंटर",
+          "ru": "Интер"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "statistics": {
+      "totalShots": 0,
+      "statisticsType": {
+        "sportSlug": "football",
+        "statisticsType": "player"
+      }
+    },
+    "position": "F",
+    "extra": null,
+    "heatmap": null
   }
 ]
