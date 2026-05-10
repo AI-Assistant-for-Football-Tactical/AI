@@ -1,0 +1,15 @@
+shot_id,player_id,player_name,time,shot_type_1,situation_1,body_part_1,xg_1,xgot_1,x_1,y_1,shot_type_2,situation_2,body_part_2,xg_2,xgot_2,x_2,y_2
+7148388,357596,Nikola Vlašić,79,goal,penalty,right-foot,0.7884,0.98764622211456,11.5,50.0,goal,penalty,right-foot,0.7884,0.98764622211456,11.5,50.0
+7148384,38162,Duván Zapata,75,block,assisted,head,0.038838125765324,0.0,10.2,56.0,block,assisted,head,0.038838125765324,0.0,10.2,56.0
+7148369,38162,Duván Zapata,74,block,corner,right-foot,0.095032081007957,0.0,8.6,48.7,block,corner,right-foot,0.095032081007957,0.0,8.6,48.7
+7148362,341143,Giovanni Simeone,74,miss,corner,head,0.14232358336449,0.0,8.3,51.1,miss,corner,head,0.14232358336449,0.0,8.3,51.1
+7148346,341143,Giovanni Simeone,72,miss,fast-break,right-foot,0.32879319787025,0.0,9.9,52.8,miss,fast-break,right-foot,0.32879319787025,0.0,9.9,52.8
+7148335,341143,Giovanni Simeone,70,goal,fast-break,right-foot,0.69116866588593,0.3601935505867,12.0,52.8,goal,fast-break,right-foot,0.69116866588593,0.3601935505867,12.0,52.8
+7148255,1030829,Gvidas Gineitis,56,block,free-kick,left-foot,0.034802205860615,0.0,28.5,56.7,block,free-kick,left-foot,0.034802205860615,0.0,28.5,56.7
+7147938,1142692,Rafael Obrador,38,miss,regular,left-foot,0.025779904797673,0.0,12.8,22.1,miss,regular,left-foot,0.025779904797673,0.0,12.8,22.1
+7147936,1030829,Gvidas Gineitis,38,block,regular,head,0.02026417478919,0.0,13.6,49.3,block,regular,head,0.02026417478919,0.0,13.6,49.3
+7147664,1089453,Saúl Coco,8,miss,assisted,right-foot,0.099230587482452,0.0,14.8,52.1,miss,assisted,right-foot,0.099230587482452,0.0,14.8,52.1
+7147572,341143,Giovanni Simeone,1,block,assisted,right-foot,0.051886349916458,0.0,13.5,59.5,block,assisted,right-foot,0.051886349916458,0.0,13.5,59.5
+7148458,38162,Duván Zapata,85,,,,,,,,block,set-piece,right-foot,0.054326709359884,0.0,17.8,48.5
+7148452,1016788,Cesare Casadei,83,,,,,,,,block,assisted,right-foot,0.091474317014217,0.0,10.6,57.0
+7148441,1142612,Emirhan İlkhan,82,,,,,,,,block,assisted,right-foot,0.034760933369398,0.0,19.9,67.4
