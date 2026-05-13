@@ -207,9 +207,15 @@ def prepare_heatmaps_delta_data(heatmaps_delta_result):
 
 
 def get_on_pitch_players(player_delta_df, lineups_stats_df):
-    """Filter to players active in this window."""
+    """Filter to players active in this window using touches_delta (not cumulative touches_2).
+    
+    touches_delta > 0  → player is on pitch and active in this window
+    touches_delta == 0 → player was subbed OFF before this window (cumulative unchanged)
+    touches_delta NaN  → bench player (never entered)
+    """
     on_pitch = player_delta_df[
-        (player_delta_df['touches_2'].notna() & (player_delta_df['touches_2'] > 0))
+        player_delta_df['touches_delta'].notna() & 
+        (player_delta_df['touches_delta'] > 0)
     ].copy()
     
     cols_to_merge = ['id', 'minutesPlayed_2', 'rating_1', 'rating_2']
@@ -246,7 +252,8 @@ def compute_fatigue_score(on_pitch_df):
     
     # Rating drop component
     df['rating_drop'] = df['rating_1'].fillna(6.0) - df['rating_2'].fillna(6.0)
-    df['fatigue_rating'] = (df['rating_drop'].clip(lower=0) / 1.0) * 25.0
+    # A 0.5 rating drop in a window = max 25 points (divide by 0.5, not 1.0)
+    df['fatigue_rating'] = (df['rating_drop'].clip(lower=0) / 0.5) * 25.0
     df['fatigue_rating'] = df['fatigue_rating'].clip(upper=25.0)
     
     # Pass accuracy component
@@ -304,9 +311,9 @@ def compute_team_passing_influence(player_delta_df):
         if col not in df.columns: 
             df[col] = 0.0
     
-    prog_score = (df['totalProgression_delta'] / 150.0).clip(upper=1.0) * 5
-    key_score = (df['keyPass_delta'] / 3.0).clip(upper=1.0) * 3
-    vol_score = (df['totalPass_delta'] / 30.0).clip(upper=1.0) * 2
+    prog_score = (df['totalProgression_delta'] / 150.0).clip(lower=0, upper=1.0) * 5
+    key_score = (df['keyPass_delta'] / 3.0).clip(lower=0, upper=1.0) * 3
+    vol_score = (df['totalPass_delta'] / 30.0).clip(lower=0, upper=1.0) * 2
     
     df['pass_influence_score'] = (prog_score + key_score + vol_score).fillna(0)
     return df[['id', 'pass_influence_score', 'totalProgression_delta', 'keyPass_delta']]
