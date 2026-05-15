@@ -1,0 +1,1909 @@
+
+api_base = r'https://football-backend-app.victoriouswater-69fff737.swedencentral.azurecontainerapps.io/'
+
+import numpy as np , json , requests , os , concurrent.futures
+
+import pandas as pd
+from google import genai
+from pandas import DataFrame , Series
+import ast
+from sklearn.cluster import KMeans
+from dotenv import load_dotenv
+load_dotenv(override=True) 
+
+def json_to_df(data , target_team : str = 'homeValue'):
+    result = {}
+    
+    for period_data in data['statistics']:
+        period = period_data['period'].lower()  # all, 1st, 2nd
+        
+        for group in period_data['groups']:
+            group_name = group['groupName'].lower().replace(" ", "_")
+            
+            for item in group['statisticsItems']:
+                stat_name = item['name'].lower().replace(" ", "_")
+                
+                # final column name (no "1")
+                col_name = f"{group_name}_{stat_name}_{period}"
+                
+                # store HOME value
+                result[col_name] = item[target_team]
+    
+    return pd.DataFrame([result])
+
+def process_events(event_stats1 : json , event_stats2 : json , home : bool = True) -> DataFrame:
+    '''helper function to make the convertion easier'''
+    # Convert both JSONs
+    if home :
+        target_team = 'homeValue'
+    else :
+        target_team = 'awayValue'
+
+    df1 = json_to_df(event_stats1 , target_team)
+    df2 = json_to_df(event_stats2 , target_team)
+
+    # Concatenate row-wise
+    event_stats = pd.concat([df1, df2], axis=0, ignore_index=True).rename(index = {0 : 'snap1' , 1 : 'snap2'})
+    
+    return event_stats
+
+
+
+import pandas as pd
+
+def json_players_to_df(data, suffix):
+    rows = []
+    
+    for p in data['players']:
+        player_info = p['player']
+        stats = p.get('statistics', {})
+        
+        row = {}
+        
+        # ✅ Common columns (NO suffix)
+        row['id'] = player_info.get('id')
+        row['name'] = player_info.get('name')
+        row['shirt_number'] = p.get('shirtNumber')
+        row['team_id'] = p.get('teamId')
+        row['position'] = p.get('position')
+        
+        # ✅ Stats columns (WITH suffix)
+        for key, value in stats.items():
+            if isinstance(value, dict):  # skip nested
+                continue
+            row[f"{key}_{suffix}"] = value
+        
+        rows.append(row)
+    
+    return pd.DataFrame(rows)
+
+def process_players_lineups (lineups1 : json , lineups2 : json , home : bool = True):
+    '''helper function to make the flow easier '''
+    if home :
+        target_team = 'home'
+    else :
+        target_team = 'away'
+    # ✅ Convert both JSONs
+    df1 = json_players_to_df(lineups1.get(target_team), suffix=1)
+    df2 = json_players_to_df(lineups2.get(target_team), suffix=2)
+
+    # ✅ Merge on shared columns
+    common_cols = ['id', 'name', 'shirt_number', 'team_id', 'position']
+
+    lineups_and_stats = pd.merge(df1, df2, on=common_cols, how='outer')
+    return lineups_and_stats
+
+
+
+def shotmap_to_df(data, suffix, home: bool = True):
+    rows = []
+    
+    for shot in data['shotmap']:
+        is_home = shot.get('isHome')
+        
+
+        if home and not is_home:
+            continue
+        if not home and is_home:
+            continue
+        
+        row = {}
+        
+        # shared columns
+        row['shot_id'] = shot.get('id')
+        row['player_id'] = shot['player'].get('id')
+        row['player_name'] = shot['player'].get('name')
+        row['time'] = shot.get('time')
+        
+        # stats
+        row[f'shot_type_{suffix}'] = shot.get('shotType')
+        row[f'situation_{suffix}'] = shot.get('situation')
+        row[f'body_part_{suffix}'] = shot.get('bodyPart')
+        row[f'xg_{suffix}'] = shot.get('xg')
+        row[f'xgot_{suffix}'] = shot.get('xgot')
+        
+        # coordinates
+        coords = shot.get('playerCoordinates', {})
+        row[f'x_{suffix}'] = coords.get('x')
+        row[f'y_{suffix}'] = coords.get('y')
+        
+        rows.append(row)
+    
+    return pd.DataFrame(rows)
+
+
+
+def process_shotmaps(players_shotmaps1, players_shotmaps2, home: bool = True):
+    '''helper function to make the flow easier'''
+    #  convert both jsons
+    df1 = shotmap_to_df(players_shotmaps1, suffix=1, home=home)
+    df2 = shotmap_to_df(players_shotmaps2, suffix=2, home=home)
+
+    # merge
+    common_cols = ['shot_id', 'player_id', 'player_name', 'time']
+    shotmaps = pd.merge(df1, df2, on=common_cols, how='outer')
+
+    return shotmaps
+
+
+
+# working on heatmaps to convert them to dataframes
+def process_heatmaps(heatmap1 :json , heatmap2 : json , lineups: DataFrame):
+    players_heatmaps1 = pd.json_normalize(heatmap1).fillna('[]').rename(columns = {'heatmap' : 'heatmap1'})
+    players_heatmaps2 = pd.json_normalize(heatmap2).fillna('[]').rename(columns = {'heatmap' : 'heatmap2'})
+    heatmaps =  pd.merge(players_heatmaps1, players_heatmaps2, on='player_id', how='inner')
+    heatmaps = heatmaps[heatmaps['player_id'].isin(list(lineups['id'])) ]
+    
+    return heatmaps
+
+
+def euclidean_distance(x1, y1, x2, y2):
+    if pd.isna(x2) or pd.isna(y2):
+        return 0
+    return np.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+
+
+def get_zone(x):
+    if pd.isna(x):
+        return None
+    if x < 33:
+        return 'def'
+    elif x < 66:
+        return 'mid'
+    else:
+        return 'att'
+
+
+# =========================
+# ✅ Extract events
+# =========================
+
+def extract_events(data, suffix):
+    rows = []
+    
+    for obj in data:
+        if obj is None:
+            continue
+        
+        for event_type in ['passes', 'dribbles', 'defensive', 'ball-carries']:
+            events = obj.get(event_type, [])
+            
+            for e in events:
+                row = {}
+                
+                # ✅ shared columns
+                row['event_type'] = event_type
+                row['action_type'] = e.get('eventActionType')
+                row['isHome'] = e.get('isHome')
+                
+                # coordinates
+                start = e.get('playerCoordinates', {})
+                end = e.get('passEndCoordinates', {})
+                
+                x1, y1 = start.get('x'), start.get('y')
+                x2, y2 = end.get('x'), end.get('y')
+                
+                row['x'] = x1
+                row['y'] = y1
+                row['x_end'] = x2
+                row['y_end'] = y2
+                
+                # ✅ suffix features
+                row[f'outcome_{suffix}'] = e.get('outcome')
+                row[f'keypass_{suffix}'] = e.get('keypass')
+                row[f'isLongBall_{suffix}'] = e.get('isLongBall')
+                row[f'isAssist_{suffix}'] = e.get('isAssist')
+                
+                # ✅ calculated features
+                row[f'distance_{suffix}'] = euclidean_distance(x1, y1, x2, y2)
+                row[f'progression_{suffix}'] = (x2 - x1) if x2 is not None else 0
+                row[f'zone_{suffix}'] = get_zone(x1)
+                
+                rows.append(row)
+    
+    return pd.DataFrame(rows)
+
+
+# =========================
+# ✅ Aggregate features
+# =========================
+
+def build_features(df, suffix):
+    
+    features = {}
+
+    # ✅ total counts
+    features['total_events'] = len(df)
+    
+    # ================= PASS FEATURES =================
+    passes = df[df['event_type'] == 'passes']
+    
+    features[f'total_passes_{suffix}'] = len(passes)
+    features[f'completed_passes_{suffix}'] = passes[f'outcome_{suffix}'].sum()
+    
+    features[f'pass_accuracy_{suffix}'] = (
+        passes[f'outcome_{suffix}'].sum() / len(passes)
+        if len(passes) > 0 else 0
+    )
+    
+    features[f'key_passes_{suffix}'] = passes[f'keypass_{suffix}'].sum()
+    features[f'long_balls_{suffix}'] = passes[f'isLongBall_{suffix}'].sum()
+    features[f'assists_{suffix}'] = passes[f'isAssist_{suffix}'].sum()
+    
+    features[f'avg_pass_length_{suffix}'] = passes[f'distance_{suffix}'].mean()
+    features[f'avg_progression_{suffix}'] = passes[f'progression_{suffix}'].mean()
+    
+    # ================= DEFENSIVE =================
+    defensive = df[df['event_type'] == 'defensive']
+    
+    features[f'def_actions_{suffix}'] = len(defensive)
+    features[f'interceptions_{suffix}'] = (defensive['action_type'] == 'interception').sum()
+    features[f'tackles_{suffix}'] = (defensive['action_type'] == 'tackle').sum()
+    features[f'clearances_{suffix}'] = (defensive['action_type'] == 'clearance').sum()
+    features[f'blocks_{suffix}'] = (defensive['action_type'] == 'block').sum()
+    features[f'recoveries_{suffix}'] = (defensive['action_type'] == 'ball-recovery').sum()
+    
+    # ================= DRIBBLES =================
+    dribbles = df[df['event_type'] == 'dribbles']
+    
+    features[f'total_dribbles_{suffix}'] = len(dribbles)
+    features[f'successful_dribbles_{suffix}'] = dribbles[f'outcome_{suffix}'].sum()
+    
+    # ================= CARRIES =================
+    carries = df[df['event_type'] == 'ball-carries']
+    
+    features[f'total_carries_{suffix}'] = len(carries)
+    features[f'avg_carry_length_{suffix}'] = carries[f'distance_{suffix}'].mean()
+    features[f'avg_carry_progression_{suffix}'] = carries[f'progression_{suffix}'].mean()
+    
+    # ================= SPATIAL =================
+    features[f'final_third_actions_{suffix}'] = (df[f'zone_{suffix}'] == 'att').sum()
+    
+    return pd.DataFrame([features])
+
+
+# =========================
+# ✅ MAIN PIPELINE
+# =========================
+
+def process_rates_files(data1, data2 , home : bool = True ):
+    
+    df1 = extract_events(data1, suffix=1)
+    df2 = extract_events(data2, suffix=2)
+
+    #  extract Home from Away
+    df1_home = df1[df1['isHome'] == True]
+    df1_away = df1[df1['isHome'] == False]
+
+    df2_home = df2[df2['isHome'] == True]
+    df2_away = df2[df2['isHome'] == False]
+
+    # build features for each team
+    f1_home = build_features(df1_home, suffix="1")
+    f1_away = build_features(df1_away, suffix="1")
+
+    f2_home = build_features(df2_home, suffix="2")
+    f2_away = build_features(df2_away, suffix="2")
+
+    # getting only the home or the away
+    if home :
+        final_df = pd.concat(
+        [f1_home,  f2_home ],
+        axis=1
+    )
+
+    else :
+        final_df = pd.concat(
+        [ f1_away ,  f2_away],
+        axis=1
+    )
+
+    
+
+    final_df = final_df.loc[:, ~final_df.columns.duplicated()]
+
+    return final_df
+
+
+
+
+
+def get_one_team_data(
+    event_stats1 : json ,
+    event_stats2 : json ,
+    lineups1 : json ,
+    lineups2 : json ,
+    shotmaps1 : json ,
+    shotmaps2 : json ,
+    heatmap1 : json , 
+    heatmap2 : json , 
+    rates1 : json , 
+    rates2 : json , 
+    home : bool = True
+)-> dict :
+    '''this function is a short cut to run all the above functions to spedup the process'''
+    # checking that data is not none or empty
+    
+    params = {
+        "event_stats1": event_stats1,
+        "event_stats2": event_stats2,
+        "lineups1": lineups1,
+        "lineups2": lineups2,
+        "shotmaps1": shotmaps1,
+        "shotmaps2": shotmaps2,
+        "heatmap1": heatmap1,
+        "heatmap2": heatmap2,
+        "rates1": rates1,
+        "rates2": rates2 
+    }
+
+    # checking all the files
+    if  not all(params.values()):
+        # getting file name and value 
+        for name, value in params.items():
+            if not value:
+                print(f"file {name} value is {value}")
+
+    # some shared columns for merge 
+    lineups_common_cols = ['id', 'name', 'shirt_number', 'team_id', 'position']
+    shotmaps_common_cols = ['shot_id', 'player_id', 'player_name', 'time']
+
+    # working files in parallel
+
+    results = {}
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+        futures = {
+            executor.submit(process_events, event_stats1, event_stats2 , home): "event_stats",
+            executor.submit(process_players_lineups, lineups1, lineups2 , home): "lineups",
+            executor.submit(process_shotmaps, shotmaps1, shotmaps2 , home): "shotmaps",
+            executor.submit(process_rates_files, rates1, rates2 , home): "rates"
+        }
+
+        for future in concurrent.futures.as_completed(futures):
+            task_name = futures[future]
+            try:
+                result = future.result(timeout=10)
+                results[task_name] = result
+                
+            except Exception as e:
+                print(f"❌ something wrong with {task_name}: {e}")
+
+    heatmaps = process_heatmaps(players_heatmaps1 , players_heatmaps2  , results['lineups'])
+    results['heatmaps'] = heatmaps
+    return results
+
+
+
+
+def players_level_delta(players_df : DataFrame)-> DataFrame :
+    """
+    For each player, compute delta = snapshot_2 − snapshot_1 for every
+    numeric stat column.
+
+    Parameters
+    ----------
+    players_df : DataFrame
+        Must contain columns ending in ``_1`` and ``_2`` (two snapshots)
+        plus shared columns: id, name, shirt_number, team_id, position.
+
+    Returns
+    -------
+    DataFrame  with columns:
+        - shared identifiers (id, name, position …)
+        - every stat as ``<stat>_delta``
+    """
+    # shared_columns that won't be computed
+    shared_cols = ["id", "name", "shirt_number", "team_id", "position"]
+
+    # Identify all stat bases that have both _1 and _2 variants
+    cols_1 = {c.rsplit("_", 1)[0] for c in players_df.columns if c.endswith("_1")}
+    cols_2 = {c.rsplit("_", 1)[0] for c in players_df.columns if c.endswith("_2")}
+    stat_bases = sorted(cols_1 & cols_2)
+
+    # Build all columns in a dict first to avoid DataFrame fragmentation
+    col_data = {}
+    for base in stat_bases:
+        c1, c2 = f"{base}_1", f"{base}_2"
+        col_data[f"{base}_delta"] = (
+            pd.to_numeric(players_df[c2], errors="coerce").values
+            - pd.to_numeric(players_df[c1], errors="coerce").values
+        )
+
+    result = pd.concat(
+        [players_df[shared_cols].reset_index(drop=True),
+         pd.DataFrame(col_data)],
+        axis=1,
+    )
+
+    return result 
+
+
+
+
+def team_level_delta(team_df : DataFrame ) -> DataFrame :
+    """
+    Compute delta between the two snapshot rows of team-level event
+    statistics (row 0 = snap1, row 1 = snap2).
+
+    Returns a single-row DataFrame with ``<col>_delta`` columns.
+    """
+    # checking for the existense of the two snapshots
+    if len(team_df) < 2:
+        raise ValueError("event_stats must have at least 2 rows (snap1, snap2)")
+
+    # getting the two snapshots separated
+    snap1 = pd.to_numeric(team_df.iloc[0], errors="coerce")
+    snap2 = pd.to_numeric(team_df.iloc[1], errors="coerce")
+    delta = snap2 - snap1
+
+    # constructing the final dataframe
+    delta_df = pd.DataFrame([delta.values], columns=[f"{c}_delta" for c in team_df.columns])
+ 
+
+    return delta_df
+
+
+
+def _parse_heatmap(raw) -> list[dict]:
+    """Safely parse a heatmap column value into a list of {x, y} dicts."""
+    if isinstance(raw, list):
+        return raw
+    if isinstance(raw, str):
+        try:
+            parsed = ast.literal_eval(raw)
+            return parsed if isinstance(parsed, list) else []
+        except (ValueError, SyntaxError):
+            return []
+    return []
+    
+def heatmap_delta(heatmaps: pd.DataFrame) -> pd.DataFrame:
+    """
+    For each player, compute the *new* heatmap points that appeared
+    between snapshot 1 and snapshot 2.
+
+    Strategy: if snap1 had N points and snap2 has M (M ≥ N), take the
+    last (M − N) points from snap2 as the delta.
+
+    Returns DataFrame with columns: player_id, heatmap_delta (list),
+    n_snap1, n_snap2, n_new_points, centroid_snap1_x/y, centroid_snap2_y/y,
+    centroid_delta_x/y.
+    """
+    rows = []
+    for _, row in heatmaps.iterrows():
+        pid = row["player_id"]
+        h1 = _parse_heatmap(row.get("heatmap1", "[]"))
+        h2 = _parse_heatmap(row.get("heatmap2", "[]"))
+
+        n1, n2 = len(h1), len(h2)
+        n_new = max(0, n2 - n1)
+        delta_points = h2[-n_new:] if n_new > 0 else []
+
+        # Centroids
+        def centroid(pts):
+            if not pts:
+                return np.nan, np.nan
+            xs = [p["x"] for p in pts]
+            ys = [p["y"] for p in pts]
+            return np.mean(xs), np.mean(ys)
+
+        cx1, cy1 = centroid(h1)
+        cx2, cy2 = centroid(h2)
+
+        rows.append({
+            "player_id": pid,
+            "heatmap_delta": delta_points,
+            "n_snap1": n1,
+            "n_snap2": n2,
+            "n_new_points": n_new,
+            "centroid_snap1_x": cx1,
+            "centroid_snap1_y": cy1,
+            "centroid_snap2_x": cx2,
+            "centroid_snap2_y": cy2,
+            "centroid_delta_x": cx2 - cx1 if not (np.isnan(cx1) or np.isnan(cx2)) else 0,
+            "centroid_delta_y": cy2 - cy1 if not (np.isnan(cy1) or np.isnan(cy2)) else 0,
+        })
+
+    return pd.DataFrame(rows)
+
+
+
+
+
+def shotmaps_delta(shotmaps_df : DataFrame) -> DataFrame:
+    """
+    Identify shots that exist only in snapshot 2 (new shots in the window).
+
+    Strategy: shots present in both snapshots have matching ``_1`` and ``_2``
+    columns. Shots that are *new* to snapshot 2 will have NaN in ``_1``
+    columns but values in ``_2``.
+
+    Also returns all shots with a computed ``is_new`` flag.
+    """
+    df = shotmaps_df.copy()
+
+    # A shot is new to snapshot 2 if it has _2 data but no _1 data
+    has_1 = df["xg_1"].notna()
+    has_2 = df["xg_2"].notna()
+
+    df["is_new_in_snap2"] = (~has_1) & has_2
+    df["is_in_both"] = has_1 & has_2
+
+    return df
+
+
+
+def features_delta(features_df : DataFrame ) -> DataFrame:
+    """
+    Compute deltas for aggregated event features (passes, dribbles,
+    defensive actions, carries).
+
+    The input has columns like ``total_passes_1`` and ``total_passes_2``.
+    Output adds ``total_passes_delta`` = _2 − _1 for each.
+    """
+    cols_1 = {c.rsplit("_", 1)[0] for c in features_df.columns
+              if c.endswith("_1") and c != "total_events"}
+    cols_2 = {c.rsplit("_", 1)[0] for c in features_df.columns
+              if c.endswith("_2")}
+    bases = sorted(cols_1 & cols_2)
+
+    data = features_df.copy()
+    result = pd.DataFrame()
+    result['total_events'] = data['total_events']
+    for base in bases:
+        c1, c2 = f"{base}_1", f"{base}_2"
+        result[f"{base}_delta"] = (
+            pd.to_numeric(data[c2], errors="coerce")
+            - pd.to_numeric(data[c1], errors="coerce")
+        )
+    return result
+
+
+
+
+def all_deltas(players_df, team_df, heatmaps_df, shotmaps_df, features_df):
+    '''Accepts dataframes and returns delta dataframes'''
+
+    try:
+        # Call each function with better error tracking
+        if players_df is not None and not players_df.empty:
+            players_delta = players_level_delta(players_df)
+        else:
+            players_delta = None
+            
+        if team_df is not None and not team_df.empty:
+            team_delta = team_level_delta(team_df)
+        else:
+            team_delta = None
+            
+        if heatmaps_df is not None and not heatmaps_df.empty:
+            heatmaps_delta = heatmap_delta(heatmaps_df)
+        else:
+            heatmaps_delta = None
+            
+        if shotmaps_df is not None and not shotmaps_df.empty:
+            shotmaps_delta_result = shotmaps_delta(shotmaps_df)
+        else:
+            shotmaps_delta_result = None
+            
+        if features_df is not None and not features_df.empty:
+            features_delta_result = features_delta(features_df)
+        else:
+            features_delta_result = None
+
+        return players_delta, team_delta, heatmaps_delta, shotmaps_delta_result, features_delta_result
+
+    except Exception as e:
+        import traceback
+        print("Error inside all_deltas:", e)
+        print("Traceback:", traceback.format_exc())
+        return None, None, None, None, None
+
+
+
+# Renamed return variables to avoid shadowing function names
+player_delta_result, events_delta_result, heatmaps_delta_result, shotmaps_delta_result, features_delta_result = all_deltas(players, events, heatmaps, shotmaps, features)
+
+import pandas as pd
+import numpy as np
+
+def prepare_section_two_data(work_dir, player_delta_result, heatmaps_delta_result):
+    
+    # Load work data from example directory
+    work_dir = 'in_data_examples/work_data/'
+    lineups_stats_df = pd.read_csv(work_dir + 'lineups_and_stats.csv')
+    heatmaps_df = pd.read_csv(work_dir + 'heatmaps.csv')
+    
+    # Use actual results from all_deltas() or recalculate
+    # player_delta_result contains: id, name, position, shared_cols + delta columns
+    if player_delta_result is not None and not player_delta_result.empty:
+        player_delta = player_delta_result.copy()
+    else:
+        # Fallback: calculate manually from lineups_stats_df
+        player_delta = lineups_stats_df.copy()
+        for col in player_delta.columns:
+            if col.endswith('_2'):
+                base = col[:-2]
+                if base + '_1' in player_delta.columns:
+                    player_delta[base + '_delta'] = player_delta[col].fillna(0) - player_delta[base + '_1'].fillna(0)
+    
+    # Merge with original lineups_stats_df to get snapshot columns (like minutesPlayed_2)
+    player_delta = player_delta.merge(
+        lineups_stats_df[['id', 'minutesPlayed_2', 'rating_1', 'rating_2', 'touches_2']],
+        on='id', how='left'
+    )
+    
+    # Use actual heatmaps_delta_result from all_deltas()
+    if heatmaps_delta_result is not None and not heatmaps_delta_result.empty:
+        heatmaps_delta = heatmaps_delta_result.copy()
+    else:
+        # Fallback: create mock data
+        print("WARNING: Using mock heatmap data. Real data not available.")
+        heatmaps_delta = pd.DataFrame()
+        heatmaps_delta['player_id'] = heatmaps_df['player_id']
+        heatmaps_delta['centroid_snap1_x'] = 50.0
+        heatmaps_delta['centroid_snap1_y'] = 50.0
+        heatmaps_delta['centroid_snap2_x'] = 65.0
+        heatmaps_delta['centroid_snap2_y'] = 55.0
+        heatmaps_delta['centroid_delta_x'] = 15.0
+        heatmaps_delta['centroid_delta_y'] = 5.0
+    
+    print("✅ Data loaded successfully.")
+    print(f"Player delta shape: {player_delta.shape}")
+    print(f"Heatmaps delta shape: {heatmaps_delta.shape}")
+    print("\nSample player data:")
+    available_cols = [c for c in ['id', 'name', 'position', 'minutesPlayed_2', 'touches_2', 'touches_delta'] if c in player_delta.columns]
+    return lineups_stats_df, heatmaps_df, player_delta, heatmaps_delta
+
+
+
+def get_on_pitch_players(player_delta_df, lineups_stats_df):
+    """Filter to players active in this window using touches_delta (not cumulative touches_2).
+    
+    touches_delta > 0  → player is on pitch and active in this window
+    touches_delta == 0 → player was subbed OFF before this window (cumulative unchanged)
+    touches_delta NaN  → bench player (never entered)
+    """
+
+    # now touches_delta > 0 (window-level — only truly active players)
+    on_pitch = player_delta_df[
+        player_delta_df['touches_delta'].notna() & 
+        (player_delta_df['touches_delta'] > 0)
+    ].copy()
+    
+    # Cols to merge - only include those that actually exist
+    cols_to_merge = ['id', 'minutesPlayed_2', 'rating_1', 'rating_2']
+    cols_to_use = [c for c in cols_to_merge if c in lineups_stats_df.columns]
+    
+    # Only merge if we have columns to merge
+    if cols_to_use:
+        on_pitch = on_pitch.merge(
+            lineups_stats_df[cols_to_use],
+            left_on='id', right_on='id', how='left', suffixes=('', '_merged')
+        )
+    
+    return on_pitch
+# Run and Output
+# Check available columns before accessing
+
+
+def compute_fatigue_score(on_pitch_df):
+    """
+    Computes a 0-100 fatigue proxy based on:
+    - Minutes played (0-20 points): longer minutes = more fatigue
+    - Rating drop (0-25 points): performance decline indicates fatigue
+    - Pass accuracy drop (0-20 points): lower accuracy in this window = fatigue
+    - Ball carry efficiency (0-15 points): low distance/touches = fatigue
+    - Duel win rate (0-20 points): losing more duels = fatigue
+    """
+    df = on_pitch_df.copy()
+    
+    # Ensure all required columns exist
+    for col in ['minutesPlayed_2', 'rating_1', 'rating_2', 'accuratePass_delta', 'totalPass_delta', 
+                'totalBallCarriesDistance_delta', 'touches_delta', 'duelWon_delta', 'duelLost_delta']:
+        if col not in df.columns: 
+            df[col] = 0.0
+            
+    # ===== FATIGUE COMPONENT 1: Minutes Played (0-20 points) =====
+    # More minutes = more fatigue, max at 90 min
+    df['fatigue_minutes'] = (df['minutesPlayed_2'].fillna(0) / 90.0) * 20.0
+    df['fatigue_minutes'] = df['fatigue_minutes'].clip(upper=20.0)
+    
+    # ===== FATIGUE COMPONENT 2: Rating Drop (0-25 points) =====
+    # now /0.5 (a 0.5 drop = max 25 points — realistic for 10-min windows)
+    df['rating_drop'] = df['rating_1'].fillna(6.0) - df['rating_2'].fillna(6.0)
+    df['fatigue_rating'] = (df['rating_drop'].clip(lower=0) / 0.5) * 25.0
+    df['fatigue_rating'] = df['fatigue_rating'].clip(upper=25.0)
+    
+    # ===== FATIGUE COMPONENT 3: Pass Accuracy in Window (0-20 points) =====
+    # Lower pass accuracy in recent window indicates fatigue
+    df['pass_acc_window'] = df['accuratePass_delta'] / df['totalPass_delta'].replace(0, np.nan)
+    df['fatigue_pass'] = 0.0
+    df.loc[df['pass_acc_window'] < 0.85, 'fatigue_pass'] = 10.0
+    df.loc[df['pass_acc_window'] < 0.70, 'fatigue_pass'] = 20.0
+    
+    # ===== FATIGUE COMPONENT 4: Ball Carry Efficiency (0-15 points) =====
+    # Low distance with high touches = tired, not carrying ball effectively
+    df['fatigue_carry'] = 0.0
+    low_carry = (df['totalBallCarriesDistance_delta'] < 5.0) & (df['touches_delta'] > 3)
+    df.loc[low_carry, 'fatigue_carry'] = 15.0
+    
+    # ===== FATIGUE COMPONENT 5: Duel Win Rate (0-20 points) =====
+    # Losing more duels indicates reduced physical/mental engagement
+    df['total_duels_delta'] = df['duelWon_delta'] + df['duelLost_delta']
+    df['duel_win_pct'] = df['duelWon_delta'] / df['total_duels_delta'].replace(0, np.nan)
+    df['fatigue_duel'] = 0.0
+    df.loc[df['duel_win_pct'] < 0.50, 'fatigue_duel'] = 10.0
+    df.loc[df['duel_win_pct'] < 0.40, 'fatigue_duel'] = 20.0
+    
+    # ===== FINAL FATIGUE SCORE (0-100) =====
+    df['fatigue_score'] = df[['fatigue_minutes', 'fatigue_rating', 'fatigue_pass', 'fatigue_carry', 'fatigue_duel']].sum(axis=1)
+    df['fatigue_score'] = df['fatigue_score'].clip(upper=100.0).fillna(0)
+    
+    return df
+# Run and Output
+
+def compute_positional_drift(heatmaps_delta_df, grid_cols=6, grid_rows=4):
+    """Analyzes spatial drift using centroid shifts from the heatmap delta."""
+    if heatmaps_delta_df.empty: return pd.DataFrame()
+        
+    df = heatmaps_delta_df.copy()
+    zone_width = 100 / grid_cols
+    zone_height = 100 / grid_rows
+    
+    df['expected_zone_x'] = (df['centroid_snap1_x'] // zone_width).clip(0, grid_cols-1)
+    df['expected_zone_y'] = (df['centroid_snap1_y'] // zone_height).clip(0, grid_rows-1)
+    df['current_zone_x'] = (df['centroid_snap2_x'] // zone_width).clip(0, grid_cols-1)
+    df['current_zone_y'] = (df['centroid_snap2_y'] // zone_height).clip(0, grid_rows-1)
+    
+    df['drift_distance'] = np.sqrt(df['centroid_delta_x']**2 + df['centroid_delta_y']**2)
+    df['is_drifting'] = df['drift_distance'] > 10.0
+    
+    return df[['player_id', 'drift_distance', 'expected_zone_x', 'expected_zone_y', 'current_zone_x', 'current_zone_y', 'is_drifting']]
+
+# Run and Output
+
+
+def compute_team_passing_influence(player_delta_df):
+    """Calculates individual passing influence from delta volume metrics."""
+    if player_delta_df.empty: return pd.DataFrame()
+        
+    df = player_delta_df.copy()
+    for col in ['totalProgression_delta', 'keyPass_delta', 'totalPass_delta']:
+        if col not in df.columns: df[col] = 0.0
+    
+    prog_score = (df['totalProgression_delta'] / 150.0).clip(lower=0, upper=1.0) * 5
+    key_score = (df['keyPass_delta'] / 3.0).clip(lower=0, upper=1.0) * 3
+    vol_score = (df['totalPass_delta'] / 30.0).clip(lower=0, upper=1.0) * 2
+    
+    df['pass_influence_score'] = (prog_score + key_score + vol_score).fillna(0)
+    return df[['id', 'pass_influence_score', 'totalProgression_delta', 'keyPass_delta']]
+# Run and Output
+
+# Cell 2.5 — Defensive Gap Detection
+def detect_defensive_gaps(events_df1, events_df2, grid_cols=6, grid_rows=4):
+    """
+    Identify zones with 0 defensive actions in the latest window that previously had actions.
+    """
+    def get_zone_counts(df):
+        # In real data, this should filter by defensive events if the 'type' column exists
+        if df is None or df.empty or 'x' not in df.columns or 'y' not in df.columns:
+            return {}
+            
+        # Use all events if type not available, or filter if it is
+        target_df = df
+        if 'type' in df.columns:
+            target_df = df[df['type'] == 'defensive']
+            
+        if target_df.empty:
+            return {}
+            
+        target_df = target_df.copy()
+        target_df['zone_x'] = (target_df['x'] // (100 / grid_cols)).clip(0, grid_cols-1)
+        target_df['zone_y'] = (target_df['y'] // (100 / grid_rows)).clip(0, grid_rows-1)
+        
+        return target_df.groupby(['zone_x', 'zone_y']).size().to_dict()
+
+    snap1_counts = get_zone_counts(events_df1)
+    snap2_counts = get_zone_counts(events_df2)
+    
+    exposed_zones = []
+    for zone, count1 in snap1_counts.items():
+        count2 = snap2_counts.get(zone, 0)
+        if count1 > 0 and count2 == 0:
+            exposed_zones.append(zone)
+            
+    return {"defensive_zone_coverage_snap2": snap2_counts, "exposed_zones": exposed_zones}
+
+
+# Cell 2.6 — Shot Quality Assessment
+def assess_shot_quality(shotmaps_delta_df):
+    """
+    Aggregates shot quality from new shots in the window.
+    """
+    if shotmaps_delta_df.empty or 'is_new_in_snap2' not in shotmaps_delta_df.columns:
+        return pd.DataFrame()
+        
+    new_shots = shotmaps_delta_df[shotmaps_delta_df['is_new_in_snap2'] == True].copy()
+    
+    if new_shots.empty:
+        return pd.DataFrame({"total_xg_this_window": [0], "shot_quality_avg": [0], "shots_inside_box": [0]})
+    
+    total_xg = new_shots['xg_2'].sum() if 'xg_2' in new_shots.columns else 0
+    avg_xg = new_shots['xg_2'].mean() if 'xg_2' in new_shots.columns else 0
+    
+    # Inside box approximation
+    shots_inside_box = len(new_shots[new_shots['x_2'] < 18]) if 'x_2' in new_shots.columns else 0
+    
+    metrics = {
+        "total_xg_this_window": [total_xg],
+        "shot_quality_avg": [avg_xg],
+        "shots_inside_box": [shots_inside_box]
+    }
+    
+    return pd.DataFrame(metrics)
+
+
+# Cell 2.7 — Merge All Engineered Features
+def merge_engineered_features(fatigue_df, drift_df, passing_df):
+    """
+    Combines per-player engineered features into a single DataFrame.
+    """
+    res = fatigue_df.copy()
+    
+    if drift_df is not None and not drift_df.empty:
+        res = res.merge(drift_df, left_on='id', right_on='player_id', how='left')
+        
+    if passing_df is not None and not passing_df.empty:
+        res = res.merge(passing_df, on='id', how='left')
+        
+    return res
+
+
+
+
+def compute_performance_deviations(on_pitch_df):
+    POSITION_METRICS = {
+        'D': ['totalClearance_delta', 'interceptionWon_delta', 'totalTackle_delta', 'duelWon_delta'],
+        'M': ['totalPass_delta', 'accuratePass_delta', 'keyPass_delta', 'totalProgression_delta'],
+        'F': ['totalShots_delta', 'expectedGoals_delta', 'duelWon_delta', 'touches_delta'],
+    }
+    # Use on_pitch from Section 2 (already filtered to active players)
+    on_pitch_s3 = on_pitch_df.copy()
+    # Ensure all needed columns exist (fill missing with 0)
+    all_metrics = set()
+    for metrics in POSITION_METRICS.values():
+        all_metrics.update(metrics)
+    for col in all_metrics:
+        if col not in on_pitch_s3.columns:
+            on_pitch_s3[col] = 0.0
+    z_score_rows = []
+    for pos, metrics in POSITION_METRICS.items():
+        group = on_pitch_s3[on_pitch_s3['position'] == pos].copy()
+        if group.empty:
+            continue
+        
+        for _, player in group.iterrows():
+            player_z = {
+                'id': player['id'],
+                'name': player['name'],
+                'position': pos,
+            }
+            anomalous_metrics = []
+            
+            for metric in metrics:
+                vals = pd.to_numeric(group[metric], errors='coerce')
+                mean_val = vals.mean()
+                std_val = vals.std()
+                player_val = pd.to_numeric(player[metric], errors='coerce')
+                
+                if pd.isna(player_val):
+                    z = np.nan
+                elif std_val == 0 or pd.isna(std_val):
+                    z = 0.0
+                else:
+                    z = (player_val - mean_val) / std_val
+                
+                player_z[f'z_{metric}'] = round(z, 3) if not pd.isna(z) else np.nan
+                
+                # Track anomalous metrics (|z| > 1.5)
+                if not pd.isna(z) and abs(z) > 1.5:
+                    anomalous_metrics.append({
+                        'metric': metric,
+                        'z_score': round(z, 3),
+                        'value': player_val,
+                        'group_mean': round(mean_val, 3),
+                    })
+            
+            player_z['n_anomalous'] = len(anomalous_metrics)
+            player_z['anomalous_metrics'] = anomalous_metrics
+            
+            # Flag: underperforming if 2+ metrics with z < -1.5
+            neg_count = sum(1 for m in anomalous_metrics if m['z_score'] < -1.5)
+            pos_count = sum(1 for m in anomalous_metrics if m['z_score'] > 1.5)
+            
+            if neg_count >= 2:
+                player_z['flag'] = 'underperforming'
+            elif pos_count >= 2:
+                player_z['flag'] = 'overperforming'
+            else:
+                player_z['flag'] = 'normal'
+            
+            z_score_rows.append(player_z)
+    z_scores_df = pd.DataFrame(z_score_rows)
+    if not z_scores_df.empty:
+        # Find worst metric per player
+        z_cols = [c for c in z_scores_df.columns if c.startswith('z_')]
+        
+        def get_worst(row):
+            worst_metric, worst_z = None, 0
+            for c in z_cols:
+                val = row[c]
+                if pd.notna(val) and abs(val) > abs(worst_z):
+                    worst_z = val
+                    worst_metric = c.replace('z_', '')
+            return pd.Series({'worst_metric': worst_metric, 'worst_z': worst_z})
+        
+        worst_info = z_scores_df.apply(get_worst, axis=1)
+        z_scores_df['worst_metric'] = worst_info['worst_metric']
+        z_scores_df['worst_z'] = worst_info['worst_z']
+        
+    # Display results
+    print('=' * 70)
+    print('SECTION 3 — Performance Deviation Summary (Z-Score Model)')
+    print('=' * 70)
+    summary_cols = ['id', 'name', 'position', 'flag', 'n_anomalous', 'worst_metric', 'worst_z']
+    available = [c for c in summary_cols if c in z_scores_df.columns]
+    deviation_summary = z_scores_df[available].sort_values('n_anomalous', ascending=False)
+    return z_scores_df
+
+
+
+# Flagged players only
+
+
+def prepare_urgency_features(engineered_features, z_scores_df):
+    # Start from engineered_features (Section 2 output: fatigue, drift, pass influence)
+    urgency_input = engineered_features.copy()
+    # Merge z-score flags from Section 3
+    if not z_scores_df.empty:
+        z_merge_cols = ['id', 'n_anomalous', 'flag', 'anomalous_metrics', 'worst_metric', 'worst_z']
+        z_available = [c for c in z_merge_cols if c in z_scores_df.columns]
+        urgency_input = urgency_input.merge(
+            z_scores_df[z_available],
+            on='id', how='left'
+        )
+    else:
+        urgency_input['n_anomalous'] = 0
+        urgency_input['flag'] = 'normal'
+        urgency_input['anomalous_metrics'] = [[] for _ in range(len(urgency_input))]
+    # Ensure all needed columns exist with safe defaults
+    for col, default in [
+        ('fatigue_score', 0.0), ('minutesPlayed_2', 0.0), ('rating_1', 6.0),
+        ('rating_2', 6.0), ('n_anomalous', 0), ('drift_distance', 0.0),
+        ('duelWon_delta', 0.0), ('duelLost_delta', 0.0),
+        ('accuratePass_delta', 0.0), ('totalPass_delta', 0.0),
+    ]:
+        if col not in urgency_input.columns:
+            urgency_input[col] = default
+    # Compute derived features
+    urgency_input['rating_delta'] = urgency_input['rating_2'].fillna(6.0) - urgency_input['rating_1'].fillna(6.0)
+    urgency_input['pass_accuracy_window'] = (
+        urgency_input['accuratePass_delta'] / urgency_input['totalPass_delta'].replace(0, np.nan)
+    ).fillna(0)
+    total_duels = urgency_input['duelWon_delta'] + urgency_input['duelLost_delta']
+    urgency_input['duel_win_pct_window'] = (
+        urgency_input['duelWon_delta'] / total_duels.replace(0, np.nan)
+    ).fillna(0)
+    print("✅ Feature matrix built.")
+    print(f"Players: {len(urgency_input)}")
+    feature_cols = ['name', 'position', 'fatigue_score', 'minutesPlayed_2', 'rating_delta', 'n_anomalous', 'flag']
+    available = [c for c in feature_cols if c in urgency_input.columns]
+    
+    return urgency_input
+
+
+
+def substitution_urgency(row):
+    """
+    Weighted rule-based scorer: 0.0 (no urgency) → 1.0 (sub immediately).
+    All inputs are from the live match — no external data needed.
+    """
+    score = 0.0
+    
+    # --- Fatigue component (0 → 0.35) ---
+    fatigue = row.get('fatigue_score', 0)
+    score += (fatigue / 100.0) * 0.35
+    
+    # --- Performance deviation component (0 → 0.30) ---
+    n_anom = row.get('n_anomalous', 0)
+    if n_anom >= 3:
+        score += 0.30
+    elif n_anom >= 2:
+        score += 0.20
+    elif n_anom >= 1:
+        score += 0.10
+    
+    # --- Minutes played component (0 → 0.15) ---
+    minutes = row.get('minutesPlayed_2', 0) or 0
+    score += min(0.15, (minutes / 90.0) * 0.15)
+    
+    # --- Rating drop component (0 → 0.20) ---
+    rating_delta = row.get('rating_delta', 0) or 0
+    rating_drop = max(0, -rating_delta)  # negative delta = player got worse
+    score += min(0.20, rating_drop * 0.40)  # 0.5 drop → 0.20 (max)
+    
+    return min(1.0, score)
+
+def rank_substitution_urgency(urgency_input_df):
+    # Apply to all on-pitch players
+    urgency_input_df['urgency_score'] = urgency_input_df.apply(substitution_urgency, axis=1)
+    # Rank by urgency
+    urgency_ranked = urgency_input_df.sort_values('urgency_score', ascending=False)
+    print("=" * 70)
+    print("SECTION 4 — Substitution Urgency Rankings")
+    print("=" * 70)
+    rank_cols = ['name', 'position', 'urgency_score', 'fatigue_score', 'n_anomalous', 'minutesPlayed_2', 'rating_delta']
+    available = [c for c in rank_cols if c in urgency_ranked.columns]
+    
+    return urgency_ranked
+
+
+
+def build_reasoning(player_row):
+    """Build a human-readable reasoning string for why this sub is recommended."""
+    reasons = []
+    
+    fatigue = player_row.get('fatigue_score', 0)
+    if fatigue >= 50:
+        reasons.append(f"High fatigue ({fatigue:.0f}/100)")
+    elif fatigue >= 30:
+        reasons.append(f"Moderate fatigue ({fatigue:.0f}/100)")
+    
+    n_anom = player_row.get('n_anomalous', 0)
+    if n_anom >= 2:
+        reasons.append(f"Underperforming in {n_anom} metrics vs position peers")
+    
+    minutes = player_row.get('minutesPlayed_2', 0)
+    if minutes and minutes >= 75:
+        reasons.append(f"Played {minutes:.0f} minutes")
+    
+    rating_delta = player_row.get('rating_delta', 0)
+    if rating_delta and rating_delta < -0.2:
+        reasons.append(f"Rating dropped by {abs(rating_delta):.2f}")
+    
+    drift = player_row.get('is_drifting', False)
+    if drift:
+        reasons.append("Positionally drifting from expected zone")
+    
+    return "; ".join(reasons) if reasons else "Marginal signals — monitor"
+
+def generate_substitution_recommendations(player_delta_df, urgency_ranked_df):
+    # Identify TRUE bench players: touches_delta is NaN = never entered the match
+    #          Only NaN = player was never on the pitch = available for substitution
+    bench = player_delta_df[
+        player_delta['touches_delta'].isna()
+    ].copy()
+    # Exclude goalkeepers from urgency (only 1 per team, rarely subbed for tactical reasons)
+    top_urgent = urgency_ranked_df[urgency_ranked['position'] != 'G'].head(3)
+    recommendations = []
+    for _, flagged in top_urgent.iterrows():
+        # Find compatible bench player (same position)
+        compatible = bench[bench['position'] == flagged['position']]
+        
+        # If no exact match, try adjacent positions (D↔M, M↔F)
+        if compatible.empty:
+            pos_map = {'D': ['M'], 'M': ['D', 'F'], 'F': ['M']}
+            for alt_pos in pos_map.get(flagged['position'], []):
+                compatible = bench[bench['position'] == alt_pos]
+                if not compatible.empty:
+                    break
+        
+        sub_in = None
+        if not compatible.empty:
+            sub_in = {
+                'id': int(compatible.iloc[0]['id']),
+                'name': compatible.iloc[0]['name'],
+                'position': compatible.iloc[0]['position'],
+            }
+            # Remove used sub from bench so we don't recommend same player twice
+            bench = bench[bench['id'] != compatible.iloc[0]['id']]
+        
+        recommendations.append({
+            'player_out': {
+                'id': int(flagged['id']),
+                'name': flagged['name'],
+                'position': flagged['position'],
+            },
+            'player_in': sub_in,
+            'urgency': round(float(flagged['urgency_score']), 3),
+            'reasoning': build_reasoning(flagged),
+        })
+    # Display recommendations
+    print("=" * 70)
+    print("SUBSTITUTION RECOMMENDATIONS")
+    print("=" * 70)
+    for i, rec in enumerate(recommendations, 1):
+        out = rec['player_out']
+        inn = rec['player_in']
+        print(f"\n🔄 Recommendation #{i}  (urgency: {rec['urgency']:.2f})")
+        print(f"   OUT: {out['name']} ({out['position']})")
+        if inn:
+            print(f"    IN: {inn['name']} ({inn['position']})")
+        else:
+            print(f"    IN: ⚠️ No compatible bench player available")
+        print(f"   WHY: {rec['reasoning']}")
+    return recommendations, bench
+
+
+
+def build_match_intelligence_export(events_delta_result, urgency_ranked, player_delta, gaps, shot_metrics, recommendations):
+    # Build flagged players list (top urgent + any z-score flagged)
+    top_flagged = urgency_ranked[urgency_ranked['urgency_score'] > 0.3]
+
+    flagged_players_export = []
+    for _, p in top_flagged.iterrows():
+        n_anom = p.get('n_anomalous', 0)
+        n_anom = 0 if pd.isna(n_anom) else int(n_anom)
+        anom_metrics = p.get('anomalous_metrics', [])
+        anom_metrics = anom_metrics if isinstance(anom_metrics, list) else []
+
+        entry = {
+            'id': int(p['id']),
+            'name': p['name'],
+            'position': p['position'],
+            'fatigue_score': round(float(p.get('fatigue_score', 0)), 2),
+            'substitution_urgency': round(float(p['urgency_score']), 3),
+            'n_anomalous_metrics': n_anom,
+            'anomalous_metrics': anom_metrics,
+            'reasoning': build_reasoning(p),
+        }
+        flagged_players_export.append(entry)
+
+    # Bench players list (only true bench — never entered)
+    bench_export = []
+    bench_remaining = player_delta[
+        player_delta['touches_delta'].isna()
+    ]
+    for _, b in bench_remaining.iterrows():
+        bench_export.append({
+            'id': int(b['id']),
+            'name': b['name'],
+            'position': b['position'],
+        })
+
+    # Full match intelligence dict
+    match_intelligence = {
+        'team_stats_delta': events_delta_result.to_dict() if events_delta_result is not None else {},
+        'flagged_players': flagged_players_export,
+        'defensive_gaps': gaps,
+        'shot_quality': shot_metrics.to_dict('records')[0] if shot_metrics is not None and not shot_metrics.empty else {},
+        'bench_available': bench_export,
+        'substitution_recommendations': recommendations,
+    }
+
+    print("=" * 70)
+    print("MATCH INTELLIGENCE — Ready for LLM (Section 7)")
+    print("=" * 70)
+    print(f"  Flagged players:  {len(match_intelligence['flagged_players'])}")
+    print(f"  Bench available:  {len(match_intelligence['bench_available'])}")
+    print(f"  Recommendations:  {len(match_intelligence['substitution_recommendations'])}")
+    print(f"  Defensive gaps:   {len(match_intelligence['defensive_gaps'].get('exposed_zones', []))}")
+    print(f"\n✅ match_intelligence dict ready for Section 7 LLM prompt builder.")
+
+    return match_intelligence
+
+
+
+
+GRID_COLS = 6
+GRID_ROWS = 4
+
+
+def _parse_heatmap(raw):
+    '''helper function just to parse the heatmap row '''
+    if isinstance(raw, list):
+        return raw
+    if isinstance(raw, str):
+        try:
+            parsed = ast.literal_eval(raw)
+            return parsed if isinstance(parsed, list) else []
+        except (ValueError, SyntaxError):
+            return []
+    return []
+
+def _xy_to_zone(x, y):
+    ''' helper function to get the zone row and column in 6 x 4 grid'''
+    if pd.isna(x) or pd.isna(y):
+        return None
+    col = min(int(x // (100 / GRID_COLS)), GRID_COLS - 1)
+    row = min(int(y // (100 / GRID_ROWS)), GRID_ROWS - 1)
+    return (col, row)
+
+
+def _zone_name(col, row):
+    '''helper function to get the name of the zone based on row and column'''
+    x_labels = ["own_box", "own_deep", "own_mid", "opp_mid", "opp_deep", "opp_box"]
+    y_labels = ["left", "center_left", "center_right", "right"]
+    return f"{x_labels[col]}_{y_labels[row]}"
+
+def compute_zone_activity(heatmaps: pd.DataFrame) -> pd.DataFrame:
+    """
+    Map all heatmap points to the 6×4 grid and compute activity
+    density per zone.
+
+    Returns DataFrame with one row per zone: zone_name, col, row,
+    activity_count, activity_density (normalized 0–1).
+    """
+    grid = np.zeros((GRID_COLS, GRID_ROWS))
+
+    for _, prow in heatmaps.iterrows():
+        points = _parse_heatmap(prow.get("heatmap2", "[]"))
+        for pt in points:
+            zone = _xy_to_zone(pt.get("x", 0), pt.get("y", 0))
+            if zone:
+                grid[zone[0], zone[1]] += 1
+
+    total = grid.sum()
+    rows = []
+    for c in range(GRID_COLS):
+        for r in range(GRID_ROWS):
+            rows.append({
+                "zone_name": _zone_name(c, r),
+                "col": c, "row": r,
+                "activity_count": int(grid[c, r]),
+                "activity_density": round(grid[c, r] / total, 4) if total > 0 else 0,
+            })
+
+    return pd.DataFrame(rows)
+
+def compute_zone_threat(
+    heatmaps: pd.DataFrame,
+    shotmap_deltas: pd.DataFrame,
+    feature_deltas: pd.DataFrame,
+) -> pd.DataFrame:
+    """
+    Compute a threat score per zone combining:
+      - Offensive activity density (from heatmap)
+      - Shot origination (from shotmap coordinates)
+      - Defensive gap detection (low activity in defensive zones)
+
+    Returns DataFrame: zone_name, col, row, offensive_threat (0–100),
+    defensive_vulnerability (0–100), combined_risk (0–100).
+    """
+    # 1. Zone activity
+    zone_df = compute_zone_activity(heatmaps)
+
+    # 2. Shot origination per zone
+    shot_zones = np.zeros((GRID_COLS, GRID_ROWS))
+    shot_xg = np.zeros((GRID_COLS, GRID_ROWS))
+
+    for _, shot in shotmap_deltas.iterrows():
+        x = pd.to_numeric(shot.get("x_2", np.nan), errors="coerce")
+        y = pd.to_numeric(shot.get("y_2", np.nan), errors="coerce")
+        xg = pd.to_numeric(shot.get("xg_2", 0), errors="coerce") or 0
+        zone = _xy_to_zone(x, y)
+        if zone:
+            shot_zones[zone[0], zone[1]] += 1
+            shot_xg[zone[0], zone[1]] += xg
+
+    # 3. Compute threat scores
+    max_activity = zone_df["activity_count"].max() or 1
+    max_shots = shot_zones.max() or 1
+
+    threats = []
+    for _, zr in zone_df.iterrows():
+        c, r = zr["col"], zr["row"]
+
+        # Offensive threat: higher in attacking zones with shots
+        off_zone_weight = c / (GRID_COLS - 1)  # 0 for own box, 1 for opp box
+        off_activity = zr["activity_density"]
+        off_shots = shot_zones[c, r] / max_shots if max_shots > 0 else 0
+        off_xg = shot_xg[c, r]
+
+        offensive_threat = (
+            off_zone_weight * 30
+            + off_activity * 200
+            + off_shots * 40
+            + off_xg * 30
+        )
+
+        # Defensive vulnerability: high risk if OWN defensive zones have LOW activity
+        def_zone_weight = 1 - (c / (GRID_COLS - 1))  # 1 for own box, 0 for opp box
+        def_vulnerability = def_zone_weight * (1 - zr["activity_density"]) * 100
+
+        # Combined risk
+        combined = offensive_threat * 0.6 + def_vulnerability * 0.4
+
+        threats.append({
+            "zone_name": zr["zone_name"],
+            "col": c, "row": r,
+            "activity_count": zr["activity_count"],
+            "activity_density": zr["activity_density"],
+            "shots_from_zone": int(shot_zones[c, r]),
+            "xg_from_zone": round(float(shot_xg[c, r]), 3),
+            "offensive_threat": round(min(offensive_threat, 100), 1),
+            "defensive_vulnerability": round(min(def_vulnerability, 100), 1),
+            "combined_risk": round(min(combined, 100), 1),
+        })
+
+    return pd.DataFrame(threats)
+
+
+
+
+def compute_player_centroids(
+    heatmaps: pd.DataFrame,
+    lineups_and_stats: pd.DataFrame,
+    on_pitch_ids=None,
+) -> pd.DataFrame:
+    """
+    Compute the heatmap centroid for each outfield player (skip GK).
+
+    Parameters
+    ----------
+    on_pitch_ids : array-like, optional
+        Player IDs currently on the pitch. When supplied, only these
+        players are considered — this prevents substitutes who already
+        left the pitch from inflating the formation count.
+
+    Returns DataFrame: player_id, name, position, centroid_x, centroid_y.
+    """
+    players = lineups_and_stats[lineups_and_stats["position"] != "G"][
+        ["id", "name", "position"]
+    ].copy()
+
+    # Filter to on-pitch players only (exclude subs who left & unused bench)
+    if on_pitch_ids is not None:
+        players = players[players["id"].isin(on_pitch_ids)]
+
+    centroids = []
+    for _, p in players.iterrows():
+        hm_row = heatmaps[heatmaps["player_id"] == p["id"]]
+        if hm_row.empty:
+            centroids.append({"player_id": p["id"], "name": p["name"],
+                              "position": p["position"],
+                              "centroid_x": np.nan, "centroid_y": np.nan})
+            continue
+
+        points = _parse_heatmap(hm_row.iloc[0].get("heatmap2", "[]"))
+        if not points:
+            centroids.append({"player_id": p["id"], "name": p["name"],
+                              "position": p["position"],
+                              "centroid_x": np.nan, "centroid_y": np.nan})
+            continue
+
+        xs = [pt["x"] for pt in points]
+        ys = [pt["y"] for pt in points]
+        centroids.append({
+            "player_id": p["id"], "name": p["name"],
+            "position": p["position"],
+            "centroid_x": round(np.mean(xs), 1),
+            "centroid_y": round(np.mean(ys), 1),
+        })
+
+    return pd.DataFrame(centroids)
+
+
+
+
+def detect_effective_formation(centroids: pd.DataFrame) -> dict:
+    """
+    Use K-means on player centroids to detect the effective formation
+    shape (3 clusters along x-axis: defense, midfield, attack).
+
+    Returns dict with: effective_formation, cluster_sizes,
+    cluster_centroids, nominal_vs_effective comparison.
+    """
+    valid = centroids.dropna(subset=["centroid_x", "centroid_y"])
+    if len(valid) < 3:
+        return {"effective_formation": "unknown", "error": "Not enough data"}
+
+    X = valid[["centroid_x"]].values
+
+    # Cluster into 3 lines (defense, midfield, attack) by x position
+    kmeans = KMeans(n_clusters=3, random_state=42, n_init=10)
+    valid = valid.copy()
+    valid["line_cluster"] = kmeans.fit_predict(X)
+
+    # Sort clusters by centroid x (lowest = defense, highest = attack)
+    cluster_order = np.argsort(kmeans.cluster_centers_.flatten())
+    line_map = {cluster_order[0]: "D", cluster_order[1]: "M", cluster_order[2]: "F"}
+    valid["effective_line"] = valid["line_cluster"].map(line_map)
+
+    # Count players per line
+    line_counts = valid["effective_line"].value_counts().to_dict()
+    d = line_counts.get("D", 0)
+    m = line_counts.get("M", 0)
+    f = line_counts.get("F", 0)
+    effective_str = f"{d}-{m}-{f}"
+
+    # Compare nominal positions
+    nominal_counts = valid["position"].value_counts().to_dict()
+    nom_d = nominal_counts.get("D", 0)
+    nom_m = nominal_counts.get("M", 0)
+    nom_f = nominal_counts.get("F", 0)
+    nominal_str = f"{nom_d}-{nom_m}-{nom_f}"
+
+    shifted = effective_str != nominal_str
+
+    return {
+        "effective_formation": effective_str,
+        "nominal_formation": nominal_str,
+        "has_shifted": shifted,
+        "line_counts": {"D": d, "M": m, "F": f},
+        "cluster_centroids": {
+            line_map[i]: round(float(kmeans.cluster_centers_[i][0]), 1)
+            for i in range(3)
+        },
+        "player_assignments": valid[["player_id", "name", "position",
+                                      "effective_line", "centroid_x",
+                                      "centroid_y"]].to_dict("records"),
+    }
+
+
+
+
+def compute_coverage_score(centroids: pd.DataFrame) -> dict:
+    """
+    Score how well the formation covers the pitch width and depth.
+
+    Returns dict with: width_coverage (0–100), depth_coverage (0–100),
+    overall_coverage (0–100), gaps (list of under-covered areas).
+    """
+    valid = centroids.dropna(subset=["centroid_x", "centroid_y"])
+    if len(valid) < 3:
+        return {"width_coverage": 0, "depth_coverage": 0, "overall_coverage": 0, "gaps": []}
+
+    xs = valid["centroid_x"].values
+    ys = valid["centroid_y"].values
+
+    # Width coverage: how spread out are players along y-axis
+    y_range = ys.max() - ys.min()
+    width_cov = min(y_range / 80 * 100, 100)  # 80% of pitch width is ideal
+
+    # Depth coverage: how spread out along x-axis
+    x_range = xs.max() - xs.min()
+    depth_cov = min(x_range / 70 * 100, 100)  # 70% of pitch depth is ideal
+
+    overall = (width_cov * 0.5 + depth_cov * 0.5)
+
+    # Detect gaps: divide pitch into 6 vertical strips, flag empty ones
+    gaps = []
+    for strip_start in range(0, 100, 20):
+        strip_end = strip_start + 20
+        in_strip = ((ys >= strip_start) & (ys < strip_end)).sum()
+        if in_strip == 0:
+            if strip_start < 33:
+                gaps.append(f"Left flank ({strip_start}-{strip_end})")
+            elif strip_start >= 67:
+                gaps.append(f"Right flank ({strip_start}-{strip_end})")
+            else:
+                gaps.append(f"Central ({strip_start}-{strip_end})")
+
+    return {
+        "width_coverage": round(width_cov, 1),
+        "depth_coverage": round(depth_cov, 1),
+        "overall_coverage": round(overall, 1),
+        "gaps": gaps,
+    }
+
+
+
+
+def analyze(heatmaps: pd.DataFrame, lineups_and_stats: pd.DataFrame,
+            on_pitch_ids=None) -> dict:
+    """
+    Full formation effectiveness analysis.
+
+    Parameters
+    ----------
+    on_pitch_ids : array-like, optional
+        Player IDs currently on the pitch.  Pass this to restrict the
+        analysis to only the active 11 (10 outfield) players so that
+        the formation sums correctly.
+
+    Returns dict with: centroids, formation, coverage.
+    """
+
+    on_pitch_ids = on_pitch_ids.tail(10)
+    centroids = compute_player_centroids(heatmaps, lineups_and_stats,
+                                         on_pitch_ids=on_pitch_ids)
+    formation = detect_effective_formation(centroids)
+    coverage = compute_coverage_score(centroids)
+
+    return {
+        "centroids": centroids,
+        "formation": formation,
+        "coverage": coverage,
+    }
+
+
+
+
+# system prompt that will be sent to the llm
+SYSTEM_PROMPT = """You are an elite football tactical analyst providing real-time 
+in-match advice to a head coach. You speak with authority, specificity, and 
+clarity. Never be vague — name players, positions, zones, and concrete actions.
+
+You will receive structured data from our analysis engine containing:
+- Player fatigue scores and performance deviations
+- Substitution urgency rankings
+- Zone threat assessments across a 6x4 pitch grid
+- Formation effectiveness analysis (nominal vs effective shape)
+- Passing influence and defensive contribution data
+
+Your job is to synthesize ALL of this into actionable tactical suggestions.
+Output ONLY valid JSON matching the schema below. No markdown, no explanation outside JSON.
+
+Required JSON schema:
+{
+  "match_analysis_summary": "str - 2-3 sentence overview of current match state",
+  "substitution_suggestions": [
+    {
+      "player_out": "str - player name",
+      "player_out_id": int,
+      "urgency": float (0-1),
+      "reason": "str - specific tactical reason",
+      "recommended_replacement_profile": "str - what type of player should come on"
+    }
+  ],
+  "tactical_adjustments": [
+    {
+      "type": "str - e.g. formation_change, pressing_trigger, width_adjustment",
+      "suggestion": "str - specific actionable suggestion",
+      "confidence": float (0-1),
+      "affected_players": ["str - player names involved"]
+    }
+  ],
+  "zone_alerts": [
+    {
+      "zone": "str - zone name from the grid",
+      "risk_level": "str - high/medium/low",
+      "issue": "str - what the problem is",
+      "recommended_action": "str - what to do about it"
+    }
+  ],
+  "formation_recommendation": {
+    "current_effective": "str - e.g. 4-3-3",
+    "recommended": "str - suggested formation if change needed",
+    "reasoning": "str - why this change"
+  },
+  "key_player_insights": [
+    {
+      "player_name": "str",
+      "insight": "str - specific observation",
+      "action": "str - what the coach should do"
+    }
+  ]
+}"""
+
+def _safe_float(val, default=0.0):
+    """Safely convert a value to a Python float for JSON serialization."""
+    try:
+        v = float(val)
+        return default if (np.isnan(v) or np.isinf(v)) else round(v, 3)
+    except (TypeError, ValueError):
+        return default
+
+
+def _safe_int(val, default=0):
+    """Safely convert a value to int for JSON serialization."""
+    try:
+        v = float(val)
+        return default if np.isnan(v) else int(v)
+    except (TypeError, ValueError):
+        return default
+
+def _build_data_context(
+    fatigue_features: pd.DataFrame,
+    z_scores_df: pd.DataFrame,
+    urgency_ranked: pd.DataFrame,
+    zone_threats: pd.DataFrame,
+    formation_output: dict,
+    engineered_features: pd.DataFrame,
+    match_intelligence: dict,
+    shot_metrics: pd.DataFrame,
+    events_delta_result: pd.DataFrame,
+) -> str:
+    """Build the data context string for the LLM prompt.
+
+    Uses the actual variable names & column names from the notebook.
+    """
+    sections = []
+
+    # ---- 1. Substitution urgency rankings ----
+    sub_data = []
+    for _, r in urgency_ranked.head(5).iterrows():
+        sub_data.append({
+            "player": r.get("name", ""),
+            "position": r.get("position", ""),
+            "urgency_score": _safe_float(r.get("urgency_score", 0)),
+            "fatigue_score": _safe_float(r.get("fatigue_score", 0)),
+            "minutes_played": _safe_float(r.get("minutesPlayed_2", 0)),
+            "n_anomalous": _safe_int(r.get("n_anomalous", 0)),
+        })
+    sections.append(f"## SUBSTITUTION URGENCY (top 5)\n{json.dumps(sub_data, indent=2)}")
+
+    # ---- 2. Fatigue scores ----
+    fatigue_data = []
+    for _, r in fatigue_features.iterrows():
+        fatigue_data.append({
+            "player": r.get("name", ""),
+            "position": r.get("position", ""),
+            "fatigue_score": _safe_float(r.get("fatigue_score", 0)),
+        })
+    fatigue_data.sort(key=lambda x: x["fatigue_score"], reverse=True)
+    sections.append(f"## FATIGUE SCORES (0=fresh, 100=exhausted)\n{json.dumps(fatigue_data[:10], indent=2)}")
+
+    # ---- 3. Performance deviations (z-score flagged players) ----
+    dev_data = []
+    if not z_scores_df.empty and "flag" in z_scores_df.columns:
+        flagged = z_scores_df[z_scores_df["flag"] != "normal"]
+        for _, r in flagged.iterrows():
+            dev_data.append({
+                "player": r.get("name", ""),
+                "position": r.get("position", ""),
+                "flag": r.get("flag", ""),
+                "n_anomalous": _safe_int(r.get("n_anomalous", 0)),
+                "worst_metric": r.get("worst_metric", ""),
+                "worst_z": _safe_float(r.get("worst_z", 0)),
+            })
+    sections.append(f"## PERFORMANCE DEVIATIONS (flagged players)\n{json.dumps(dev_data, indent=2)}")
+
+    # ---- 4. Zone threats (top risk zones) ----
+    zone_data = []
+    if not zone_threats.empty and "combined_risk" in zone_threats.columns:
+        zt = zone_threats.sort_values("combined_risk", ascending=False).head(8)
+        for _, r in zt.iterrows():
+            zone_data.append({
+                "zone": r.get("zone_name", ""),
+                "offensive_threat": _safe_float(r.get("offensive_threat", 0)),
+                "defensive_vulnerability": _safe_float(r.get("defensive_vulnerability", 0)),
+                "combined_risk": _safe_float(r.get("combined_risk", 0)),
+                "shots": _safe_int(r.get("shots_from_zone", 0)),
+                "xg": _safe_float(r.get("xg_from_zone", 0)),
+            })
+    sections.append(f"## ZONE THREAT MAP (highest risk zones)\n{json.dumps(zone_data, indent=2)}")
+
+    # ---- 5. Formation analysis ----
+    form = formation_output.get("formation", {})
+    cov = formation_output.get("coverage", {})
+    form_data = {
+        "effective_formation": form.get("effective_formation"),
+        "nominal_formation": form.get("nominal_formation"),
+        "has_shifted": form.get("has_shifted"),
+        "coverage": {k: v for k, v in cov.items() if k != "centroids"},
+    }
+    sections.append(f"## FORMATION ANALYSIS\n{json.dumps(form_data, indent=2)}")
+
+    # ---- 6. Passing influence (from engineered_features) ----
+    pi_data = []
+    if "pass_influence_score" in engineered_features.columns:
+        pi = engineered_features.sort_values("pass_influence_score", ascending=False).head(5)
+        for _, r in pi.iterrows():
+            pi_data.append({
+                "player": r.get("name", ""),
+                "position": r.get("position", ""),
+                "pass_influence_score": _safe_float(r.get("pass_influence_score", 0)),
+            })
+    sections.append(f"## PASSING INFLUENCE (top 5)\n{json.dumps(pi_data, indent=2)}")
+
+    # ---- 7. Shot quality ----
+    if shot_metrics is not None and not shot_metrics.empty:
+        sq = {k: _safe_float(v) for k, v in shot_metrics.iloc[0].to_dict().items()}
+    else:
+        sq = {}
+    sections.append(f"## SHOT QUALITY\n{json.dumps(sq, indent=2)}")
+
+    # ---- 8. Substitution recommendations (from match_intelligence) ----
+    recs = match_intelligence.get("substitution_recommendations", [])
+    rec_data = []
+    for rec in recs[:3]:
+        out_player = rec.get("player_out", {})
+        in_player = rec.get("player_in", {})
+        rec_data.append({
+            "out": out_player.get("name", "") if isinstance(out_player, dict) else str(out_player),
+            "in": in_player.get("name", "N/A") if isinstance(in_player, dict) else str(in_player),
+            "urgency": _safe_float(rec.get("urgency", 0)),
+            "reasoning": rec.get("reasoning", ""),
+        })
+    sections.append(f"## SUBSTITUTION RECOMMENDATIONS\n{json.dumps(rec_data, indent=2)}")
+
+    return "\n\n".join(sections)
+
+
+
+def generate_analysis(
+    fatigue_features: pd.DataFrame,
+    z_scores_df: pd.DataFrame,
+    urgency_ranked: pd.DataFrame,
+    zone_threats: pd.DataFrame,
+    formation_output: dict,
+    engineered_features: pd.DataFrame,
+    match_intelligence: dict,
+    shot_metrics: pd.DataFrame,
+    events_delta_result: pd.DataFrame,
+    
+    
+) -> dict:
+    """
+    Run the full LLM aggregation pipeline.
+
+    Returns parsed JSON dict with tactical suggestions.
+    """
+    model: str = "gemini-2.5-flash"
+    api_key: str = os.environ.get("GEMINI_API_KEY_POST_MATCH")
+
+
+    if not api_key:
+        return {"error": "No Gemini API key found. Set GEMINI_API_KEY_IN_MATCH in .env"}
+
+    # Build context
+    context = _build_data_context(
+        fatigue_features, z_scores_df, urgency_ranked,
+        zone_threats, formation_output, engineered_features,
+        match_intelligence, shot_metrics, events_delta_result,
+    )
+
+    prompt = f"""Analyze the following in-match data and provide tactical recommendations.
+
+{context}
+
+Respond with ONLY valid JSON matching the schema in your system instructions. 
+No markdown formatting, no code blocks."""
+
+    # Call Gemini
+    client = genai.Client(api_key=api_key)
+    response = client.models.generate_content(
+        model=model,
+        config={
+            "system_instruction": SYSTEM_PROMPT,
+        },
+        contents=prompt,
+    )
+
+    # Parse response
+    raw = response.text.replace("```json", "").replace("```", "").strip()
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        return {"raw_response": raw, "error": "Could not parse LLM response as JSON"}
+
+
+
+def generate_analysis_without_llm(
+    fatigue_features: pd.DataFrame,
+    z_scores_df: pd.DataFrame,
+    urgency_ranked: pd.DataFrame,
+    zone_threats: pd.DataFrame,
+    formation_output: dict,
+    engineered_features: pd.DataFrame,
+    match_intelligence: dict,
+    shot_metrics: pd.DataFrame,
+    events_delta_result: pd.DataFrame,
+) -> dict:
+    """
+    Produce a structured analysis report WITHOUT calling the LLM.
+    Useful for testing or when no API key is available.
+    """
+    # Top substitution candidates
+    top_subs = []
+    for _, r in urgency_ranked.head(3).iterrows():
+        top_subs.append({
+            "player_out": r.get("name", ""),
+            "player_out_id": _safe_int(r.get("id", 0)),
+            "urgency": _safe_float(r.get("urgency_score", 0)),
+            "reason": f"Fatigue {_safe_float(r.get('fatigue_score', 0))}, "
+                      f"{_safe_int(r.get('n_anomalous', 0))} anomalous metrics",
+            "recommended_replacement_profile": f"Fresh {r.get('position', '?')} with high work rate",
+        })
+
+    # Zone alerts
+    alerts = []
+    if not zone_threats.empty and "combined_risk" in zone_threats.columns:
+        high_risk = zone_threats[zone_threats["combined_risk"] > 50]
+        for _, r in high_risk.iterrows():
+            alerts.append({
+                "zone": r.get("zone_name", ""),
+                "risk_level": "high" if r["combined_risk"] > 70 else "medium",
+                "issue": f"Combined risk {_safe_float(r['combined_risk'])}",
+                "recommended_action": "Increase coverage in this zone",
+            })
+
+    # Formation
+    form = formation_output.get("formation", {})
+    cov = formation_output.get("coverage", {})
+
+    # Key player insights from z-score deviations
+    insights = []
+    if not z_scores_df.empty and "flag" in z_scores_df.columns:
+        flagged = z_scores_df[z_scores_df["flag"] != "normal"]
+        for _, r in flagged.iterrows():
+            worst = r.get("worst_metric", "unknown")
+            worst_z = _safe_float(r.get("worst_z", 0))
+            direction = "above" if worst_z > 0 else "below"
+            insights.append({
+                "player_name": r.get("name", ""),
+                "insight": f"{worst} is {abs(worst_z):.1f}σ {direction} baseline",
+                "action": "Consider tactical adjustment or substitution",
+            })
+
+    # Additional insight: most fatigued player
+    if not fatigue_features.empty:
+        most_fatigued = fatigue_features.nlargest(1, "fatigue_score").iloc[0]
+        if most_fatigued["fatigue_score"] > 40:
+            insights.append({
+                "player_name": most_fatigued.get("name", ""),
+                "insight": f"Fatigue score {_safe_float(most_fatigued['fatigue_score'])} — "
+                           f"highest on the team",
+                "action": "Monitor closely, consider substitution if performance drops further",
+            })
+
+    # Tactical adjustments based on formation shift
+    adjustments = []
+    if form.get("has_shifted", False):
+        adjustments.append({
+            "type": "formation_change",
+            "suggestion": f"Team has drifted from nominal {form.get('nominal_formation', '?')} "
+                          f"to effective {form.get('effective_formation', '?')}. "
+                          f"Consider whether to reinforce the current shape or correct back.",
+            "confidence": 0.7,
+            "affected_players": [
+                p["name"] for p in form.get("player_assignments", [])
+                if p.get("position") != p.get("effective_line")
+            ][:5],
+        })
+
+    coverage_gaps = cov.get("gaps", [])
+    if coverage_gaps:
+        adjustments.append({
+            "type": "width_adjustment",
+            "suggestion": f"Coverage gaps detected: {', '.join(coverage_gaps)}. "
+                          f"Wide players should stretch to cover these corridors.",
+            "confidence": 0.65,
+            "affected_players": [],
+        })
+
+    return {
+        "match_analysis_summary": (
+            f"Formation is {'shifted' if form.get('has_shifted') else 'holding'} "
+            f"({form.get('effective_formation', '?')} effective vs "
+            f"{form.get('nominal_formation', '?')} nominal). "
+            f"Coverage: {_safe_float(cov.get('overall_coverage', 0))}%. "
+            f"{len(top_subs)} substitution candidates identified."
+        ),
+        "substitution_suggestions": top_subs,
+        "tactical_adjustments": adjustments,
+        "zone_alerts": alerts,
+        "formation_recommendation": {
+            "current_effective": form.get("effective_formation", "unknown"),
+            "recommended": form.get("effective_formation", "unknown"),
+            "reasoning": f"Coverage: {_safe_float(cov.get('overall_coverage', 0))}%. "
+                         f"Gaps: {coverage_gaps}",
+        },
+        "key_player_insights": insights,
+    }
+
+
+
