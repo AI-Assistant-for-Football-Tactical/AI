@@ -151,8 +151,8 @@ def process_shotmaps(players_shotmaps1, players_shotmaps2, home: bool = True):
 def process_heatmaps(heatmap1 :json , heatmap2 : json , lineups: DataFrame):
     players_heatmaps1 = pd.json_normalize(heatmap1).fillna('[]').rename(columns = {'heatmap' : 'heatmap1'})
     players_heatmaps2 = pd.json_normalize(heatmap2).fillna('[]').rename(columns = {'heatmap' : 'heatmap2'})
-    heatmaps =  pd.merge(players_heatmaps1, players_heatmaps2, on='player_id', how='inner')
-    heatmaps = heatmaps[heatmaps['player_id'].isin(list(lineups['id'])) ]
+    heatmaps =  pd.merge(players_heatmaps1, players_heatmaps2, on='playerId', how='inner')
+    heatmaps = heatmaps[heatmaps['playerId'].isin(list(lineups['id'])) ]
     
     return heatmaps
 
@@ -389,7 +389,7 @@ def get_one_team_data(
             except Exception as e:
                 print(f"❌ something wrong with {task_name}: {e}")
 
-    heatmaps = process_heatmaps(players_heatmaps1 , players_heatmaps2  , results['lineups'])
+    heatmaps = process_heatmaps(heatmap1 , heatmap2  , results['lineups'])
     results['heatmaps'] = heatmaps
     return results
 
@@ -491,7 +491,7 @@ def heatmap_delta(heatmaps: pd.DataFrame) -> pd.DataFrame:
     """
     rows = []
     for _, row in heatmaps.iterrows():
-        pid = row["player_id"]
+        pid = row["playerId"]
         h1 = _parse_heatmap(row.get("heatmap1", "[]"))
         h2 = _parse_heatmap(row.get("heatmap2", "[]"))
 
@@ -621,18 +621,11 @@ def all_deltas(players_df, team_df, heatmaps_df, shotmaps_df, features_df):
 
 
 
-# Renamed return variables to avoid shadowing function names
-player_delta_result, events_delta_result, heatmaps_delta_result, shotmaps_delta_result, features_delta_result = all_deltas(players, events, heatmaps, shotmaps, features)
 
-import pandas as pd
-import numpy as np
 
-def prepare_section_two_data(work_dir, player_delta_result, heatmaps_delta_result):
+def prepare_section_two_data(lineups_stats_df, heatmaps_df , player_delta_result, heatmaps_delta_result):
     
-    # Load work data from example directory
-    work_dir = 'in_data_examples/work_data/'
-    lineups_stats_df = pd.read_csv(work_dir + 'lineups_and_stats.csv')
-    heatmaps_df = pd.read_csv(work_dir + 'heatmaps.csv')
+
     
     # Use actual results from all_deltas() or recalculate
     # player_delta_result contains: id, name, position, shared_cols + delta columns
