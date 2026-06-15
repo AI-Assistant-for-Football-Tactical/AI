@@ -5,3 +5,4 @@ numpy
 google-genai
 gunicorn
 python-dotenv
+scikit-learn
