@@ -26,25 +26,22 @@ def in_match():
         # Parse request data
         data = request.get_json()
         
+            
         # getting event data
         event_stats1 = data.get('statistics1')
-        team_id = event_stats1['teamId']
-        del event_stats1['teamId']
+        team_id =  data.get('target_team_id')
         event_stats2 = data.get('statistics2')
-        del event_stats2['teamId']
 
         # getting lineups data
 
-        lineups1 = data.get('lineups1').get('lineups')
-        lineups2 = data.get('lineups2').get('lineups')
+        lineups1 = data.get('lineups1')
+        lineups2 = data.get('lineups2')
 
         # getting shotmaps data
 
         players_shotmaps1 = data.get('shotmap1')
-        del players_shotmaps1['teamId']
 
         players_shotmaps2 = data.get('shotmap2')
-        del players_shotmaps2['teamId']
 
 
         # getting heatmaps data
@@ -55,29 +52,47 @@ def in_match():
         # getting rating data
 
         breakdowns1 = data.get('ratingBreakdown1').get('home') + data.get('ratingBreakdown1').get('away')
-        players_rating_breakdowns1 =[]
-        for player in breakdowns1 :
-            players_rating_breakdowns1.append(player.get('breakdown'))
+        if len(breakdowns1) < 1 :
+            players_rating_breakdowns1 = None
+        else :
+            players_rating_breakdowns1 =[]
+            for player in breakdowns1 :
+                players_rating_breakdowns1.append(player.get('ratingBreakdown'))
 
         breakdowns2 = data.get('ratingBreakdown2').get('home') + data.get('ratingBreakdown2').get('away')
+
         players_rating_breakdowns2 = []
         for player in breakdowns2 :
-            players_rating_breakdowns2.append(player.get('breakdown'))
+            players_rating_breakdowns2.append(player.get('ratingBreakdown'))
             
         # determine which team is ours
 
-        is_home = True if team_id == lineups1.get('home').get('players')[0].get('teamId') else False
-                
+        home_heatmap_team_id = data.get('heatmap1').get('home')[0].get('teamId')   
+        is_home = True if team_id == home_heatmap_team_id else False
+
+
         # getting data ready for section 1
-        result = get_one_team_data(event_stats1, event_stats2, lineups1, lineups2, players_shotmaps1, players_shotmaps2, 
-        players_heatmaps1, players_heatmaps2, players_rating_breakdowns1, players_rating_breakdowns2, is_home)
-        
+        result = get_one_team_data(
+            event_stats1 ,
+            event_stats2 ,
+            lineups1 , 
+            lineups2 , 
+            players_shotmaps1 , 
+            players_shotmaps2 , 
+            players_heatmaps1 , 
+            players_heatmaps2 , 
+            players_rating_breakdowns1  ,
+            players_rating_breakdowns2 , 
+            team_id ,
+            is_home 
+        )
+
         players = result['lineups']
         events = result['event_stats']
         heatmaps = result['heatmaps']
         shotmaps = result['shotmaps']
         features = result['rates']
-            
+        
         #  ===== STEP 1: Rolling Snapshot & Delta Engine =====
         player_delta_result, events_delta_result, heatmaps_delta_result, shotmaps_delta_result, features_delta_result = all_deltas(players, events, heatmaps, shotmaps, features)
         
